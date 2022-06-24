@@ -11,17 +11,17 @@ export function Layout({ children }) {
       </div>
       <div id="menu">
         <p>
-          <Link href="/">
+          <Link href="/ukagaka/">
             <a>index</a>
           </Link>
         </p>
         <p>
-          <Link href="/tips/">
+          <Link href="/ukagaka/tips/">
             <a>tips</a>
           </Link>
         </p>
         <p>
-          <Link href="/blog/">
+          <Link href="/ukagaka/blog/">
             <a>blog</a>
           </Link>
         </p>

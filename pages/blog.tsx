@@ -22,7 +22,7 @@ const Home: NextPage<Props> = ({ allPosts }) => (
     <ul>
       {allPosts?.map((post) => (
         <div className="list-article">
-          <Link href={`/entries/${post.slug}`}>
+          <Link href={"/ukagaka/entries/" + post.slug}>
             <a>
               <h2>{post.title}</h2>
             </a>
