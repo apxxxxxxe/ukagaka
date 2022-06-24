@@ -118,7 +118,8 @@ table {
   min-height: var(--header-height);
   background-color: var(--color-black);
   background-image: linear-gradient(to left, #ffffff00, var(--color-black)),
-    linear-gradient(to left, #ffffff00, var(--color-black)), url("./fog.jpg");
+    linear-gradient(to left, #ffffff00, var(--color-black)),
+    url("/ukagaka/fog.jpg");
   background-size: cover;
   color: var(--color-white);
 }
@@ -192,4 +193,11 @@ pre {
   color: var(--color-white);
   padding: 2rem;
   border-radius: 10px;
+}
+
+@media (orientation: portrait) {
+  .inner {
+    padding: 20px;
+    width: 90%;
+  }
 }

@@ -1,12 +1,13 @@
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import html from "remark-html";
+
 /**
  * remarkによるmarkdownの構文変換を行う
  * @param markdown markdown記法で書かれたプレーンテキスト
  * @returns 変換結果をString化したもの
  */
-const markdownToHtml = async (markdown: string) => {
+const markdownToHtml = async (markdown) => {
   const result = await remark().use(html).use(remarkGfm).process(markdown);
   return result.toString();
 };
