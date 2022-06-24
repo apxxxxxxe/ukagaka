@@ -1,7 +1,7 @@
 import { NextPage, InferGetStaticPropsType } from "next";
 import { getPostBySlug } from "utils/api";
 import { Layout } from "utils/page";
-import markdownToHtml from "./api/markdownToHtml";
+import markdownToHtml from "pages/api/markdownToHtml";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
