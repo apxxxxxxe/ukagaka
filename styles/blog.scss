@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap");
+
+:root {
+  --color-black: #30383a;
+  --color-white: #fafafa;
+  --color-blue: #4566af;
+  --header-height: 10rem;
+  --footer-height: 10vh;
+  --heading-margin-base-top: 0.4rem;
+  --heading-margin-base-left: 0rem;
+  --heading-margin-base-right: 0rem;
+  --heading-margin-base-bottom: 0.1rem;
+  --min-fontsize: 0.9rem;
+}
+
+* {
+  font-family: "Lucida Grande", "Calibri", Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-top: calc(var(--heading-margin-base-top) * 6);
+  margin-left: calc(var(--heading-margin-base-left) * 6);
+  margin-right: calc(var(--heading-margin-base-right) * 6);
+  margin-bottom: calc(var(--heading-margin-base-bottom) * 6);
+  font-size: calc(var(--min-fontsize) * 2);
+  border-left: 4px solid var(--color-black);
+  border-bottom: 1px solid var(--color-black);
+  padding-left: 10px;
+}
+h2 {
+  margin-top: calc(var(--heading-margin-base-top) * 5);
+  margin-left: calc(var(--heading-margin-base-left) * 5);
+  margin-right: calc(var(--heading-margin-base-right) * 5);
+  margin-bottom: calc(var(--heading-margin-base-bottom) * 5);
+  font-size: calc(var(--min-fontsize) * 1.5);
+  border-bottom: 1px solid var(--color-black);
+}
+h3 {
+  margin-top: calc(var(--heading-margin-base-top) * 4);
+  margin-left: calc(var(--heading-margin-base-left) * 4);
+  margin-right: calc(var(--heading-margin-base-right) * 4);
+  margin-bottom: calc(var(--heading-margin-base-bottom) * 4);
+  font-size: calc(var(--min-fontsize) * 1.4);
+}
+h4 {
+  margin-top: calc(var(--heading-margin-base-top) * 3);
+  margin-left: calc(var(--heading-margin-base-left) * 3);
+  margin-right: calc(var(--heading-margin-base-right) * 3);
+  margin-bottom: calc(var(--heading-margin-base-bottom) * 3);
+  font-size: calc(var(--min-fontsize) * 1.3);
+}
+h5 {
+  margin-top: calc(var(--heading-margin-base-top) * 2);
+  margin-left: calc(var(--heading-margin-base-left) * 2);
+  margin-right: calc(var(--heading-margin-base-right) * 2);
+  margin-bottom: calc(var(--heading-margin-base-bottom) * 2);
+  font-size: calc(var(--min-fontsize) * 1.2);
+}
+h6 {
+  margin-top: calc(var(--heading-margin-base-top) * 1);
+  margin-left: calc(var(--heading-margin-base-left) * 1);
+  margin-right: calc(var(--heading-margin-base-right) * 1);
+  margin-bottom: calc(var(--heading-margin-base-bottom) * 1);
+  font-size: calc(var(--min-fontsize) * 1.1);
+}
+
+p {
+  margin-left: 0.5rem;
+  font-size: calc(var(--min-fontsize) * 1);
+}
+
+th,
+td {
+  border: solid 1px var(--color-black); /* 枠線指定 */
+  padding: 0.5rem; /* 余白指定 */
+}
+
+td {
+  font-size: calc(var(--min-fontsize) * 1);
+}
+
+th {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+ul {
+  padding-left: 10px;
+  margin-left: 1em;
+}
+
+a {
+  color: var(--color-blue);
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse; /* セルの線を重ねる */
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white);
+}
+
+#header {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  min-height: var(--header-height);
+  background-color: var(--color-black);
+  background-image: linear-gradient(to left, #ffffff00, var(--color-black)),
+    linear-gradient(to left, #ffffff00, var(--color-black)), url("./fog.jpg");
+  background-size: cover;
+  color: var(--color-white);
+}
+
+#header > div > h1,
+#header > div > p {
+  font-family: "Noto Sans JP", "Lucida Grande", "Calibri", Helvetica, Arial,
+    sans-serif;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+#header > div > h1 {
+  font-size: calc(var(--min-fontsize) * 2.5);
+}
+
+#header > div > p {
+  margin-left: 5px;
+}
+
+#footer {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  min-height: var(--footer-height);
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+#container {
+  box-sizing: border-box;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  background-color: var(--color-white);
+}
+
+.inner {
+  margin: 0 auto;
+  padding: 50px;
+  width: 50%;
+}
+
+pre {
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+}
+
+.prettyprint ol.linenums > li {
+  list-style-type: decimal;
+  border-left: solid 1px #ebb15e;
+  padding-left: 0.5rem;
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-black);
+}
+
+#menu > p {
+  margin: 10px 20px;
+  font-size: calc(var(--min-fontsize) * 1.2);
+}
+
+#menu > p > a {
+  color: var(--color-white);
+}
+
+pre {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 2rem;
+  border-radius: 10px;
+}
