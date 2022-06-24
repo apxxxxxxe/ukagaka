@@ -1,4 +1,4 @@
-name: github pages
+name: deploy to gh-pages
 # 以下参考(https://qiita.com/manten120/items/87e9e822800403904dc8)
 
 # masterブランチにプッシュしたときjobsに記述した操作を行う
