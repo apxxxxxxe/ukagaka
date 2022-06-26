@@ -10,7 +10,7 @@ import rehypeSlug from "rehype-slug";
  * @returns 変換結果をString化したもの
  */
 const markdownToHtml = async (markdown) => {
-  const mid = await remark()
+  const rawHTML = await remark()
     .use(html)
     .use(remarkGfm)
     .use(rehypeSlug)
@@ -19,7 +19,7 @@ const markdownToHtml = async (markdown) => {
   const result = await rehype()
     .data("settings", { fragment: true })
     .use(rehypeSlug)
-    .process(mid);
+    .process(rawHTML);
 
   return result.toString();
 };
