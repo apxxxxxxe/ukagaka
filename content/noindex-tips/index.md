@@ -124,7 +124,7 @@ SAORI([kisaragi.dll](https://github.com/ponapalt/csaori))で文章を単語に�
 
 ### 実装例
 
-[Crave The Grave](https://github.com/apxxxxxxe/Haine/blob/8f04e65e134431a3b2c6c884a35f287b5123d0bb/ghost/master/yaya_functions.txt#L168)
+[Crave The Grave](https://github.com/apxxxxxxe/Haine/blob/8f04e65e134431a3b2c6c884a35f287b5123d0bb/ghost/master/yaya_functions.txt#L168-L297)
 
 ## 🔖 栞を最新版にしよう
 
