@@ -14,11 +14,14 @@
     "next": "12.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "rehype": "^12.0.1",
+    "rehype-slug": "^5.0.1",
     "remark": "^14.0.2",
     "remark-gfm": "^3.0.1",
     "remark-html": "^15.0.1",
     "sass": "^1.53.0",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "tocbot": "^4.18.2"
   },
   "devDependencies": {
     "@chakra-ui/react": "^2.2.1",

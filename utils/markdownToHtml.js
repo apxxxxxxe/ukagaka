@@ -1,6 +1,8 @@
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import html from "remark-html";
+import { rehype } from "rehype";
+import rehypeSlug from "rehype-slug";
 
 /**
  * remarkによるmarkdownの構文変換を行う
@@ -8,7 +10,17 @@ import html from "remark-html";
  * @returns 変換結果をString化したもの
  */
 const markdownToHtml = async (markdown) => {
-  const result = await remark().use(html).use(remarkGfm).process(markdown);
+  const mid = await remark()
+    .use(html)
+    .use(remarkGfm)
+    .use(rehypeSlug)
+    .process(markdown);
+
+  const result = await rehype()
+    .data("settings", { fragment: true })
+    .use(rehypeSlug)
+    .process(mid);
+
   return result.toString();
 };
 
