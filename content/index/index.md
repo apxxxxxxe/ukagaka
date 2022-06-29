@@ -1,7 +1,7 @@
 ---
 title: "index"
-date: "20220522"
-tags: ["タグ2"]
+date: "20220629"
+tags: ["noindex"]
 ---
 
 # Index

@@ -6,7 +6,7 @@ import markdownToHtml from "utils/markdownToHtml";
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 export const getStaticProps = async () => {
-  const post = getPostBySlug("noindex-index", ["content"]);
+  const post = getPostBySlug("index", ["content"]);
   const content = await markdownToHtml(post.content);
   return { props: { content } };
 };

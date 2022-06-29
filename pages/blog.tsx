@@ -20,21 +20,25 @@ const Home: NextPage<Props> = ({ allPosts }) => (
     <h1>Blog</h1>
     <p>記事一覧</p>
     <ul>
-      {allPosts?.map((post) => (
-        <div className="list-article">
-          <Link href={"/entries/" + post.slug}>
-            <a>
-              <h2>{post.title}</h2>
-            </a>
-          </Link>
-          <p>{post.date}</p>
-          <ul>
-            {post.tags?.map((tag) => (
-              <li key={tag}>{tag}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
+      {allPosts?.map((post) => {
+        if (!post.tags.includes("noindex")) {
+          return (
+            <div className="list-article">
+              <Link href={"/entries/" + post.slug}>
+                <a>
+                  <h2>{post.title}</h2>
+                </a>
+              </Link>
+              <p>{post.date}</p>
+              <ul>
+                {post.tags?.map((tag) => (
+                  <li key={tag}>{tag}</li>
+                ))}
+              </ul>
+            </div>
+          );
+        }
+      })}
     </ul>
   </Layout>
 );

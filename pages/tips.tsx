@@ -8,7 +8,7 @@ import tocbot from "tocbot";
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 export const getStaticProps = async () => {
-  const post = getPostBySlug("noindex-tips", ["content"]);
+  const post = getPostBySlug("tips", ["content"]);
   const content = await markdownToHtml(post.content);
   return { props: { content } };
 };
