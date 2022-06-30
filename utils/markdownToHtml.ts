@@ -9,7 +9,7 @@ import rehypeSlug from "rehype-slug";
  * @param markdown markdown記法で書かれたプレーンテキスト
  * @returns 変換結果をString化したもの
  */
-const markdownToHtml = async (markdown) => {
+const markdownToHtml = async (markdown: string) => {
   const rawHTML = await remark()
     .use(html)
     .use(remarkGfm)
