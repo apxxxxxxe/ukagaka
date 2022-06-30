@@ -4,7 +4,7 @@ date: "20220629"
 tags: ["noindex"]
 ---
 
-# Index
+# INDEX
 
 ## 配布物
 
