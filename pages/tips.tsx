@@ -1,10 +1,9 @@
 import { NextPage, InferGetStaticPropsType } from "next";
-import { getPostBySlug } from "utils/api";
-import Layout from "utils/Layout";
-import markdownToHtml from "utils/markdownToHtml";
 import { useEffect } from "react";
 import tocbot from "tocbot";
-import parse from "html-react-parser";
+import { getPostBySlug } from "utils/api";
+import markdownToHtml, { rawHtmlToDom } from "utils/markdownToHtml";
+import Layout from "utils/Layout";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -25,14 +24,6 @@ const Page: NextPage<Props> = ({ content, slug }) => {
     return () => tocbot.destroy();
   }, []);
 
-  const changeImageURL = (node) => {
-    const imageRoot = "/ukagaka/contents";
-    if (node.name === "img") {
-      node.attribs.src = `${imageRoot}/${slug}/${node.attribs.src}`;
-    }
-    return node;
-  };
-
   return (
     <Layout title="TIPS">
       <h1>TIPS</h1>
@@ -43,7 +34,7 @@ const Page: NextPage<Props> = ({ content, slug }) => {
       </p>
       <h2>もくじ</h2>
       <nav className="toc" />
-      <div className="body">{parse(content, { replace: changeImageURL })}</div>
+      <div className="body">{rawHtmlToDom(content, slug)}</div>
     </Layout>
   );
 };

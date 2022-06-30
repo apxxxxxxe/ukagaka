@@ -3,6 +3,7 @@ import remarkGfm from "remark-gfm";
 import html from "remark-html";
 import { rehype } from "rehype";
 import rehypeSlug from "rehype-slug";
+import parse from "html-react-parser";
 
 /**
  * remarkによるmarkdownの構文変換を行う
@@ -22,6 +23,17 @@ const markdownToHtml = async (markdown: string) => {
     .process(rawHTML);
 
   return result.toString();
+};
+
+export const rawHtmlToDom = (content: string, slug: string) => {
+  const rep = (node) => {
+    const imageRoot = "/ukagaka/contents";
+    if (node.name === "img") {
+      node.attribs.src = `${imageRoot}/${slug}/${node.attribs.src}`;
+    }
+    return node;
+  };
+  return parse(content, { replace: rep });
 };
 
 export default markdownToHtml;
