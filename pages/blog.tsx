@@ -1,7 +1,7 @@
 import { NextPage, InferGetStaticPropsType } from "next";
 import Link from "next/link";
 import { getAllPosts } from "utils/api";
-import { Layout } from "utils/page";
+import Layout from "utils/Layout";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 

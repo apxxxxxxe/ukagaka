@@ -1,6 +1,6 @@
 import { NextPage, InferGetStaticPropsType } from "next";
 import { getPostBySlug } from "utils/api";
-import { Layout } from "utils/page";
+import Layout from "utils/Layout";
 import markdownToHtml from "utils/markdownToHtml";
 import { useEffect } from "react";
 import tocbot from "tocbot";

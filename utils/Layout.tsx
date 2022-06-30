@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Head from "next/head";
 
-export function Layout({ children, title = "" }) {
+export default function Layout({ children, title = "" }): JSX.Element {
   const siteTitle = "おわらない.lzh";
 
-  let pageTitle;
+  let pageTitle: string;
   if (title !== "") {
     pageTitle = `${title} | ${siteTitle}`;
   } else {
