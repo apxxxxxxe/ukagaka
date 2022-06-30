@@ -16,7 +16,7 @@ export const getStaticProps = async () => {
 };
 
 const Home: NextPage<Props> = ({ allPosts }) => (
-  <Layout>
+  <Layout title="Blog">
     <h1>Blog</h1>
     <p>記事一覧</p>
     <ul>

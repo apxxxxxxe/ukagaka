@@ -1,11 +1,20 @@
 import Link from "next/link";
 import Head from "next/head";
 
-export function Layout({ children }) {
+export function Layout({ children, title = "" }) {
+  const siteTitle = "おわらない.lzh";
+
+  let pageTitle;
+  if (title !== "") {
+    pageTitle = `${title} | ${siteTitle}`;
+  } else {
+    pageTitle = siteTitle;
+  }
+
   return (
     <>
       <Head>
-        <title>おわらない.lzh</title>
+        <title>{pageTitle}</title>
         <link
           rel="shortcut icon"
           href="favicon.ico"

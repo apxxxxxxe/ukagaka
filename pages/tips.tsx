@@ -25,7 +25,7 @@ const Page: NextPage<Props> = ({ content }) => {
   }, []);
 
   return (
-    <Layout>
+    <Layout title="TIPS">
       <h1>TIPS</h1>
       <p>
         制作中に気づいたことなどをかいています
