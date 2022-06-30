@@ -8,6 +8,8 @@ tags: ["noindex"]
 
 ### シェルの口パク
 
+![kuchipaku.gif](/ukagaka/contents/tips/kuchipaku.gif)
+
 [surfaces.txt のアニメーションインターバル定義](http://ssp.shillest.net/ukadoc/manual/descript_shell_surfaces.html#introduction_animationinterval)には、トークに合わせて animation を動かすオプションの talk がある。
 これを使うとトーク時に口を動かす表現ができる。  
 ただし、これは「......」のようなセリフ的には無言の部分でも口が動いてしまう。
@@ -19,8 +21,8 @@ tags: ["noindex"]
 クイックセクションで表示された場所は一瞬で表示され、口パクの対象外になる。  
 更に直後にウェイトを入れれば、表面上は通常通りの表示になる。つまり最終的には、
 
-```{.prettyprint .lang-cs .linenums}
-'\_q…\_w[500]…\_w[500]\_q'
+```
+\_q…\_w[500]…\_w[500]\_q
 ```
 
 みたいになる。その都度さくらスクリプトを仕込むのは大変なので、里々なら replace.txt、YAYA なら OnTranslate に置換処理を記述すると楽。
@@ -68,9 +70,7 @@ SSP のデフォルト表示速度は
 
 ### 具体的な方法(YAYA)
 
-<div>
-
-```{.prettyprint .lang-cs .linenums}
+```
 AddWait
 {
     // _argv[0]: 対象文字列
@@ -105,8 +105,6 @@ AddWait
 }
 
 ```
-
-</div>
 
 これはトークを遅らせる場合。早めたい場合、#1 部分で単語を\\\_q で囲めばデフォルトのウェイトを無効化できる
 
