@@ -8,7 +8,7 @@ tags: ["noindex"]
 
 ### シェルの口パク
 
-![kuchipaku.gif](/ukagaka/contents/tips/kuchipaku.gif)
+![kuchipaku.gif](kuchipaku.gif)
 
 [surfaces.txt のアニメーションインターバル定義](http://ssp.shillest.net/ukadoc/manual/descript_shell_surfaces.html#introduction_animationinterval)には、トークに合わせて animation を動かすオプションの talk がある。
 これを使うとトーク時に口を動かす表現ができる。  
