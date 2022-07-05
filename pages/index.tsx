@@ -12,7 +12,7 @@ export const getStaticProps = async () => {
 };
 
 const Page: NextPage<Props> = ({ content }) => (
-  <Layout>
+  <Layout title="INDEX">
     <div dangerouslySetInnerHTML={{ __html: content }} />
   </Layout>
 );
