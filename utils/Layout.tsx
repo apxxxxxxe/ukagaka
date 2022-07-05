@@ -39,11 +39,6 @@ export default function Layout({ children, title = "" }): JSX.Element {
               <a>tips</a>
             </Link>
           </p>
-          <p>
-            <Link href="/blog/">
-              <a>blog</a>
-            </Link>
-          </p>
         </div>
         <div id="container" className="inner">
           {children}
