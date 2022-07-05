@@ -1,6 +1,13 @@
 import Link from "next/link";
 import Head from "next/head";
 
+export function formatDate(date: string) {
+  const year = date.substring(0, 4);
+  const month = date.substring(4, 6);
+  const day = date.substring(6, 8);
+  return `${year}/${month}/${day}`;
+}
+
 export default function Layout({ children, title = "" }): JSX.Element {
   const siteTitle = "おわらない.lzh";
 

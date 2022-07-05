@@ -33,7 +33,7 @@ h1 {
   margin-left: calc(var(--heading-margin-base-left) * 6);
   margin-right: calc(var(--heading-margin-base-right) * 6);
   margin-bottom: calc(var(--heading-margin-base-bottom) * 6);
-  font-size: calc(var(--min-fontsize) * 2.5);
+  font-size: calc(var(--min-fontsize) * 2);
   font-weight: 700;
   padding-left: 10px;
 }
@@ -213,6 +213,73 @@ pre {
   color: var(--color-white);
   padding: 2rem;
   border-radius: 10px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-column-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-space {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-row {
+  margin: 0;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.blog-tag {
+  font-size: calc(var(--min-fontsize) * 1);
+}
+
+.article-tag {
+  font-size: calc(var(--min-fontsize) * 1.2);
+  cursor: pointer;
+}
+
+.flex-compontent {
+  margin: 0;
+}
+
+p.flex-compontent {
+  margin-right: 0.5rem;
+}
+
+.flex-leftchild {
+  margin-right: auto;
+}
+
+.blogpost-title {
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-black);
+  margin-bottom: 1rem;
+}
+
+.blogpost-title > a > h2 {
+  border-bottom: none;
+}
+
+.list-article {
+  border-radius: 0.5rem;
+  padding: 1.8rem 1.5rem;
+  margin: 0.75rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.05) -1px 1px 2px inset,
+    rgba(255, 255, 255, 1) -2px 2px 0;
 }
 
 @media (orientation: portrait) {

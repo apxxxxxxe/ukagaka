@@ -11,6 +11,11 @@ export const getPostSlugs = () => {
     .map(({ name }) => name);
 };
 
+export const getPostByTag = (tag: string, fields: string[]) => {
+  const posts = getAllPosts(fields);
+  return posts.filter((post) => post.tags.includes(tag));
+};
+
 export const getPostBySlug = (slug: string, fields: string[] = []) => {
   const fullPath = join(postsDirectory, slug, "index.md");
   const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -53,17 +58,17 @@ export const getAllPosts = (fields: string[] = []) => {
     .map((slug) => getPostBySlug(slug, fields))
     .sort((a, b) => {
       // 辞書順ソート
-      // 目的に応じて、日付順などでソートしてもよい
-      const slugA = a.slug.toString().toLowerCase();
-      const slugB = b.slug.toString().toLowerCase();
+      // 日付順
+      const slugA = a.date.toString().toLowerCase();
+      const slugB = b.date.toString().toLowerCase();
 
-      if (slugA > slugB) {
+      if (slugA < slugB) {
         return 1;
       } else {
-        slugB > slugA;
+        slugB < slugA;
       }
 
-      return slugA >= slugB ? 1 : -1;
+      return slugA < slugB ? 1 : -1;
     });
 
   return posts;

@@ -1,7 +1,8 @@
 import { NextPage, InferGetStaticPropsType } from "next";
+import Link from "next/link";
 import { getAllPosts, getPostBySlug } from "utils/api";
-import Layout from "utils/Layout";
-import markdownToHtml from "utils/markdownToHtml";
+import Layout, { formatDate } from "utils/Layout";
+import markdownToHtml, { rawHtmlToDom } from "utils/markdownToHtml";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -46,17 +47,20 @@ export const getStaticProps = async ({ params }: any) => {
 
 const Post: NextPage<Props> = ({ post }) => (
   <Layout>
-    <h2>{post.title}</h2>
-    <p>{post.date}</p>
-    <ul>
-      {post.tags?.map((tag) => (
-        <li key={tag}>{tag}</li>
-      ))}
-    </ul>
-    <section>
-      {/* ここでdangerouslySetInnerHTMLを使ってHTMLタグを出力する */}
-      <div dangerouslySetInnerHTML={{ __html: post.content }} />
-    </section>
+    <p>{formatDate(post.date)}</p>
+    <h1>{post.title}</h1>
+    <div className="flex-end">
+      <div className="flex-row">
+        {post.tags?.map((tag) => (
+          <Link href={`/search/${tag}`}>
+            <p className="article-tag flex-compontent">
+              <a>{`#${tag}`}</a>
+            </p>
+          </Link>
+        ))}
+      </div>
+    </div>
+    <section>{rawHtmlToDom(post.content, post.slug)}</section>
   </Layout>
 );
 
