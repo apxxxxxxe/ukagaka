@@ -2,6 +2,7 @@
 title: "TIPS"
 date: "20220629"
 tags: ["noindex"]
+summery: ""
 ---
 
 ## 💬「......」で口パクアニメーションしないようにしたい
