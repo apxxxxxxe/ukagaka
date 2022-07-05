@@ -46,7 +46,7 @@ export const getStaticProps = async ({ params }: any) => {
 };
 
 const Post: NextPage<Props> = ({ post }) => (
-  <Layout>
+  <Layout title={post.title}>
     <p>{formatDate(post.date)}</p>
     <h1>{post.title}</h1>
     <div className="flex-end">

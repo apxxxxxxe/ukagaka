@@ -6,9 +6,7 @@ import Layout, { formatDate } from "utils/Layout";
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(["slug", "title", "date", "tags"]).filter(
-    (post) => !post.slug.startsWith("noindex-")
-  );
+  const allPosts = getAllPosts(["slug", "title", "date", "tags", "summery"]);
 
   return {
     props: { allPosts },
@@ -25,7 +23,7 @@ const Home: NextPage<Props> = ({ allPosts }) => (
           return (
             <div className="list-article">
               <Link href={"/entries/" + post.slug}>
-                <div className="flex-end flex-margin blogpost-title">
+                <div className="flex-end flex-margin blogpost-title bloglist-compontent">
                   <a className="flex-leftchild flex-compontent">
                     <h2 className="flex-compontent">{post.title}</h2>
                   </a>
@@ -34,7 +32,10 @@ const Home: NextPage<Props> = ({ allPosts }) => (
                   </p>
                 </div>
               </Link>
-              <div className="flex-row">
+              <p className="bloglist-compontent bloglist-summery">
+                {post.summery}
+              </p>
+              <div className="flex-row bloglist-compontent">
                 {post.tags?.map((tag) => (
                   <Link href={`/search/${tag}`}>
                     <a className="blog-tag flex-compontent">

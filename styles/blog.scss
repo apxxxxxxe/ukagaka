@@ -3,6 +3,7 @@
 :root {
   --color-black: #30383a;
   --color-darkgray: #4a4a4a;
+  --color-gray: #6c6c6c;
   --color-lightgray: #eee;
   --color-white: #f8f8f8;
   --color-blue: #4566af;
@@ -266,11 +267,17 @@ p.flex-compontent {
 .blogpost-title {
   cursor: pointer;
   border-bottom: 1px solid var(--color-black);
-  margin-bottom: 1rem;
 }
 
 .blogpost-title > a > h2 {
   border-bottom: none;
+}
+.bloglist-compontent {
+  margin: 0.5rem 0;
+}
+
+.bloglist-summery {
+  color: var(--color-gray);
 }
 
 .list-article {
