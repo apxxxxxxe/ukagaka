@@ -8,7 +8,7 @@
 }
 
 .ogp-data {
-  padding: 1rem;
+  padding: 0.75rem;
   margin: 1rem 0.5rem;
   max-width: 45%;
   background-color: var(--color-white);
@@ -20,11 +20,14 @@
 
 .ogp-data > img {
   width: 100%;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: (rgba(255, 255, 255, 1) 0 2px 0);
 }
 
 .ogp-data > h1 {
   padding: 0;
-  margin: 0.5rem 0;
+  margin: 0.25rem 0;
   font-size: 0.8rem;
   color: var(--color-gray);
   text-decoration: none;
