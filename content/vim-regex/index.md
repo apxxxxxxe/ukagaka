@@ -16,7 +16,7 @@ VSCodeのシンタックス拡張機能をVimプラグインに移植したい�
 ## モチベーション
 ### ayayaについて
 先日、こんな拡張機能が開発・公開されました。  
-[ayaya-vs-code-extension](https://github.com/Taromati2/ayaya-vs-code-extension)  
+[card:ayaya-vs-code-extension](https://github.com/Taromati2/ayaya-vs-code-extension)
 エディタのデファクトスタンダードであるVSCodeでaya/yayaのシンタックスハイライトほか便利な機能を提供するものです。  
 ありがたい…
 

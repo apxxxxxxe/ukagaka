@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getAllPosts, getPostBySlug } from "utils/api";
 import Layout, { formatDate } from "utils/Layout";
 import markdownToHtml, { rawHtmlToDom } from "utils/markdownToHtml";
+import getOgpData, { getFloatingURLs } from "utils/getOgpData";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -31,7 +32,9 @@ export const getStaticProps = async ({ params }: any) => {
     "tags",
     "content",
   ]);
-  // ここで変換
+
+  const floatingUrls = getFloatingURLs(post.content);
+  const ogpDatas = await getOgpData(floatingUrls);
   const content = await markdownToHtml(post.content);
 
   // 変換結果をpropsとして渡す
@@ -41,11 +44,12 @@ export const getStaticProps = async ({ params }: any) => {
         ...post,
         content,
       },
+      ogpDatas,
     },
   };
 };
 
-const Post: NextPage<Props> = ({ post }) => (
+const Post: NextPage<Props> = ({ post,ogpDatas }) => (
   <Layout title={post.title}>
     <p>{formatDate(post.date)}</p>
     <h1>{post.title}</h1>
@@ -60,7 +64,7 @@ const Post: NextPage<Props> = ({ post }) => (
         ))}
       </div>
     </div>
-    <section>{rawHtmlToDom(post.content, post.slug)}</section>
+    <section>{rawHtmlToDom(post.content, post.slug,ogpDatas)}</section>
   </Layout>
 );
 

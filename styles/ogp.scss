@@ -1,0 +1,40 @@
+* {
+  font-family: "Lucida Grande", "Calibri", Helvetica, Arial;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ogp-data {
+  cursor: pointer;
+  padding: 1rem;
+  margin: 1rem 0.5rem;
+  max-width: 45%;
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.05) -1px 1px 2px inset,
+    rgba(255, 255, 255, 1) -2px 2px 0;
+}
+
+.ogp-data > img {
+  width: 100%;
+}
+
+.ogp-data > h1 {
+  padding: 0;
+  margin: 0.5rem 0;
+  font-size: 0.8rem;
+  color: var(--color-gray);
+  text-decoration: none;
+}
+
+.ogp-data > p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8rem;
+  color: var(--color-gray);
+  text-decoration: none;
+}

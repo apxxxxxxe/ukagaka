@@ -4,17 +4,20 @@ import tocbot from "tocbot";
 import { getPostBySlug } from "utils/api";
 import markdownToHtml, { rawHtmlToDom } from "utils/markdownToHtml";
 import Layout from "utils/Layout";
+import getOgpData, { getFloatingURLs } from "utils/getOgpData";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 export const getStaticProps = async () => {
   const post = getPostBySlug("tips", ["content", "slug"]);
+  const floatingUrls = getFloatingURLs(post.content);
+  const ogpDatas = await getOgpData(floatingUrls);
   const content = await markdownToHtml(post.content);
   const slug = post.slug;
-  return { props: { content, slug } };
+  return { props: { content, slug, ogpDatas } };
 };
 
-const Page: NextPage<Props> = ({ content, slug }) => {
+const Page: NextPage<Props> = ({ content, slug, ogpDatas }) => {
   useEffect(() => {
     tocbot.init({
       tocSelector: ".toc",
@@ -34,7 +37,7 @@ const Page: NextPage<Props> = ({ content, slug }) => {
       </p>
       <h2>もくじ</h2>
       <nav className="toc" />
-      <div className="body">{rawHtmlToDom(content, slug)}</div>
+      <div className="body">{rawHtmlToDom(content, slug, ogpDatas)}</div>
     </Layout>
   );
 };

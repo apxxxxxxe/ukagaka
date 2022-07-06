@@ -80,7 +80,8 @@ h6 {
   font-weight: 700;
 }
 
-p {
+p,
+section {
   margin-left: 0.5rem;
   font-size: calc(var(--min-fontsize) * 1);
 }
@@ -134,7 +135,8 @@ table {
 }
 
 #header > div > h1,
-#header > div > p {
+#header > div > p,
+#header > div > section {
   font-family: "Noto Sans JP", "Lucida Grande", "Calibri", Helvetica, Arial,
     sans-serif;
   padding: 0;
@@ -147,7 +149,8 @@ table {
   background-color: #ffffff00;
 }
 
-#header > div > p {
+#header > div > p,
+#header > div > section {
   margin-left: 5px;
 }
 
@@ -188,6 +191,10 @@ code {
   font-weight: 300;
 }
 
+nav.toc {
+  margin-left: 2rem;
+}
+
 .prettyprint ol.linenums > li {
   list-style-type: decimal;
   border-left: solid 1px #ebb15e;
@@ -200,12 +207,14 @@ code {
   background-color: var(--color-black);
 }
 
-#menu > p {
+#menu > p,
+#menu > section {
   margin: 10px 20px;
   font-size: calc(var(--min-fontsize) * 1.3);
 }
 
-#menu > p > a {
+#menu > p > a,
+#menu > section > a {
   color: var(--color-white);
 }
 

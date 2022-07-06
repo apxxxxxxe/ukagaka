@@ -1,5 +1,6 @@
 import Script from "next/script";
 import "styles/blog.scss";
+import "styles/ogp.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
