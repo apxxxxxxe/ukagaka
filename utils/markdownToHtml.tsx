@@ -46,8 +46,18 @@ export const rawHtmlToDom = (
     const imageRoot = `/ukagaka/contents`;
     if (node.name === "p") {
       node.name = "section";
-    } else if (node.name === "img" && !node.attribs.src.startsWith("http")) {
-      node.attribs.src = `${imageRoot}/${slug}/${node.attribs.src}`;
+    } else if (node.name === "img") {
+      if (!node.attribs.src.startsWith("http")) {
+        node.attribs.src = `${imageRoot}/${slug}/${node.attribs.src}`;
+      }
+      if (node.attribs.alt.startsWith("center:")) {
+        node.attribs.alt = node.attribs.alt.replace("center:", "");
+        return (
+          <div className="image-center">
+            <img {...node.attribs} />
+          </div>
+        );
+      }
     } else if (node.name === "a") {
       const ogpData = ogpDatas.find((data) =>
         node.attribs.href.includes(data.ogUrl)

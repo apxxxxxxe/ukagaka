@@ -284,6 +284,11 @@ p.flex-compontent {
     rgba(255, 255, 255, 1) -2px 2px 0;
 }
 
+.image-center {
+  display: flex;
+  justify-content: center;
+}
+
 @media (orientation: portrait) {
   .inner {
     padding: 20px;
