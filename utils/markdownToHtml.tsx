@@ -7,6 +7,15 @@ import rehypeSlug from "rehype-slug";
 import parse from "html-react-parser";
 import { OgpData } from "utils/getOgpData";
 import Link from "next/link";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { github } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+
+function hasProperty<K extends string>(
+  x: unknown,
+  name: K
+): x is { [M in K]: unknown } {
+  return x instanceof Object && name in x;
+}
 
 /**
  * remarkによるmarkdownの構文変換を行う
@@ -56,6 +65,18 @@ export const rawHtmlToDom = (
           </Link>
         );
       }
+    } else if (node.name === "pre" && node.children.length > 0) {
+      const child = node.children.find((child) => {
+        if (hasProperty(child, "name")) {
+          return child.name === "code";
+        }
+        return false;
+      });
+      let code = "";
+      if (hasProperty(child, "children")) {
+        code = child.children[0].data;
+      }
+      return <SyntaxHighlighter style={github}>{code}</SyntaxHighlighter>;
     }
     return node;
   };
