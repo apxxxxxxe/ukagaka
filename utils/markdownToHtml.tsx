@@ -46,11 +46,13 @@ export const rawHtmlToDom = (
       if (ogpData !== undefined) {
         return (
           <Link href={node.attribs.href}>
-            <div className="ogp-data">
-              <img src={ogpData.ogImage.url} />
-              <h1>{ogpData.ogTitle}</h1>
-              <p>{ogpData.ogDescription}</p>
-            </div>
+            <a>
+              <div className="ogp-data">
+                <img src={ogpData.ogImage.url} />
+                <h1>{ogpData.ogTitle}</h1>
+                <p>{ogpData.ogDescription}</p>
+              </div>
+            </a>
           </Link>
         );
       }
