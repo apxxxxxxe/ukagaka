@@ -19,7 +19,7 @@ const Home: NextPage<Props> = ({ allPosts }) => (
     <p>記事一覧（新着順）</p>
     <ul>
       {allPosts?.map((post) => {
-        if (!post.tags.includes("noindex")) {
+        if (!post.tags.includes("noindex") && !post.tags.includes("draft")) {
           return (
             <div className="list-article">
               <Link href={"/entries/" + post.slug}>

@@ -9,7 +9,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 export const getStaticPaths = async () => {
   const posts = getAllPosts(["slug"]).filter(
-    (post) => !post.slug.startsWith("noindex-")
+    (post) => !post.slug.startsWith("noindex-") && !post.tags.includes("hidden")
   );
 
   return {
@@ -49,7 +49,7 @@ export const getStaticProps = async ({ params }: any) => {
   };
 };
 
-const Post: NextPage<Props> = ({ post,ogpDatas }) => (
+const Post: NextPage<Props> = ({ post, ogpDatas }) => (
   <Layout title={post.title}>
     <p>{formatDate(post.date)}</p>
     <h1>{post.title}</h1>
@@ -64,7 +64,7 @@ const Post: NextPage<Props> = ({ post,ogpDatas }) => (
         ))}
       </div>
     </div>
-    <section>{rawHtmlToDom(post.content, post.slug,ogpDatas)}</section>
+    <section>{rawHtmlToDom(post.content, post.slug, ogpDatas)}</section>
   </Layout>
 );
 
