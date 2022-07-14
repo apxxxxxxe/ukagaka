@@ -1,6 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;700&display=swap");
+@font-face {
+  font-family: "klee";
+  src: url(/ukagaka/fonts/Klee/KleeOne-Regular.ttf);
+}
+@font-face {
+  font-family: "klee-semibold";
+  src: url(/ukagaka/fonts/Klee/KleeOne-SemiBold.ttf);
+}
+@font-face {
+  font-family: "HackGen";
+  src: url(/ukagaka/fonts/HackGen/HackGen35-Regular.ttf);
+}
 
 :root {
+  --color-darkblack: #10181a;
   --color-black: #30383a;
   --color-darkgray: #4a4a4a;
   --color-gray: #6c6c6c;
@@ -14,18 +28,26 @@
   --heading-margin-base-right: 0rem;
   --heading-margin-base-bottom: 0.2rem;
   --min-fontsize: 16px;
+  --min-lineheight: 24px;
   --size-adjust: 2px;
+
+  --font-serif: "Noto Serif JP", "Lucida Grande", "Calibri", Helvetica, Arial;
+  --font-sans: "Noto Sans JP", "Lucida Grande", "Calibri", Helvetica, Arial;
+  --font-tegaki: "klee", "Lucida Grande", "Calibri", Helvetica, Arial;
+  --font-tegaki-semibold: "klee-semibold", "Lucida Grande", "Calibri", Helvetica,
+    Arial;
+  --font-code: "HackGen", "Consolas", "Lucida Console", "Courier New", monospace;
+  --fontweight-head: 200;
 }
 
 * {
-  font-family: "Lucida Grande", "Calibri", Helvetica, Arial;
-  font-weight: 400;
+  font-family: var(--font-code);
 }
 
 html,
 body {
   font-size: 16px;
-  color: var(--color-black);
+  color: var(--color-darkblack);
   margin: 0;
   padding: 0;
 }
@@ -35,6 +57,8 @@ h1 {
   margin-left: calc(var(--heading-margin-base-left) * 6);
   margin-right: calc(var(--heading-margin-base-right) * 6);
   margin-bottom: calc(var(--heading-margin-base-bottom) * 6);
+  font-family: var(--font-tegaki);
+  font-weight: var(--fontweight-head);
   font-size: calc(var(--min-fontsize) * 2);
   font-weight: 700;
   padding-left: 10px;
@@ -44,15 +68,20 @@ h2 {
   margin-left: calc(var(--heading-margin-base-left) * 5);
   margin-right: calc(var(--heading-margin-base-right) * 5);
   margin-bottom: calc(var(--heading-margin-base-bottom) * 5);
+  padding-bottom: 10px;
+  font-family: var(--font-tegaki);
+  font-weight: var(--fontweight-head);
   font-size: calc(var(--min-fontsize) * 1.5);
   font-weight: 700;
-  border-bottom: 1px solid var(--color-black);
+  border-bottom: 1px dashed var(--color-black);
 }
 h3 {
   margin-top: calc(var(--heading-margin-base-top) * 4);
   margin-left: calc(var(--heading-margin-base-left) * 4);
   margin-right: calc(var(--heading-margin-base-right) * 4);
   margin-bottom: calc(var(--heading-margin-base-bottom) * 4);
+  font-family: var(--font-tegaki);
+  font-weight: var(--fontweight-head);
   font-size: calc(var(--min-fontsize) * 1.4);
   font-weight: 700;
 }
@@ -61,6 +90,8 @@ h4 {
   margin-left: calc(var(--heading-margin-base-left) * 3);
   margin-right: calc(var(--heading-margin-base-right) * 3);
   margin-bottom: calc(var(--heading-margin-base-bottom) * 3);
+  font-family: var(--font-tegaki);
+  font-weight: var(--fontweight-head);
   font-size: calc(var(--min-fontsize) * 1.3);
   font-weight: 700;
 }
@@ -69,6 +100,8 @@ h5 {
   margin-left: calc(var(--heading-margin-base-left) * 2);
   margin-right: calc(var(--heading-margin-base-right) * 2);
   margin-bottom: calc(var(--heading-margin-base-bottom) * 2);
+  font-family: var(--font-tegaki);
+  font-weight: var(--fontweight-head);
   font-size: calc(var(--min-fontsize) * 1.2);
   font-weight: 700;
 }
@@ -77,20 +110,33 @@ h6 {
   margin-left: calc(var(--heading-margin-base-left) * 1);
   margin-right: calc(var(--heading-margin-base-right) * 1);
   margin-bottom: calc(var(--heading-margin-base-bottom) * 1);
+  font-family: var(--font-tegaki);
+  font-weight: var(--fontweight-head);
   font-size: calc(var(--min-fontsize) * 1.1);
   font-weight: 700;
 }
 
 p,
 section {
-  margin-left: 0.5rem;
+  margin: 0 1.5rem;
   font-size: calc(var(--min-fontsize) * 1);
+  line-height: calc(var(--min-lineheight) * 1);
+}
+
+table {
+  max-width: 85%;
+  border-collapse: collapse;
+  margin: 0.5rem auto;
 }
 
 th,
 td {
-  border: solid 1px var(--color-black); /* 枠線指定 */
+  margin: 2px;
   padding: 0.5rem; /* 余白指定 */
+}
+
+tr td {
+  border-bottom: 1px dashed var(--color-gray);
 }
 
 td {
@@ -103,8 +149,16 @@ th {
 }
 
 ul {
-  padding-left: 10px;
-  margin-left: 1em;
+  padding-left: 0;
+  margin-left: 2rem;
+}
+
+li {
+  list-style-type: circle;
+}
+
+li::marker {
+  margin: 0;
 }
 
 a {
@@ -112,14 +166,14 @@ a {
   text-decoration: none;
 }
 
-table {
-  border-collapse: collapse; /* セルの線を重ねる */
-}
-
 #wrapper {
   width: 100%;
   height: 100%;
-  background-color: var(--color-white);
+  background-color: var(--color-lightgray);
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #header {
@@ -135,23 +189,23 @@ table {
   color: var(--color-white);
 }
 
-#header > div > h1,
-#header > div > p,
-#header > div > section {
-  font-family: "Noto Sans JP", "Lucida Grande", "Calibri", Helvetica, Arial,
-    sans-serif;
+#header h1,
+#header p,
+#header section {
   padding: 0;
   margin: 0;
   border: none;
 }
 
-#header > div > h1 {
+#header h1 {
+  font-family: var(--font-tegaki);
   font-size: calc(var(--min-fontsize) * 2.7);
   background-color: #ffffff00;
 }
 
-#header > div > p,
-#header > div > section {
+#header p,
+#header section {
+  font-family: var(--font-tegaki);
   margin-left: 5px;
 }
 
@@ -167,12 +221,11 @@ table {
 #container {
   margin: 2.5rem auto;
   box-sizing: border-box;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   min-height: calc(100vh - var(--header-height) - var(--footer-height));
   background-color: var(--color-white);
   border: 1px solid rgba(0, 0, 0, 0.15);
-  box-shadow: rgba(0, 0, 0, 0.05) -1px 1px 2px inset,
-    rgba(255, 255, 255, 1) -2px 2px 0;
+  box-shadow: rgba(0, 0, 0, 0.05) 1px 1px 0px, rgba(0, 0, 0, 0.05) -1px 0px 0px;
 }
 
 .inner {
@@ -182,7 +235,7 @@ table {
 }
 
 pre {
-  background-color: var(--color-lightgray);
+  background-color: var(--color-white) !important;
   padding: 1rem !important;
   border-radius: 10px;
   margin: 1rem 0;
@@ -191,8 +244,9 @@ pre {
     rgba(255, 255, 255, 1) -2px 2px 0;
 }
 
-nav.toc {
-  margin-left: 2rem;
+code,
+code span {
+  font-family: var(--font-code);
 }
 
 #menu {
@@ -201,15 +255,15 @@ nav.toc {
   background-color: var(--color-black);
 }
 
-#menu > p,
-#menu > section {
+#menu p,
+#menu section {
   margin: 10px 20px;
-  font-size: calc(var(--min-fontsize) * 1.3);
+  font-size: calc(var(--min-fontsize) * 1.2);
 }
 
-#menu > p > a,
-#menu > section > a {
+#menu a {
   color: var(--color-white);
+  font-family: var(--font-tegaki-semibold);
 }
 
 .flex-column {
@@ -265,7 +319,7 @@ p.flex-compontent {
   border-bottom: 1px solid var(--color-black);
 }
 
-.blogpost-title > a > h2 {
+.blogpost-title h2 {
   border-bottom: none;
 }
 .bloglist-compontent {

@@ -8,7 +8,7 @@ import parse from "html-react-parser";
 import { OgpData } from "utils/getOgpData";
 import Link from "next/link";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { github } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import { tomorrow } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 function hasProperty<K extends string>(
   x: unknown,
@@ -86,7 +86,7 @@ export const rawHtmlToDom = (
       if (hasProperty(child, "children")) {
         code = child.children[0].data;
       }
-      return <SyntaxHighlighter style={github}>{code}</SyntaxHighlighter>;
+      return <SyntaxHighlighter style={tomorrow}>{code}</SyntaxHighlighter>;
     }
     return node;
   };
