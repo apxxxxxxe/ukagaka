@@ -1,1 +1,0 @@
-{"pageProps":{"posts":[{"slug":"vim-regex","content":"","title":"vimの正規表現とVSCodeの正規表現(鬼車)の対応","date":"20220705","tags":["vim","vscode"],"summery":"VSCodeのシンタックス拡張機能をVimプラグインに移植する話"}],"tag":"vim"},"__N_SSG":true}
