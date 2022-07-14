@@ -35,7 +35,7 @@ export const getStaticProps = async ({ params }: any) => {
     "title",
     "date",
     "tags",
-    "content",
+    "summery",
   ]);
   // ここで変換
 
@@ -55,7 +55,7 @@ const Home: NextPage<Props> = ({ posts, tag }) => (
           return (
             <div className="list-article">
               <Link href={"/entries/" + post.slug}>
-                <div className="flex-end flex-margin blogpost-title">
+                <div className="flex-end flex-margin blogpost-title bloglist-compontent">
                   <a className="flex-leftchild flex-compontent">
                     <h2 className="flex-compontent">{post.title}</h2>
                   </a>
@@ -64,9 +64,12 @@ const Home: NextPage<Props> = ({ posts, tag }) => (
                   </p>
                 </div>
               </Link>
-              <div className="flex-row">
+              <p className="bloglist-compontent bloglist-summery">
+                {post.summery}
+              </p>
+              <div className="flex-row bloglist-compontent">
                 {post.tags?.map((tag) => (
-                  <Link href="">
+                  <Link href={`/search/${tag}`}>
                     <a className="blog-tag flex-compontent">
                       <p className="blog-tag flex-compontent">{`#${tag}`}</p>
                     </a>
