@@ -18,12 +18,12 @@
   --color-black: #30383a;
   --color-darkgray: #4a4a4a;
   --color-gray: #6c6c6c;
-  --color-lightgray: #eee;
+  --color-lightgray: #e6e8ea;
   --color-white: #f8f8f8;
   --color-blue: #4566af;
   --header-height: 10rem;
   --footer-height: 10vh;
-  --heading-margin-base-top: 0.2rem;
+  --heading-margin-base-top: 0.4rem;
   --heading-margin-base-left: 0rem;
   --heading-margin-base-right: 0rem;
   --heading-margin-base-bottom: 0.2rem;
@@ -116,6 +116,10 @@ h6 {
   font-weight: 700;
 }
 
+h1:first-child {
+  margin-top: 0;
+}
+
 p,
 section {
   margin: 0 1.5rem;
@@ -135,7 +139,7 @@ section {
 }
 
 table {
-  max-width: 85%;
+  max-width: 90%;
   border-collapse: collapse;
   margin: 0.5rem auto;
   display: block;
@@ -149,25 +153,32 @@ table tr {
 
 th,
 td {
-  margin: 2px;
-  padding: 0.5rem; /* 余白指定 */
-}
-
-tr td {
-  border-bottom: 1px dashed var(--color-gray);
-}
-
-th,td {
-  overflow-wrap : break-word;
+  padding: 0.5rem 1rem;
 }
 
 td {
   font-size: calc(var(--min-fontsize) * 1);
+  overflow-wrap : break-word;
+}
+
+tr:nth-child(even){
+  background-color: var(--color-lightgray);
 }
 
 th {
+  font-family: var(--font-tegaki-semibold);
   background-color: var(--color-black);
   color: var(--color-white);
+}
+
+th:first-child,
+td:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+th:last-child ,
+td:last-child {
+  border-radius: 0 10px 10px 0 ;
 }
 
 ul {
@@ -177,6 +188,7 @@ ul {
 
 li {
   list-style-type: circle;
+  line-height: 1.4rem;
 }
 
 li::marker {
@@ -227,7 +239,7 @@ a {
 
 #header p,
 #header section {
-  font-family: var(--font-tegaki);
+  font-family: var(--font-code);
   margin-left: 5px;
 }
 
@@ -366,7 +378,7 @@ p.flex-compontent {
   justify-content: center;
 }
 
-img {
+.image-center img {
   max-width: 100%;
 }
 
@@ -380,3 +392,4 @@ img {
     white-space: nowrap;
   }
 }
+
