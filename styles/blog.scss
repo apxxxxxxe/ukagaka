@@ -123,10 +123,28 @@ section {
   line-height: calc(var(--min-lineheight) * 1);
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  margin: 5px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius:5px;
+}
+
 table {
   max-width: 85%;
   border-collapse: collapse;
   margin: 0.5rem auto;
+  display: block;
+  -webkit-overflow-scrolling: touch;
+}
+
+table thead,
+table tr {
+  max-width: 85%;
 }
 
 th,
@@ -137,6 +155,10 @@ td {
 
 tr td {
   border-bottom: 1px dashed var(--color-gray);
+}
+
+th,td {
+  overflow-wrap : break-word;
 }
 
 td {
@@ -344,9 +366,17 @@ p.flex-compontent {
   justify-content: center;
 }
 
+img {
+  max-width: 100%;
+}
+
 @media (orientation: portrait) {
   .inner {
     padding: 20px;
     width: 90%;
+  }
+  table {
+    overflow-x: scroll;
+    white-space: nowrap;
   }
 }
