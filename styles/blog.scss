@@ -10,7 +10,7 @@
 }
 @font-face {
   font-family: "HackGen";
-  src: url(/ukagaka/fonts/HackGen/HackGen35-Regular.ttf);
+  src: url(/ukagaka/fonts/HackGen/HackGen-Regular.ttf);
 }
 
 :root {
@@ -298,6 +298,10 @@ code span {
 #menu a {
   color: var(--color-white);
   font-family: var(--font-tegaki-semibold);
+}
+
+#menu a.menuitem-active {
+  color: var(--color-gray);
 }
 
 .flex-column {

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 export function formatDate(date: string) {
   const year = date.substring(0, 4);
@@ -8,7 +9,22 @@ export function formatDate(date: string) {
   return `${year}/${month}/${day}`;
 }
 
+const menuItem = (name: string, currentSlug: string): JSX.Element => {
+  const slug = name === "index" ? "/" : `/${name}`;
+  const c = currentSlug === slug ? "menuitem-active" : "";
+
+  return (
+    <p>
+      <Link href={`/${slug}`} as={`/${name}`}>
+        <a className={c}>{name}</a>
+      </Link>
+    </p>
+  );
+}
+
+
 export default function Layout({ children, title = "" }): JSX.Element {
+  const router = useRouter();
   const siteTitle = "おわらない.lzh";
 
   let pageTitle: string;
@@ -36,21 +52,9 @@ export default function Layout({ children, title = "" }): JSX.Element {
           </div>
         </div>
         <div id="menu">
-          <p>
-            <Link href="/">
-              <a>index</a>
-            </Link>
-          </p>
-          <p>
-            <Link href="/tips/">
-              <a>tips</a>
-            </Link>
-          </p>
-          <p>
-            <Link href="/blog/">
-              <a>blog</a>
-            </Link>
-          </p>
+            {menuItem("index", router.pathname)}
+            {menuItem("tips", router.pathname)}
+            {menuItem("blog", router.pathname)}
         </div>
         <div id="container" className="inner">
           {children}
