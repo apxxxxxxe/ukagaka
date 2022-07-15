@@ -1,4 +1,4 @@
-HackGen35-Regular.ttf
+HackGen-Regular.ttf
 以上のフォントは以下ライセンスのもとで使用されています。
 Licensed under SIL Open Font License 1.1 (http://scripts.sil.org/OFL)
 Copyright (c) 2019, Yuko OTAWARA. with Reserved Font Name "白源", "HackGen"
