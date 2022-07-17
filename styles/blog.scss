@@ -116,10 +116,6 @@ h6 {
   font-weight: 700;
 }
 
-#container h1:first-child {
-  margin-top: 0;
-}
-
 p,
 section {
   margin: 0 1.5rem;
@@ -131,11 +127,11 @@ section {
   width: 10px;
   height: 5px;
 }
- 
+
 ::-webkit-scrollbar-thumb {
   margin: 5px;
   background: rgba(0, 0, 0, 0.15);
-  border-radius:5px;
+  border-radius: 5px;
 }
 
 table {
@@ -158,10 +154,10 @@ td {
 
 td {
   font-size: calc(var(--min-fontsize) * 1);
-  overflow-wrap : break-word;
+  overflow-wrap: break-word;
 }
 
-tr:nth-child(even){
+tr:nth-child(even) {
   background-color: var(--color-lightgray);
 }
 
@@ -176,9 +172,9 @@ td:first-child {
   border-radius: 10px 0 0 10px;
 }
 
-th:last-child ,
+th:last-child,
 td:last-child {
-  border-radius: 0 10px 10px 0 ;
+  border-radius: 0 10px 10px 0;
 }
 
 ul {
@@ -257,19 +253,56 @@ a:hover {
 }
 
 #container {
-  margin: 2.5rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#container h1:first-child {
+  margin-top: 0;
+}
+
+.content {
+  margin: 2.5rem;
+  padding: 20px 40px;
   box-sizing: border-box;
   border-radius: 1rem;
-  min-height: calc(100vh - var(--header-height) - var(--footer-height));
   background-color: var(--color-white);
   border: 1px solid rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.05) 1px 1px 0px, rgba(0, 0, 0, 0.05) -1px 0px 0px;
 }
 
-.inner {
+.main-container {
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  width: 50%;
+  margin-right: 1rem;
+}
+
+.toc-content {
+  width: 18%;
+  position: sticky;
+  top: 2.5rem;
+  margin-left: 0;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.toc-content h2 {
+  margin-top: 0;
+}
+
+.center {
   margin: 0 auto;
   padding: 20px 40px;
   width: 50%;
+}
+
+nav.toc ul {
+  padding: 0;
+}
+
+nav.toc li {
+  list-style-type: none;
 }
 
 pre {
@@ -390,8 +423,17 @@ p.flex-compontent {
   max-width: 100%;
 }
 
+@media (orientation: landscape) {
+  nav.toc ul {
+    margin: 0;
+  }
+  nav.toc li {
+    font-size: calc(var(--min-fontsize) * 0.8);
+  }
+}
+
 @media (orientation: portrait) {
-  .inner {
+  .content {
     padding: 20px;
     width: 90%;
   }
@@ -399,5 +441,20 @@ p.flex-compontent {
     overflow-x: scroll;
     white-space: nowrap;
   }
+  #container {
+    flex-direction: column;
+  }
+  .toc-content {
+    position: static;
+    order: 1;
+    margin-bottom: 0;
+    padding: 1.5rem;
+    height: 100%;
+  }
+  .main-container {
+    order: 2;
+  }
+  .content {
+    margin: 2.5rem;
+  }
 }
-

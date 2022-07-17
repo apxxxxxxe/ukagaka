@@ -46,7 +46,7 @@ export default function Layout({ children, title = "" }): JSX.Element {
       </Head>
       <div id="wrapper">
         <div id="header">
-          <div className="inner">
+          <div className="center">
             <h1>おわらない.lzh</h1>
             <p>伺か関連の配布物をおいています</p>
           </div>
@@ -56,7 +56,7 @@ export default function Layout({ children, title = "" }): JSX.Element {
             {menuItem("tips", router.pathname)}
             {menuItem("blog", router.pathname)}
         </div>
-        <div id="container" className="inner">
+        <div id="container">
           {children}
         </div>
         <div id="footer"></div>

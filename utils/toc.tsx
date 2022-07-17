@@ -4,7 +4,7 @@ type HeadingType = {id: string; text: string; level: number};
 function useHeadings() {
   const [headings, setHeadings] = useState<HeadingType[]>([]);
   useEffect(() => {
-    const elements = Array.from(document.querySelectorAll("h2"))
+    const elements = Array.from(document.querySelectorAll("h2,h3"))
       .filter((element) => element.id)
       .map((element) => ({
         id: element.id,

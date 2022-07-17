@@ -51,20 +51,22 @@ export const getStaticProps = async ({ params }: any) => {
 
 const Post: NextPage<Props> = ({ post, ogpDatas }) => (
   <Layout title={post.title}>
-    <p>{formatDate(post.date)}</p>
-    <h1>{post.title}</h1>
-    <div className="flex-end">
-      <div className="flex-row">
-        {post.tags?.map((tag) => (
-          <Link href={`/search/${tag}`}>
-            <p className="article-tag flex-compontent">
-              <a>{`#${tag}`}</a>
-            </p>
-          </Link>
-        ))}
+    <div className="content main-container">
+      <p>{formatDate(post.date)}</p>
+      <h1>{post.title}</h1>
+      <div className="flex-end">
+        <div className="flex-row">
+          {post.tags?.map((tag) => (
+            <Link href={`/search/${tag}`}>
+              <p className="article-tag flex-compontent">
+                <a>{`#${tag}`}</a>
+              </p>
+            </Link>
+          ))}
+        </div>
       </div>
+      <section>{rawHtmlToDom(post.content, post.slug, ogpDatas)}</section>
     </div>
-    <section>{rawHtmlToDom(post.content, post.slug, ogpDatas)}</section>
   </Layout>
 );
 

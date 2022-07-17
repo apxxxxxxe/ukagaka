@@ -1,8 +1,8 @@
-import {NextPage, InferGetStaticPropsType} from "next";
-import {getPostBySlug} from "utils/api";
-import markdownToHtml, {rawHtmlToDom} from "utils/markdownToHtml";
+import { NextPage, InferGetStaticPropsType } from "next";
+import { getPostBySlug } from "utils/api";
+import markdownToHtml, { rawHtmlToDom } from "utils/markdownToHtml";
 import Layout from "utils/Layout";
-import getOgpData, {getFloatingURLs} from "utils/getOgpData";
+import getOgpData, { getFloatingURLs } from "utils/getOgpData";
 import TableOfContent from "utils/toc";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
@@ -13,17 +13,20 @@ export const getStaticProps = async () => {
   const ogpDatas = await getOgpData(floatingUrls);
   const content = await markdownToHtml(post.content);
   const slug = post.slug;
-  return {props: {content, slug, ogpDatas}};
+  return { props: { content, slug, ogpDatas } };
 };
 
-const Page: NextPage<Props> = ({content, slug, ogpDatas}) => {
+const Page: NextPage<Props> = ({ content, slug, ogpDatas }) => {
   return (
     <Layout title="TIPS">
-      <h1>TIPS</h1>
-      <h2>もくじ</h2>
-      <TableOfContent />
-      <nav className="toc" />
-      <div className="body">{rawHtmlToDom(content, slug, ogpDatas)}</div>
+      <div className="content main-container">
+        <h1>TIPS</h1>
+        <div className="body">{rawHtmlToDom(content, slug, ogpDatas)}</div>
+      </div>
+      <div className="content toc-content">
+        <h2>もくじ</h2>
+        <TableOfContent />
+      </div>
     </Layout>
   );
 };
