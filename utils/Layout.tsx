@@ -10,12 +10,12 @@ export function formatDate(date: string) {
 }
 
 const menuItem = (name: string, currentSlug: string): JSX.Element => {
-  const slug = name === "index" ? "/" : `/${name}`;
+  const slug = name === "index" ? "" : `${name}`;
   const c = currentSlug === slug ? "menuitem-active" : "";
 
   return (
     <p>
-      <Link href={`/${slug}`} as={`/${name}`}>
+      <Link href={`/${slug}`} as={`/${slug}`}>
         <a className={c}>{name}</a>
       </Link>
     </p>
