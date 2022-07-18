@@ -63,13 +63,15 @@ export const rawHtmlToDom = (
         node.attribs.href.includes(data.ogUrl)
       );
       if (ogpData !== undefined) {
+        const ogTitle = ogpData.ogTitle.substring(0, 50) + "...";
+        const ogDescription = ogpData.ogDescription.substring(0, 90) + "...";
         return (
           <Link href={node.attribs.href}>
             <a>
               <div className="ogp-data">
                 <img src={ogpData.ogImage.url} />
-                <h1>{ogpData.ogTitle}</h1>
-                <p>{ogpData.ogDescription}</p>
+                <h1>{ogTitle}</h1>
+                <p>{ogDescription}</p>
               </div>
             </a>
           </Link>
