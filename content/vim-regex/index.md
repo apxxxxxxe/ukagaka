@@ -24,7 +24,7 @@ VSCodeのシンタックス拡張機能をVimプラグインに移植したい�
 ところで、筆者は開発の際に[Vim](https://vim-jp.org/)を使っています。「慣れればどんなエディタよりも快適に開発できる」という某ユーザーの声に惹かれて２年ほど使っていますが、文章編集が実際とても楽になりました。  
 なんとかして今回の拡張機能の恩恵を受けたかったのですが、Vimの編集能力を捨ててVSCodeに乗り換えるのはまだ厳しいものがありました。
 [VSCodeでVimのキーバインドを実現する拡張機能](https://github.com/VSCodeVim/Vim)や[裏で動くNeovimとVSCodeを同期させる拡張機能](https://github.com/vscode-neovim/vscode-neovim)はありますが、Vimに慣れた身体には違和感が強く、解決には至りません。  
-ayayaのライセンスはWTFPL(実質パブリックドメイン)ということで、Vimプラグインへの移植を目指します。
+ayayaのライセンスはWTFPL(パブリックドメインと同等)ということで、Vimプラグインへの移植を目指します。
 
 ## 正規表現の対応関係
 VSCodeの正規表現ライブラリは「鬼車」です。[日本語リファレンス](https://macromates.com/manual/ja/regular_expressions)があるのでありがたく参考にします。  
