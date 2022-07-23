@@ -20,8 +20,7 @@ const menuItem = (name: string, currentSlug: string): JSX.Element => {
       </Link>
     </p>
   );
-}
-
+};
 
 export default function Layout({ children, title = "" }): JSX.Element {
   const router = useRouter();
@@ -52,13 +51,11 @@ export default function Layout({ children, title = "" }): JSX.Element {
           </div>
         </div>
         <div id="menu">
-            {menuItem("index", router.pathname)}
-            {menuItem("tips", router.pathname)}
-            {menuItem("blog", router.pathname)}
+          {menuItem("index", router.pathname)}
+          {menuItem("tips", router.pathname)}
+          {menuItem("blog", router.pathname)}
         </div>
-        <div id="container">
-          {children}
-        </div>
+        <div id="container">{children}</div>
         <div id="footer"></div>
       </div>
     </>

@@ -63,8 +63,8 @@ export const rawHtmlToDom = (
         node.attribs.href.includes(data.ogUrl)
       );
       if (ogpData !== undefined) {
-        const ogTitle = ogpData.ogTitle.substring(0, 50) + "...";
-        const ogDescription = ogpData.ogDescription.substring(0, 90) + "...";
+        const ogTitle = ogpData.ogTitle;
+        const ogDescription = ogpData.ogDescription;
         return (
           <Link href={node.attribs.href}>
             <a>

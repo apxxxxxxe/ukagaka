@@ -1,6 +1,6 @@
-import {useEffect, useState, useRef} from "react";
+import { useEffect, useState, useRef } from "react";
 
-type HeadingType = {id: string; text: string; level: number};
+type HeadingType = { id: string; text: string; level: number };
 function useHeadings() {
   const [headings, setHeadings] = useState<HeadingType[]>([]);
   useEffect(() => {
@@ -9,7 +9,7 @@ function useHeadings() {
       .map((element) => ({
         id: element.id,
         text: element.textContent ?? "",
-        level: Number(element.tagName.substring(1))
+        level: Number(element.tagName.substring(1)),
       }));
     setHeadings(elements);
   }, []);
@@ -29,7 +29,7 @@ type HeadingProps = {
   id?: string;
 };
 
-function Heading({children, id, as: Element, ...props}: HeadingProps) {
+function Heading({ children, id, as: Element, ...props }: HeadingProps) {
   const theId = id ?? getId(children);
   return (
     <Element id={theId} {...props}>
@@ -64,8 +64,8 @@ function useScrollSpy(ids: string[], options: IntersectionObserverInit) {
 function TableOfContent() {
   const headings = useHeadings();
   const activeId = useScrollSpy(
-    headings.map(({id}) => id),
-    {rootMargin: "0% 0% -25% 0%"}
+    headings.map(({ id }) => id),
+    { rootMargin: "0% 0% -25% 0%" }
   );
   return (
     <nav className="toc">
@@ -75,7 +75,7 @@ function TableOfContent() {
             <a
               style={{
                 marginLeft: `${heading.level - 2}em`,
-                fontWeight: activeId === heading.id ? "bold" : "normal"
+                fontWeight: activeId === heading.id ? "bold" : "normal",
               }}
               href={`#${heading.id}`}
             >
