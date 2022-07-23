@@ -24,7 +24,7 @@ const menuItem = (name: string, currentSlug: string): JSX.Element => {
 
 export default function Layout({ children, title = "" }): JSX.Element {
   const router = useRouter();
-  const siteTitle = "おわらない.lzh";
+  const siteTitle = "おわらない";
 
   let pageTitle: string;
   if (title !== "") {
@@ -46,7 +46,7 @@ export default function Layout({ children, title = "" }): JSX.Element {
       <div id="wrapper">
         <div id="header">
           <div className="center">
-            <h1>おわらない.lzh</h1>
+            <h1>おわらない</h1>
             <p>伺か関連の配布物をおいています</p>
           </div>
         </div>
