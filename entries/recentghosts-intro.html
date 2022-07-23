@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><title>直近のゴーストをリスト表示するプラグインを作った | おわらない</title><link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon"/><meta name="next-head-count" content="4"/><link rel="preload" href="/ukagaka/_next/static/css/b24405beedf36dff.css" as="style"/><link rel="stylesheet" href="/ukagaka/_next/static/css/b24405beedf36dff.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/ukagaka/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/ukagaka/_next/static/chunks/webpack-02f5d862c58f2df7.js" defer=""></script><script src="/ukagaka/_next/static/chunks/framework-0ba0ddd33199226d.js" defer=""></script><script src="/ukagaka/_next/static/chunks/main-04081e2e3e179f10.js" defer=""></script><script src="/ukagaka/_next/static/chunks/pages/_app-4bef882ddad9747e.js" defer=""></script><script src="/ukagaka/_next/static/chunks/814-259de7ffbbf7ee2d.js" defer=""></script><script src="/ukagaka/_next/static/chunks/31-d919542aa8bce111.js" defer=""></script><script src="/ukagaka/_next/static/chunks/pages/entries/%5Bslug%5D-d22ff1bdf6310d91.js" defer=""></script><script src="/ukagaka/_next/static/9QKb_uABbUX8yKpGNzan3/_buildManifest.js" defer=""></script><script src="/ukagaka/_next/static/9QKb_uABbUX8yKpGNzan3/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div id="wrapper"><div id="header"><div class="center"><h1>おわらない</h1><p>伺か関連の配布物をおいています</p></div></div><div id="menu"><p><a class="" href="/ukagaka">index</a></p><p><a class="" href="/ukagaka/tips">tips</a></p><p><a class="" href="/ukagaka/blog">blog</a></p></div><div id="container"><div class="flex-column flex-column-center"><div class="content main-container"><p>2022/07/24</p><h1>直近のゴーストをリスト表示するプラグインを作った</h1><div class="flex-end"><div class="flex-row"><p class="article-tag flex-compontent"><a>#ukagaka</a></p></div></div><section><h2 id="要旨">要旨</h2>
+<section>いっぱいゴーストがいるのでより便利な方法で管理したい。
+思いつく方法は</section>
+<ol>
+<li>お気に入りのゴーストとその他のゴーストを別管理</li>
+<li>起動したいゴーストを検索する</li>
+<li>最近起動したゴーストのリストをリスト表示</li>
+</ol>
+<section>3.のみ既存の機能になかったのでプラグインを作った。</section>
+<h2 id="きっかけ">きっかけ</h2>
+<section>apeの環境にはゴーストが700名ほどインストールされています。<br/>
+どのゴーストさんも満遍なく起動したいとはいえ、このままではあまりにも無秩序です。<br/>
+ある程度優先順位をつけ、探しやすくする必要があると考えました。</section>
+<h2 id="アプローチ">アプローチ</h2>
+<h3 id="1-お気に入りのゴーストとその他のゴーストを分ける">1. お気に入りのゴーストとその他のゴーストを分ける</h3>
+<section>最初に思いつく方法でした。お気に入りは特別な枠で管理したいものです。<br/>
+SSPでは、ゴーストのインストールディレクトリを複数設定することが可能です。(バルーンなども同様)<br/>
+この機能を使うことで、お気に入り/それ以外のみならず、イベント別・ジャンル別など様々な分類が可能になります。</section>
+<h3 id="2-起動したいゴーストを検索する">2. 起動したいゴーストを検索する</h3>
+<section>ユーザの需要をより即時的かつ直感的に叶える方法です。<br/>
+これもSSPに該当する機能が搭載されています。<br/>
+Ctrl+Eで開くエクスプローラーでCtrl+Fを押すと開く検索窓に単語を入力することで、ゴースト名はもちろん作者名、キャラクター名までもを対象にゴーストの検索が可能です。<br/>
+とてもべんり</section>
+<h3 id="3-最近起動したゴーストのリストを作る">3. 最近起動したゴーストのリストを作る</h3>
+<section>一般に、最近使ったものはまたすぐに使うことが多いです。<a href="https://ja.wikipedia.org/wiki/%E5%8F%82%E7%85%A7%E3%81%AE%E5%B1%80%E6%89%80%E6%80%A7">時間的局所性</a>といいます。<br/>
+つまり、よく使うものはすぐに取り出せるところにおいていたほうが便利ということです。<br/>
+よくテキストエディタに搭載されている「最近使ったファイル」はこれを実現するものです。ぜひSSPでも使いたい。<br/>
+ところが、SSPに最近起動したゴーストを表示する機能はありませんでした（私が気付いてないだけであれば教えていただけると幸いです）。<br/>
+ということで最近起動したゴーストをリスト表示するプラグインを作りました。<br/>
+<a class="ogp-link" href="https://github.com/apxxxxxxe/recentghosts"><div class="ogp-data"><img src="https://opengraph.githubassets.com/5766598d9dfb208262e70bd90deaee0802ad1b14c7d1bd445d3447aa7971dde1/apxxxxxxe/recentghosts"/><h1>GitHub - apxxxxxxe/recentghosts: 伺か プラグイン</h1><p>伺か プラグイン. Contribute to apxxxxxxe/recentghosts development by creating an account on GitHub.</p></div></a></section>
+<h2 id="直近のゴーストの簡単な説明">「直近のゴースト」の簡単な説明</h2>
+<ul>
+<li>本プラグインを有効にしておくと、起動したゴーストが自動的に20件まで記録されます。</li>
+<li>メニューからプラグインを実行するとリストが表示されます。</li>
+<li>リストの各項目から各ゴーストの切り替えと呼び出しが可能です。</li>
+</ul>
+<section>ぜひおためしください。</section>
+</section></div></div></div><div id="footer"></div></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"post":{"slug":"recentghosts-intro","content":"\u003ch2 id=\"要旨\"\u003e要旨\u003c/h2\u003e\n\u003cp\u003eいっぱいゴーストがいるのでより便利な方法で管理したい。\n思いつく方法は\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003eお気に入りのゴーストとその他のゴーストを別管理\u003c/li\u003e\n\u003cli\u003e起動したいゴーストを検索する\u003c/li\u003e\n\u003cli\u003e最近起動したゴーストのリストをリスト表示\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e3.のみ既存の機能になかったのでプラグインを作った。\u003c/p\u003e\n\u003ch2 id=\"きっかけ\"\u003eきっかけ\u003c/h2\u003e\n\u003cp\u003eapeの環境にはゴーストが700名ほどインストールされています。\u003cbr\u003e\nどのゴーストさんも満遍なく起動したいとはいえ、このままではあまりにも無秩序です。\u003cbr\u003e\nある程度優先順位をつけ、探しやすくする必要があると考えました。\u003c/p\u003e\n\u003ch2 id=\"アプローチ\"\u003eアプローチ\u003c/h2\u003e\n\u003ch3 id=\"1-お気に入りのゴーストとその他のゴーストを分ける\"\u003e1. お気に入りのゴーストとその他のゴーストを分ける\u003c/h3\u003e\n\u003cp\u003e最初に思いつく方法でした。お気に入りは特別な枠で管理したいものです。\u003cbr\u003e\nSSPでは、ゴーストのインストールディレクトリを複数設定することが可能です。(バルーンなども同様)\u003cbr\u003e\nこの機能を使うことで、お気に入り/それ以外のみならず、イベント別・ジャンル別など様々な分類が可能になります。\u003c/p\u003e\n\u003ch3 id=\"2-起動したいゴーストを検索する\"\u003e2. 起動したいゴーストを検索する\u003c/h3\u003e\n\u003cp\u003eユーザの需要をより即時的かつ直感的に叶える方法です。\u003cbr\u003e\nこれもSSPに該当する機能が搭載されています。\u003cbr\u003e\nCtrl+Eで開くエクスプローラーでCtrl+Fを押すと開く検索窓に単語を入力することで、ゴースト名はもちろん作者名、キャラクター名までもを対象にゴーストの検索が可能です。\u003cbr\u003e\nとてもべんり\u003c/p\u003e\n\u003ch3 id=\"3-最近起動したゴーストのリストを作る\"\u003e3. 最近起動したゴーストのリストを作る\u003c/h3\u003e\n\u003cp\u003e一般に、最近使ったものはまたすぐに使うことが多いです。\u003ca href=\"https://ja.wikipedia.org/wiki/%E5%8F%82%E7%85%A7%E3%81%AE%E5%B1%80%E6%89%80%E6%80%A7\"\u003e時間的局所性\u003c/a\u003eといいます。\u003cbr\u003e\nつまり、よく使うものはすぐに取り出せるところにおいていたほうが便利ということです。\u003cbr\u003e\nよくテキストエディタに搭載されている「最近使ったファイル」はこれを実現するものです。ぜひSSPでも使いたい。\u003cbr\u003e\nところが、SSPに最近起動したゴーストを表示する機能はありませんでした（私が気付いてないだけであれば教えていただけると幸いです）。\u003cbr\u003e\nということで最近起動したゴーストをリスト表示するプラグインを作りました。\u003cbr\u003e\n\u003ca href=\"https://github.com/apxxxxxxe/recentghosts\"\u003ecard:直近のゴースト - Github\u003c/a\u003e\u003c/p\u003e\n\u003ch2 id=\"直近のゴーストの簡単な説明\"\u003e「直近のゴースト」の簡単な説明\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e本プラグインを有効にしておくと、起動したゴーストが自動的に20件まで記録されます。\u003c/li\u003e\n\u003cli\u003eメニューからプラグインを実行するとリストが表示されます。\u003c/li\u003e\n\u003cli\u003eリストの各項目から各ゴーストの切り替えと呼び出しが可能です。\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eぜひおためしください。\u003c/p\u003e\n","title":"直近のゴーストをリスト表示するプラグインを作った","date":"20220724","tags":["ukagaka"],"summery":""},"ogpDatas":[{"twitterSite":"@github","twitterCard":"summary_large_image","twitterTitle":"GitHub - apxxxxxxe/recentghosts: 伺か プラグイン","twitterDescription":"伺か プラグイン. Contribute to apxxxxxxe/recentghosts development by creating an account on GitHub.","ogSiteName":"GitHub","ogType":"object","ogTitle":"GitHub - apxxxxxxe/recentghosts: 伺か プラグイン","ogUrl":"https://github.com/apxxxxxxe/recentghosts","ogDescription":"伺か プラグイン. Contribute to apxxxxxxe/recentghosts development by creating an account on GitHub.","ogImage":{"url":"https://opengraph.githubassets.com/5766598d9dfb208262e70bd90deaee0802ad1b14c7d1bd445d3447aa7971dde1/apxxxxxxe/recentghosts","width":"1200","height":"600","type":null},"twitterImage":{"url":"https://opengraph.githubassets.com/5766598d9dfb208262e70bd90deaee0802ad1b14c7d1bd445d3447aa7971dde1/apxxxxxxe/recentghosts","width":null,"height":null,"alt":null},"requestUrl":"https://github.com/apxxxxxxe/recentghosts","success":true}]},"__N_SSG":true},"page":"/entries/[slug]","query":{"slug":"recentghosts-intro"},"buildId":"9QKb_uABbUX8yKpGNzan3","assetPrefix":"/ukagaka","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
