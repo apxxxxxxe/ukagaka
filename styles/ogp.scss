@@ -22,6 +22,11 @@
   font-size: 0.8rem;
   color: var(--color-gray);
   text-decoration: none;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 
 .ogp-data > p {
@@ -30,4 +35,15 @@
   font-size: 0.8rem;
   color: var(--color-gray);
   text-decoration: none;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+@media (orientation: portrait) {
+  .ogp-data {
+    max-width: 75%;
+  }
 }
