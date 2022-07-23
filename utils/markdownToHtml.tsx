@@ -67,7 +67,7 @@ export const rawHtmlToDom = (
         const ogDescription = ogpData.ogDescription;
         return (
           <Link href={node.attribs.href}>
-            <a>
+            <a className="ogp-link">
               <div className="ogp-data">
                 <img src={ogpData.ogImage.url} />
                 <h1>{ogTitle}</h1>
