@@ -2,10 +2,11 @@
   color: var(--color-gray);
 }
 
-.ogp-data {
+.ogp-box {
+  display: flex;
   padding: 0.75rem;
   margin: 1rem 0.5rem;
-  max-width: 45%;
+  max-width: 100%;
   background-color: var(--color-white);
   border-radius: 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -13,14 +14,21 @@
     rgba(255, 255, 255, 1) -2px 2px 0;
 }
 
-.ogp-data > img {
-  width: 100%;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  box-shadow: (rgba(255, 255, 255, 1) 0 2px 0);
+.ogp-box img {
+  width: 25%;
+  margin-right: 0.8rem;
+  padding-right: 0.8rem;
+  border-right: 1px solid rgba(255, 255, 255, 1);
+  box-shadow: (rgba(0, 0, 0, 0.15) 1px 0px 0);
 }
 
-.ogp-data > h1 {
+.ogp-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ogp-caption h1 {
   padding: 0;
   margin: 0.25rem 0;
   font-size: 0.8rem;
@@ -33,7 +41,7 @@
   overflow: hidden;
 }
 
-.ogp-data > p {
+.ogp-caption p {
   margin: 0;
   padding: 0;
   font-size: 0.8rem;
@@ -44,10 +52,4 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-}
-
-@media (orientation: portrait) {
-  .ogp-data {
-    max-width: 75%;
-  }
 }

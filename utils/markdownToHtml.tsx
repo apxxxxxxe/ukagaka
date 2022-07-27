@@ -53,11 +53,16 @@ export const rawHtmlToDom = (
       if (node.attribs.alt.startsWith("center:")) {
         node.attribs.alt = node.attribs.alt.replace("center:", "");
         return (
-          <div className="image-center">
+          <figure className="image-center">
             <img {...node.attribs} />
-          </div>
+          </figure>
         );
       }
+      return (
+        <figure>
+          <img {...node.attribs} />
+        </figure>
+      );
     } else if (node.name === "a") {
       const ogpData = ogpDatas.find((data) =>
         node.attribs.href.includes(data.ogUrl)
@@ -68,10 +73,12 @@ export const rawHtmlToDom = (
         return (
           <Link href={node.attribs.href}>
             <a className="ogp-link">
-              <div className="ogp-data">
+              <div className="ogp-box">
                 <img src={ogpData.ogImage.url} />
-                <h1>{ogTitle}</h1>
-                <p>{ogDescription}</p>
+                <div className="ogp-caption">
+                  <h1>{ogTitle}</h1>
+                  <p>{ogDescription}</p>
+                </div>
               </div>
             </a>
           </Link>

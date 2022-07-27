@@ -16,8 +16,8 @@
 :root {
   --color-darkblack: #10181a;
   --color-black: #30383a;
-  --color-darkgray: #4a4a4a;
-  --color-gray: #6c6c6c;
+  --color-darkgray: #40484a;
+  --color-gray: #60686a;
   --color-lightgray: #e6e8ea;
   --color-white: #f8f8f8;
   --color-blue: #4566af;
@@ -139,6 +139,10 @@ table {
   border-collapse: collapse;
   margin: 2.5rem auto;
   -webkit-overflow-scrolling: touch;
+  box-shadow: rgba(0, 0, 0, 0.15) 1px 0px 0px, rgba(0, 0, 0, 0.15) 0px 1px 0px,
+    rgba(0, 0, 0, 0.15) -1px 0px 0px, rgba(0, 0, 0, 0.15) 0px -1px 0px,
+    rgba(0, 0, 0, 0.05) -1px 1px 1px inset, rgba(255, 255, 255, 1) -3px 3px 0;
+  border-radius: 10px;
 }
 
 table thead,
@@ -162,18 +166,24 @@ tr:nth-child(even) {
 
 th {
   font-family: var(--font-tegaki-semibold);
-  background-color: var(--color-black);
+  background-color: var(--color-darkgray);
   color: var(--color-white);
 }
 
-th:first-child,
-td:first-child {
-  border-radius: 10px 0 0 10px;
+th:first-child {
+  border-radius: 10px 0 0 0;
 }
 
-th:last-child,
-td:last-child {
-  border-radius: 0 10px 10px 0;
+th:last-child {
+  border-radius: 0 10px 0 0;
+}
+
+tr:last-child td:first-child {
+  border-radius: 0 0 0 10px;
+}
+
+tr:last-child td:last-child {
+  border-radius: 0 0 10px 0;
 }
 
 ul {
@@ -249,6 +259,9 @@ a:hover {
   min-height: var(--footer-height);
   background-color: var(--color-black);
   color: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, 1);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 1px,
+    rgba(255, 255, 255, 0.1) -2px 2px 0px inset;
 }
 
 #container h1:first-child {
@@ -259,10 +272,11 @@ a:hover {
   margin: 2.5rem;
   padding: 2.5rem;
   box-sizing: border-box;
-  border-radius: 1rem;
+  border-radius: 15px;
   background-color: var(--color-white);
   border: 1px solid rgba(0, 0, 0, 0.15);
-  box-shadow: rgba(0, 0, 0, 0.05) 1px 1px 0px, rgba(0, 0, 0, 0.05) -1px 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0.05) 1px 1px 0px, rgba(0, 0, 0, 0.05) -1px 0px 0px,
+    rgba(255, 255, 255, 1) -2px 2px 0px inset;
 }
 
 .main-container {
@@ -304,7 +318,7 @@ pre {
   border-radius: 10px;
   margin: 1rem 0;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: rgba(0, 0, 0, 0.05) -1px 1px 2px inset,
+  box-shadow: rgba(0, 0, 0, 0.10) -1px 1px 2px inset,
     rgba(255, 255, 255, 1) -2px 2px 0;
 }
 
@@ -317,12 +331,25 @@ code span {
   display: flex;
   justify-content: center;
   background-color: var(--color-black);
+  border: 1px solid rgba(0, 0, 0, 1);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 1px,
+    rgba(255, 255, 255, 0.1) -2px 2px 0px inset;
 }
 
 #menu p,
 #menu section {
-  margin: 10px 20px;
-  font-size: calc(var(--min-fontsize) * 1.2);
+  margin: 10px 0px;
+  padding: 0 20px;
+  font-size: calc(var(--min-fontsize) * 1.1);
+  line-height: calc(var(--min-lineheight) * 1.1);
+  border-left: 1px solid var(--color-darkgray);
+  box-shadow: rgba(0, 0, 0, 1) -1px 0px 0px;
+}
+
+#menu p:first-child,
+#menu section:first-child {
+  border-left: none;
+  box-shadow: none;
 }
 
 #menu a {
@@ -340,11 +367,11 @@ code span {
 }
 
 .flex-column > div {
-	margin-top: 0;
+  margin-top: 0;
 }
 
 .flex-column > div:first-child {
-	margin-top: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .flex-column-center {
@@ -420,13 +447,29 @@ p.flex-compontent {
     rgba(255, 255, 255, 1) -2px 2px 0;
 }
 
-.image-center {
+figure {
   display: flex;
-  justify-content: center;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(255, 255, 255, 1) -2px 2px 0;
 }
 
-.image-center img {
-  max-width: 100%;
+figure::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.05) -1px 1px 2px inset;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 @media (orientation: landscape) {
