@@ -27,7 +27,7 @@
   --heading-margin-base-left: 0rem;
   --heading-margin-base-right: 0rem;
   --heading-margin-base-bottom: 0.2rem;
-  --min-fontsize: 16px;
+  --min-fontsize: 15px;
   --min-lineheight: 24px;
   --size-adjust: 2px;
 
@@ -135,6 +135,9 @@ section {
 }
 
 table {
+  border-collapse: separate;
+  text-indent: initial;
+  border-spacing: 2px;
   max-width: 90%;
   border-collapse: collapse;
   margin: 2.5rem auto;
@@ -150,9 +153,24 @@ table tr {
   max-width: 85%;
 }
 
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
 th,
 td {
-  padding: 0.5rem 1rem;
+  max-width: 20rem;
+  padding: 1rem 1rem;
+  display: table-cell;
+  vertical-align: inherit;
 }
 
 td {
@@ -186,9 +204,10 @@ tr:last-child td:last-child {
   border-radius: 0 0 10px 0;
 }
 
-ul {
-  padding-left: 0;
-  margin-left: 2rem;
+ul,
+ol {
+  margin: 0.8em 0;
+  padding-left: 3rem;
 }
 
 li {
@@ -212,7 +231,8 @@ a:hover {
 #wrapper {
   width: 100%;
   height: 100%;
-  background-color: var(--color-lightgray);
+  background-image: url("/ukagaka/bg.png"),
+    linear-gradient(to left, var(--color-lightgray), var(--color-lightgray));
   font-size: 16px;
   margin: 0;
   padding: 0;
@@ -318,7 +338,7 @@ pre {
   border-radius: 10px;
   margin: 1rem 0;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: rgba(0, 0, 0, 0.10) -1px 1px 2px inset,
+  box-shadow: rgba(0, 0, 0, 0.1) -1px 1px 2px inset,
     rgba(255, 255, 255, 1) -2px 2px 0;
 }
 
@@ -447,7 +467,14 @@ p.flex-compontent {
     rgba(255, 255, 255, 1) -2px 2px 0;
 }
 
+.image-center {
+  display: block;
+  margin: 0 auto;
+}
+
 figure {
+  margin: 0;
+  width: fit-content;
   display: flex;
   position: relative;
   border-radius: 15px;
@@ -469,7 +496,6 @@ figure::after {
 
 img {
   width: 100%;
-  height: auto;
 }
 
 @media (orientation: landscape) {
