@@ -27,7 +27,7 @@
   --heading-margin-base-left: 0rem;
   --heading-margin-base-right: 0rem;
   --heading-margin-base-bottom: 0.2rem;
-  --min-fontsize: 15px;
+  --min-fontsize: 16px;
   --min-lineheight: 24px;
   --size-adjust: 2px;
 
@@ -134,35 +134,36 @@ section {
   border-radius: 5px;
 }
 
-table {
-  border-collapse: separate;
-  text-indent: initial;
-  border-spacing: 2px;
-  max-width: 90%;
-  border-collapse: collapse;
-  margin: 2.5rem auto;
-  -webkit-overflow-scrolling: touch;
-  box-shadow: rgba(0, 0, 0, 0.15) 1px 0px 0px, rgba(0, 0, 0, 0.15) 0px 1px 0px,
-    rgba(0, 0, 0, 0.15) -1px 0px 0px, rgba(0, 0, 0, 0.15) 0px -1px 0px,
-    rgba(0, 0, 0, 0.05) -1px 1px 1px inset, rgba(255, 255, 255, 1) -3px 3px 0;
+.table-box {
+  margin: 1.25rem auto;
+  width: fit-content;
+  max-width: 95%;
   border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: rgba(0, 0, 0, 0.1) -1px 1px 2px inset,
+    rgba(255, 255, 255, 1) -2px 2px 0;
 }
 
-table thead,
-table tr {
+.table-wrapper {
+  margin: 10px;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.05) 1px 0px 0px, rgba(0, 0, 0, 0.05) -1px 0px 0px,rgba(0, 0, 0, 0.05) 0px 1px 1px,
+    rgba(255, 255, 255, 1) -2px 2px 0px inset;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-indent: initial;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+table thead {
   max-width: 85%;
-}
-
-tbody {
-  display: table-row-group;
-  vertical-align: middle;
-  border-color: inherit;
-}
-
-tr {
-  display: table-row;
-  vertical-align: inherit;
-  border-color: inherit;
 }
 
 th,
@@ -170,22 +171,30 @@ td {
   max-width: 20rem;
   padding: 1rem 1rem;
   display: table-cell;
-  vertical-align: inherit;
+  vertical-align: middle;
 }
 
 td {
   font-size: calc(var(--min-fontsize) * 1);
+  background-color: var(--color-white);
   overflow-wrap: break-word;
 }
 
-tr:nth-child(even) {
+td:last-child {
+  box-shadow: rgba(255, 255, 255, 0.5) -2px 0px 0px inset,
+    rgba(255, 255, 255, 0.1) -3px 3px 0px inset;
+}
+
+tr:nth-child(even) td {
   background-color: var(--color-lightgray);
 }
 
 th {
   font-family: var(--font-tegaki-semibold);
-  background-color: var(--color-darkgray);
+  background-color: var(--color-black);
   color: var(--color-white);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 1px, rgba(0, 0, 0, 1) 0px 1px 0px inset,
+    rgba(255, 255, 255, 0.15) 0px 3px 0px inset;
 }
 
 th:first-child {
@@ -194,6 +203,8 @@ th:first-child {
 
 th:last-child {
   border-radius: 0 10px 0 0;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 1px, rgba(0, 0, 0, 1) 0px 1px 0px inset,
+    rgba(255, 255, 255, 0.15) -4px 3px 0px inset;
 }
 
 tr:last-child td:first-child {
@@ -362,8 +373,8 @@ code span {
   padding: 0 20px;
   font-size: calc(var(--min-fontsize) * 1.1);
   line-height: calc(var(--min-lineheight) * 1.1);
-  border-left: 1px solid var(--color-darkgray);
-  box-shadow: rgba(0, 0, 0, 1) -1px 0px 0px;
+  border-left: 1px solid #000;
+  box-shadow: var(--color-darkgray) -1px 0px 0px;
 }
 
 #menu p:first-child,
@@ -468,7 +479,6 @@ p.flex-compontent {
 }
 
 .image-center {
-  display: block;
   margin: 0 auto;
 }
 
@@ -491,7 +501,7 @@ figure::after {
   bottom: 0;
   left: 0;
   border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.05) -1px 1px 2px inset;
+  box-shadow: rgba(0, 0, 0, 0.5) -1px 1px 2px inset;
 }
 
 img {
