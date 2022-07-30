@@ -4,6 +4,7 @@ import { getAllPosts, getPostBySlug } from "utils/api";
 import Layout, { formatDate } from "utils/Layout";
 import markdownToHtml, { rawHtmlToDom } from "utils/markdownToHtml";
 import getOgpData, { getFloatingURLs } from "utils/getOgpData";
+import TableOfContent from "utils/toc";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -51,7 +52,7 @@ export const getStaticProps = async ({ params }: any) => {
 
 const Post: NextPage<Props> = ({ post, ogpDatas }) => (
   <Layout title={post.title}>
-    <div className="flex-column flex-column-center">
+      <div className="flex-row flex-row-center">
       <div className="content main-container">
         <p>{formatDate(post.date)}</p>
         <h1>{post.title}</h1>
@@ -68,6 +69,10 @@ const Post: NextPage<Props> = ({ post, ogpDatas }) => (
         </div>
         <section>{rawHtmlToDom(post.content, post.slug, ogpDatas)}</section>
       </div>
+        <div className="content toc-content">
+          <h2>もくじ</h2>
+          <TableOfContent />
+        </div>
     </div>
   </Layout>
 );
