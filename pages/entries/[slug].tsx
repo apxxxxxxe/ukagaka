@@ -10,7 +10,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 export const getStaticPaths = async () => {
   const posts = getAllPosts(["slug"]).filter(
-    (post) => !post.slug.startsWith("noindex-") && !post.tags.includes("hidden")
+    (post) => !post.slug.startsWith("noindex-")
   );
 
   return {
@@ -51,28 +51,26 @@ export const getStaticProps = async ({ params }: any) => {
 };
 
 const Post: NextPage<Props> = ({ post, ogpDatas }) => (
-  <Layout title={post.title}>
-      <div className="flex-row flex-row-center">
-      <div className="content main-container">
-        <p>{formatDate(post.date)}</p>
-        <h1>{post.title}</h1>
-        <div className="flex-end">
-          <div className="flex-row">
-            {post.tags?.map((tag) => (
-              <Link key={tag} href={`/search/${tag}`}>
-                <p className="article-tag flex-compontent">
-                  <a>{`#${tag}`}</a>
-                </p>
-              </Link>
-            ))}
-          </div>
+  <Layout title={post.title} contentDirection="row">
+    <div className="content main-container">
+      <p>{formatDate(post.date)}</p>
+      <h1>{post.title}</h1>
+      <div className="flex-end">
+        <div className="flex-row">
+          {post.tags?.map((tag) => (
+            <Link key={tag} href={`/search/${tag}`}>
+              <p className="article-tag flex-compontent">
+                <a>{`#${tag}`}</a>
+              </p>
+            </Link>
+          ))}
         </div>
-        <section>{rawHtmlToDom(post.content, post.slug, ogpDatas)}</section>
       </div>
-        <div className="content toc-content">
-          <h2>もくじ</h2>
-          <TableOfContent />
-        </div>
+      <section>{rawHtmlToDom(post.content, post.slug, ogpDatas)}</section>
+    </div>
+    <div className="content toc-content">
+      <h2>もくじ</h2>
+      <TableOfContent />
     </div>
   </Layout>
 );

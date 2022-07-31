@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, ReactElement } from "react";
 
 type HeadingType = { id: string; text: string; level: number };
 function useHeadings() {
@@ -61,20 +61,37 @@ function useScrollSpy(ids: string[], options: IntersectionObserverInit) {
   return activeId;
 }
 
-function TableOfContent() {
-  const headings = useHeadings();
-  const activeId = useScrollSpy(
-    headings.map(({ id }) => id),
-    { rootMargin: "0% 0% -25% 0%" }
-  );
-  return (
-    <nav className="toc">
+function makeHeading(headings: HeadingType[], activeId: string) {
+  let lastLevel = 0;
+  let result = <></>;
+  let tmp = new Array<ReactElement>(6).fill(null);
+
+  const wrapUl = (ary: ReactElement[], i: number) => {
+    if (i === ary.length - 1 && ary[i] === null) {
+      return <></>;
+    } else if (i === ary.length - 1) {
+      return <ul>{ary[i]}</ul>;
+    } else if (ary[i] === null) {
+      return <>{wrapUl(ary, i + 1)}</>;
+    }
+    return (
       <ul>
-        {headings.map((heading) => (
+        {ary[i]}
+        {wrapUl(ary, i + 1)}
+      </ul>
+    );
+  };
+
+  let i = 0;
+  while (i < headings.length) {
+    const heading = headings[i];
+    if (heading.level >= lastLevel) {
+      tmp[heading.level - 1] = (
+        <>
+          {tmp[heading.level - 1]}
           <li key={heading.id}>
             <a
               style={{
-                marginLeft: `${heading.level - 2}em`,
                 fontWeight: activeId === heading.id ? "bold" : "normal",
               }}
               href={`#${heading.id}`}
@@ -82,10 +99,38 @@ function TableOfContent() {
               {heading.text}
             </a>
           </li>
-        ))}
-      </ul>
-    </nav>
+        </>
+      );
+      lastLevel = heading.level;
+      i++;
+    } else {
+      result = (
+        <>
+          {result}
+          {wrapUl(tmp, 0)}
+        </>
+      );
+      tmp = new Array<ReactElement>(6).fill(null);
+      lastLevel = 0;
+    }
+  }
+  return (
+    <>
+      {result}
+      {wrapUl(tmp, 0)}
+    </>
   );
+}
+
+function TableOfContent() {
+  const headings = useHeadings();
+  const activeId = useScrollSpy(
+    headings.map(({ id }) => id),
+    { rootMargin: "0% 0% -90% 0%" }
+  );
+  const result = makeHeading(headings, activeId);
+
+  return <nav className="toc">{result}</nav>;
 }
 
 export default TableOfContent;

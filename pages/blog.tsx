@@ -14,47 +14,46 @@ export const getStaticProps = async () => {
 };
 
 const Home: NextPage<Props> = ({ allPosts }) => (
-  <Layout title="Blog">
-    <div className="flex-column flex-column-center">
-      <div className="content main-container">
-        <h1>Blog</h1>
-        <p>記事一覧（新着順）</p>
-        <ul>
-          {allPosts?.map((post) => {
-            if (
-              !post.tags.includes("noindex") &&
-              !post.tags.includes("draft")
-            ) {
-              return (
-                <div className="list-article">
-                  <Link href={"/entries/" + post.slug}>
-                    <div className="flex-end flex-margin blogpost-title bloglist-compontent">
-                      <a className="flex-leftchild flex-compontent">
-                        <h2 className="flex-compontent">{post.title}</h2>
-                      </a>
-                      <p className="flex-compontent flex-column-center">
-                        {formatDate(post.date)}
-                      </p>
-                    </div>
-                  </Link>
-                  <p className="bloglist-compontent bloglist-summery">
-                    {post.summery}
-                  </p>
-                  <div className="flex-row bloglist-compontent">
-                    {post.tags?.map((tag) => (
-                      <Link key={tag} href={`/search/${tag}`}>
-                        <a className="blog-tag flex-compontent">
-                          <p className="blog-tag flex-compontent">{`#${tag}`}</p>
-                        </a>
-                      </Link>
-                    ))}
+  <Layout title="Blog" contentDirection="column">
+    <div className="content main-container">
+      <h1>Blog</h1>
+      <p>記事一覧（新着順）</p>
+      <ul>
+        {allPosts?.map((post) => {
+          if (
+            !post.tags.includes("noindex") &&
+            !post.tags.includes("draft") &&
+            !post.tags.includes("intro")
+          ) {
+            return (
+              <div className="list-article">
+                <Link href={"/entries/" + post.slug}>
+                  <div className="flex-end flex-margin blogpost-title bloglist-compontent">
+                    <a className="flex-leftchild flex-compontent">
+                      <h2 className="flex-compontent">{post.title}</h2>
+                    </a>
+                    <p className="flex-compontent flex-column-center">
+                      {formatDate(post.date)}
+                    </p>
                   </div>
+                </Link>
+                <p className="bloglist-compontent bloglist-summery">
+                  {post.summery}
+                </p>
+                <div className="flex-row bloglist-compontent">
+                  {post.tags?.map((tag) => (
+                    <Link key={tag} href={`/search/${tag}`}>
+                      <a className="blog-tag flex-compontent">
+                        <p className="blog-tag flex-compontent">{`#${tag}`}</p>
+                      </a>
+                    </Link>
+                  ))}
                 </div>
-              );
-            }
-          })}
-        </ul>
-      </div>
+              </div>
+            );
+          }
+        })}
+      </ul>
     </div>
   </Layout>
 );

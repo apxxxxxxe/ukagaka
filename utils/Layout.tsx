@@ -22,7 +22,11 @@ const menuItem = (name: string, currentSlug: string): JSX.Element => {
   );
 };
 
-export default function Layout({ children, title = "" }): JSX.Element {
+export default function Layout({
+  children,
+  title = "",
+  contentDirection = "row",
+}): JSX.Element {
   const router = useRouter();
   const siteTitle = "おわらない";
 
@@ -31,6 +35,11 @@ export default function Layout({ children, title = "" }): JSX.Element {
     pageTitle = `${title} | ${siteTitle}`;
   } else {
     pageTitle = siteTitle;
+  }
+
+  let contentClass = "flex-row flex-row-center";
+  if (contentDirection !== "row") {
+    contentClass = "flex-column flex-column-center";
   }
 
   return (
@@ -45,9 +54,9 @@ export default function Layout({ children, title = "" }): JSX.Element {
       </Head>
       <div id="wrapper">
         <div id="header">
-          <div className="center">
+          <div className="blog-title">
             <h1>おわらない</h1>
-            <p>伺か関連の配布物をおいています</p>
+            <p>伺か関連の配布物を置くところ</p>
           </div>
         </div>
         <div id="menu">
@@ -55,7 +64,9 @@ export default function Layout({ children, title = "" }): JSX.Element {
           {menuItem("tips", router.pathname)}
           {menuItem("blog", router.pathname)}
         </div>
-        <div id="container">{children}</div>
+        <div id="container" className={contentClass}>
+          {children}
+        </div>
         <div id="footer"></div>
       </div>
     </>

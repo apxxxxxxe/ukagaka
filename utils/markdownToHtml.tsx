@@ -8,7 +8,7 @@ import parse, { domToReact } from "html-react-parser";
 import { OgpData } from "utils/getOgpData";
 import Link from "next/link";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { defaultStyle } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import { arduinoLight } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 function hasProperty<K extends string>(
   x: unknown,
@@ -44,7 +44,8 @@ export const rawHtmlToDom = (
 ) => {
   const options = {
     replace: (node: Element) => {
-      const imageRoot = `/ukagaka/contents`;
+      const rootDir = `/ukagaka`;
+      const imageRoot = `${rootDir}/contents`;
       if (node.name === "p") {
         node.name = "section";
       } else if (node.name === "img") {
@@ -65,6 +66,10 @@ export const rawHtmlToDom = (
           </figure>
         );
       } else if (node.name === "a") {
+        if (!node.attribs.href.startsWith("http")) {
+          node.attribs.href = `${rootDir}/${node.attribs.href}`;
+        }
+
         const ogpData = ogpDatas.find((data) =>
           node.attribs.href.includes(data.ogUrl)
         );
@@ -97,7 +102,9 @@ export const rawHtmlToDom = (
           code = child.children[0].data;
         }
         return (
-          <SyntaxHighlighter style={defaultStyle}>{code}</SyntaxHighlighter>
+          <SyntaxHighlighter style={arduinoLight} showLineNumbers={false}>
+            {code}
+          </SyntaxHighlighter>
         );
       } else if (node.name === "table") {
         return (

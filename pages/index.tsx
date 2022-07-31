@@ -15,11 +15,9 @@ export const getStaticProps = async () => {
 };
 
 const Page: NextPage<Props> = ({ content, slug, ogpDatas }) => (
-  <Layout title="INDEX">
-    <div className="flex-column flex-column-center">
-      <div className="content main-container">
-        <div className="body">{rawHtmlToDom(content, slug, ogpDatas)}</div>
-      </div>
+  <Layout title="INDEX" contentDirection="column">
+    <div className="content main-container">
+      <div className="body">{rawHtmlToDom(content, slug, ogpDatas)}</div>
     </div>
   </Layout>
 );
