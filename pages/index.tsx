@@ -20,9 +20,7 @@ const pieces: Piece[] = [
     introLink: "https://github.com/apxxxxxxe/Haine#readme",
     bannerImg: `${imageRoot}banner_haine.png`,
     description: (
-      <ul>
-        <li>ソロゴースト/女性/フォークロア/希死念慮</li>
-      </ul>
+        <span>ソロゴースト/女性/フォークロア/希死念慮</span>
     ),
     downloadButton: <span>[制作中]</span>,
   },
@@ -32,9 +30,7 @@ const pieces: Piece[] = [
     introLink: "https://github.com/apxxxxxxe/kirinokougai#readme",
     bannerImg: `${imageRoot}banner_kirinokougai.png`,
     description: (
-      <ul>
-        <li>ゴースト「Crave The Grave」同梱バルーン</li>
-      </ul>
+        <span>ゴースト「Crave The Grave」同梱バルーン</span>
     ),
     downloadButton: (
       <Link href="https://github.com/apxxxxxxe/kirinokougai/releases/latest/download/kirinokougai.nar">
@@ -55,9 +51,7 @@ const pieces: Piece[] = [
     introLink: "https://github.com/apxxxxxxe/Youto#readme",
     bannerImg: `${imageRoot}banner_youto.png`,
     description: (
-      <ul>
-        <li>ソロゴースト/男性/ゴーストマスカレード3参加作品</li>
-      </ul>
+        <span>ソロゴースト/男性/ゴーストマスカレード3参加作品</span>
     ),
     downloadButton: (
       <Link href="https://github.com/apxxxxxxe/Youto/releases/latest/download/omoideno.nar">
@@ -78,9 +72,7 @@ const pieces: Piece[] = [
     introLink: "https://github.com/apxxxxxxe/Bouyomi#readme",
     bannerImg: `${imageRoot}banner_noimage.png`,
     description: (
-      <ul>
-        <li>棒読みちゃん連携プラグイン</li>
-      </ul>
+        <span>棒読みちゃん連携プラグイン</span>
     ),
     downloadButton: (
       <Link href="https://github.com/apxxxxxxe/Bouyomi/releases/latest/download/Bouyomi.nar">
@@ -101,9 +93,7 @@ const pieces: Piece[] = [
     introLink: "https://github.com/apxxxxxxe/recentghosts#readme",
     bannerImg: `${imageRoot}banner_noimage.png`,
     description: (
-      <ul>
-        <li>直近に起動したゴーストをリスト表示するプラグイン</li>
-      </ul>
+        <span>直近に起動したゴーストをリスト表示するプラグイン</span>
     ),
     downloadButton: (
       <Link href="https://github.com/apxxxxxxe/recentghosts/releases/latest/download/recentghosts.nar">
@@ -124,9 +114,7 @@ const pieces: Piece[] = [
     introLink: "https://github.com/apxxxxxxe/shioriupdater#readme",
     bannerImg: `${imageRoot}banner_noimage.png`,
     description: (
-      <ul>
-        <li>栞(里々・YAYA)一括更新ツール</li>
-      </ul>
+        <span>栞(里々・YAYA)一括更新ツール</span>
     ),
     downloadButton: (
       <Link href="https://github.com/apxxxxxxe/shioriupdater/releases/latest/download/shioriupdater_windows_386.exe">
@@ -147,9 +135,7 @@ const pieces: Piece[] = [
     introLink: "https://github.com/apxxxxxxe/sunset-sunrise-saori#readme",
     bannerImg: `${imageRoot}banner_noimage.png`,
     description: (
-      <ul>
-        <li>日没・日の出の時間を計算する SAORI-basic</li>
-      </ul>
+        <span>日没・日の出の時間を計算する SAORI-basic</span>
     ),
     downloadButton: (
       <Link href="https://github.com/apxxxxxxe/sunset-sunrise-saori/releases/latest/download/sunset.exe">
@@ -188,27 +174,27 @@ function getPiecesElement(pieceAry) {
                 .map((piece) => (
                   <>
                     <div className="piece-wrapper">
-                      <div className="flex-row flex-start flex-column-center">
-                        <div className="flex-column flex-column-center piece-box">
-                          <Link href={piece.introLink}>
-                            <a>
-                              <div className="banner-image">
-                                <figure>
-                                  <img src={piece.bannerImg} />
-                                </figure>
-                              </div>
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="piece-box">
-                          <Link href={piece.introLink}>
-                            <a>
-                              <h4>{piece.title}</h4>
-                            </a>
-                          </Link>
-                          {piece.description}
-                          {piece.downloadButton}
-                        </div>
+                      <div className="flex-column flex-column-center piece-box">
+                        <Link href={piece.introLink}>
+                          <a>
+                            <div className="banner-image">
+                              <figure>
+                                <img src={piece.bannerImg} />
+                              </figure>
+                            </div>
+                          </a>
+                        </Link>
+                      </div>
+                      <div className="piece-box">
+                        <Link href={piece.introLink}>
+                          <a>
+                            <h4>{piece.title}</h4>
+                          </a>
+                        </Link>
+						<div className="piece-description">
+                        {piece.description}
+						</div>
+                        {piece.downloadButton}
                       </div>
                     </div>
                   </>
