@@ -80,7 +80,7 @@ h3 {
   margin-top: calc(var(--heading-margin-base-top) * 4);
   margin-left: calc(var(--heading-margin-base-left) * 4);
   margin-right: calc(var(--heading-margin-base-right) * 4);
-  margin-bottom: calc(var(--heading-margin-base-bottom) * 4);
+  margin-bottom: calc(var(--heading-margin-base-bottom) * 5);
   font-family: var(--font-sans);
   font-weight: var(--fontweight-head);
   font-size: 1.4rem;
@@ -90,7 +90,7 @@ h4 {
   margin-top: calc(var(--heading-margin-base-top) * 3);
   margin-left: calc(var(--heading-margin-base-left) * 3);
   margin-right: calc(var(--heading-margin-base-right) * 3);
-  margin-bottom: calc(var(--heading-margin-base-bottom) * 3);
+  margin-bottom: calc(var(--heading-margin-base-bottom) * 5);
   font-family: var(--font-sans);
   font-weight: var(--fontweight-head);
   font-size: 1.3rem;
@@ -100,7 +100,7 @@ h5 {
   margin-top: calc(var(--heading-margin-base-top) * 2);
   margin-left: calc(var(--heading-margin-base-left) * 2);
   margin-right: calc(var(--heading-margin-base-right) * 2);
-  margin-bottom: calc(var(--heading-margin-base-bottom) * 2);
+  margin-bottom: calc(var(--heading-margin-base-bottom) * 5);
   font-family: var(--font-sans);
   font-weight: var(--fontweight-head);
   font-size: 1.2rem;
@@ -224,12 +224,29 @@ ol {
 }
 
 li {
-  list-style-type: circle;
+  list-style-type: disc;
   line-height: 1.4rem;
 }
 
 li::marker {
   margin: 0;
+}
+
+ul {
+  ul {
+    margin: 0;
+    padding-left: 1.6rem;
+
+    li {
+      list-style-type: circle;
+    }
+
+    ul {
+      li {
+        list-style-type: square;
+      }
+    }
+  }
 }
 
 a {
@@ -342,44 +359,33 @@ a:hover {
   display: flex;
   flex-direction: column;
   margin-left: 20vw;
+  h1,
+  p,
+  section {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+  h1 {
+    font-family: var(--font-tegaki);
+    font-size: 2.7rem;
+    background-color: #ffffff00;
+  }
+  p,
+  section {
+    margin-top: 15px;
+  }
 }
 
-.blog-title h1,
-.blog-title p,
-.blog-title section {
-  text-align: left;
-  padding: 0;
-  margin: 0;
-  border: none;
-}
-
-.blog-title h1 {
-  font-family: var(--font-tegaki);
-  font-size: 2.7rem;
-  background-color: #ffffff00;
-}
-
-.blog-title p,
-.blog-title section {
-  margin-top: 15px;
-}
-
-nav.toc ul {
-  padding-left: 1.2rem;
-  margin: 0;
-}
-
-nav.toc ul ul {
-  padding-left: 1.6rem;
-}
-
-nav.toc li {
-  list-style-type: disc;
-  font-size: 0.8rem;
-}
-
-nav.toc ul ul li {
-  list-style-type: circle;
+nav.toc {
+  ul {
+    padding-left: 1.4rem;
+    margin: 0;
+  }
+  li {
+    font-size: 0.8rem;
+  }
 }
 
 pre {
@@ -390,12 +396,12 @@ pre {
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: rgba(0, 0, 0, 0.1) -1px 1px 2px inset,
     rgba(255, 255, 255, 1) -2px 2px 0;
-}
 
-pre * {
-  font-family: var(--font-code);
-  font-size: 0.95rem;
-  line-height: calc(1rem + 4px);
+  * {
+    font-family: var(--font-code);
+    font-size: 0.95rem;
+    line-height: calc(1rem + 4px);
+  }
 }
 
 span.comment.linenumber.react-syntax-highlighter-line-number {
@@ -416,30 +422,30 @@ span.comment.linenumber.react-syntax-highlighter-line-number:last-child {
   border: 1px solid rgba(0, 0, 0, 1);
   box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 1px,
     rgba(255, 255, 255, 0.1) -2px 2px 0px inset;
-}
 
-#menu p,
-#menu section {
-  margin: 10px 0px;
-  padding: 0 20px;
-  font-size: 1.1rem;
-  line-height: calc(var(--min-lineheight) * 1.1);
-  border-left: 1px solid #000;
-  box-shadow: var(--color-darkgray) -1px 0px 0px;
-}
+  p,
+  section {
+    margin: 10px 0px;
+    padding: 0 20px;
+    font-size: 1.1rem;
+    line-height: calc(var(--min-lineheight) * 1.1);
+    border-left: 1px solid #000;
+    box-shadow: var(--color-darkgray) -1px 0px 0px;
+  }
 
-#menu p:first-child,
-#menu section:first-child {
-  border-left: none;
-  box-shadow: none;
-}
+  p:first-child,
+  section:first-child {
+    border-left: none;
+    box-shadow: none;
+  }
 
-#menu a {
-  color: var(--color-white);
-}
+  a {
+    color: var(--color-white);
+  }
 
-#menu a.menuitem-active {
-  color: var(--color-gray);
+  a.menuitem-active {
+    color: var(--color-gray);
+  }
 }
 
 .flex-column {
@@ -506,11 +512,12 @@ p.flex-compontent {
 .blogpost-title {
   cursor: pointer;
   border-bottom: 1px solid;
+
+  h2 {
+    border-bottom: none;
+  }
 }
 
-.blogpost-title h2 {
-  border-bottom: none;
-}
 .bloglist-compontent {
   margin: 0.5rem 0;
 }
