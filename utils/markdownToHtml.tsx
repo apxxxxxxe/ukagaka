@@ -50,6 +50,9 @@ export const rawHtmlToDom = (
         node.name = "section";
       } else if (node.name === "img") {
         if (!node.attribs.src.startsWith("http")) {
+          if (slug === "") {
+            slug = "index";
+          }
           node.attribs.src = `${imageRoot}/${slug}/${node.attribs.src}`;
         }
         if (node.attribs.alt.startsWith("center:")) {
