@@ -595,7 +595,13 @@ img {
 }
 
 .piece-description {
-	margin: 0.7rem 0;
+  margin: 0.7rem 0;
+  p {
+    margin: 0;
+  }
+  a {
+    color: var(--color-blue);
+  }
 }
 
 @media (orientation: portrait) {
@@ -608,7 +614,7 @@ img {
     white-space: nowrap;
   }
   a {
-	text-decoration: underline;
+    text-decoration: underline;
   }
   #container {
     flex-direction: column;
