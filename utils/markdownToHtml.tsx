@@ -41,7 +41,7 @@ export const rawHtmlToDom = (
   content: string,
   slug: string,
   ogpDatas: OgpData[]
-) => {
+): ReturnType<typeof parse> => {
   const options = {
     replace: (node: Element) => {
       const rootDir = `/ukagaka`;
