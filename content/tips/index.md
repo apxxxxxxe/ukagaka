@@ -172,7 +172,7 @@ OnTranslate関数にこれを仕込むことでウェイトの調整がトーク
 
 ### 実装例
 
-拙作ゴースト「[Crave The Grave](https://github.com/apxxxxxxe/Haine/blob/8f04e65e134431a3b2c6c884a35f287b5123d0bb/ghost/master/yaya_functions.txt#L168-L297)」で実装されています。
+拙作ゴースト「[Crave The Grave](https://github.com/apxxxxxxe/Haine/blob/main/ghost/master/yaya_insertlinefeed.dic)」で実装されています。
 
 ## 栞を最新版にしよう
 
