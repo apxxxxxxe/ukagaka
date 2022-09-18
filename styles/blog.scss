@@ -86,18 +86,19 @@ h3 {
   border-left: solid 5px;
 }
 h4 {
-  margin-top: calc(var(--heading-margin-base-top) * 2);
+  margin-top: calc(var(--heading-margin-base-top) * 3);
   margin-left: calc(var(--heading-margin-base-left) * 1);
-  margin-bottom: calc(var(--heading-margin-base-bottom) * 2);
+  margin-bottom: calc(var(--heading-margin-base-bottom) * 5);
   font-family: var(--font-sans);
   font-weight: var(--fontweight-head);
   font-size: 1.3rem;
   font-weight: 700;
 }
 h5 {
-  margin-top: calc(var(--heading-margin-base-top) * 1.5);
+  margin-top: calc(var(--heading-margin-base-top) * 2);
   margin-left: calc(var(--heading-margin-base-left) * 2);
-  margin-bottom: calc(var(--heading-margin-base-bottom) * 1.5);
+  margin-right: calc(var(--heading-margin-base-right) * 2);
+  margin-bottom: calc(var(--heading-margin-base-bottom) * 5);
   font-family: var(--font-sans);
   font-weight: var(--fontweight-head);
   font-size: 1.2rem;
