@@ -216,11 +216,15 @@ const Page: NextPage = () => (
       <h2>配布物</h2>
       <div className="body">{getPiecesElement(pieces)}</div>
       <h2>このサイトについて</h2>
-	  <p>デスクトップマスコット「伺か」の配布物と開発情報を載せているサイトです</p>
-	  <h4>サイト名</h4>
-<p>おわらない</p>
-	  <h4>管理者</h4>
-<p>ape(あぺ)</p>
+      <p>
+        デスクトップマスコット「伺か」の配布物と開発情報を載せているサイトです。
+        <br />
+        <br />
+        サイト名: <strong>おわらない</strong>
+      </p>
+      <p>
+        管理者: <strong>ape (あぺ)</strong>
+      </p>
       <h4>連絡先</h4>
       <ul>
         <li>
