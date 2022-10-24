@@ -5,10 +5,11 @@ import Layout from "utils/Layout";
 type Piece = {
   type: string;
   title: string;
-  introLink: string;
+  repoName: string;
+  color: string;
+  fileName: string;
   bannerImg: string;
   description: JSX.Element;
-  downloadButton: JSX.Element;
 };
 
 const imageRoot = `/ukagaka/contents/index/`;
@@ -17,77 +18,53 @@ const pieces: Piece[] = [
   {
     type: "ゴースト",
     title: "Crave The Grave",
-    introLink: "https://github.com/apxxxxxxe/Haine#readme",
+	repoName: "Haine",
+	color: "ab1609",
+	fileName: "",
     bannerImg: `${imageRoot}banner_haine.png`,
     description: (
       <>
-        <p>ソロゴースト/女性/フォークロア/希死念慮</p>
-        <p>[制作中]</p>
+        <p>ソロゴースト/女性/フォークロア/destrudo</p>
       </>
     ),
-    downloadButton: <></>,
   },
   {
     type: "バルーン",
     title: "霧の郊外にて",
-    introLink: "https://github.com/apxxxxxxe/kirinokougai#readme",
+	repoName: "kirinokougai",
+	color: "7e7958&",
+	fileName: "kirinokougai.nar",
     bannerImg: `${imageRoot}banner_kirinokougai.png`,
     description: <p>ゴースト「Crave The Grave」同梱バルーン</p>,
-    downloadButton: (
-      <Link href="https://github.com/apxxxxxxe/kirinokougai/releases/latest/download/kirinokougai.nar">
-        <a>
-          <figure>
-            <img
-              src="https://img.shields.io/github/v/release/apxxxxxxe/kirinokougai?color=%237e7958&label=kirinokougai.nar&logo=github"
-              alt="ダウンロード"
-            />
-          </figure>
-        </a>
-      </Link>
-    ),
   },
   {
     type: "ゴースト",
     title: "思い出の、",
-    introLink: "https://github.com/apxxxxxxe/Youto#readme",
+	repoName: "Youto",
+	color: "d196bb",
+	fileName: "omoideno.nar",
     bannerImg: `${imageRoot}banner_youto.png`,
-    description: <p>ソロゴースト/男性/ゴーストマスカレード3参加作品</p>,
-    downloadButton: (
-      <Link href="https://github.com/apxxxxxxe/Youto/releases/latest/download/omoideno.nar">
-        <a>
-          <figure>
-            <img
-              src="https://img.shields.io/github/v/release/apxxxxxxe/Youto?color=%23d196bb&label=omoideno.nar&logo=github"
-              alt="ダウンロード"
-            />
-          </figure>
-        </a>
-      </Link>
-    ),
+    description: (
+		<>
+			<p>ソロゴースト/男性/ゴーストマスカレード3参加作品</p>
+		</>
+	),
   },
   {
     type: "プラグイン",
     title: "Bouyomi",
-    introLink: "https://github.com/apxxxxxxe/Bouyomi#readme",
+	repoName: "Bouyomi",
+	color: "67ab7b",
+	fileName: "Bouyomi.nar",
     bannerImg: `${imageRoot}banner_noimage.png`,
     description: <p>棒読みちゃん連携プラグイン</p>,
-    downloadButton: (
-      <Link href="https://github.com/apxxxxxxe/Bouyomi/releases/latest/download/Bouyomi.nar">
-        <a>
-          <figure>
-            <img
-              src="https://img.shields.io/github/v/release/apxxxxxxe/Bouyomi?color=%2367ab7b&label=Bouyomi.nar&logo=github"
-              alt="ダウンロード"
-            />
-          </figure>
-        </a>
-      </Link>
-    ),
   },
   {
     type: "プラグイン",
     title: "直近のゴースト",
-    introLink: "https://github.com/apxxxxxxe/recentghosts#readme",
+	repoName: "recentghosts",
+	color: "535178",
+	fileName: "recentghosts.nar",
     bannerImg: `${imageRoot}banner_noimage.png`,
     description: (
       <>
@@ -101,56 +78,24 @@ const pieces: Piece[] = [
         </p>
       </>
     ),
-    downloadButton: (
-      <Link href="https://github.com/apxxxxxxe/recentghosts/releases/latest/download/recentghosts.nar">
-        <a>
-          <figure>
-            <img
-              src="https://img.shields.io/github/v/release/apxxxxxxe/recentghosts?color=%23535178&label=recentghosts.nar&logo=github"
-              alt="ダウンロード"
-            />
-          </figure>
-        </a>
-      </Link>
-    ),
   },
   {
     type: "ツール",
     title: "shioriupdater",
-    introLink: "https://github.com/apxxxxxxe/shioriupdater#readme",
+	repoName: "shioriupdater",
+	color: "59a6b5",
+	fileName: "shioriupdater_windows_386.exe",
     bannerImg: `${imageRoot}banner_noimage.png`,
     description: <p>栞(里々・YAYA)一括更新ツール</p>,
-    downloadButton: (
-      <Link href="https://github.com/apxxxxxxe/shioriupdater/releases/latest/download/shioriupdater_windows_386.exe">
-        <a>
-          <figure>
-            <img
-              src="https://img.shields.io/github/v/release/apxxxxxxe/shioriupdater?color=%2359a6b5&label=shioriupdater_windows_386.exe&logo=github"
-              alt="ダウンロード"
-            />
-          </figure>
-        </a>
-      </Link>
-    ),
   },
   {
     type: "SAORI",
     title: "sunset-sunrise-saori",
-    introLink: "https://github.com/apxxxxxxe/sunset-sunrise-saori#readme",
+	repoName: "sunset-sunrise-saori",
+	color: "e3aa40",
+	fileName: "sunset.exe",
     bannerImg: `${imageRoot}banner_noimage.png`,
     description: <p>日没・日の出の時間を計算する SAORI-basic</p>,
-    downloadButton: (
-      <Link href="https://github.com/apxxxxxxe/sunset-sunrise-saori/releases/latest/download/sunset.exe">
-        <a>
-          <figure>
-            <img
-              src="https://img.shields.io/github/v/release/apxxxxxxe/sunset-sunrise-saori?color=%23e3aa40&label=sunset.exe&logo=github"
-              alt="ダウンロード"
-            />
-          </figure>
-        </a>
-      </Link>
-    ),
   },
 ];
 
@@ -177,10 +122,10 @@ function getPiecesElement(pieceAry) {
                   <>
                     <div className="piece-wrapper">
                       <div className="flex-column flex-column-center piece-box">
-                        <Link href={piece.introLink}>
+                        <Link href={`https://github.com/apxxxxxxe/${piece.repoName}#readme`}>
                           <a>
                             <div className="banner-image">
-                              <figure>
+                              <figure className="shadow-figure">
                                 <img src={piece.bannerImg} />
                               </figure>
                             </div>
@@ -188,15 +133,35 @@ function getPiecesElement(pieceAry) {
                         </Link>
                       </div>
                       <div className="piece-box">
-                        <Link href={piece.introLink}>
-                          <a>
-                            <h4>{piece.title}</h4>
-                          </a>
-                        </Link>
+						<div className="piece-title">
+							<Link href={`https://github.com/apxxxxxxe/${piece.repoName}#readme`}>
+							<a>
+								<h4>{piece.title}</h4>
+							</a>
+							</Link>
+							<figure>
+								<img className="rounded5"
+									src={ `https://img.shields.io/github/last-commit/apxxxxxxe/${piece.repoName}?color=%23${piece.color}&label=最終更新&style=flat-square` }
+									alt="最終更新"
+								/>
+							</figure>
+						</div>
                         <div className="piece-description">
                           {piece.description}
+						  <p className="piece-download-button">DL: {piece.fileName === "" ?  <>[制作中]</> :
+							<Link href={ `https://github.com/apxxxxxxe/${piece.repoName}/releases/latest/download/${piece.fileName}` }>
+								<a>
+								<figure>
+									<img className="rounded5"
+									src={ `https://img.shields.io/github/v/release/apxxxxxxe/${piece.repoName}?color=%23${piece.color}&label=${piece.fileName}&logo=github&style=flat-square` }
+									alt="ダウンロード"
+									/>
+								</figure>
+								</a>
+							</Link>
+							}
+						  </p>
                         </div>
-                        {piece.downloadButton}
                       </div>
                     </div>
                   </>

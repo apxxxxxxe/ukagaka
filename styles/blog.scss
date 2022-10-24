@@ -542,9 +542,13 @@ p.flex-compontent {
 }
 
 figure {
+	display: flex;
+	align-items: center;
+}
+
+figure.shadow-figure {
   margin: 0;
   width: fit-content;
-  display: flex;
   position: relative;
   border-radius: 15px;
   overflow: hidden;
@@ -552,7 +556,7 @@ figure {
   box-shadow: rgba(255, 255, 255, 1) -2px 2px 0;
 }
 
-figure::after {
+figure.shadow-figure::after {
   content: "";
   position: absolute;
   top: 0;
@@ -594,7 +598,18 @@ img {
   margin-left: 0;
 }
 
+.piece-title {
+	display: flex;
+	h4{
+		margin-right: 0.5rem;
+	}
+}
+
 .piece-description {
+  background-color: var(--color-lightgray);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+
   margin: 0.7rem 0;
   p {
     margin: 0;
@@ -602,6 +617,17 @@ img {
   a {
     color: var(--color-blue);
   }
+}
+
+p.piece-download-button {
+	 margin-top: 0.2rem;
+	 color: var(--color-gray);
+	font-size: 0.9rem;
+	display: flex;
+	align-items: center;
+	a {
+		margin-left: 0.5rem;
+	}
 }
 
 @media (orientation: portrait) {
@@ -647,4 +673,8 @@ img {
   .piece-box:first-child {
     margin-top: 0;
   }
+}
+
+.rounded5 {
+	border-radius: 5px;
 }

@@ -58,13 +58,13 @@ export const rawHtmlToDom = (
         if (node.attribs.alt.startsWith("center:")) {
           node.attribs.alt = node.attribs.alt.replace("center:", "");
           return (
-            <figure className="image-center">
+            <figure className="image-center shadow-figure">
               <img {...node.attribs} />
             </figure>
           );
         }
         return (
-          <figure>
+          <figure className="shadow-figure">
             <img {...node.attribs} />
           </figure>
         );
