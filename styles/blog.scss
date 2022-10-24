@@ -19,8 +19,10 @@
 	--color-darkblack: #10181a;
 	--color-black: #30383a;
 	--color-darkgray: #40484a;
-	--color-gray: #60686a;
-	--color-lightgray: #e6e8ea;
+	--colorbase-gray: 96, 104, 106;
+	--color-gray: rgb(var(--colorbase-gray));
+	--color-lightdarkgray: rgba(var(--colorbase-gray), 0.4);
+	--color-lightgray: rgba(var(--colorbase-gray), 0.1);
 	--color-white: #f8f8f8;
 	--color-blue: #4566af;
 	--color-red: #aa2323;
@@ -50,7 +52,7 @@
 
 html,
 body {
-	font-size: 16px;
+	font-size: 15px;
 	color: var(--color-darkblack);
 	margin: 0;
 	padding: 0;
@@ -334,7 +336,7 @@ a:hover {
 
 .main-container {
 	min-height: calc(100vh - var(--header-height) - var(--footer-height));
-	width: 60rem;
+	width: 50rem;
 	max-width: 60%;
 	margin-right: 1rem;
 }
@@ -581,13 +583,23 @@ img {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin: 2rem;
+	margin: 2rem auto;
+
+	padding: 1rem 1.5rem;
+	border: solid 1px var(--color-lightdarkgray);
+	border-radius: 10px;
+}
+
+.banner-image {
 }
 
 .piece-box {
+	flex: 1;
+
 	display: flex;
 	flex-direction: column;
 	margin-left: 2rem;
+
 	h4 {
 		margin: 0;
 	}
@@ -606,14 +618,14 @@ img {
 
 .piece-title {
 	display: flex;
+	padding-bottom: 0.5rem;
+	border-bottom: dashed 1px var(--color-gray);
 	h4 {
 		margin-right: 0.5rem;
 	}
 }
 
 .piece-description {
-	background-color: var(--color-lightgray);
-	padding: 1rem 1.5rem;
 	border-radius: 10px;
 
 	margin: 0.7rem 0;
@@ -625,13 +637,13 @@ img {
 	}
 }
 
-p.piece-download-button {
+div.piece-download-button {
 	margin-top: 0.2rem;
 	color: var(--color-gray);
 	font-size: 0.9rem;
 	display: flex;
 	align-items: center;
-	a {
+	*:nth-child(2) {
 		margin-left: 0.5rem;
 	}
 }
@@ -673,6 +685,7 @@ p.piece-download-button {
 		flex-direction: column;
 	}
 	.piece-box {
+		margin-left: 0;
 		margin-top: 0.5rem;
 		align-items: center;
 	}

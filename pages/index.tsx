@@ -22,11 +22,7 @@ const pieces: Piece[] = [
 		color: "ab1609",
 		fileName: "",
 		bannerImg: `${imageRoot}banner_haine.png`,
-		description: (
-			<>
-				<p>ソロゴースト/女性/フォークロア/destrudo</p>
-			</>
-		),
+		description: <p>ソロゴースト/女性/フォークロア/希死念慮</p>,
 	},
 	{
 		type: "バルーン",
@@ -44,11 +40,7 @@ const pieces: Piece[] = [
 		color: "d196bb",
 		fileName: "omoideno.nar",
 		bannerImg: `${imageRoot}banner_youto.png`,
-		description: (
-			<>
-				<p>ソロゴースト/男性/ゴーストマスカレード3参加作品</p>
-			</>
-		),
+		description: <p>ソロゴースト/男性/ゴーストマスカレード3参加作品</p>,
 	},
 	{
 		type: "プラグイン",
@@ -67,16 +59,15 @@ const pieces: Piece[] = [
 		fileName: "recentghosts.nar",
 		bannerImg: `${imageRoot}banner_noimage.png`,
 		description: (
-			<>
-				<p>
-					直近に起動したゴーストをリスト表示するプラグイン
-					<br />(
-					<Link href="/entries/recentghosts-intro">
-						<a>紹介記事</a>
-					</Link>
-					)
-				</p>
-			</>
+			<p>
+				直近に起動したゴーストをリスト表示するプラグイン
+				<br />
+				(紹介記事:
+				<Link href="/entries/recentghosts-intro">
+					<a>プラグインを作った</a>
+				</Link>
+				)
+			</p>
 		),
 	},
 	{
@@ -119,71 +110,57 @@ function getPiecesElement(pieceAry) {
 							{pieces
 								.filter((piece) => piece.type === type)
 								.map((piece) => (
-									<>
-										<div className="piece-wrapper">
-											<div className="flex-column flex-column-center piece-box">
+									<div
+										className="piece-wrapper"
+										key={piece.repoName}
+									>
+										<div className="banner-image flex-column flex-column-center">
+											<figure className="shadow-figure">
+												<img src={piece.bannerImg} />
+											</figure>
+										</div>
+										<div className="piece-box">
+											<div className="piece-title">
 												<Link
 													href={`https://github.com/apxxxxxxe/${piece.repoName}#readme`}
 												>
 													<a>
-														<div className="banner-image">
-															<figure className="shadow-figure">
-																<img
-																	src={
-																		piece.bannerImg
-																	}
-																/>
-															</figure>
-														</div>
+														<h4>{piece.title}</h4>
 													</a>
 												</Link>
+												<figure>
+													<img
+														className="rounded5"
+														src={`https://img.shields.io/github/last-commit/apxxxxxxe/${piece.repoName}?color=%23${piece.color}&label=最終更新&style=flat-square`}
+														alt="最終更新"
+													/>
+												</figure>
 											</div>
-											<div className="piece-box">
-												<div className="piece-title">
-													<Link
-														href={`https://github.com/apxxxxxxe/${piece.repoName}#readme`}
-													>
-														<a>
-															<h4>
-																{piece.title}
-															</h4>
-														</a>
-													</Link>
-													<figure>
-														<img
-															className="rounded5"
-															src={`https://img.shields.io/github/last-commit/apxxxxxxe/${piece.repoName}?color=%23${piece.color}&label=最終更新&style=flat-square`}
-															alt="最終更新"
-														/>
-													</figure>
-												</div>
-												<div className="piece-description">
-													{piece.description}
-													<p className="piece-download-button">
-														DL:{" "}
-														{piece.fileName ===
-														"" ? (
-															<>[制作中]</>
-														) : (
-															<Link
-																href={`https://github.com/apxxxxxxe/${piece.repoName}/releases/latest/download/${piece.fileName}`}
-															>
-																<a>
-																	<figure>
-																		<img
-																			className="rounded5"
-																			src={`https://img.shields.io/github/v/release/apxxxxxxe/${piece.repoName}?color=%23${piece.color}&label=${piece.fileName}&logo=github&style=flat-square`}
-																			alt="ダウンロード"
-																		/>
-																	</figure>
-																</a>
-															</Link>
-														)}
-													</p>
+											<div className="piece-description">
+												{piece.description}
+												<div className="piece-download-button">
+													<p>Download:</p>
+													{piece.fileName === "" ? (
+														<p>[制作中]</p>
+													) : (
+														<Link
+															href={`https://github.com/apxxxxxxe/${piece.repoName}/releases/latest/download/${piece.fileName}`}
+														>
+															<a>
+																<figure>
+																	<img
+																		className="rounded5"
+																		src={`https://img.shields.io/github/v/release/apxxxxxxe/${piece.repoName}?color=%23${piece.color}&label=${piece.fileName}&logo=github&style=flat-square`}
+																		alt="ダウンロード"
+																	/>
+																</figure>
+															</a>
+														</Link>
+													)}
 												</div>
 											</div>
 										</div>
-									</>
+									</div>
 								))}
 						</div>
 					</>
