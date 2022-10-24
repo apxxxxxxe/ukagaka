@@ -1,61 +1,63 @@
-import { NextPage, InferGetStaticPropsType } from "next";
-import Link from "next/link";
-import { getAllPosts } from "utils/api";
-import Layout, { formatDate } from "utils/Layout";
+import { NextPage, InferGetStaticPropsType } from "next"
+import Link from "next/link"
+import { getAllPosts } from "utils/api"
+import Layout, { formatDate } from "utils/Layout"
 
-type Props = InferGetStaticPropsType<typeof getStaticProps>;
+type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts(["slug", "title", "date", "tags", "summery"]);
+	const allPosts = getAllPosts(["slug", "title", "date", "tags", "summery"])
 
-  return {
-    props: { allPosts },
-  };
-};
+	return {
+		props: { allPosts },
+	}
+}
 
 const Home: NextPage<Props> = ({ allPosts }) => (
-  <Layout title="Blog" contentDirection="column">
-    <div className="content main-container">
-      <h1>Blog</h1>
-      <p>記事一覧（新着順）</p>
-      <ul>
-        {allPosts?.map((post) => {
-          if (
-            !post.tags.includes("noindex") &&
-            !post.tags.includes("draft") &&
-            !post.tags.includes("intro")
-          ) {
-            return (
-              <div className="list-article">
-                <Link href={"/entries/" + post.slug}>
-                  <div className="flex-end flex-margin blogpost-title bloglist-compontent">
-                    <a className="flex-leftchild flex-compontent">
-                      <h2 className="flex-compontent">{post.title}</h2>
-                    </a>
-                    <p className="flex-compontent flex-column-center">
-                      {formatDate(post.date)}
-                    </p>
-                  </div>
-                </Link>
-                <p className="bloglist-compontent bloglist-summery">
-                  {post.summery}
-                </p>
-                <div className="flex-row bloglist-compontent">
-                  {post.tags?.map((tag) => (
-                    <Link key={tag} href={`/search/${tag}`}>
-                      <a className="blog-tag flex-compontent">
-                        <p className="blog-tag flex-compontent">{`#${tag}`}</p>
-                      </a>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            );
-          }
-        })}
-      </ul>
-    </div>
-  </Layout>
-);
+	<Layout title="Blog" contentDirection="column">
+		<div className="content main-container">
+			<h1>Blog</h1>
+			<p>記事一覧（新着順）</p>
+			<ul>
+				{allPosts?.map((post) => {
+					if (
+						!post.tags.includes("noindex") &&
+						!post.tags.includes("draft") &&
+						!post.tags.includes("intro")
+					) {
+						return (
+							<div className="list-article">
+								<Link href={"/entries/" + post.slug}>
+									<div className="flex-end flex-margin blogpost-title bloglist-compontent">
+										<a className="flex-leftchild flex-compontent">
+											<h2 className="flex-compontent">
+												{post.title}
+											</h2>
+										</a>
+										<p className="flex-compontent flex-column-center">
+											{formatDate(post.date)}
+										</p>
+									</div>
+								</Link>
+								<p className="bloglist-compontent bloglist-summery">
+									{post.summery}
+								</p>
+								<div className="flex-row bloglist-compontent">
+									{post.tags?.map((tag) => (
+										<Link key={tag} href={`/search/${tag}`}>
+											<a className="blog-tag flex-compontent">
+												<p className="blog-tag flex-compontent">{`#${tag}`}</p>
+											</a>
+										</Link>
+									))}
+								</div>
+							</div>
+						)
+					}
+				})}
+			</ul>
+		</div>
+	</Layout>
+)
 
-export default Home;
+export default Home
