@@ -267,12 +267,13 @@ a:hover {
 }
 
 #header {
+  position: relative;
   display: flex;
   align-items: center;
   box-sizing: border-box;
   margin: 0 auto;
   width: 100%;
-  min-height: var(--header-height);
+  height: var(--header-height);
   background-color: var(--color-black);
   background-image: url("/ukagaka/fog.jpg");
   background-size: cover;
@@ -280,15 +281,15 @@ a:hover {
 }
 
 #header::after {
-  z-index: 1;
   content: "";
+  z-index: 1;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: var(--header-height);
+  height: 100%;
   background-image: linear-gradient(to left, #ffffff00, var(--color-black)),
     linear-gradient(to left, #ffffff00, var(--color-black)),
     url("/ukagaka/rain.gif");

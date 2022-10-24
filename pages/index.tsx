@@ -180,7 +180,17 @@ const Page: NextPage = () => (
       <h1>INDEX</h1>
       <h2>配布物</h2>
       <div className="body">{getPiecesElement(pieces)}</div>
-      <h2>連絡先</h2>
+      <h2>このサイトについて</h2>
+      <p>
+        デスクトップマスコット「伺か」の配布物と開発情報を載せているサイトです。
+        <br />
+        <br />
+        サイト名: <strong>おわらない</strong>
+      </p>
+      <p>
+        管理者: <strong>ape (あぺ)</strong>
+      </p>
+      <h4>連絡先</h4>
       <ul>
         <li>
           <a href="http://clap.webclap.com/clap.php?id=apxxxxxxe">Web拍手</a>
