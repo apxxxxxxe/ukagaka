@@ -7,7 +7,7 @@ summery: ""
 
 ## 「......」で口パクアニメーションしないようにしたい
 
-![center:kuchipaku.gif](kuchipaku.gif)
+![center:……で口パクを止めている](kuchipaku.gif)
 
 ### シェルの口パク
 
