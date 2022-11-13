@@ -545,17 +545,11 @@ p.flex-compontent {
 		rgba(255, 255, 255, 1) -2px 2px 0;
 }
 
-.image-center {
-	margin: 0 auto;
-}
-
-figure {
-	display: flex;
-	align-items: center;
-}
-
 figure.shadow-figure {
-	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 2rem 0 0;
 	width: fit-content;
 	position: relative;
 	border-radius: 15px;
@@ -573,6 +567,15 @@ figure.shadow-figure::after {
 	left: 0;
 	border-radius: 15px;
 	box-shadow: rgba(0, 0, 0, 0.3) -1px 1px 2px inset;
+}
+
+figure.image-center {
+	margin: 2rem auto 0;
+}
+
+figcaption.caption-center {
+	margin-top: 0.2rem;
+	text-align: center;
 }
 
 img {

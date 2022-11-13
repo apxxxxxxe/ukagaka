@@ -9,6 +9,7 @@ import { OgpData } from "utils/getOgpData"
 import Link from "next/link"
 import SyntaxHighlighter from "react-syntax-highlighter"
 import { arduinoLight } from "react-syntax-highlighter/dist/cjs/styles/hljs"
+import reactStringReplace from "react-string-replace"
 
 function hasProperty<K extends string>(
 	x: unknown,
@@ -46,27 +47,43 @@ export const rawHtmlToDom = (
 		replace: (node: Element) => {
 			const rootDir = `/ukagaka`
 			const imageRoot = `${rootDir}/contents`
-			if (node.name === "p") {
-				node.name = "section"
-			} else if (node.name === "img") {
+			if (node.name === "p" && node.children.length > 0) {
+				let includeImg = false
+				node.children.forEach(c => {
+					if (hasProperty(c, "name")) {
+						if (c.name === "img") {
+							includeImg = true
+						}
+					}
+				})
+				if (includeImg) {
+					node.name = "div"
+				}
+			}
+			if (node.name === "img") {
 				if (!node.attribs.src.startsWith("http")) {
 					if (slug === "") {
 						slug = "index"
 					}
 					node.attribs.src = `${imageRoot}/${slug}/${node.attribs.src}`
 				}
+				let figureClass = "shadow-figure"
+				let figcapClass = ""
 				if (node.attribs.alt.startsWith("center:")) {
 					node.attribs.alt = node.attribs.alt.replace("center:", "")
-					return (
-						<figure className="image-center shadow-figure">
+					figureClass += " image-center"
+					figcapClass += " caption-center"
+				}
+
+				const caption = reactStringReplace(node.attribs.alt, "crlf", () => <br/>)
+
+				return (
+					<>
+						<figure className={figureClass}>
 							<img {...node.attribs} />
 						</figure>
-					)
-				}
-				return (
-					<figure className="shadow-figure">
-						<img {...node.attribs} />
-					</figure>
+						<figcaption className={figcapClass}>{caption}</figcaption>
+					</>
 				)
 			} else if (node.name === "a") {
 				if (!node.attribs.href.startsWith("http")) {
