@@ -199,6 +199,9 @@ const Page: NextPage = () => (
 				<li>
 					<a href="https://github.com/apxxxxxxe">GitHub</a>
 				</li>
+				<li>
+					<a rel="me" href="https://ukadon.shillest.net/@apxxxxxxe">Mastodon</a>
+				</li>
 			</ul>
 		</div>
 	</Layout>
