@@ -22,7 +22,7 @@ const pieces: Piece[] = [
 		color: "ab1609",
 		fileName: "",
 		bannerImg: `${imageRoot}banner_haine.png`,
-		description: <p>ソロゴースト/女性/フォークロア/希死念慮</p>,
+		description: <p>ソロゴースト/女性/フォークロア</p>,
 	},
 	{
 		type: "バルーン",
@@ -184,7 +184,7 @@ const Page: NextPage = () => (
 				サイト名: <strong>おわらない</strong>
 			</p>
 			<p>
-				管理者: <strong>ape (あぺ)</strong>
+				管理者: <strong>日野つみ</strong>
 			</p>
 			<h4>連絡先</h4>
 			<ul>
