@@ -44,6 +44,15 @@ const pieces: Piece[] = [
 	},
 	{
 		type: "プラグイン",
+		title: "GhostWardrobe",
+		repoName: "GhostWardrobe",
+		color: "9cb08b",
+		fileName: "GhostWardrobe.nar",
+		bannerImg: `${imageRoot}banner_noimage.png`,
+		description: <p>シェルの着せ替え保存&読込プラグイン</p>,
+	},
+	{
+		type: "プラグイン",
 		title: "Bouyomi",
 		repoName: "Bouyomi",
 		color: "67ab7b",
@@ -131,7 +140,7 @@ function getPiecesElement(pieceAry) {
 												<figure>
 													<img
 														className="rounded5"
-														src={														`https://img.shields.io/badge/dynamic/json?query=pushed_at&url=https%3A%2F%2Fghlastpushed.vercel.app%2Fapi%2Fapxxxxxxe%2F${piece.repoName}&color=%23${piece.color}&label=最終更新&style=flat-square`}
+														src={`https://img.shields.io/badge/dynamic/json?query=pushed_at&url=https%3A%2F%2Fghlastpushed.vercel.app%2Fapi%2Fapxxxxxxe%2F${piece.repoName}&color=%23${piece.color}&label=最終更新&style=flat-square`}
 														alt="最終更新"
 													/>
 												</figure>
@@ -200,7 +209,9 @@ const Page: NextPage = () => (
 					<a href="https://github.com/apxxxxxxe">GitHub</a>
 				</li>
 				<li>
-					<a rel="me" href="https://ukadon.shillest.net/@apxxxxxxe">Mastodon</a>
+					<a rel="me" href="https://ukadon.shillest.net/@apxxxxxxe">
+						Mastodon
+					</a>
 				</li>
 			</ul>
 		</div>
