@@ -125,7 +125,7 @@ OnTranslateInternal関数にこれを仕込むことでウェイトの調整が�
 
 ##### 実装例
 
-拙作ゴースト「[Crave The Grave](https://github.com/apxxxxxxe/Haine/blob/main/ghost/master/yaya_rouletteselection.txt)」で実装されています。
+拙作ゴースト「[Crave The Grave](https://github.com/apxxxxxxe/Haine/blob/main/ghost/master/yaya_rouletteselection.dic)」で実装されています。
 
 ##  トークを日本語的にいい感じのところで自動改行したい
 
@@ -160,8 +160,8 @@ OnTranslateInternal関数にこれを仕込むことでウェイトの調整が�
 いた事だけは記憶している。吾輩はここで始めて
 人間というものを見た。
 ```
-多少文末がでこぼこしますが、筆者は後者のほうが読みやすく、美しいと思います。  
-仮にそうでなくても、SSPとエディタを行き来しながら改行を調整する手間から開放されるのは大きいです。
+文節で改行しています。  
+従来より自然な印象が出ている気がします。
 
 ### くわしい説明(YAYA)
 
