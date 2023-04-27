@@ -49,7 +49,7 @@ export const rawHtmlToDom = (
 			const imageRoot = `${rootDir}/contents`
 			if (node.name === "p" && node.children.length > 0) {
 				let includeImg = false
-				node.children.forEach(c => {
+				node.children.forEach((c) => {
 					if (hasProperty(c, "name")) {
 						if (c.name === "img") {
 							includeImg = true
@@ -75,14 +75,20 @@ export const rawHtmlToDom = (
 					figcapClass += " caption-center"
 				}
 
-				const caption = reactStringReplace(node.attribs.alt, "crlf", () => <br/>)
+				const caption = reactStringReplace(
+					node.attribs.alt,
+					"crlf",
+					() => <br />
+				)
 
 				return (
 					<>
 						<figure className={figureClass}>
 							<img {...node.attribs} />
 						</figure>
-						<figcaption className={figcapClass}>{caption}</figcaption>
+						<figcaption className={figcapClass}>
+							{caption}
+						</figcaption>
 					</>
 				)
 			} else if (node.name === "a") {
