@@ -5,6 +5,7 @@ import Layout, { formatDate } from "utils/Layout"
 import markdownToHtml, { rawHtmlToDom } from "utils/markdownToHtml"
 import getOgpData, { getFloatingURLs } from "utils/getOgpData"
 import TableOfContent from "utils/toc"
+import WebClapBox from "utils/webclap"
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
@@ -67,6 +68,7 @@ const Post: NextPage<Props> = ({ post, ogpDatas }) => (
 				</div>
 			</div>
 			<section>{rawHtmlToDom(post.content, post.slug, ogpDatas)}</section>
+			<WebClapBox />
 		</div>
 		<div className="content toc-content">
 			<h2>もくじ</h2>
