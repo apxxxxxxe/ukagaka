@@ -99,15 +99,15 @@ const pieces: Piece[] = [
 	},
 ]
 
-function getAllPieceTypes(pieceAry) {
+function getAllPieceTypes(pieceAry: Piece[]): string[] {
 	const types = []
-	pieceAry.forEach((piece) => {
+	pieceAry.forEach((piece: Piece) => {
 		types.push(piece.type)
 	})
 	return Array.from(new Set(types))
 }
 
-function getPiecesElement(pieceAry) {
+function getPiecesElement(pieceAry: Piece[]) {
 	const pieceTypes = getAllPieceTypes(pieceAry)
 	return (
 		<>
