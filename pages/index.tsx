@@ -13,6 +13,7 @@ type Piece = {
 }
 
 const imageRoot = `/contents/index/`
+const apiRoot = encodeURIComponent(process.env.NEXT_PUBLIC_API_URL)
 
 const pieces: Piece[] = [
 	{
@@ -157,7 +158,7 @@ function getPiecesElement(pieceAry: Piece[]) {
 												<figure>
 													<img
 														className="rounded5"
-														src={`https://img.shields.io/badge/dynamic/json?query=pushed_at&url=https%3A%2F%2Fapxxxxxxe.dev%2Fapi%2F${piece.repoName}&color=%23${piece.color}&label=最終更新&style=flat-square`}
+														src={`https://img.shields.io/badge/dynamic/json?query=pushed_at&url=${apiRoot}%2F${piece.repoName}&color=%23${piece.color}&label=最終更新&style=flat-square`}
 														alt="最終更新"
 													/>
 												</figure>
