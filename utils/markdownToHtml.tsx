@@ -45,8 +45,7 @@ export const rawHtmlToDom = (
 ): ReturnType<typeof parse> => {
 	const options = {
 		replace: (node: Element) => {
-			const rootDir = `/ukagaka`
-			const imageRoot = `${rootDir}/contents`
+			const imageRoot = `contents`
 			if (node.name === "p" && node.children.length > 0) {
 				let includeImg = false
 				node.children.forEach((c) => {
@@ -93,7 +92,7 @@ export const rawHtmlToDom = (
 				)
 			} else if (node.name === "a") {
 				if (!node.attribs.href.startsWith("http")) {
-					node.attribs.href = `${rootDir}/${node.attribs.href}`
+					node.attribs.href = `${node.attribs.href}`
 				}
 
 				const ogpData = ogpDatas.find((data) =>
