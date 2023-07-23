@@ -132,40 +132,49 @@ function getPiecesElement(pieceAry: Piece[]) {
 			{pieceTypes.map((type) => {
 				return (
 					<>
-						<div className="piece-type">
-							<h3>{type}</h3>
+						<div className="flex flex-col">
+							<h3 className="border-solid border-l-4 border-black pl-2 text-lg font-bold">
+								{type}
+							</h3>
 							{pieces
 								.filter((piece) => piece.type === type)
 								.map((piece) => (
 									<div
-										className="piece-wrapper"
+										className="flex flex-col items-center md:flex-row md:items-normal py-4 px-2 my-6 border-solid border border-gray/[0.2] rounded-lg shadow-md"
 										key={piece.repoName}
 									>
-										<div className="banner-image flex-column flex-column-center">
-											<figure className="shadow-figure">
-												<img src={piece.bannerImg} />
+										<div className="my-auto">
+											<figure>
+												<img
+													className="w-min"
+													src={piece.bannerImg}
+												/>
 											</figure>
 										</div>
-										<div className="piece-box">
-											<div className="piece-title">
+										<div className="ml-3 mt-3 md:mt-0">
+											<div className="flex flex-row items-center">
 												<Link
 													href={`https://github.com/apxxxxxxe/${piece.repoName}#readme`}
 												>
 													<a>
-														<h4>{piece.title}</h4>
+														<h4 className="font-bold">
+															{piece.title}
+														</h4>
 													</a>
 												</Link>
-												<figure>
+												<figure className="ml-2">
 													<img
-														className="rounded5"
+														className=""
 														src={`https://img.shields.io/badge/dynamic/json?query=pushed_at&url=${apiRoot}%2F${piece.repoName}&color=%23${piece.color}&label=最終更新&style=flat-square`}
 														alt="最終更新"
 													/>
 												</figure>
 											</div>
-											<div className="piece-description">
-												{piece.description}
-												<div className="piece-download-button">
+											<div className="">
+												<div className="my-1">
+													{piece.description}
+												</div>
+												<div className="flex flex-row">
 													<p>Download:</p>
 													{piece.fileName === "" ? (
 														<p>[制作中]</p>
@@ -173,10 +182,10 @@ function getPiecesElement(pieceAry: Piece[]) {
 														<Link
 															href={`https://github.com/apxxxxxxe/${piece.repoName}/releases/latest/download/${piece.fileName}`}
 														>
-															<a>
+															<a className="ml-2">
 																<figure>
 																	<img
-																		className="rounded5"
+																		className=""
 																		src={`https://img.shields.io/github/v/release/apxxxxxxe/${piece.repoName}?color=%23${piece.color}&label=${piece.fileName}&logo=github&style=flat-square`}
 																		alt="ダウンロード"
 																	/>
@@ -199,35 +208,55 @@ function getPiecesElement(pieceAry: Piece[]) {
 
 const Page: NextPage = () => (
 	<Layout title="INDEX" contentDirection="row">
-		<div className="content main-container">
-			<h1>INDEX</h1>
-			<h2>配布物</h2>
-			<div className="body">{getPiecesElement(pieces)}</div>
-			<h2>このサイトについて</h2>
-			<p>
+		<div className="flex flex-col bg-white m-5 p-10 rounded-xl shadow-md">
+			<h1 className="font-bold text-3xl mb-5">INDEX</h1>
+			<h2 className="font-bold text-2xl border-solid border-b border-dashed pb-1">
+				配布物
+			</h2>
+			<div className="mt-3">{getPiecesElement(pieces)}</div>
+			<h2 className="mt-3 font-bold text-2xl border-solid border-b border-dashed pb-1">
+				このサイトについて
+			</h2>
+			<p className="mt-3">
 				デスクトップマスコット「伺か」の配布物と開発情報を載せているサイトです。
-				<br />
-				<br />
-				サイト名: <strong>おわらない</strong> (https://apxxxxxxe.dev)
 			</p>
-			<p>
+			<p className="my-2">
+				サイト名: <strong>おわらない</strong> (https://apxxxxxxe.dev)
+				<br />
 				管理者: <strong>日野つみ</strong>
 			</p>
-			<h4>連絡先</h4>
-			<ul>
+			<h4 className="font-bold text-lg">連絡先</h4>
+			<ul className="list-disc list-inside">
 				<li>
-					<a href="http://clap.webclap.com/clap.php?id=apxxxxxxe">
+					<a
+						className="hover:underline hover:decoration-solid text-blue"
+						href="http://clap.webclap.com/clap.php?id=apxxxxxxe"
+					>
 						Web拍手
 					</a>
 				</li>
 				<li>
-					<a href="https://twitter.com/apxxxxxxe">Twitter</a>
+					<a
+						className="hover:underline hover:decoration-solid text-blue"
+						href="https://twitter.com/apxxxxxxe"
+					>
+						Twitter
+					</a>
 				</li>
 				<li>
-					<a href="https://github.com/apxxxxxxe">GitHub</a>
+					<a
+						className="hover:underline hover:decoration-solid text-blue"
+						href="https://github.com/apxxxxxxe"
+					>
+						GitHub
+					</a>
 				</li>
 				<li>
-					<a rel="me" href="https://ukadon.shillest.net/@apxxxxxxe">
+					<a
+						className="hover:underline hover:decoration-solid text-blue"
+						rel="me"
+						href="https://ukadon.shillest.net/@apxxxxxxe"
+					>
 						Mastodon
 					</a>
 				</li>

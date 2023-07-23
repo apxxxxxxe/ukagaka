@@ -1,0 +1,18 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+@font-face {
+	font-family: "klee";
+	src: url(/fonts/Klee/KleeOne-Regular.ttf);
+}
+@font-face {
+	font-family: "klee-semibold";
+	src: url(/fonts/Klee/KleeOne-SemiBold.ttf);
+}
+@font-face {
+	font-family: "HackGen";
+	src: url(/fonts/HackGen/HackGen-Regular.ttf);
+}

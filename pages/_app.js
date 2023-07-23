@@ -1,5 +1,6 @@
 import Script from "next/script"
 import "styles/main.scss"
+import "styles/tailwind.css"
 
 function MyApp({ Component, pageProps }) {
 	return (
