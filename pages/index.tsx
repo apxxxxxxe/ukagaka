@@ -208,7 +208,7 @@ const Page: NextPage = () => (
 				デスクトップマスコット「伺か」の配布物と開発情報を載せているサイトです。
 				<br />
 				<br />
-				サイト名: <strong>おわらない</strong>
+				サイト名: <strong>おわらない</strong> (https://apxxxxxxe.dev)
 			</p>
 			<p>
 				管理者: <strong>日野つみ</strong>
