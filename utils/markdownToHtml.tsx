@@ -57,6 +57,12 @@ export const rawHtmlToDom = (
 				node.attribs.class =
 					"border-solid border-l-4 border-black pl-2 text-lg font-bold mb-4"
 			}
+			if (node.name === "h4") {
+				node.attribs.class = "font-bold text-lg mb-4"
+			}
+			if (node.name === "h5") {
+				node.attribs.class = "font-bold mb-4"
+			}
 			if (node.name === "p" && node.children.length > 0) {
 				let includeImg = false
 				node.children.forEach((c) => {
@@ -79,12 +85,12 @@ export const rawHtmlToDom = (
 					}
 					node.attribs.src = `${imageRoot}/${slug}/${node.attribs.src}`
 				}
-				let figureClass = "shadow-figure"
-				let figcapClass = ""
+
+				let imgdivClass = "my-5 flex flex-col"
+
 				if (node.attribs.alt.startsWith("center:")) {
 					node.attribs.alt = node.attribs.alt.replace("center:", "")
-					figureClass += " image-center"
-					figcapClass += " caption-center"
+					imgdivClass += " justify-center items-center"
 				}
 
 				const caption = reactStringReplace(
@@ -94,14 +100,10 @@ export const rawHtmlToDom = (
 				)
 
 				return (
-					<>
-						<figure className={figureClass}>
-							<img {...node.attribs} />
-						</figure>
-						<figcaption className={figcapClass}>
-							{caption}
-						</figcaption>
-					</>
+					<div className={imgdivClass}>
+						<img {...node.attribs} />
+						<p>{caption}</p>
+					</div>
 				)
 			} else if (node.name === "a") {
 				if (!node.attribs.href.startsWith("http")) {

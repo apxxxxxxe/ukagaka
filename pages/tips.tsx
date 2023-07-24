@@ -19,16 +19,22 @@ export const getStaticProps = async () => {
 const Page: NextPage<Props> = ({ content, slug, ogpDatas }) => {
 	return (
 		<Layout title="TIPS" contentDirection="row">
-			<div className="content main-container">
-				<h1>TIPS</h1>
-				<p>開発中の備忘録をTIPS形式で掲載しています</p>
-				<div className="body">
-					{rawHtmlToDom(content, slug, ogpDatas)}
+			<div className="flex flex-row justify-center">
+				<div className="container flex flex-col bg-white m-5 p-10 rounded-xl shadow-md">
+					<h1 className="font-bold text-3xl mb-5">TIPS</h1>
+					<p className="mb-4">
+						開発中の備忘録をTIPS形式で掲載しています
+					</p>
+					<div className="body">
+						{rawHtmlToDom(content, slug, ogpDatas)}
+					</div>
 				</div>
-			</div>
-			<div className="content toc-content">
-				<h2>もくじ</h2>
-				<TableOfContent />
+				<div className="sticky top-5 h-fit w-1/6 flex flex-col bg-white mt-5 p-6 rounded-xl shadow-md">
+					<h2 className="font-bold text-xl border-solid border-b border-dashed pb-1 mb-4">
+						もくじ
+					</h2>
+					<TableOfContent />
+				</div>
 			</div>
 		</Layout>
 	)
