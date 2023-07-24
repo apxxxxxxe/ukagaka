@@ -2,6 +2,7 @@ import { NextPage } from "next"
 import Link from "next/link"
 import Layout from "utils/Layout"
 import axios from "axios"
+import WebClapBox from "utils/webclap"
 
 type Piece = {
 	type: string
@@ -281,17 +282,10 @@ const Page: NextPage = ({ pushedAts }: { pushedAts: PushedAt[] }) => (
 				<li>
 					<a
 						className="hover:underline hover:decoration-solid hover:cursor-pointer text-blue"
-						href="http://clap.webclap.com/clap.php?id=apxxxxxxe"
+						rel="me"
+						href="https://ukadon.shillest.net/@apxxxxxxe"
 					>
-						Web拍手
-					</a>
-				</li>
-				<li>
-					<a
-						className="hover:underline hover:decoration-solid hover:cursor-pointer text-blue"
-						href="https://twitter.com/apxxxxxxe"
-					>
-						Twitter
+						Mastodon
 					</a>
 				</li>
 				<li>
@@ -302,16 +296,8 @@ const Page: NextPage = ({ pushedAts }: { pushedAts: PushedAt[] }) => (
 						GitHub
 					</a>
 				</li>
-				<li>
-					<a
-						className="hover:underline hover:decoration-solid hover:cursor-pointer text-blue"
-						rel="me"
-						href="https://ukadon.shillest.net/@apxxxxxxe"
-					>
-						Mastodon
-					</a>
-				</li>
 			</ul>
+			<WebClapBox />
 		</div>
 	</Layout>
 )
