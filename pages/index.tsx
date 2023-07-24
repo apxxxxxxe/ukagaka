@@ -123,21 +123,34 @@ const pieces: Piece[] = [
 	},
 ]
 
+const formatDate = (dateString: string): string => {
+	const date = new Date(dateString)
+	return (
+		date.getFullYear() +
+		"/" +
+		("0" + (date.getMonth() + 1)).slice(-2) +
+		"/" +
+		("0" + date.getDate()).slice(-2)
+	)
+}
+
 export async function getServerSideProps() {
 	// Piecesのリポジトリの最終更新日を取得
 	const pushedAts: PushedAt[] = await Promise.all(
 		pieces.map(async (piece) => {
-			const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/${piece.repoName}`);
-      if (res.status !== 200) {
-        return {
-          repoName: piece.repoName,
-          pushedAt: "error",
-        }
-      }
-
+			const res = await axios.get(
+				`https://api.github.com/repos/apxxxxxxe/${piece.repoName}`,
+				{ timeout: 5000 }
+			)
+			if (res.status !== 200) {
+				return {
+					repoName: piece.repoName,
+					pushedAt: "取得失敗",
+				}
+			}
 			return {
 				repoName: piece.repoName,
-				pushedAt: res.data.pushed_at,
+				pushedAt: formatDate(res.data.pushed_at),
 			}
 		})
 	)
