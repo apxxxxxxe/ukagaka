@@ -46,6 +46,17 @@ export const rawHtmlToDom = (
 	const options = {
 		replace: (node: Element) => {
 			const imageRoot = `contents`
+			if (node.name === "h1") {
+				node.attribs.class = "font-bold text-3xl mb-5"
+			}
+			if (node.name === "h2") {
+				node.attribs.class =
+					"font-bold text-2xl border-solid border-b border-dashed pb-1 mb-4"
+			}
+			if (node.name === "h3") {
+				node.attribs.class =
+					"border-solid border-l-4 border-black pl-2 text-lg font-bold mb-4"
+			}
 			if (node.name === "p" && node.children.length > 0) {
 				let includeImg = false
 				node.children.forEach((c) => {
@@ -57,6 +68,8 @@ export const rawHtmlToDom = (
 				})
 				if (includeImg) {
 					node.name = "div"
+				} else {
+					node.attribs.class = "mb-4"
 				}
 			}
 			if (node.name === "img") {
@@ -127,12 +140,14 @@ export const rawHtmlToDom = (
 					code = child.children[0].data
 				}
 				return (
-					<SyntaxHighlighter
-						style={arduinoLight}
-						showLineNumbers={false}
-					>
-						{code}
-					</SyntaxHighlighter>
+					<div className="mb-4 mx-4 border-solid border border-gray/[0.6] shadow">
+						<SyntaxHighlighter
+							style={arduinoLight}
+							showLineNumbers={false}
+						>
+							{code}
+						</SyntaxHighlighter>
+					</div>
 				)
 			} else if (node.name === "table") {
 				return (

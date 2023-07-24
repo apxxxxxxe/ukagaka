@@ -14,7 +14,7 @@ const menuItem = (name: string, currentSlug: string): JSX.Element => {
 	const c = currentSlug === slug ? "menuitem-active" : ""
 
 	return (
-		<p className="text-white text-md w-10 mx-5 my-2.5">
+		<p className="text-center text-white text-md font px-5 my-2 py-0.5">
 			<Link href={`/${slug}`} as={`/${slug}`}>
 				<a className={c}>{name}</a>
 			</Link>
@@ -47,31 +47,28 @@ export default function Layout({
 					type="image/vnd.microsoft.icon"
 				/>
 			</Head>
-			<div id="wrapper" className="bg-dot bg-lightgray font-sans">
-				<div id="header" className="bg-fog">
+			<div className="bg-dot bg-lightgray font-sans">
+				<div className="bg-fog">
 					<div className="bg-rain">
 						<div className="backdrop-blur-xs h-40 flex flex-row items-center bg-darkblue/[0.6]">
-							<div className="ml-40 text-white font-tegakibold">
-								<h1 className="text-5xl">おわらない</h1>
-								<p className="ml-2 mt-1">
+							<div className="ml-40 text-white">
+								<h1 className="text-5xl font-tegakibold">
+									おわらない
+								</h1>
+								<p className="text-sm ml-2 mt-1.5 font-sans">
 									伺か関連の配布物を置くところ
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div
-					id="menu"
-					className="flex flex-row justify-center bg-black"
-				>
+				<div className="flex flex-row justify-center divide-x divide-darkgray bg-black">
 					{menuItem("index", router.pathname)}
 					{menuItem("tips", router.pathname)}
 					{menuItem("blog", router.pathname)}
 				</div>
-				<div id="container" className="container">
-					{children}
-				</div>
-				<div id="footer" className="bg-black h-32"></div>
+				{children}
+				<div className="bg-black h-32"></div>
 			</div>
 		</>
 	)

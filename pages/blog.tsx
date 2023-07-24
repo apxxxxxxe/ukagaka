@@ -15,8 +15,8 @@ export const getStaticProps = async () => {
 
 const Home: NextPage<Props> = ({ allPosts }) => (
 	<Layout title="Blog" contentDirection="column">
-		<div className="content main-container">
-			<h1>Blog</h1>
+		<div className="container mx-auto flex flex-col bg-white m-5 p-10 rounded-xl shadow-md">
+			<h1 className="font-bold text-3xl mb-5">Blog</h1>
 			<p>記事一覧（新着順）</p>
 			<ul>
 				{allPosts?.map((post) => {
@@ -26,26 +26,22 @@ const Home: NextPage<Props> = ({ allPosts }) => (
 						!post.tags.includes("intro")
 					) {
 						return (
-							<div className="list-article">
+							<div className="rounded-lg my-5 py-5 px-7 border-solid border border-gray/[0.2] rounded-lg shadow-md">
 								<Link href={"/entries/" + post.slug}>
-									<div className="flex-end flex-margin blogpost-title bloglist-compontent">
-										<a className="flex-leftchild flex-compontent">
-											<h2 className="flex-compontent">
-												{post.title}
-											</h2>
+									<div className="flex flex-row items-center border-solid border-b pb-3 mb-3">
+										<a className="grow font-bold text-xl hover:underline hover:decoration-solid hover:cursor-pointer text-blue mr-3">
+											{post.title}
 										</a>
-										<p className="flex-compontent flex-column-center">
+										<p className="grow-0 text-right text-sm">
 											{formatDate(post.date)}
 										</p>
 									</div>
 								</Link>
-								<p className="bloglist-compontent bloglist-summery">
-									{post.summery}
-								</p>
-								<div className="flex-row bloglist-compontent">
+								<p className="text-darkgray">{post.summery}</p>
+								<div className="flex flex-row mt-1">
 									{post.tags?.map((tag) => (
 										<Link key={tag} href={`/search/${tag}`}>
-											<a className="blog-tag flex-compontent">
+											<a className="text-sm hover:underline hover:decoration-solid hover:cursor-pointer text-blue mr-1">
 												<p className="blog-tag flex-compontent">{`#${tag}`}</p>
 											</a>
 										</Link>

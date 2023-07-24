@@ -65,17 +65,18 @@ function makeHeading(headings: HeadingType[], activeId: string) {
 	let lastLevel = 0
 	let result = <></>
 	let tmp = new Array<ReactElement>(6).fill(null)
+	const ulClass = "pl-5 text-sm"
 
 	const wrapUl = (ary: ReactElement[], i: number) => {
 		if (i === ary.length - 1 && ary[i] === null) {
 			return <></>
 		} else if (i === ary.length - 1) {
-			return <ul>{ary[i]}</ul>
+			return <ul className={ulClass}>{ary[i]}</ul>
 		} else if (ary[i] === null) {
 			return <>{wrapUl(ary, i + 1)}</>
 		}
 		return (
-			<ul>
+			<ul className={ulClass}>
 				{ary[i]}
 				{wrapUl(ary, i + 1)}
 			</ul>
@@ -86,15 +87,21 @@ function makeHeading(headings: HeadingType[], activeId: string) {
 	while (i < headings.length) {
 		const heading = headings[i]
 		if (heading.level >= lastLevel) {
-			tmp[heading.level - 1] = (
+			const level = heading.level - 1
+			let c = "list-disc"
+			switch (level) {
+				case 2:
+					c = "list-circle"
+					break
+			}
+			tmp[level] = (
 				<>
-					{tmp[heading.level - 1]}
-					<li key={heading.id}>
+					{tmp[level]}
+					<li key={heading.id} className={c}>
 						<a
-							style={{
-								fontWeight:
-									activeId === heading.id ? "bold" : "normal",
-							}}
+							className={
+								activeId === heading.id ? "font-bold" : ""
+							}
 							href={`#${heading.id}`}
 						>
 							{heading.text}

@@ -8,7 +8,7 @@ module.exports = {
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		fontFamily: {
-			sans: ["Open Sans", "sans-serif"],
+			sans: ["Open Sans", "HackGen", "sans-serif"],
 			tegaki: ["klee", "sans-serif"],
 			tegakibold: ["klee-semibold", "sans-serif"],
 		},
@@ -16,9 +16,18 @@ module.exports = {
 			darkblue: "#1e2130",
 			black: "#30383a",
 			white: "#f8f8f8",
-			gray: "#b8b8b8",
 			lightgray: "#e4e4e8",
+			gray: "#b8b8b8",
+			darkgray: "#6c6c6f",
 			blue: "#4566af",
+		},
+		listStyleType: {
+			none: "none",
+			disc: "disc",
+			decimal: "decimal",
+			square: "square",
+			circle: "circle",
+			roman: "upper-roman",
 		},
 		extend: {
 			backgroundImage: {
