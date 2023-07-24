@@ -54,7 +54,7 @@ export const getStaticProps = async ({ params }: any) => {
 const Post: NextPage<Props> = ({ post, ogpDatas }) => (
 	<Layout title={post.title}>
 		<div className="flex flex-row justify-center">
-			<div className="container flex flex-col bg-white m-5 p-10 rounded-xl shadow-md">
+			<div className="container flex flex-col bg-white m-5 p-10 rounded-xl shadow-md min-h-screen">
 				<h1 className="font-bold text-2xl">{post.title}</h1>
 				<p className="mt-3 text-darkgray text-sm text-right">
 					{formatDate(post.date)}

@@ -257,12 +257,12 @@ const Page: NextPage = ({ pushedAts }: { pushedAts: PushedAt[] }) => (
 			<p className="mt-3">
 				デスクトップマスコット「伺か」の配布物と開発情報を載せているサイトです。
 			</p>
-			<p className="my-2">
+			<p className="my-4">
 				サイト名: <strong>おわらない</strong> (https://apxxxxxxe.dev)
 				<br />
 				管理者: <strong>日野つみ</strong>
 			</p>
-			<h4 className="font-bold text-lg">連絡先</h4>
+			<h4 className="font-bold text-lg mb-1">連絡先</h4>
 			<ul className="list-disc list-inside">
 				<li>
 					<a
