@@ -20,7 +20,6 @@ type PushedAt = {
 }
 
 const imageRoot = `/contents/index/`
-const apiRoot = encodeURIComponent(process.env.NEXT_PUBLIC_API_URL)
 
 const pieces: Piece[] = [
 	{
@@ -128,9 +127,14 @@ export async function getServerSideProps() {
 	// Piecesのリポジトリの最終更新日を取得
 	const pushedAts: PushedAt[] = await Promise.all(
 		pieces.map(async (piece) => {
-			const res = await axios.get(
-				`https://apxxxxxxe.dev/api/${piece.repoName}`
-			)
+			const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/${piece.repoName}`);
+      if (res.status !== 200) {
+        return {
+          repoName: piece.repoName,
+          pushedAt: "error",
+        }
+      }
+
 			return {
 				repoName: piece.repoName,
 				pushedAt: res.data.pushed_at,
@@ -208,9 +212,6 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: PushedAt[]) {
 														{piece.description}
 													</div>
 													<div className="flex flex-row items-center justify-end">
-														<p className="mr-2">
-															Download:
-														</p>
 														{piece.fileName ===
 														"" ? (
 															<p>[制作中]</p>
@@ -221,7 +222,7 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: PushedAt[]) {
 																<a>
 																	<figure>
 																		<img
-																			className="rounded-md"
+																			className="rounded-md h-6"
 																			src={`https://img.shields.io/github/v/release/apxxxxxxe/${piece.repoName}?color=%23${piece.color}&label=${piece.fileName}&logo=github&style=flat-square`}
 																			alt="ダウンロード"
 																		/>
