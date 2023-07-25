@@ -47,21 +47,19 @@ export const rawHtmlToDom = (
 		replace: (node: Element) => {
 			const imageRoot = `contents`
 			if (node.name === "h1") {
-				node.attribs.class = "font-bold text-3xl mb-5"
+				node.attribs.class = "article-h1"
 			}
 			if (node.name === "h2") {
-				node.attribs.class =
-					"font-bold text-2xl border-solid border-b border-dashed pb-1 mb-4"
+				node.attribs.class = "article-h2"
 			}
 			if (node.name === "h3") {
-				node.attribs.class =
-					"border-solid border-l-4 border-black pl-2 text-lg font-bold mb-4"
+				node.attribs.class = "article-h3"
 			}
 			if (node.name === "h4") {
-				node.attribs.class = "font-bold text-lg mb-4"
+				node.attribs.class = "article-h4"
 			}
 			if (node.name === "h5") {
-				node.attribs.class = "font-bold mb-4"
+				node.attribs.class = "article-h5"
 			}
 			if (node.name === "p" && node.children.length > 0) {
 				let includeImg = false
@@ -75,7 +73,7 @@ export const rawHtmlToDom = (
 				if (includeImg) {
 					node.name = "div"
 				} else {
-					node.attribs.class = "mb-4"
+					node.attribs.class = "article-p"
 				}
 			}
 			if (node.name === "img") {
@@ -135,6 +133,13 @@ export const rawHtmlToDom = (
 						</Link>
 					)
 				}
+				return (
+					<Link href={node.attribs.href}>
+						<a className="article-a">
+							{domToReact(node.children, options)}
+						</a>
+					</Link>
+				)
 			} else if (node.name === "pre" && node.children.length > 0) {
 				const child = node.children.find((child) => {
 					if (hasProperty(child, "name")) {

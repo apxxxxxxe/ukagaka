@@ -51,7 +51,10 @@ const pieces: Piece[] = [
 		description: (
 			<p>
 				ゴースト「
-				<a href="https://nanachi.sakura.ne.jp/narnaloader/ghost.php?ghost=DSLGS">
+				<a
+					className="article-a"
+					href="https://nanachi.sakura.ne.jp/narnaloader/ghost.php?ghost=DSLGS"
+				>
 					DSLGS
 				</a>
 				」用追加シェル
@@ -98,7 +101,7 @@ const pieces: Piece[] = [
 				<br />
 				(紹介記事:
 				<Link href="/entries/recentghosts-intro">
-					<a>プラグインを作った</a>
+					<a className="article-a">プラグインを作った</a>
 				</Link>
 				)
 			</p>
@@ -181,9 +184,7 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: PushedAt[]) {
 				return (
 					<>
 						<div className="flex flex-col">
-							<h3 className="border-solid border-l-4 border-black pl-2 text-lg font-bold">
-								{type}
-							</h3>
+							<h3 className="article-h3">{type}</h3>
 							{pieces
 								.filter((piece) => piece.type === type)
 								.map((piece) => {
@@ -210,10 +211,8 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: PushedAt[]) {
 													<Link
 														href={`https://github.com/apxxxxxxe/${piece.repoName}#readme`}
 													>
-														<a className="grow">
-															<h4 className="font-bold hover:underline">
-																{piece.title}
-															</h4>
+														<a className="grow font-bold hover:underline">
+															{piece.title}
 														</a>
 													</Link>
 													<p className="ml-2 grow-0 text-sm text-darkgray">
@@ -260,15 +259,11 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: PushedAt[]) {
 
 const Page: NextPage = ({ pushedAts }: { pushedAts: PushedAt[] }) => (
 	<Layout title="INDEX" contentDirection="row">
-		<div className="container mx-auto flex flex-col bg-white m-5 p-10 rounded-xl shadow-md">
-			<h1 className="font-bold text-3xl mb-5">INDEX</h1>
-			<h2 className="font-bold text-2xl border-solid border-b border-dashed pb-1 mb-4">
-				配布物
-			</h2>
+		<div className="article-container mx-auto">
+			<h1 className="article-h1">INDEX</h1>
+			<h2 className="article-h2">配布物</h2>
 			<div className="mt-3">{getPiecesElement(pieces, pushedAts)}</div>
-			<h2 className="mt-3 font-bold text-2xl border-solid border-b border-dashed pb-1 mb-4">
-				このサイトについて
-			</h2>
+			<h2 className="article-h2">このサイトについて</h2>
 			<p className="mt-3">
 				デスクトップマスコット「伺か」の配布物と開発情報を載せているサイトです。
 			</p>
@@ -277,11 +272,11 @@ const Page: NextPage = ({ pushedAts }: { pushedAts: PushedAt[] }) => (
 				<br />
 				管理者: <strong>日野つみ</strong>
 			</p>
-			<h4 className="font-bold text-lg mb-1">連絡先</h4>
+			<h4 className="article-h4">連絡先</h4>
 			<ul className="list-disc list-inside">
 				<li>
 					<a
-						className="hover:underline hover:decoration-solid hover:cursor-pointer text-blue"
+						className="article-a"
 						rel="me"
 						href="https://ukadon.shillest.net/@apxxxxxxe"
 					>
@@ -290,7 +285,7 @@ const Page: NextPage = ({ pushedAts }: { pushedAts: PushedAt[] }) => (
 				</li>
 				<li>
 					<a
-						className="hover:underline hover:decoration-solid hover:cursor-pointer text-blue"
+						className="article-a"
 						href="https://github.com/apxxxxxxe"
 					>
 						GitHub

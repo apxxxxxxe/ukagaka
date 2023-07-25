@@ -15,8 +15,8 @@ export const getStaticProps = async () => {
 
 const Home: NextPage<Props> = ({ allPosts }) => (
 	<Layout title="Blog" contentDirection="column">
-		<div className="container mx-auto flex flex-col bg-white m-5 p-10 rounded-xl shadow-md">
-			<h1 className="font-bold text-3xl mb-5">Blog</h1>
+		<div className="article-container mx-auto">
+			<h1 className="article-h1">Blog</h1>
 			<p>記事一覧（新着順）</p>
 			<ul>
 				{allPosts?.map((post) => {
@@ -41,7 +41,7 @@ const Home: NextPage<Props> = ({ allPosts }) => (
 								<div className="flex flex-row mt-1">
 									{post.tags?.map((tag) => (
 										<Link key={tag} href={`/search/${tag}`}>
-											<a className="text-sm hover:underline hover:decoration-solid hover:cursor-pointer text-blue mr-1">
+											<a className="article-a text-sm mr-1">
 												<p className="blog-tag flex-compontent">{`#${tag}`}</p>
 											</a>
 										</Link>

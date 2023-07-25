@@ -16,3 +16,36 @@
 	font-family: "HackGen";
 	src: url(/fonts/HackGen/HackGen-Regular.ttf);
 }
+
+@layer components {
+	.article-container {
+		@apply container flex flex-col bg-white m-5 p-10 rounded-xl shadow-md;
+	}
+	.article-h1 {
+		@apply font-bold text-3xl mb-5;
+	}
+	.article-h2 {
+		@apply font-bold text-2xl border-solid border-b border-dashed pb-1 mb-4;
+	}
+	.article-h3 {
+		@apply border-solid border-l-4 border-black pl-2 text-lg font-bold;
+	}
+	.article-h4 {
+		@apply font-bold text-lg mb-1;
+	}
+	.article-h5 {
+		@apply font-bold mb-4;
+	}
+	.article-p {
+		@apply mb-4;
+	}
+	.article-a {
+		@apply hover:underline hover:decoration-solid hover:cursor-pointer text-blue;
+	}
+	.toc-container {
+		@apply sticky top-5 h-fit w-1/6 flex flex-col bg-white mt-5 p-6 rounded-xl shadow-md;
+	}
+	.toc-h2 {
+		@apply font-bold text-xl border-solid border-b border-dashed pb-1 mb-4;
+	}
+}
