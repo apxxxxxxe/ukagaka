@@ -144,9 +144,14 @@ export async function getServerSideProps() {
 		pieces.map(async (piece) => {
 			const res = await axios.get(
 				`https://api.github.com/repos/apxxxxxxe/${piece.repoName}`,
-				{ timeout: 5000 }
+				{
+					timeout: 5000,
+					validateStatus: function (status) {
+						return true
+					},
+				}
 			)
-			if (res.status !== 200) {
+			if (res.status < 200 || res.status >= 300) {
 				return {
 					repoName: piece.repoName,
 					pushedAt: "取得失敗",
