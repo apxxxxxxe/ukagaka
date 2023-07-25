@@ -1,0 +1,32 @@
+name: Update JSON
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 毎日00:00 UTCに実行します
+    - cron: '0 0 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install jq
+      run: sudo apt-get install jq
+
+    - name: Fetch GitHub API and update JSON
+      run: |
+        mkdir -p ./data
+        curl -H "Accept: application/vnd.github.v3+json" "https://api.github.com/users/apxxxxxxe/repos" | jq '. | map({ repoName: .name, pushedAt: .pushed_at })' > ./data/repos.json
+
+    - name: Commit and push if it changed
+      run: |
+        git diff
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -A .
+        git commit -m "Update JSON data" || exit 0
+        git push

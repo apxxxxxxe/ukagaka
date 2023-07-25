@@ -1,8 +1,10 @@
 import { NextPage } from "next"
 import Link from "next/link"
 import Layout from "utils/Layout"
-import axios from "axios"
 import WebClapBox from "utils/webclap"
+
+import fs from "fs"
+import path from "path"
 
 type Piece = {
 	type: string
@@ -140,35 +142,16 @@ const formatDate = (dateString: string): string => {
 
 export async function getServerSideProps() {
 	// Piecesのリポジトリの最終更新日を取得
-	const pushedAts: PushedAt[] = await Promise.all(
-		pieces.map(async (piece) => {
-			const res = await axios.get(
-				`https://api.github.com/repos/apxxxxxxe/${piece.repoName}`,
-				{
-					timeout: 5000,
-					validateStatus: function (status) {
-						return true
-					},
-				}
-			)
-			if (res.status < 200 || res.status >= 300) {
-				return {
-					repoName: piece.repoName,
-					pushedAt: "取得失敗",
-				}
-			}
-			return {
-				repoName: piece.repoName,
-				pushedAt: formatDate(res.data.pushed_at),
-			}
-		})
-	)
+	const filePath = path.join(process.cwd(), "data", "repos.json")
+	const fileContents = fs.readFileSync(filePath, "utf8")
 
-	console.log(pushedAts)
+	const data = JSON.parse(fileContents) as PushedAt[]
+
+	console.log(data)
 
 	return {
 		props: {
-			pushedAts: pushedAts,
+			pushedAts: data as PushedAt[],
 		},
 	}
 }
@@ -196,7 +179,11 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: PushedAt[]) {
 									let pushedAt = pushedAts.find(
 										(p) => p.repoName === piece.repoName
 									)
-									if (!pushedAt) {
+									if (pushedAt) {
+										pushedAt.pushedAt = formatDate(
+											pushedAt.pushedAt
+										)
+									} else {
 										pushedAt = {
 											repoName: piece.repoName,
 											pushedAt: "取得失敗",
