@@ -277,7 +277,7 @@ const Page: NextPage = ({ pushedAts }: { pushedAts: PushedAt[] }) => (
 				<br />
 				管理者: <strong>日野つみ</strong>
 			</p>
-			<h4 className="article-h4">連絡先</h4>
+			<h4 className="article-h4 mb-1">連絡先</h4>
 			<ul className="list-disc list-inside">
 				<li>
 					<a

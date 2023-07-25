@@ -156,6 +156,9 @@ export const rawHtmlToDom = (
 						<SyntaxHighlighter
 							style={arduinoLight}
 							showLineNumbers={false}
+							codeTagProps={{
+								className: "font-sans text-sm",
+							}}
 						>
 							{code}
 						</SyntaxHighlighter>

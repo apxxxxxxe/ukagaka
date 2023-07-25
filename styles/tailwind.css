@@ -28,10 +28,10 @@
 		@apply font-bold text-2xl border-solid border-b border-dashed pb-1 mb-4;
 	}
 	.article-h3 {
-		@apply border-solid border-l-4 border-black pl-2 text-lg font-bold;
+		@apply border-solid border-l-4 border-black pl-2 text-lg font-bold mb-4;
 	}
 	.article-h4 {
-		@apply font-bold text-lg mb-1;
+		@apply font-bold text-lg mb-4;
 	}
 	.article-h5 {
 		@apply font-bold mb-4;
