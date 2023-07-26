@@ -191,7 +191,7 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: PushedAt[]) {
 									}
 									return (
 										<div
-											className="flex flex-col items-center md:flex-row md:items-normal p-4 px-3 my-6 border-solid border border-gray/[0.2] rounded-lg shadow-md"
+											className="flex flex-col items-center md:flex-row md:items-normal p-4 px-3 mb-8 border-solid border border-gray/[0.2] rounded-lg shadow-md"
 											key={piece.repoName}
 										>
 											<img
