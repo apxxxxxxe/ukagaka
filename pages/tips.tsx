@@ -19,7 +19,7 @@ export const getStaticProps = async () => {
 const Page: NextPage<Props> = ({ content, slug, ogpDatas }) => {
 	return (
 		<Layout title="TIPS" contentDirection="row">
-			<div className="flex flex-row justify-center">
+			<div className="flex flex-col md:flex-row justify-center">
 				<div className="article-container">
 					<h1 className="article-h1">TIPS</h1>
 					<p className="mb-4">

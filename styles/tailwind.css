@@ -19,7 +19,7 @@
 
 @layer components {
 	.article-container {
-		@apply container flex flex-col bg-white m-5 p-10 rounded-xl shadow-md;
+		@apply container order-2 md:order-1 w-11/12 mx-auto my-5 flex flex-col bg-white md:m-5 p-10 rounded-xl shadow-md;
 	}
 	.article-h1 {
 		@apply font-bold text-3xl mb-5;
@@ -43,7 +43,7 @@
 		@apply hover:underline hover:decoration-solid hover:cursor-pointer text-blue;
 	}
 	.toc-container {
-		@apply sticky top-5 h-fit w-1/6 flex flex-col bg-white mt-5 p-6 rounded-xl shadow-md;
+		@apply md:sticky order-1 md:order-2 md:top-5 h-fit w-11/12 md:w-1/6 flex flex-col bg-white mx-auto md:mx-0 md:mb-0 mt-5 p-6 rounded-xl shadow-md;
 	}
 	.toc-h2 {
 		@apply font-bold text-xl border-solid border-b border-dashed pb-1 mb-4;

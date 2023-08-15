@@ -51,7 +51,7 @@ export default function Layout({
 				<div className="bg-fog">
 					<div className="bg-rain">
 						<div className="backdrop-blur-xs h-40 flex flex-row items-center bg-darkblue/[0.6]">
-							<div className="ml-40 text-white">
+							<div className="text-white mx-auto md:ml-40 md:mr-0">
 								<h1 className="text-5xl font-tegakibold">
 									おわらない
 								</h1>

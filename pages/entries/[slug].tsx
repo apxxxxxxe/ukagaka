@@ -53,7 +53,7 @@ export const getStaticProps = async ({ params }: any) => {
 
 const Post: NextPage<Props> = ({ post, ogpDatas }) => (
 	<Layout title={post.title}>
-		<div className="flex flex-row justify-center">
+		<div className="flex flex-col md:flex-row justify-center">
 			<div className="article-container">
 				<h1 className="font-bold text-2xl">{post.title}</h1>
 				<p className="mt-3 text-darkgray text-sm text-right">

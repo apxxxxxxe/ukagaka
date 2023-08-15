@@ -198,7 +198,7 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: PushedAt[]) {
 												className="w-min my-auto"
 												src={piece.bannerImg}
 											/>
-											<div className="w-full ml-5 mt-3 md:mt-0">
+											<div className="w-full mx-5 mt-3 md:mt-0">
 												<div className="flex flex-row items-center">
 													<Link
 														href={`https://github.com/apxxxxxxe/${piece.repoName}#readme`}
