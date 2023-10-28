@@ -74,6 +74,15 @@ const pieces: Piece[] = [
 	},
 	{
 		type: "プラグイン",
+		title: "Ukaing",
+		repoName: "Ukaing",
+		color: "5865f2",
+		fileName: "Ukaing.nar",
+		bannerImg: `${imageRoot}banner_noimage.png`,
+		description: <p>Discord上に起動中ゴーストの情報を表示するプラグイン</p>,
+	},
+	{
+		type: "プラグイン",
 		title: "GhostWardrobe",
 		repoName: "GhostWardrobe",
 		color: "9cb08b",
