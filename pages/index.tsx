@@ -74,6 +74,15 @@ const pieces: Piece[] = [
 	},
 	{
 		type: "プラグイン",
+		title: "GhostSpeaker",
+		repoName: "GhostSpeaker",
+		color: "8a4e4e",
+		fileName: "GhostSpeaker.nar",
+		bannerImg: `${imageRoot}banner_noimage.png`,
+		description: <p>棒読みちゃん・VOICEVOX・COEIROINK等でゴーストのトークを読み上げられるようになるプラグイン</p>,
+	},
+	{
+		type: "プラグイン",
 		title: "Ukaing",
 		repoName: "Ukaing",
 		color: "5865f2",
