@@ -2,6 +2,7 @@ import { NextPage } from "next"
 import Link from "next/link"
 import Layout from "utils/Layout"
 import WebClapBox from "utils/webclap"
+import Iframe from "react-iframe"
 
 import fs from "fs"
 import path from "path"
@@ -79,7 +80,11 @@ const pieces: Piece[] = [
 		color: "8a4e4e",
 		fileName: "GhostSpeaker.nar",
 		bannerImg: `${imageRoot}banner_noimage.png`,
-		description: <p>棒読みちゃん・VOICEVOX・COEIROINK等でゴーストのトークを読み上げられるようになるプラグイン</p>,
+		description: (
+			<p>
+				棒読みちゃん・VOICEVOX・COEIROINK等でゴーストのトークを読み上げられるようになるプラグイン
+			</p>
+		),
 	},
 	{
 		type: "プラグイン",
@@ -282,8 +287,16 @@ const Page: NextPage = ({ pushedAts }: { pushedAts: PushedAt[] }) => (
 				<br />
 				管理者: <strong>日野つみ</strong>
 			</p>
-			<h4 className="article-h4 mb-1">連絡先</h4>
+			<h4 className="article-h4">連絡先</h4>
 			<ul className="list-disc list-inside">
+				<li>
+					<a
+						className="article-a"
+						href="https://github.com/apxxxxxxe"
+					>
+						GitHub
+					</a>
+				</li>
 				<li>
 					<a
 						className="article-a"
@@ -293,15 +306,22 @@ const Page: NextPage = ({ pushedAts }: { pushedAts: PushedAt[] }) => (
 						Mastodon
 					</a>
 				</li>
-				<li>
-					<a
-						className="article-a"
-						href="https://github.com/apxxxxxxe"
-					>
-						GitHub
-					</a>
-				</li>
 			</ul>
+
+			<Iframe
+				className="my-5 border rounded-lg"
+				url="https://mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Fukadon.shillest.net%2Fusers%2Fapxxxxxxe&theme=light&size=88&header=true&replies=false&boosts=true"
+				allowFullScreen
+				sandbox={[
+					"allow-top-navigation",
+					"allow-scripts",
+					"allow-popups",
+					"allow-popups-to-escape-sandbox",
+				]}
+				width="300"
+				height="400"
+			/>
+
 			<WebClapBox />
 		</div>
 	</Layout>
