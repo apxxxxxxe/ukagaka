@@ -15,5 +15,6 @@ module.exports = {
 		"Bouyomi",
 		"recentghosts",
 		"shioriupdater",
+		"sunset-sunrise-saori",
 	],
 }
