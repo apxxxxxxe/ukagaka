@@ -317,12 +317,15 @@ const Page: NextPage = ({
 			<div className="overflow-y-auto h-96 mb-5">
 				{commitsByDate.map((commitByDate) => {
 					return (
-						<div className="p-5 mb-5 mx-5 border-solid border border-gray/[0.6] rounded-lg shadow-md md:w-3/4 mx-auto">
+						<div
+							className="p-5 mb-5 mx-5 border-solid border border-gray/[0.6] rounded-lg shadow-md md:w-3/4 mx-auto"
+							key={`commitByDate-${commitByDate.date}`}
+						>
 							<h2 className="text-xl font-bold mb-3">
 								{formatDate(commitByDate.date)}
 							</h2>
 							{commitByDate.commits.map((commit: Commit) => (
-								<div className="ml-5">
+								<div className="ml-5" key={commit.date}>
 									<h3 className="font-bold mb-1">
 										{pieceNameByRepoName(commit.repoName)}
 									</h3>
@@ -330,7 +333,11 @@ const Page: NextPage = ({
 										{commit.message
 											.split("\n")
 											.map((line) => (
-												<li>{line}</li>
+												<li
+													key={`${commit.date}-${line}`}
+												>
+													{line}
+												</li>
 											))}
 									</ol>
 								</div>
