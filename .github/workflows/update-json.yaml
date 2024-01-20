@@ -14,13 +14,18 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install jq
-      run: sudo apt-get install jq
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14.x'
 
     - name: Fetch GitHub API and update JSON
       run: |
         mkdir -p ./data
-        curl -H "Accept: application/vnd.github.v3+json" "https://api.github.com/users/apxxxxxxe/repos" | jq '. | map({ repoName: .name, pushedAt: .pushed_at }) | [.[] | select(contains({repoName: "ukagaka"}) or contains({private: false})|not)]' > ./data/repos.json
+        cd workflows
+        npm install
+        node github_repos.js > ../data/github_repos.json
+        node github_commits.js > ../data/github_commits.json
 
     - name: Commit and push if it changed
       run: |
