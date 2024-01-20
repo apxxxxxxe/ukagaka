@@ -11,19 +11,14 @@
 		"format": "prettier --write --ignore-path .gitignore --tab-width 4 --use-tabs --no-semi './**/*.{js,jsx,ts,tsx,json,css,scss}'"
 	},
 	"dependencies": {
-		"@tailwindcss/typography": "^0.5.9",
 		"autoprefixer": "^10.4.14",
-		"axios": "^1.4.0",
 		"gray-matter": "^4.0.3",
 		"html-react-parser": "^2.0.0",
-		"marked": "^4.0.17",
 		"next": "^12.2.3",
 		"node-fetch": "^3.2.10",
 		"open-graph-scraper": "^4.11.1",
-		"postcss": "^8.4.27",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"react-iframe": "^1.8.5",
 		"react-string-replace": "^1.1.0",
 		"react-syntax-highlighter": "^15.5.0",
 		"rehype": "^12.0.1",
@@ -31,9 +26,7 @@
 		"remark": "^14.0.2",
 		"remark-gfm": "^3.0.1",
 		"remark-html": "^15.0.1",
-		"sass": "^1.53.0",
-		"scss": "^0.2.4",
-		"tocbot": "^4.18.2"
+		"sass": "^1.53.0"
 	},
 	"devDependencies": {
 		"@chakra-ui/react": "^2.2.1",

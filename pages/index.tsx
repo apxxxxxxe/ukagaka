@@ -2,7 +2,6 @@ import { NextPage } from "next"
 import Link from "next/link"
 import Layout from "utils/Layout"
 import WebClapBox from "utils/webclap"
-import Iframe from "react-iframe"
 
 import fs from "fs"
 import path from "path"
@@ -375,21 +374,6 @@ const Page: NextPage = ({
 					</a>
 				</li>
 			</ul>
-
-			<Iframe
-				className="my-5 border rounded-lg"
-				url="https://mastofeed.com/apiv2/feed?userurl=https%3A%2F%2Fukadon.shillest.net%2Fusers%2Fapxxxxxxe&theme=light&size=88&header=true&replies=false&boosts=true"
-				allowFullScreen
-				sandbox={[
-					"allow-top-navigation",
-					"allow-scripts",
-					"allow-popups",
-					"allow-popups-to-escape-sandbox",
-				]}
-				width="300"
-				height="400"
-			/>
-
 			<WebClapBox />
 		</div>
 	</Layout>
