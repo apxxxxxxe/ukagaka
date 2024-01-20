@@ -23,6 +23,17 @@ type PushedAt = {
 	pushedAt: string
 }
 
+type CommitsByDate = {
+	date: string
+	commits: Commit[]
+}
+
+type Commit = {
+	repoName: string
+	date: string
+	message: string
+}
+
 const imageRoot = `/contents/index/`
 
 const pieces: Piece[] = [
@@ -152,6 +163,15 @@ const pieces: Piece[] = [
 	},
 ]
 
+const pieceNameByRepoName = (repoName: string): string => {
+	const piece = pieces.find((piece) => piece.repoName === repoName)
+	if (piece) {
+		return piece.title
+	} else {
+		return repoName
+	}
+}
+
 const formatDate = (dateString: string): string => {
 	const date = new Date(dateString)
 	return (
@@ -165,16 +185,25 @@ const formatDate = (dateString: string): string => {
 
 export async function getServerSideProps() {
 	// Piecesのリポジトリの最終更新日を取得
-	const filePath = path.join(process.cwd(), "data", "repos.json")
-	const fileContents = fs.readFileSync(filePath, "utf8")
+	const repoDataPath = path.join(process.cwd(), "data", "github_repos.json")
+	const repoContents = fs.readFileSync(repoDataPath, "utf8")
+	const pushedAts: PushedAt[] = JSON.parse(repoContents)
+	console.log(pushedAts)
 
-	const data = JSON.parse(fileContents) as PushedAt[]
-
-	console.log(data)
+	// 最近のコミットを取得
+	const commitDataPath = path.join(
+		process.cwd(),
+		"data",
+		"github_commits.json"
+	)
+	const commitContents = fs.readFileSync(commitDataPath, "utf8")
+	const commits: CommitsByDate[] = JSON.parse(commitContents)
+	console.log(commits)
 
 	return {
 		props: {
-			pushedAts: data as PushedAt[],
+			pushedAts: pushedAts,
+			commits: commits,
 		},
 	}
 }
@@ -272,12 +301,44 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: PushedAt[]) {
 	)
 }
 
-const Page: NextPage = ({ pushedAts }: { pushedAts: PushedAt[] }) => (
+const Page: NextPage = ({
+	pushedAts,
+	commits: commitsByDate,
+}: {
+	pushedAts: PushedAt[]
+	commits: CommitsByDate[]
+}) => (
 	<Layout title="INDEX" contentDirection="row">
 		<div className="article-container mx-auto">
 			<h1 className="article-h1">INDEX</h1>
 			<h2 className="article-h2">配布物</h2>
 			<div className="mt-3">{getPiecesElement(pieces, pushedAts)}</div>
+			<h2 className="article-h2">最近の更新</h2>
+			<div className="overflow-y-auto h-96 mb-5">
+				{commitsByDate.map((commitByDate) => {
+					return (
+						<div className="p-5 mb-5 mx-5 border-solid border border-gray/[0.6] rounded-lg shadow-md md:w-3/4 mx-auto">
+							<h2 className="text-xl font-bold mb-3">
+								{formatDate(commitByDate.date)}
+							</h2>
+							{commitByDate.commits.map((commit: Commit) => (
+								<div className="ml-5">
+									<h3 className="font-bold mb-1">
+										{pieceNameByRepoName(commit.repoName)}
+									</h3>
+									<ol className="list-disc list-inside ml-5 mb-3">
+										{commit.message
+											.split("\n")
+											.map((line) => (
+												<li>{line}</li>
+											))}
+									</ol>
+								</div>
+							))}
+						</div>
+					)
+				})}
+			</div>
 			<h2 className="article-h2">このサイトについて</h2>
 			<p className="mt-3">
 				デスクトップマスコット「伺か」の配布物と開発情報を載せているサイトです。

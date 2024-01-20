@@ -36,7 +36,28 @@ async function get_commits() {
 	commits.sort((a, b) => {
 		return new Date(b.date) - new Date(a.date)
 	})
-	console.log(JSON.stringify(commits))
+
+	let commitsByDate = new Map()
+	for (const commit of commits) {
+		const date = new Date(commit.date).toLocaleDateString()
+		if (commitsByDate.has(date)) {
+			const ary = commitsByDate.get(date)
+			ary.push(commit)
+			commitsByDate.set(date, ary)
+		} else {
+			commitsByDate.set(date, [commit])
+		}
+	}
+
+	let obj = []
+	for (const [key, value] of commitsByDate) {
+		obj.push({
+			date: key,
+			commits: value,
+		})
+	}
+
+	console.log(JSON.stringify(obj))
 }
 
 get_commits()
