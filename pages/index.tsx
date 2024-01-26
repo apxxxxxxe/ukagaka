@@ -78,7 +78,7 @@ const pieces: Piece[] = [
 		type: "バルーン",
 		title: "霧の郊外にて",
 		repoName: "kirinokougai",
-		color: "7e7958&",
+		color: "7e7958",
 		fileName: "kirinokougai.nar",
 		bannerImg: `${imageRoot}banner_kirinokougai.png`,
 		description: <p>ゴースト「Crave The Grave」同梱バルーン</p>,
