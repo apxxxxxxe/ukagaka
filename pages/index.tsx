@@ -326,6 +326,9 @@ const Page: NextPage = ({
 							{commitByDate.commits.map((commit: Commit) => (
 								<div className="ml-5" key={commit.date}>
 									<h3 className="font-bold mb-1">
+                    <span className="mr-1" style={{color: `#${pieces.find((piece) => piece.repoName === commit.repoName)?.color}`}}>
+                      ●
+                    </span>
 										{pieceNameByRepoName(commit.repoName)}
 									</h3>
 									<ol className="list-disc list-inside ml-5 mb-3">
