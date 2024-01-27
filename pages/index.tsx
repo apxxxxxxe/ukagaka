@@ -347,10 +347,29 @@ const Page: NextPage = ({
 											</a>
 										</Link>
 									</h3>
-									<ol className="list-disc list-inside ml-5 mb-3">
-										{commit.message.map((line) => (
-											<li key={`${commit.date}-${line}`}>
-												{line}
+									<ol className="list-disc ml-11 mb-3">
+										{commit.message.map((mes) => (
+											<li key={`${commit.date}-${mes}`}>
+												{mes
+													.split("\n")
+													.map((line, idx) => {
+														if (line === "") {
+															return ""
+														}
+														return (
+															<>
+																{line}
+																{idx <
+																mes.split("\n")
+																	.length -
+																	1 ? (
+																	<br />
+																) : (
+																	""
+																)}
+															</>
+														)
+													})}
 											</li>
 										))}
 									</ol>
