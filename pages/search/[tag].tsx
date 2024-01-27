@@ -56,7 +56,10 @@ const Home: NextPage<Props> = ({ posts, tag }) => (
 						if (!post.tags.includes("noindex")) {
 							return (
 								<div className="list-article">
-									<Link href={"/entries/" + post.slug}>
+									<Link
+										href={"/entries/" + post.slug}
+										legacyBehavior
+									>
 										<div className="flex-end flex-margin blogpost-title bloglist-compontent">
 											<a className="flex-leftchild flex-compontent">
 												<h2 className="flex-compontent">
@@ -76,10 +79,9 @@ const Home: NextPage<Props> = ({ posts, tag }) => (
 											<Link
 												key={tag}
 												href={`/search/${tag}`}
+												className="blog-tag flex-compontent"
 											>
-												<a className="blog-tag flex-compontent">
-													<p className="blog-tag flex-compontent">{`#${tag}`}</p>
-												</a>
+												<p className="blog-tag flex-compontent">{`#${tag}`}</p>
 											</Link>
 										))}
 									</div>

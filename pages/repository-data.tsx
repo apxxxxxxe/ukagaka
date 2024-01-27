@@ -73,7 +73,7 @@ const Page: NextPage<Props> = ({ repos }) => {
 									<tr key={repo.name}>
 										<td>
 											<Link href={`/repo/${repo.name}`}>
-												<a>{repo.name}</a>
+												{repo.name}
 											</Link>
 										</td>
 										<td>{formatDate(repo.lastUpdated)}</td>

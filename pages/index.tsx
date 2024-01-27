@@ -135,8 +135,8 @@ const pieces: Piece[] = [
 				直近に起動したゴーストをリスト表示するプラグイン
 				<br />
 				(紹介記事:
-				<Link href="/entries/recentghosts-intro">
-					<a className="article-a">プラグインを作った</a>
+				<Link href="/entries/recentghosts-intro" className="article-a">
+					プラグインを作った
 				</Link>
 				)
 			</p>
@@ -252,10 +252,9 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: PushedAt[]) {
 												<div className="flex flex-row items-center">
 													<Link
 														href={`https://github.com/apxxxxxxe/${piece.repoName}#readme`}
+														className="grow font-bold hover:underline"
 													>
-														<a className="grow font-bold hover:underline">
-															{piece.title}
-														</a>
+														{piece.title}
 													</Link>
 													<p className="ml-2 grow-0 text-sm text-darkgray">
 														最終更新:{" "}
@@ -274,15 +273,13 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: PushedAt[]) {
 															<Link
 																href={`https://github.com/apxxxxxxe/${piece.repoName}/releases/latest/download/${piece.fileName}`}
 															>
-																<a>
-																	<figure>
-																		<img
-																			className="rounded-md h-6"
-																			src={`https://img.shields.io/github/v/release/apxxxxxxe/${piece.repoName}?color=%23${piece.color}&label=${piece.fileName}&logo=github&style=flat-square`}
-																			alt="ダウンロード"
-																		/>
-																	</figure>
-																</a>
+																<figure>
+																	<img
+																		className="rounded-md h-6"
+																		src={`https://img.shields.io/github/v/release/apxxxxxxe/${piece.repoName}?color=%23${piece.color}&label=${piece.fileName}&logo=github&style=flat-square`}
+																		alt="ダウンロード"
+																	/>
+																</figure>
 															</Link>
 														)}
 													</div>
@@ -339,12 +336,13 @@ const Page: NextPage = ({
 										>
 											●
 										</span>
-										<Link href={`#${commit.repoName}`}>
-											<a className="grow font-bold hover:underline">
-												{pieceNameByRepoName(
-													commit.repoName
-												)}
-											</a>
+										<Link
+											href={`#${commit.repoName}`}
+											className="grow font-bold hover:underline"
+										>
+											{pieceNameByRepoName(
+												commit.repoName
+											)}
 										</Link>
 									</h3>
 									<ol className="list-disc ml-11 mb-3">

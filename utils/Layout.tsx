@@ -15,8 +15,8 @@ const menuItem = (name: string, currentSlug: string): JSX.Element => {
 
 	return (
 		<p className="text-center text-white text-md font px-5 my-2 py-0.5">
-			<Link href={`/${slug}`} as={`/${slug}`}>
-				<a className={c}>{name}</a>
+			<Link href={`/${slug}`} as={`/${slug}`} className={c}>
+				{name}
 			</Link>
 		</p>
 	)

@@ -61,8 +61,12 @@ const Post: NextPage<Props> = ({ post, ogpDatas }) => (
 				</p>
 				<div className="flex flex-row justify-end">
 					{post.tags?.map((tag) => (
-						<Link key={tag} href={`/search/${tag}`}>
-							<a className="hover:underline hover:decoration-solid hover:cursor-pointer text-blue mr-1">{`#${tag}`}</a>
+						<Link
+							key={tag}
+							href={`/search/${tag}`}
+							className="hover:underline hover:decoration-solid hover:cursor-pointer text-blue mr-1"
+						>
+							{`#${tag}`}
 						</Link>
 					))}
 				</div>

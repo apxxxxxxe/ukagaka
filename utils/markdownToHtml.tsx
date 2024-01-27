@@ -116,28 +116,24 @@ export const rawHtmlToDom = (
 					const ogDescription = ogpData.ogDescription
 					return (
 						<Link href={node.attribs.href}>
-							<a>
-								<div className="flex flex-row m-5 p-3 border-solid border border-gray/[0.6] rounded-lg shadow-md">
-									<img
-										className="w-1/4 mr-3 pr-3 border-solid border-r border-black"
-										src={ogpData.ogImage.url}
-									/>
-									<div className="flex flex-col justify-center">
-										<h1 className="font-bold">{ogTitle}</h1>
-										<p className="text-darkgray">
-											{ogDescription}
-										</p>
-									</div>
+							<div className="flex flex-row m-5 p-3 border-solid border border-gray/[0.6] rounded-lg shadow-md">
+								<img
+									className="w-1/4 mr-3 pr-3 border-solid border-r border-black"
+									src={ogpData.ogImage.url}
+								/>
+								<div className="flex flex-col justify-center">
+									<h1 className="font-bold">{ogTitle}</h1>
+									<p className="text-darkgray">
+										{ogDescription}
+									</p>
 								</div>
-							</a>
+							</div>
 						</Link>
 					)
 				}
 				return (
-					<Link href={node.attribs.href}>
-						<a className="article-a">
-							{domToReact(node.children, options)}
-						</a>
+					<Link href={node.attribs.href} className="article-a">
+						{domToReact(node.children, options)}
 					</Link>
 				)
 			} else if (node.name === "pre" && node.children.length > 0) {

@@ -27,7 +27,10 @@ const Home: NextPage<Props> = ({ allPosts }) => (
 					) {
 						return (
 							<div className="rounded-lg my-5 py-5 px-7 border-solid border border-gray/[0.2] rounded-lg shadow-md">
-								<Link href={"/entries/" + post.slug}>
+								<Link
+									href={"/entries/" + post.slug}
+									legacyBehavior
+								>
 									<div className="flex flex-row items-center border-solid border-b pb-3 mb-3">
 										<a className="grow font-bold text-xl hover:underline hover:decoration-solid hover:cursor-pointer text-blue mr-3">
 											{post.title}
@@ -40,10 +43,12 @@ const Home: NextPage<Props> = ({ allPosts }) => (
 								<p className="text-darkgray">{post.summery}</p>
 								<div className="flex flex-row mt-1">
 									{post.tags?.map((tag) => (
-										<Link key={tag} href={`/search/${tag}`}>
-											<a className="article-a text-sm mr-1">
-												<p className="blog-tag flex-compontent">{`#${tag}`}</p>
-											</a>
+										<Link
+											key={tag}
+											href={`/search/${tag}`}
+											className="article-a text-sm mr-1"
+										>
+											<p className="blog-tag flex-compontent">{`#${tag}`}</p>
 										</Link>
 									))}
 								</div>

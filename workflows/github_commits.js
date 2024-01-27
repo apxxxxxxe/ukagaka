@@ -24,7 +24,7 @@ async function get_commits() {
 			) {
 				continue
 			}
-			
+
 			tmpMessages.push(data[i].commit.message)
 
 			let dateA = new Date(data[i].commit.committer.date)
