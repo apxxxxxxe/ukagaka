@@ -30,7 +30,6 @@ async function get_commits() {
 			let dateA = new Date(data[i].commit.committer.date)
 			let dateB = new Date(data[i + 1].commit.committer.date)
 			if (dateA.toLocaleDateString() !== dateB.toLocaleDateString()) {
-				tmpMessages.push(data[i].commit.message)
 				commits.push({
 					repoName: repo,
 					date: data[i].commit.committer.date,
