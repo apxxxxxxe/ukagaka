@@ -24,16 +24,12 @@ async function get_commits() {
 			) {
 				continue
 			}
+			
+			tmpMessages.push(data[i].commit.message)
 
 			let dateA = new Date(data[i].commit.committer.date)
 			let dateB = new Date(data[i + 1].commit.committer.date)
-			// 日付(時刻は無視)が同じならコミットメッセージを結合する
-			if (dateA.toLocaleDateString() === dateB.toLocaleDateString()) {
-				tmpMessages.push(data[i].commit.message)
-			} else {
-				if (tmpMessages.length === 0) {
-					tmpMessages.push(data[i].commit.message)
-				}
+			if (dateA.toLocaleDateString() !== dateB.toLocaleDateString()) {
 				commits.push({
 					repoName: repo,
 					date: data[i].commit.committer.date,
