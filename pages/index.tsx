@@ -240,6 +240,7 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: PushedAt[]) {
 									}
 									return (
 										<div
+											id={piece.repoName}
 											className="flex flex-col items-center md:flex-row md:items-normal p-4 px-3 mb-8 border-solid border border-gray/[0.2] rounded-lg shadow-md"
 											key={piece.repoName}
 										>
@@ -338,7 +339,13 @@ const Page: NextPage = ({
 										>
 											●
 										</span>
-										{pieceNameByRepoName(commit.repoName)}
+										<Link href={`#${commit.repoName}`}>
+											<a className="grow font-bold hover:underline">
+												{pieceNameByRepoName(
+													commit.repoName
+												)}
+											</a>
+										</Link>
 									</h3>
 									<ol className="list-disc list-inside ml-5 mb-3">
 										{commit.message.map((line) => (
