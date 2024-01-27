@@ -55,7 +55,7 @@ const Home: NextPage<Props> = ({ posts, tag }) => (
 					{posts?.map((post) => {
 						if (!post.tags.includes("noindex")) {
 							return (
-								<div className="list-article">
+								<div className="list-article" key={post.slug}>
 									<Link
 										href={"/entries/" + post.slug}
 										legacyBehavior

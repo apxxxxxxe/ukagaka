@@ -26,20 +26,20 @@ const Home: NextPage<Props> = ({ allPosts }) => (
 						!post.tags.includes("intro")
 					) {
 						return (
-							<div className="rounded-lg my-5 py-5 px-7 border-solid border border-gray/[0.2] rounded-lg shadow-md">
-								<Link
-									href={"/entries/" + post.slug}
-									legacyBehavior
-								>
-									<div className="flex flex-row items-center border-solid border-b pb-3 mb-3">
-										<a className="grow font-bold text-xl hover:underline hover:decoration-solid hover:cursor-pointer text-blue mr-3">
+							<div
+								className="rounded-lg my-5 py-5 px-7 border-solid border border-gray/[0.2] rounded-lg shadow-md"
+								key={post.slug}
+							>
+								<div className="flex flex-row items-center border-solid border-b pb-3 mb-3">
+									<Link href={"/entries/" + post.slug}>
+										<p className="grow font-bold text-xl hover:underline text-blue mr-3">
 											{post.title}
-										</a>
-										<p className="grow-0 text-right text-sm">
-											{formatDate(post.date)}
 										</p>
-									</div>
-								</Link>
+									</Link>
+									<p className="grow-0 text-right text-sm">
+										{formatDate(post.date)}
+									</p>
+								</div>
 								<p className="text-darkgray">{post.summery}</p>
 								<div className="flex flex-row mt-1">
 									{post.tags?.map((tag) => (

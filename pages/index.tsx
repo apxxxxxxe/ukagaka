@@ -1,5 +1,6 @@
 import { NextPage } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import Layout from "utils/Layout"
 import WebClapBox from "utils/webclap"
 
@@ -64,12 +65,12 @@ const pieces: Piece[] = [
 		description: (
 			<p>
 				ゴースト「
-				<a
+				<Link
 					className="article-a"
 					href="https://nanachi.sakura.ne.jp/narnaloader/ghost.php?ghost=DSLGS"
 				>
 					DSLGS
-				</a>
+				</Link>
 				」用追加シェル
 			</p>
 		),
@@ -244,9 +245,12 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: PushedAt[]) {
 											className="flex flex-col items-center md:flex-row md:items-normal p-4 px-3 mb-8 border-solid border border-gray/[0.2] rounded-lg shadow-md"
 											key={piece.repoName}
 										>
-											<img
+											<Image
 												className="w-min my-auto"
+												width={234}
+												height={60}
 												src={piece.bannerImg}
+												alt={`${piece.title}のバナー`}
 											/>
 											<div className="w-full mx-5 mt-3 md:mt-0">
 												<div className="flex flex-row items-center">
@@ -389,21 +393,21 @@ const Page: NextPage = ({
 			<h4 className="article-h4">連絡先</h4>
 			<ul className="list-disc list-inside">
 				<li>
-					<a
+					<Link
 						className="article-a"
 						href="https://github.com/apxxxxxxe"
 					>
 						GitHub
-					</a>
+					</Link>
 				</li>
 				<li>
-					<a
+					<Link
 						className="article-a"
 						rel="me"
 						href="https://ukadon.shillest.net/@apxxxxxxe"
 					>
 						Mastodon
-					</a>
+					</Link>
 				</li>
 			</ul>
 			<WebClapBox />
