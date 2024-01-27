@@ -14,21 +14,32 @@ async function get_commits() {
 			)
 		})
 
+		let tmpMessages = []
 		for (let i = 0; i < data.length - 1; i++) {
+			// 特定のコミットメッセージは無視する
+			if (
+				data[i].commit.message.includes("md5") ||
+				data[i].commit.message.includes("CI") ||
+				data[i].commit.message.includes("Merge branch")
+			) {
+				continue
+			}
+
 			let dateA = new Date(data[i].commit.committer.date)
 			let dateB = new Date(data[i + 1].commit.committer.date)
 			// 日付(時刻は無視)が同じならコミットメッセージを結合する
 			if (dateA.toLocaleDateString() === dateB.toLocaleDateString()) {
-				data[i + 1].commit.message = data[i].commit.message.concat(
-					"\n",
-					data[i + 1].commit.message
-				)
+				tmpMessages.push(data[i].commit.message)
 			} else {
+				if (tmpMessages.length === 0) {
+					tmpMessages.push(data[i].commit.message)
+				}
 				commits.push({
 					repoName: repo,
 					date: data[i].commit.committer.date,
-					message: data[i].commit.message,
+					message: tmpMessages,
 				})
+				tmpMessages = []
 			}
 		}
 	}

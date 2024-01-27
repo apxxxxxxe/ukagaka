@@ -30,7 +30,7 @@ type CommitsByDate = {
 type Commit = {
 	repoName: string
 	date: string
-	message: string
+	message: string[]
 }
 
 const imageRoot = `/contents/index/`
@@ -187,7 +187,6 @@ export async function getServerSideProps() {
 	const repoDataPath = path.join(process.cwd(), "data", "github_repos.json")
 	const repoContents = fs.readFileSync(repoDataPath, "utf8")
 	const pushedAts: PushedAt[] = JSON.parse(repoContents)
-	console.log(pushedAts)
 
 	// 最近のコミットを取得
 	const commitDataPath = path.join(
@@ -197,7 +196,6 @@ export async function getServerSideProps() {
 	)
 	const commitContents = fs.readFileSync(commitDataPath, "utf8")
 	const commits: CommitsByDate[] = JSON.parse(commitContents)
-	console.log(commits)
 
 	return {
 		props: {
@@ -326,21 +324,28 @@ const Page: NextPage = ({
 							{commitByDate.commits.map((commit: Commit) => (
 								<div className="ml-5" key={commit.date}>
 									<h3 className="font-bold mb-1">
-                    <span className="mr-1" style={{color: `#${pieces.find((piece) => piece.repoName === commit.repoName)?.color}`}}>
-                      ●
-                    </span>
+										<span
+											className="mr-1"
+											style={{
+												color: `#${
+													pieces.find(
+														(piece) =>
+															piece.repoName ===
+															commit.repoName
+													)?.color
+												}`,
+											}}
+										>
+											●
+										</span>
 										{pieceNameByRepoName(commit.repoName)}
 									</h3>
 									<ol className="list-disc list-inside ml-5 mb-3">
-										{commit.message
-											.split("\n")
-											.map((line) => (
-												<li
-													key={`${commit.date}-${line}`}
-												>
-													{line}
-												</li>
-											))}
+										{commit.message.map((line) => (
+											<li key={`${commit.date}-${line}`}>
+												{line}
+											</li>
+										))}
 									</ol>
 								</div>
 							))}
