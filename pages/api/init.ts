@@ -1,6 +1,10 @@
 import { sql } from "@vercel/postgres"
+import { NextApiRequest, NextApiResponse } from "next"
 
-export default async function handler(req, res) {
+export default async function handler(
+	_req: NextApiRequest,
+	res: NextApiResponse
+) {
 	// when not develop mode, return 403
 	if (process.env.NODE_ENV !== "development") {
 		res.status(403).json({ message: "access denied" })

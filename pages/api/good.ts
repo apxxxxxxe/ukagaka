@@ -1,4 +1,5 @@
 import { sql } from "@vercel/postgres"
+import { NextApiRequest, NextApiResponse } from "next"
 
 export enum GoodButtonStatus {
 	OK = 200,
@@ -18,11 +19,16 @@ export type GoodButtonPostResponse = {
 
 export const GoodLimit = 10
 
-export default async function handler(req, res) {
-	const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress
+export default async function handler(
+	req: NextApiRequest,
+	res: NextApiResponse
+) {
+	const ip: string = req.headers["x-forwarded-for"]
+		? String(req.headers["x-forwarded-for"]).split(",")[0]
+		: ""
 
 	// button id
-	const { id } = req.query
+	const id: string = req.query.id as string
 	if (id === undefined) {
 		res.status(400).json({ message: "id is required" })
 		return
