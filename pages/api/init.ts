@@ -1,9 +1,9 @@
 import { sql } from "@vercel/postgres"
 
 export default async function handler(req, res) {
-	// when not develop mode, return 404
+	// when not develop mode, return 403
 	if (process.env.NODE_ENV !== "development") {
-		res.status(404)
+		res.status(403).json({ message: "access denied" })
 		return
 	}
 
