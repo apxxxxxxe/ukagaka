@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Head from "next/head"
 import { useRouter } from "next/router"
+import "react-material-symbols/rounded"
 
 export function formatDate(date: string) {
 	const year = date.substring(0, 4)

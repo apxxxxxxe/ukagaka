@@ -11,6 +11,7 @@
 		"format": "prettier --write --ignore-path .gitignore --tab-width 4 --use-tabs --no-semi './**/*.{js,jsx,ts,tsx,json,css,scss}'"
 	},
 	"dependencies": {
+		"@vercel/postgres": "^0.7.2",
 		"autoprefixer": "^10.4.14",
 		"gray-matter": "^4.0.3",
 		"html-react-parser": "^2.0.0",
@@ -19,6 +20,7 @@
 		"open-graph-scraper": "^4.11.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-material-symbols": "^4.3.1",
 		"react-string-replace": "^1.1.0",
 		"react-syntax-highlighter": "^15.5.0",
 		"rehype": "^12.0.1",
@@ -32,6 +34,7 @@
 		"@chakra-ui/react": "^2.2.1",
 		"@types/node": "^18.0.0",
 		"@types/react": "^18.0.14",
+		"axios": "^1.6.7",
 		"eslint": "8.18.0",
 		"eslint-config-next": "^14.1.0",
 		"eslint-config-prettier": "^8.5.0",

@@ -2,7 +2,7 @@ import { NextPage } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import Layout from "utils/Layout"
-import WebClapBox from "utils/webclap"
+import GoodButton from "utils/goodButton"
 
 import fs from "fs"
 import path from "path"
@@ -377,6 +377,10 @@ const Page: NextPage = ({
 									</ol>
 								</div>
 							))}
+							<GoodButton
+								id={`commitByDate-${commitByDate.date}`}
+								align="end"
+							/>
 						</div>
 					)
 				})}
@@ -409,8 +413,25 @@ const Page: NextPage = ({
 						Mastodon
 					</Link>
 				</li>
+				<li>
+					<Link
+						className="article-a"
+						href="http://clap.webclap.com/clap.php?id=apxxxxxxe"
+					>
+						Web拍手
+					</Link>
+				</li>
 			</ul>
-			<WebClapBox />
+			<div className="mt-20 flex flex-col items-center">
+				<GoodButton id="index" align="center" />
+				<div className="mt-2 text-sm text-darkgray">
+					<p>
+						いいねボタンはそれぞれ1日10回まで押せます。
+						<br />
+						押しても何も起きませんが、作者の励みになります。{" "}
+					</p>
+				</div>
+			</div>
 		</div>
 	</Layout>
 )
