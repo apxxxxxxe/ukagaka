@@ -30,7 +30,15 @@ export default function GoodButton({
 		/>
 	)
 	const [count, setCount] = useState(0)
+	const [fakeCount, setFakeCount] = useState<number | null>(null)
 	const [icon, setIcon] = useState<JSX.Element>(goodIcon)
+
+	const getSurfaceCount = (count: number) => {
+		if (fakeCount !== null) {
+			return fakeCount
+		}
+		return count
+	}
 
 	const setGoodIconByCount = (count: number) => {
 		if (count >= 1) {
@@ -57,15 +65,22 @@ export default function GoodButton({
 		fetch()
 	}, [])
 
-	const onClickButton = async () => {
-		if (count < GoodLimit) {
-			setIcon(<span className="loader"></span>)
-			await axios
+	const onClickButton = () => {
+		if (getSurfaceCount(count) < GoodLimit) {
+			const fc = fakeCount ? fakeCount + 1 : count + 1
+			setFakeCount(fc)
+			setGoodIconByCount(fc)
+
+			// 非同期でAPIを叩く
+			axios
 				.post(`/api/good?id=${id}`)
 				.then((res) => {
 					const data: GoodButtonPostResponse = res.data
 					setCount(data.todayCount)
-					setGoodIconByCount(data.todayCount)
+					if (fakeCount !== null && fakeCount <= data.todayCount) {
+						setFakeCount(null)
+						setGoodIconByCount(data.todayCount)
+					}
 				})
 				.catch((err) => {
 					console.error(err)
@@ -81,13 +96,17 @@ export default function GoodButton({
 			<a
 				className={`
         h-10 flex flex-row items-center
-        select-none px-1.5 py-0.5 text-sm border-solid border border-gray/[0.6] rounded
-        ${count < GoodLimit ? "hover:cursor-pointer shadow" : "bg-lightgray"}
+        select-none px-1.5 py-0.5 text-sm border-solid border border-gray/[0.6] rounded active:bg-lightgray active:shadow-inner
+        ${
+			getSurfaceCount(count) < GoodLimit
+				? "hover:cursor-pointer shadow"
+				: "bg-lightgray shadow-inner"
+		}
         `}
 				onClick={onClickButton}
 			>
-				<div className="loader-wrapper">{icon}</div>
-				<span>{`${count}/${GoodLimit}`}</span>
+				<div className="flex items-center justify-center">{icon}</div>
+				<span>{`${getSurfaceCount(count)}/${GoodLimit}`}</span>
 			</a>
 		</div>
 	)
