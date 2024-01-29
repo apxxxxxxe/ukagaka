@@ -17,7 +17,7 @@ export type GoodButtonPostResponse = {
 	cumlitiveCount: number
 }
 
-export const GoodLimit = 10
+export const GoodLimit = 5
 
 export default async function handler(
 	req: NextApiRequest,

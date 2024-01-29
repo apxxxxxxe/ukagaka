@@ -3,6 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import Layout from "utils/Layout"
 import GoodButton from "utils/goodButton"
+import { GoodLimit } from "pages/api/good"
 
 import fs from "fs"
 import path from "path"
@@ -426,7 +427,7 @@ const Page: NextPage = ({
 				<GoodButton id="index" align="center" />
 				<div className="mt-2 text-sm text-darkgray">
 					<p>
-						いいねボタンはそれぞれ1日10回まで押せます。
+						いいねボタンはそれぞれ1日{GoodLimit}回まで押せます。
 						<br />
 						押しても何も起きませんが、作者の励みになります。{" "}
 					</p>
