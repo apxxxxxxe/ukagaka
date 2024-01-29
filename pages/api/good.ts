@@ -52,6 +52,18 @@ export default async function handler(
 		rows = q.rows
 	}
 
+	// if last_date is not today, reset today_count
+	const dataA = rows[0].last_date.toUTCString()
+	if (dataA.slice(0, 16) !== now.slice(0, 16)) {
+		await sql`UPDATE good_count SET
+    last_date = ${now},
+    today_count = 0
+    WHERE ip = ${ip} AND id = ${id}`
+		let q =
+			await sql`SELECT * FROM good_count WHERE ip = ${ip} AND id = ${id}`
+		rows = q.rows
+	}
+
 	if (req.method === "GET") {
 		const response: GoodButtonGetResponse = {
 			todayCount: rows[0].today_count,
@@ -59,16 +71,6 @@ export default async function handler(
 		}
 		res.status(200).json(response)
 	} else if (req.method === "POST") {
-		// if last_date is not today, reset today_count
-		// when comparing dates, convert to UTC
-		const dataA = rows[0].last_date.toUTCString()
-		if (dataA.slice(0, 16) !== now.slice(0, 16)) {
-			await sql`UPDATE good_count SET
-      last_date = ${now},
-      today_count = 0
-      WHERE ip = ${ip} AND id = ${id}`
-		}
-
 		// if today_count is limit, return error
 		if (rows[0].today_count >= GoodLimit) {
 			const response: GoodButtonPostResponse = {
