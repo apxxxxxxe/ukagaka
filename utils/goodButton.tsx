@@ -1,5 +1,9 @@
-import { useState, useEffect } from "react"
-import { GoodButtonPostResponse, GoodLimit } from "pages/api/good"
+import { useState, useEffect, useRef } from "react"
+import {
+	GoodButtonPostResponse,
+	GoodButtonStatus,
+	GoodLimit,
+} from "pages/api/good"
 import axios from "axios"
 import { MaterialSymbol } from "react-material-symbols"
 
@@ -29,16 +33,10 @@ export default function GoodButton({
 			size={20}
 		/>
 	)
-	const [count, setCount] = useState(0)
-	const [fakeCount, setFakeCount] = useState<number | null>(null)
-	const [icon, setIcon] = useState<JSX.Element>(goodIcon)
 
-	const getSurfaceCount = (count: number) => {
-		if (fakeCount !== null) {
-			return fakeCount
-		}
-		return count
-	}
+	const countRef = useRef<number>(0)
+	const [icon, setIcon] = useState<JSX.Element>(goodIcon)
+	const [surfaceCount, setSurfaceCount] = useState<number>(0)
 
 	const setGoodIconByCount = (count: number) => {
 		if (count >= 1) {
@@ -55,8 +53,9 @@ export default function GoodButton({
 				.get(`/api/good?id=${id}`)
 				.then((res) => {
 					const data: GoodButtonPostResponse = res.data
-					setCount(data.todayCount)
+					countRef.current = data.todayCount
 					setGoodIconByCount(data.todayCount)
+					setSurfaceCount(data.todayCount)
 				})
 				.catch((err) => {
 					console.error(err)
@@ -66,23 +65,26 @@ export default function GoodButton({
 	}, [])
 
 	const onClickButton = () => {
-		if (getSurfaceCount(count) < GoodLimit) {
-			const fc = fakeCount ? fakeCount + 1 : count + 1
-			setFakeCount(fc)
-			setGoodIconByCount(fc)
+		if (countRef.current < GoodLimit) {
+			countRef.current = countRef.current + 1
+			setGoodIconByCount(countRef.current)
+			setSurfaceCount(countRef.current)
 
 			// 非同期でAPIを叩く
 			axios
 				.post(`/api/good?id=${id}`)
 				.then((res) => {
 					const data: GoodButtonPostResponse = res.data
-					setCount(data.todayCount)
-					if (fakeCount !== null && fakeCount <= data.todayCount) {
-						setFakeCount(null)
-						setGoodIconByCount(data.todayCount)
+					if (data.goodButtonStatus !== GoodButtonStatus.OK) {
+						countRef.current = data.todayCount
 					}
+					setGoodIconByCount(countRef.current)
+					setSurfaceCount(countRef.current)
 				})
 				.catch((err) => {
+					countRef.current = countRef.current - 1
+					setGoodIconByCount(countRef.current)
+					setSurfaceCount(countRef.current)
 					console.error(err)
 				})
 		}
@@ -98,7 +100,7 @@ export default function GoodButton({
         h-10 flex flex-row items-center
         select-none px-1.5 py-0.5 text-sm border-solid border border-gray/[0.6] rounded active:bg-lightgray active:shadow-inner
         ${
-			getSurfaceCount(count) < GoodLimit
+			countRef.current < GoodLimit
 				? "hover:cursor-pointer shadow"
 				: "bg-lightgray shadow-inner"
 		}
@@ -106,7 +108,7 @@ export default function GoodButton({
 				onClick={onClickButton}
 			>
 				<div className="flex items-center justify-center">{icon}</div>
-				<span>{`${getSurfaceCount(count)}/${GoodLimit}`}</span>
+				<span>{`${surfaceCount}/${GoodLimit}`}</span>
 			</a>
 		</div>
 	)
