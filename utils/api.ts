@@ -18,6 +18,10 @@ export const getPostByTag = (tag: string, fields: string[]) => {
 
 export const getPostBySlug = (slug: string, fields: string[] = []) => {
 	const fullPath = join(postsDirectory, slug, "index.md")
+	return markdownToPost(fullPath, fields)
+}
+
+export const markdownToPost = (fullPath: string, fields: string[] = []) => {
 	const fileContents = fs.readFileSync(fullPath, "utf8")
 	const { data, content } = matter(fileContents)
 	type Item = {
@@ -40,7 +44,9 @@ export const getPostBySlug = (slug: string, fields: string[] = []) => {
 
 	fields.forEach((field) => {
 		if (field === "slug") {
-			items[field] = slug
+			items[field] = fullPath
+				.replace(`${postsDirectory}/`, "")
+				.replace("/index.md", "")
 		}
 		if (field === "content") {
 			items[field] = content

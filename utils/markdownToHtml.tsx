@@ -177,4 +177,60 @@ export const rawHtmlToDom = (
 	return parse(content, options)
 }
 
+export const makeGitHubReleaseDescription = (
+	html: string
+): ReturnType<typeof parse> => {
+	const options = {
+		replace: (node: Element) => {
+			if (node.name === "h2") {
+				node.attribs.class = "text-lg font-bold"
+			}
+			if (node.name === "h3") {
+				node.attribs.class = "font-bold"
+			}
+			if (node.name === "ul") {
+				node.attribs.class = "list-disc ml-7 mb-3"
+			}
+			if (node.name === "p" && node.children.length > 0) {
+				let includeImg = false
+				node.children.forEach((c) => {
+					if (hasProperty(c, "name")) {
+						if (c.name === "img") {
+							includeImg = true
+						}
+					}
+				})
+				if (includeImg) {
+					node.name = "div"
+				}
+			}
+			if (node.name === "img") {
+				return (
+					<div className="my-5 flex flex-col">
+						<img {...node.attribs} />
+					</div>
+				)
+			} else if (node.name === "a") {
+				return (
+					<Link href={node.attribs.href} className="article-a">
+						{domToReact(node.children, options)}
+					</Link>
+				)
+			} else if (node.name === "table") {
+				return (
+					<div className="table-box">
+						<div className="table-wrapper">
+							<table {...node.attribs}>
+								{domToReact(node.children, options)}
+							</table>
+						</div>
+					</div>
+				)
+			}
+			return node
+		},
+	}
+	return parse(html, options)
+}
+
 export default markdownToHtml

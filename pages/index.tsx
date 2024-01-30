@@ -4,8 +4,11 @@ import Image from "next/image"
 import Layout from "utils/Layout"
 import GoodButton from "utils/goodButton"
 import { GoodLimit } from "pages/api/good"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Checkbox } from "@mui/material"
+import markdownToHtml, {
+	makeGitHubReleaseDescription,
+} from "utils/markdownToHtml"
 
 import fs from "fs"
 import path from "path"
@@ -49,8 +52,9 @@ type ReleaseByDate = {
 type Release = {
 	repoName: string
 	date: string
-	tag_name: string
+	tagName: string
 	body: string
+	bodyHtml: string | null
 }
 
 const isReleaseByDate = (item: any): item is ReleaseByDate => {
@@ -230,6 +234,19 @@ export async function getServerSideProps() {
 	const releaseContents = fs.readFileSync(releaseDataPath, "utf8")
 	const releases: ReleaseByDate[] = JSON.parse(releaseContents)
 
+	for (let i = 0; i < releases.length; i++) {
+		for (let j = 0; j < releases[i].releases.length; j++) {
+			const release = releases[i].releases[j]
+			if (release.body !== "") {
+				releases[i].releases[j].bodyHtml = await markdownToHtml(
+					release.body
+				)
+			} else {
+				releases[i].releases[j].bodyHtml = null
+			}
+		}
+	}
+
 	let updates: (CommitsByDate | ReleaseByDate)[] = [...commits, ...releases]
 
 	// sort by date
@@ -283,7 +300,7 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: PushedAt[]) {
 										<div
 											id={piece.repoName}
 											className="flex flex-col items-center md:flex-row md:items-normal p-4 px-3 mb-8 border-solid border border-gray/[0.2] rounded-lg shadow-md"
-											key={piece.repoName}
+											key={`piece-${piece.repoName}`}
 										>
 											<Image
 												className="w-min my-auto"
@@ -349,7 +366,7 @@ const renderCommitsByDate = (commitByDate: CommitsByDate) => (
 			{formatDate(commitByDate.date)}
 		</h2>
 		{commitByDate.commits.map((commit: Commit) => (
-			<div className="ml-5" key={commit.date}>
+			<div className="ml-5" key={`${commit.date}-${commit.repoName}}`}>
 				<h3 className="font-bold mb-1">
 					<span
 						className="mr-1"
@@ -398,61 +415,54 @@ const renderCommitsByDate = (commitByDate: CommitsByDate) => (
 	</div>
 )
 
-const renderReleasesByDate = (releasesByDate: ReleaseByDate) => (
-	<div
-		className="p-5 mb-5 mx-5 border-solid border border-gray/[0.6] rounded-lg shadow-md md:w-3/4 mx-auto"
-		key={`commitByDate-${releasesByDate.date}`}
-	>
-		<h2 className="text-xl font-bold mb-3">
-			{formatDate(releasesByDate.date)}
-		</h2>
-		{releasesByDate.releases.map((release: Release) => (
-			<div className="ml-5" key={release.date}>
-				<h2 className="text-xl font-bold mb-1">
-					<span
-						className="mr-1"
-						style={{
-							color: `#${
-								pieces.find(
-									(piece) =>
-										piece.repoName === release.repoName
-								)?.color
-							}`,
-						}}
-					>
-						●
-					</span>
-					<Link
-						href={`https://github.com/apxxxxxxe/${release.repoName}/releases/tag/${release.tag_name}`}
-						className="grow font-bold hover:underline"
-					>
-						{`${pieceNameByRepoName(release.repoName)} Release ${
-							release.tag_name
-						}`}
-					</Link>
-				</h2>
-				<p className="ml-11 mb-3">
-					{release.body.split("\n").map((line, idx) => {
-						if (line === "") {
-							return ""
-						}
-						return (
-							<>
-								{line}
-								{idx < release.body.split("\n").length - 1 ? (
-									<br />
-								) : (
-									""
-								)}
-							</>
-						)
-					})}
-				</p>
-			</div>
-		))}
-		<GoodButton id={`commitByDate-${releasesByDate.date}`} align="end" />
-	</div>
-)
+const renderReleasesByDate = (releasesByDate: ReleaseByDate) => {
+	return (
+		<div
+			className="p-5 mb-5 mx-5 border-solid border border-gray/[0.6] rounded-lg shadow-md md:w-3/4 mx-auto"
+			key={`releaseByDate-${releasesByDate.date}`}
+		>
+			<h2 className="text-xl font-bold mb-3">
+				{formatDate(releasesByDate.date)}
+			</h2>
+			{releasesByDate.releases.map((release: Release) => (
+				<div className="ml-5" key={`${release.date}-${release.tagName}`}>
+					<h2 className="text-xl font-bold mb-1">
+						<span
+							className="mr-1"
+							style={{
+								color: `#${
+									pieces.find(
+										(piece) =>
+											piece.repoName === release.repoName
+									)?.color
+								}`,
+							}}
+						>
+							●
+						</span>
+						<Link
+							href={`https://github.com/apxxxxxxe/${release.repoName}/releases/tag/${release.tagName}`}
+							className="grow font-bold hover:underline"
+						>
+							{`${pieceNameByRepoName(
+								release.repoName
+							)} Release ${release.tagName}`}
+						</Link>
+					</h2>
+					<p className="ml-3 my-3">
+						{release.bodyHtml !== null
+							? makeGitHubReleaseDescription(release.bodyHtml)
+							: release.body}
+					</p>
+				</div>
+			))}
+			<GoodButton
+				id={`commitByDate-${releasesByDate.date}`}
+				align="end"
+			/>
+		</div>
+	)
+}
 
 const Page: NextPage = ({
 	pushedAts,
@@ -463,15 +473,26 @@ const Page: NextPage = ({
 }) => {
 	const [showCommits, setShowCommits] = useState(true)
 	const [showReleases, setShowReleases] = useState(true)
+	const [updateDoms, setUpdateDoms] = useState<JSX.Element>(<p>Loading...</p>)
+
+	useEffect(() => {
+		const doms: JSX.Element[] = []
+		for (const update of updates) {
+			if (isCommitsByDate(update) && showCommits) {
+				doms.push(renderCommitsByDate(update as CommitsByDate))
+			} else if (isReleaseByDate(update) && showReleases) {
+				doms.push(renderReleasesByDate(update as ReleaseByDate))
+			} else {
+				continue
+			}
+		}
+		setUpdateDoms(<> {doms} </>)
+	}, [showCommits, showReleases])
 
 	return (
 		<Layout title="INDEX" contentDirection="row">
 			<div className="article-container mx-auto">
 				<h1 className="article-h1">INDEX</h1>
-				<h2 className="article-h2">配布物</h2>
-				<div className="mt-3">
-					{getPiecesElement(pieces, pushedAts)}
-				</div>
 				<h2 className="article-h2">最近の更新</h2>
 				<div className="flex flex-row items-center justify-center mb-3">
 					<Checkbox
@@ -485,16 +506,10 @@ const Page: NextPage = ({
 					/>{" "}
 					アーカイブ更新情報
 				</div>
-				<div className="overflow-y-auto h-96 mb-5">
-					{updates.map((update) => {
-						if (isCommitsByDate(update) && showCommits) {
-							return renderCommitsByDate(update as CommitsByDate)
-						} else if (isReleaseByDate(update) && showReleases) {
-							return renderReleasesByDate(update as ReleaseByDate)
-						} else {
-							return <></>
-						}
-					})}
+				<div className="overflow-y-auto h-96 mb-5">{updateDoms}</div>
+				<h2 className="article-h2">配布物</h2>
+				<div className="mt-3">
+					{getPiecesElement(pieces, pushedAts)}
 				</div>
 				<h2 className="article-h2">このサイトについて</h2>
 				<p className="mt-3">

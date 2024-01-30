@@ -20,8 +20,9 @@ async function get_releases() {
 			releases.push({
 				repoName: repo,
 				date: data[i].published_at,
-				tag_name: data[i].tag_name,
+				tagName: data[i].tag_name,
 				body: data[i].body || "",
+				bodyHtml: null,
 			})
 		}
 	}
