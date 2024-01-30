@@ -11,6 +11,9 @@
 		"format": "prettier --write --ignore-path .gitignore --tab-width 4 --use-tabs --no-semi './**/*.{js,jsx,ts,tsx,json,css,scss}'"
 	},
 	"dependencies": {
+		"@emotion/react": "^11.11.3",
+		"@emotion/styled": "^11.11.0",
+		"@mui/material": "^5.15.6",
 		"@vercel/postgres": "^0.7.2",
 		"autoprefixer": "^10.4.14",
 		"crypto-js": "^4.2.0",

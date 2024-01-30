@@ -4,6 +4,8 @@ import Image from "next/image"
 import Layout from "utils/Layout"
 import GoodButton from "utils/goodButton"
 import { GoodLimit } from "pages/api/good"
+import { useState } from "react"
+import { Checkbox } from "@mui/material"
 
 import fs from "fs"
 import path from "path"
@@ -33,6 +35,26 @@ type Commit = {
 	repoName: string
 	date: string
 	message: string[]
+}
+
+const isCommitsByDate = (item: any): item is CommitsByDate => {
+	return item.commits !== undefined
+}
+
+type ReleaseByDate = {
+	date: string
+	releases: Release[]
+}
+
+type Release = {
+	repoName: string
+	date: string
+	tag_name: string
+	body: string
+}
+
+const isReleaseByDate = (item: any): item is ReleaseByDate => {
+	return item.releases !== undefined
 }
 
 const imageRoot = `/contents/index/`
@@ -199,10 +221,27 @@ export async function getServerSideProps() {
 	const commitContents = fs.readFileSync(commitDataPath, "utf8")
 	const commits: CommitsByDate[] = JSON.parse(commitContents)
 
+	// 最近のリリースを取得
+	const releaseDataPath = path.join(
+		process.cwd(),
+		"data",
+		"github_releases.json"
+	)
+	const releaseContents = fs.readFileSync(releaseDataPath, "utf8")
+	const releases: ReleaseByDate[] = JSON.parse(releaseContents)
+
+	let updates: (CommitsByDate | ReleaseByDate)[] = [...commits, ...releases]
+
+	// sort by date
+	// 両方dateを持つので区別の必要はない
+	updates = updates.sort((a, b) => {
+		return new Date(b.date).getTime() - new Date(a.date).getTime()
+	})
+
 	return {
 		props: {
 			pushedAts: pushedAts,
-			commits: commits,
+			updates: updates,
 		},
 	}
 }
@@ -301,140 +340,213 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: PushedAt[]) {
 	)
 }
 
+const renderCommitsByDate = (commitByDate: CommitsByDate) => (
+	<div
+		className="p-5 mb-5 mx-5 border-solid border border-gray/[0.6] rounded-lg shadow-md md:w-3/4 mx-auto"
+		key={`commitByDate-${commitByDate.date}`}
+	>
+		<h2 className="text-xl font-bold mb-3">
+			{formatDate(commitByDate.date)}
+		</h2>
+		{commitByDate.commits.map((commit: Commit) => (
+			<div className="ml-5" key={commit.date}>
+				<h3 className="font-bold mb-1">
+					<span
+						className="mr-1"
+						style={{
+							color: `#${
+								pieces.find(
+									(piece) =>
+										piece.repoName === commit.repoName
+								)?.color
+							}`,
+						}}
+					>
+						●
+					</span>
+					<Link
+						href={`#${commit.repoName}`}
+						className="grow font-bold hover:underline"
+					>
+						{pieceNameByRepoName(commit.repoName)}
+					</Link>
+				</h3>
+				<ol className="list-disc ml-11 mb-3">
+					{commit.message.map((mes) => (
+						<li key={`${commit.date}-${mes}`}>
+							{mes.split("\n").map((line, idx) => {
+								if (line === "") {
+									return ""
+								}
+								return (
+									<>
+										{line}
+										{idx < mes.split("\n").length - 1 ? (
+											<br />
+										) : (
+											""
+										)}
+									</>
+								)
+							})}
+						</li>
+					))}
+				</ol>
+			</div>
+		))}
+		<GoodButton id={`commitByDate-${commitByDate.date}`} align="end" />
+	</div>
+)
+
+const renderReleasesByDate = (releasesByDate: ReleaseByDate) => (
+	<div
+		className="p-5 mb-5 mx-5 border-solid border border-gray/[0.6] rounded-lg shadow-md md:w-3/4 mx-auto"
+		key={`commitByDate-${releasesByDate.date}`}
+	>
+		<h2 className="text-xl font-bold mb-3">
+			{formatDate(releasesByDate.date)}
+		</h2>
+		{releasesByDate.releases.map((release: Release) => (
+			<div className="ml-5" key={release.date}>
+				<h2 className="text-xl font-bold mb-1">
+					<span
+						className="mr-1"
+						style={{
+							color: `#${
+								pieces.find(
+									(piece) =>
+										piece.repoName === release.repoName
+								)?.color
+							}`,
+						}}
+					>
+						●
+					</span>
+					<Link
+						href={`https://github.com/apxxxxxxe/${release.repoName}/releases/tag/${release.tag_name}`}
+						className="grow font-bold hover:underline"
+					>
+						{`${pieceNameByRepoName(release.repoName)} Release ${
+							release.tag_name
+						}`}
+					</Link>
+				</h2>
+				<p className="ml-11 mb-3">
+					{release.body.split("\n").map((line, idx) => {
+						if (line === "") {
+							return ""
+						}
+						return (
+							<>
+								{line}
+								{idx < release.body.split("\n").length - 1 ? (
+									<br />
+								) : (
+									""
+								)}
+							</>
+						)
+					})}
+				</p>
+			</div>
+		))}
+		<GoodButton id={`commitByDate-${releasesByDate.date}`} align="end" />
+	</div>
+)
+
 const Page: NextPage = ({
 	pushedAts,
-	commits: commitsByDate,
+	updates,
 }: {
 	pushedAts: PushedAt[]
-	commits: CommitsByDate[]
-}) => (
-	<Layout title="INDEX" contentDirection="row">
-		<div className="article-container mx-auto">
-			<h1 className="article-h1">INDEX</h1>
-			<h2 className="article-h2">配布物</h2>
-			<div className="mt-3">{getPiecesElement(pieces, pushedAts)}</div>
-			<h2 className="article-h2">最近の更新</h2>
-			<div className="overflow-y-auto h-96 mb-5">
-				{commitsByDate.map((commitByDate) => {
-					return (
-						<div
-							className="p-5 mb-5 mx-5 border-solid border border-gray/[0.6] rounded-lg shadow-md md:w-3/4 mx-auto"
-							key={`commitByDate-${commitByDate.date}`}
+	updates: (CommitsByDate | ReleaseByDate)[]
+}) => {
+	const [showCommits, setShowCommits] = useState(true)
+	const [showReleases, setShowReleases] = useState(true)
+
+	return (
+		<Layout title="INDEX" contentDirection="row">
+			<div className="article-container mx-auto">
+				<h1 className="article-h1">INDEX</h1>
+				<h2 className="article-h2">配布物</h2>
+				<div className="mt-3">
+					{getPiecesElement(pieces, pushedAts)}
+				</div>
+				<h2 className="article-h2">最近の更新</h2>
+				<div className="flex flex-row items-center justify-center mb-3">
+					<Checkbox
+						checked={showCommits}
+						onChange={() => setShowCommits(!showCommits)}
+					/>{" "}
+					ネットワーク更新情報
+					<Checkbox
+						checked={showReleases}
+						onChange={() => setShowReleases(!showReleases)}
+					/>{" "}
+					アーカイブ更新情報
+				</div>
+				<div className="overflow-y-auto h-96 mb-5">
+					{updates.map((update) => {
+						if (isCommitsByDate(update) && showCommits) {
+							return renderCommitsByDate(update as CommitsByDate)
+						} else if (isReleaseByDate(update) && showReleases) {
+							return renderReleasesByDate(update as ReleaseByDate)
+						} else {
+							return <></>
+						}
+					})}
+				</div>
+				<h2 className="article-h2">このサイトについて</h2>
+				<p className="mt-3">
+					デスクトップマスコット「伺か」の配布物と開発情報を載せているサイトです。
+				</p>
+				<p className="my-4">
+					サイト名: <strong>おわらない</strong>{" "}
+					(https://apxxxxxxe.dev)
+					<br />
+					管理者: <strong>日野つみ</strong>
+				</p>
+				<h4 className="article-h4">連絡先</h4>
+				<ul className="list-disc list-inside">
+					<li>
+						<Link
+							className="article-a"
+							href="https://github.com/apxxxxxxe"
 						>
-							<h2 className="text-xl font-bold mb-3">
-								{formatDate(commitByDate.date)}
-							</h2>
-							{commitByDate.commits.map((commit: Commit) => (
-								<div className="ml-5" key={commit.date}>
-									<h3 className="font-bold mb-1">
-										<span
-											className="mr-1"
-											style={{
-												color: `#${
-													pieces.find(
-														(piece) =>
-															piece.repoName ===
-															commit.repoName
-													)?.color
-												}`,
-											}}
-										>
-											●
-										</span>
-										<Link
-											href={`#${commit.repoName}`}
-											className="grow font-bold hover:underline"
-										>
-											{pieceNameByRepoName(
-												commit.repoName
-											)}
-										</Link>
-									</h3>
-									<ol className="list-disc ml-11 mb-3">
-										{commit.message.map((mes) => (
-											<li key={`${commit.date}-${mes}`}>
-												{mes
-													.split("\n")
-													.map((line, idx) => {
-														if (line === "") {
-															return ""
-														}
-														return (
-															<>
-																{line}
-																{idx <
-																mes.split("\n")
-																	.length -
-																	1 ? (
-																	<br />
-																) : (
-																	""
-																)}
-															</>
-														)
-													})}
-											</li>
-										))}
-									</ol>
-								</div>
-							))}
-							<GoodButton
-								id={`commitByDate-${commitByDate.date}`}
-								align="end"
-							/>
-						</div>
-					)
-				})}
-			</div>
-			<h2 className="article-h2">このサイトについて</h2>
-			<p className="mt-3">
-				デスクトップマスコット「伺か」の配布物と開発情報を載せているサイトです。
-			</p>
-			<p className="my-4">
-				サイト名: <strong>おわらない</strong> (https://apxxxxxxe.dev)
-				<br />
-				管理者: <strong>日野つみ</strong>
-			</p>
-			<h4 className="article-h4">連絡先</h4>
-			<ul className="list-disc list-inside">
-				<li>
-					<Link
-						className="article-a"
-						href="https://github.com/apxxxxxxe"
-					>
-						GitHub
-					</Link>
-				</li>
-				<li>
-					<Link
-						className="article-a"
-						rel="me"
-						href="https://ukadon.shillest.net/@apxxxxxxe"
-					>
-						Mastodon
-					</Link>
-				</li>
-				<li>
-					<Link
-						className="article-a"
-						href="http://clap.webclap.com/clap.php?id=apxxxxxxe"
-					>
-						Web拍手
-					</Link>
-				</li>
-			</ul>
-			<div className="mt-20 flex flex-col items-center">
-				<GoodButton id="index" align="center" />
-				<div className="mt-2 text-sm text-darkgray">
-					<p>
-						いいねボタンはそれぞれ1日{GoodLimit}回まで押せます。
-						<br />
-						押しても何も起きませんが、作者の励みになります。{" "}
-					</p>
+							GitHub
+						</Link>
+					</li>
+					<li>
+						<Link
+							className="article-a"
+							rel="me"
+							href="https://ukadon.shillest.net/@apxxxxxxe"
+						>
+							Mastodon
+						</Link>
+					</li>
+					<li>
+						<Link
+							className="article-a"
+							href="http://clap.webclap.com/clap.php?id=apxxxxxxe"
+						>
+							Web拍手
+						</Link>
+					</li>
+				</ul>
+				<div className="mt-20 flex flex-col items-center">
+					<GoodButton id="index" align="center" />
+					<div className="mt-2 text-sm text-darkgray">
+						<p>
+							いいねボタンはそれぞれ1日{GoodLimit}回まで押せます。
+							<br />
+							押しても何も起きませんが、作者の励みになります。{" "}
+						</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</Layout>
-)
+		</Layout>
+	)
+}
 
 export default Page

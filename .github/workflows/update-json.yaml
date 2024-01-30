@@ -26,6 +26,7 @@ jobs:
         npm install
         node github_repos.js > ../data/github_repos.json
         node github_commits.js > ../data/github_commits.json
+        node github_releases.js > ../data/github_releases.json
 
     - name: Commit and push if it changed
       run: |
