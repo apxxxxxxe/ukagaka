@@ -4,7 +4,7 @@ import Image from "next/image"
 import Layout from "utils/Layout"
 import GoodButton from "utils/goodButton"
 import { GoodLimit } from "pages/api/good"
-import { useState, useEffect } from "react"
+import { useCallback, useState, useRef, useEffect } from "react"
 import { Checkbox } from "@mui/material"
 import markdownToHtml, {
 	makeGitHubReleaseDescription,
@@ -425,7 +425,10 @@ const renderReleasesByDate = (releasesByDate: ReleaseByDate) => {
 				{formatDate(releasesByDate.date)}
 			</h2>
 			{releasesByDate.releases.map((release: Release) => (
-				<div className="ml-5" key={`${release.date}-${release.tagName}`}>
+				<div
+					className="ml-5"
+					key={`${release.date}-${release.tagName}`}
+				>
 					<h2 className="text-xl font-bold mb-1">
 						<span
 							className="mr-1"
@@ -473,20 +476,56 @@ const Page: NextPage = ({
 }) => {
 	const [showCommits, setShowCommits] = useState(true)
 	const [showReleases, setShowReleases] = useState(true)
-	const [updateDoms, setUpdateDoms] = useState<JSX.Element>(<p>Loading...</p>)
+	const [updateDoms, setUpdateDoms] = useState<JSX.Element[]>([])
+	const numPerUpdate = 10
+	const [page, setPage] = useState(1)
+	const [showMore, setShowMore] = useState(true)
+	const updateObserverRef = useRef<HTMLDivElement>(null)
+
+	const scrollObserver = useCallback(
+		(node: HTMLDivElement) => {
+			new IntersectionObserver((entries) => {
+				if (entries[0].isIntersecting) {
+					setPage((p) => p + 1)
+				}
+			}).observe(node)
+		},
+		[showMore]
+	)
 
 	useEffect(() => {
-		const doms: JSX.Element[] = []
-		for (const update of updates) {
-			if (isCommitsByDate(update) && showCommits) {
-				doms.push(renderCommitsByDate(update as CommitsByDate))
-			} else if (isReleaseByDate(update) && showReleases) {
-				doms.push(renderReleasesByDate(update as ReleaseByDate))
-			} else {
-				continue
-			}
+		if (updateObserverRef.current) {
+			scrollObserver(updateObserverRef.current)
 		}
-		setUpdateDoms(<> {doms} </>)
+	}, [updateObserverRef, scrollObserver])
+
+	useEffect(() => {
+		const fetchMoreUpdates = async () => {
+			const doms: JSX.Element[] = []
+			for (let i = updateDoms.length; i < page * numPerUpdate; i++) {
+				if (i >= updates.length) {
+					setShowMore(false)
+					break
+				}
+				const update = updates[i]
+				if (isCommitsByDate(update) && showCommits) {
+					doms.push(renderCommitsByDate(update as CommitsByDate))
+				} else if (isReleaseByDate(update) && showReleases) {
+					doms.push(renderReleasesByDate(update as ReleaseByDate))
+				} else {
+					continue
+				}
+			}
+			setUpdateDoms([...updateDoms, ...doms])
+			setShowMore(updates.length > page * numPerUpdate)
+		}
+		fetchMoreUpdates()
+	}, [page])
+
+	useEffect(() => {
+		setUpdateDoms([])
+		setShowMore(updates.length > page * numPerUpdate)
+		setPage(1)
 	}, [showCommits, showReleases])
 
 	return (
@@ -506,7 +545,16 @@ const Page: NextPage = ({
 					/>{" "}
 					アーカイブ更新情報
 				</div>
-				<div className="overflow-y-auto h-96 mb-5">{updateDoms}</div>
+				<div className="overflow-y-auto h-96 mb-5">
+					{updateDoms}
+					<div ref={updateObserverRef}>
+						{showMore && (
+							<div className="loader-wrapper">
+								<div className="loader"></div>
+							</div>
+						)}
+					</div>
+				</div>
 				<h2 className="article-h2">配布物</h2>
 				<div className="mt-3">
 					{getPiecesElement(pieces, pushedAts)}
