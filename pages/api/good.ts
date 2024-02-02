@@ -1,4 +1,4 @@
-import { sql } from "@vercel/postgres"
+import prisma from "lib/prisma"
 import { NextApiRequest, NextApiResponse } from "next"
 
 export enum GoodButtonStatus {
@@ -8,13 +8,13 @@ export enum GoodButtonStatus {
 
 export type GoodButtonGetResponse = {
 	todayCount: number
-	cumlitiveCount: number
+	cumulativeCount: number
 }
 
 export type GoodButtonPostResponse = {
 	goodButtonStatus: GoodButtonStatus
 	todayCount: number
-	cumlitiveCount: number
+	cumulativeCount: number
 }
 
 export const GoodLimit = 5
@@ -35,68 +35,83 @@ export default async function handler(
 	}
 
 	// set timezone to UTC
-	await sql`SET timezone TO 'UTC'`
+	// await sql`SET timezone TO 'UTC'`
+	await prisma.$executeRaw`SET timezone TO 'UTC'`
 
 	const now = new Date().toUTCString()
+	const nowISO = new Date().toISOString()
 
-	let { rows } =
-		await sql`SELECT * FROM good_count WHERE ip = ${ip} AND id = ${id}`
+	// await sql`SELECT * FROM good_count WHERE ip = ${ip} AND id = ${id}`
+	let good = await prisma.good_count.findFirst({
+		where: {
+			ip: ip,
+			button_id: id,
+		},
+	})
 
 	// if user doesn't exist, create a new user
-	if (rows.length === 0) {
-		await sql`INSERT INTO
-      good_count (ip, id, last_date, today_count, cumlitive_count)
-      VALUES (${ip}, ${id}, ${now}, 0, 0)`
-		let q =
-			await sql`SELECT * FROM good_count WHERE ip = ${ip} AND id = ${id}`
-		rows = q.rows
+	// await sql`INSERT INTO
+	//    good_count (ip, id, last_date, today_count, cumulative_count)
+	//    VALUES (${ip}, ${id}, ${now}, 0, 0)`
+	// let q =
+	//   await sql`SELECT * FROM good_count WHERE ip = ${ip} AND id = ${id}`
+	// rows = q.rows
+	if (good === null) {
+		good = await prisma.good_count.create({
+			data: {
+				ip: ip,
+				button_id: id,
+				last_date: nowISO,
+				today_count: 0,
+				cumulative_count: 0,
+			},
+		})
 	}
 
 	// if last_date is not today, reset today_count
-	const dataA = rows[0].last_date.toUTCString()
+	const dataA = good.last_date.toUTCString()
 	if (dataA.slice(0, 16) !== now.slice(0, 16)) {
-		await sql`UPDATE good_count SET
-    last_date = ${now},
-    today_count = 0
-    WHERE ip = ${ip} AND id = ${id}`
-		let q =
-			await sql`SELECT * FROM good_count WHERE ip = ${ip} AND id = ${id}`
-		rows = q.rows
 	}
 
 	if (req.method === "GET") {
 		const response: GoodButtonGetResponse = {
-			todayCount: rows[0].today_count,
-			cumlitiveCount: rows[0].cumlitive_count,
+			todayCount: good.today_count,
+			cumulativeCount: good.cumulative_count,
 		}
 		res.status(200).json(response)
 	} else if (req.method === "POST") {
 		// if today_count is limit, return error
-		if (rows[0].today_count >= GoodLimit) {
+		if (good.today_count >= GoodLimit) {
 			const response: GoodButtonPostResponse = {
 				goodButtonStatus: GoodButtonStatus.UPTOLIMIT,
-				todayCount: rows[0].today_count,
-				cumlitiveCount: rows[0].cumlitive_count,
+				todayCount: good.today_count,
+				cumulativeCount: good.cumulative_count,
 			}
 			res.status(200).json(response)
 			return
 		}
 
 		// count up
-		await sql`UPDATE good_count SET
-      last_date = ${now},
-      today_count = today_count + 1,
-      cumlitive_count = cumlitive_count + 1
-      WHERE ip = ${ip} AND id = ${id}`
-
-		let q =
-			await sql`SELECT * FROM good_count WHERE ip = ${ip} AND id = ${id}`
-		rows = q.rows
+		// await sql`UPDATE good_count SET
+		//   last_date = ${now},
+		//   today_count = today_count + 1,
+		//   cumulative_count = cumulative_count + 1
+		//   WHERE ip = ${ip} AND id = ${id}`
+		good = await prisma.good_count.update({
+			where: {
+				id: good.id,
+			},
+			data: {
+				last_date: nowISO,
+				today_count: { increment: 1 },
+				cumulative_count: { increment: 1 },
+			},
+		})
 
 		const response: GoodButtonPostResponse = {
 			goodButtonStatus: GoodButtonStatus.OK,
-			todayCount: rows[0].today_count,
-			cumlitiveCount: rows[0].cumlitive_count,
+			todayCount: good.today_count,
+			cumulativeCount: good.cumulative_count,
 		}
 		res.status(200).json(response)
 	}

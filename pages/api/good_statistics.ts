@@ -1,4 +1,4 @@
-import { sql, QueryResultRow } from "@vercel/postgres"
+import prisma from "lib/prisma"
 import { NextApiRequest, NextApiResponse } from "next"
 
 export type GoodUser = {
@@ -17,8 +17,12 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
 
 	if (req.method === "GET") {
 		const rawIpAddresses: string[] = (
-			await sql`SELECT * FROM good_count`
-		).rows.map((row: QueryResultRow) => row.ip)
+			await prisma.good_count.findMany({
+				select: {
+					ip: true,
+				},
+			})
+		).map((row) => row.ip)
 
 		let ipAddresses: string[] = []
 		let ipMap: Map<string, boolean> = new Map()
@@ -31,20 +35,26 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
 
 		let goodUsers: GoodUser[] = []
 		for (const ip of ipAddresses) {
-			const results: QueryResultRow[] = (
-				await sql`
-      SELECT id, today_count, cumlitive_count
-      FROM good_count
-      WHERE ip = ${ip} AND cumlitive_count > 0
-    `
-			).rows
+			const results = await prisma.good_count.findMany({
+				where: {
+					ip: ip,
+					cumulative_count: {
+						gt: 0,
+					},
+				},
+				select: {
+					button_id: true,
+					today_count: true,
+					cumulative_count: true,
+				},
+			})
 
 			let goodCounts: GoodCount[] = []
 			for (const result of results) {
 				goodCounts.push({
-					id: result.id,
+					id: result.button_id,
 					todayCount: result.today_count,
-					cumlitiveCount: result.cumlitive_count,
+					cumlitiveCount: result.cumulative_count,
 				})
 			}
 
