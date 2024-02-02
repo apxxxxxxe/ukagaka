@@ -411,7 +411,6 @@ const renderCommitsByDate = (commitByDate: CommitsByDate) => (
 				</ol>
 			</div>
 		))}
-		<GoodButton id={`commitByDate-${commitByDate.date}`} align="end" />
 	</div>
 )
 
@@ -459,10 +458,6 @@ const renderReleasesByDate = (releasesByDate: ReleaseByDate) => {
 					</p>
 				</div>
 			))}
-			<GoodButton
-				id={`commitByDate-${releasesByDate.date}`}
-				align="end"
-			/>
 		</div>
 	)
 }
@@ -597,16 +592,6 @@ const Page: NextPage = ({
 						</Link>
 					</li>
 				</ul>
-				<div className="mt-20 flex flex-col items-center">
-					<GoodButton id="index" align="center" />
-					<div className="mt-2 text-sm text-darkgray">
-						<p>
-							いいねボタンはそれぞれ1日{GoodLimit}回まで押せます。
-							<br />
-							押しても何も起きませんが、作者の励みになります。{" "}
-						</p>
-					</div>
-				</div>
 			</div>
 		</Layout>
 	)
