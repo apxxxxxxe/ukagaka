@@ -566,7 +566,7 @@ const Page: NextPage = ({
 	useEffect(() => {
 		const fetchMoreUpdates = async () => {
 			const doms: JSX.Element[] = []
-			for (let i = updateDoms.length; i < page * numPerUpdate; i++) {
+			for (let i = 0; i < page * numPerUpdate; i++) {
 				if (i >= updates.length) {
 					setShowMore(false)
 					break
@@ -580,7 +580,7 @@ const Page: NextPage = ({
 					continue
 				}
 			}
-			setUpdateDoms([...updateDoms, ...doms])
+			setUpdateDoms([...doms])
 			setShowMore(updates.length > page * numPerUpdate)
 		}
 		fetchMoreUpdates()
