@@ -50,12 +50,6 @@ export default async function handler(
 	})
 
 	// if user doesn't exist, create a new user
-	// await sql`INSERT INTO
-	//    good_count (ip, id, last_date, today_count, cumulative_count)
-	//    VALUES (${ip}, ${id}, ${now}, 0, 0)`
-	// let q =
-	//   await sql`SELECT * FROM good_count WHERE ip = ${ip} AND id = ${id}`
-	// rows = q.rows
 	if (good === null) {
 		good = await prisma.good_count.create({
 			data: {
@@ -91,12 +85,6 @@ export default async function handler(
 			return
 		}
 
-		// count up
-		// await sql`UPDATE good_count SET
-		//   last_date = ${now},
-		//   today_count = today_count + 1,
-		//   cumulative_count = cumulative_count + 1
-		//   WHERE ip = ${ip} AND id = ${id}`
 		good = await prisma.good_count.update({
 			where: {
 				id: good.id,

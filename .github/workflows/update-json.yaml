@@ -19,14 +19,12 @@ jobs:
       with:
         node-version: '14.x'
 
-    - name: Fetch GitHub API and update JSON
+    - name: Fetch GitHub API and update database
       run: |
-        mkdir -p ./data
-        cd workflows
         npm install
-        node github_repos.js > ../data/github_repos.json
-        node github_commits.js > ../data/github_commits.json
-        node github_releases.js > ../data/github_releases.json
+        node --loader ts-node/esm ./workflows/github_repos.js
+        node --loader ts-node/esm ./workflows/github_commits.js
+        node --loader ts-node/esm ./workflows/github_releases.js
 
     - name: Commit and push if it changed
       run: |
@@ -34,5 +32,5 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add -A .
-        git commit -m "Update JSON data" || exit 0
+        git commit -m "update repository data" || exit 0
         git push

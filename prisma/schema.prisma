@@ -6,17 +6,54 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
-  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  provider          = "postgresql"
+  url               = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl         = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
   shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migrations
 }
 
 model good_count {
-  id Int @id @default(autoincrement())
-  ip String
-  button_id String
-  last_date DateTime @db.Timestamptz
-  today_count Int
+  id               Int      @id @default(autoincrement())
+  ip               String
+  button_id        String
+  last_date        DateTime @db.Timestamptz
+  today_count      Int
   cumulative_count Int
+}
+
+model repos {
+  id        Int      @id @default(autoincrement())
+  repo_name String
+  pushed_at DateTime
+}
+
+model commits_by_date {
+  id      Int      @id @default(autoincrement())
+  date    String
+  commits commits[]
+}
+
+model commits {
+  id               Int             @id @default(autoincrement())
+  repo_name        String
+  date             DateTime
+  messages         String[]
+  parent           commits_by_date? @relation(fields: [parent_id], references: [id])
+  parent_id        Int?
+}
+
+model releases_by_date {
+  id       Int       @id @default(autoincrement())
+  date     String
+  releases releases[]
+}
+
+model releases {
+  id               Int                @id @default(autoincrement())
+  repo_name        String
+  date             DateTime
+  tag_name         String
+  body             String
+  parent           releases_by_date? @relation(fields: [parent_id], references: [id])
+  parent_id        Int?
 }

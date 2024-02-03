@@ -1,57 +1,75 @@
-const utils = require("./utils.js")
+import { github, repos as repo_info } from "./utils.js"
+import prisma from "../lib/prisma.ts"
 
 async function get_releases() {
-	let releases = []
-	for (const repo of utils.repos) {
-		const response = await utils.github.get(
-			`/repos/apxxxxxxe/${repo}/releases`
-		)
-		const data = response.data
-		data.sort((a, b) => {
-			return new Date(b.published_at) - new Date(a.published_at)
-		})
+  let releases = []
+  for (const repo of repo_info) {
+    const response = await github.get(
+      `/repos/apxxxxxxe/${repo}/releases`
+    )
+    const data = response.data
+    data.sort((a, b) => {
+      return new Date(b.published_at) - new Date(a.published_at)
+    })
 
-		for (let i = 0; i < data.length - 1; i++) {
-			// draftは除外
-			if (data[i].draft) {
-				continue
-			}
+    for (let i = 0; i < data.length - 1; i++) {
+      // draftは除外
+      if (data[i].draft) {
+        continue
+      }
 
-			releases.push({
-				repoName: repo,
-				date: data[i].published_at,
-				tagName: data[i].tag_name,
-				body: data[i].body || "",
-				bodyHtml: null,
-			})
-		}
-	}
+      releases.push({
+        repoName: repo,
+        date: data[i].published_at,
+        tagName: data[i].tag_name,
+        body: data[i].body || "",
+      })
+    }
+  }
 
-	releases.sort((a, b) => {
-		return new Date(b.date) - new Date(a.date)
-	})
+  releases.sort((a, b) => {
+    return new Date(b.date) - new Date(a.date)
+  })
 
-	let releasesByDate = new Map()
-	for (const release of releases) {
-		const date = new Date(release.date).toLocaleDateString()
-		if (releasesByDate.has(date)) {
-			const ary = releasesByDate.get(date)
-			ary.push(release)
-			releasesByDate.set(date, ary)
-		} else {
-			releasesByDate.set(date, [release])
-		}
-	}
+  let releasesByDate = {}
+  for (const release of releases) {
+    const date = new Date(release.date).toLocaleDateString();
+    if (!releasesByDate[date]) {
+      releasesByDate[date] = [];
+    }
+    releasesByDate[date].push(release);
+  }
 
-	let obj = []
-	for (const [key, value] of releasesByDate) {
-		obj.push({
-			date: key,
-			releases: value,
-		})
-	}
+  await prisma.$executeRaw`SET timezone TO 'UTC'`
 
-	console.log(JSON.stringify(obj))
+  await prisma.releases.deleteMany()
+  await prisma.releases_by_date.deleteMany()
+
+  let promises = []
+  for (const date of Object.keys(releasesByDate)) {
+    let queries = []
+    for (const release of releasesByDate[date]) {
+      queries.push(
+        {
+          repo_name: release.repoName,
+          date: new Date(release.date).toISOString(),
+          tag_name: release.tagName,
+          body: release.body,
+        }
+      )
+    }
+    promises.push(prisma.releases_by_date.create({
+      data: {
+        date: date,
+        releases: {
+          create: queries
+        }
+      },
+    }))
+  }
+
+  const result = await Promise.all(promises)
+  console.log("releases: ", result)
 }
 
 get_releases()
