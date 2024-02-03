@@ -45,6 +45,7 @@ async function get_releases() {
   await prisma.releases.deleteMany()
   await prisma.releases_by_date.deleteMany()
 
+  const promiseNum = 10
   let promises = []
   for (const date of Object.keys(releasesByDate)) {
     let queries = []
@@ -58,18 +59,27 @@ async function get_releases() {
         }
       )
     }
+
     promises.push(prisma.releases_by_date.create({
       data: {
         date: date,
         releases: {
-          create: queries
+          create: queries,
         }
-      },
+      }
     }))
-  }
 
-  const result = await Promise.all(promises)
-  console.log("releases: ", result)
+    // timeoutを避けるためにpromiseNum件ずつ処理する
+    if (promises.length >= promiseNum) {
+      const result = await Promise.all(promises)
+      console.log("result: ", result)
+      promises = []
+    }
+  }
+  if (promises.length > 0) {
+    const result = await Promise.all(promises)
+    console.log("result: ", result)
+  }
 }
 
 get_releases()

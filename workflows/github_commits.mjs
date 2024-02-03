@@ -58,7 +58,8 @@ async function get_commits() {
   await prisma.commits.deleteMany()
   await prisma.commits_by_date.deleteMany()
 
-  let promises = []
+  const promiseNum = 10
+  const promises = []
   for (const date of Object.keys(commitsByDate)) {
     let queries = []
     for (const commit of commitsByDate[date]) {
@@ -68,20 +69,27 @@ async function get_commits() {
         messages: commit.messages,
       })
     }
-    promises.push(
-      prisma.commits_by_date.create({
-        data: {
-          date: date,
-          commits: {
-            create: queries,
-          }
-        }
-      })
-    )
-  }
 
-  const result = await Promise.all(promises)
-  console.log("result: ", result)
+    promises.push(prisma.commits_by_date.create({
+      data: {
+        date: date,
+        commits: {
+          create: queries,
+        }
+      }
+    }))
+
+    // timeoutを避けるためにpromiseNum件ずつ処理する
+    if (promises.length >= promiseNum) {
+      const result = await Promise.all(promises)
+      console.log("result: ", result)
+      promises = []
+    }
+  }
+  if (promises.length > 0) {
+    const result = await Promise.all(promises)
+    console.log("result: ", result)
+  }
 }
 
 get_commits()
