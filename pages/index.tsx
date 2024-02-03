@@ -9,9 +9,7 @@ import { Checkbox } from "@mui/material"
 import markdownToHtml, {
 	makeGitHubReleaseDescription,
 } from "utils/markdownToHtml"
-
-import fs from "fs"
-import path from "path"
+import prisma from "lib/prisma"
 
 type Piece = {
 	type: string
@@ -212,28 +210,94 @@ const formatDate = (dateString: string): string => {
 
 export async function getServerSideProps() {
 	// Piecesのリポジトリの最終更新日を取得
-	const repoDataPath = path.join(process.cwd(), "data", "github_repos.json")
-	const repoContents = fs.readFileSync(repoDataPath, "utf8")
-	const pushedAts: PushedAt[] = JSON.parse(repoContents)
+	const rawPushedAts = await prisma.repos.findMany({
+		select: {
+			repo_name: true,
+			pushed_at: true,
+		},
+	})
+
+	const pushedAts: PushedAt[] = rawPushedAts.map((raw) => ({
+		repoName: raw.repo_name,
+		pushedAt: raw.pushed_at.toISOString(),
+	}))
 
 	// 最近のコミットを取得
-	const commitDataPath = path.join(
-		process.cwd(),
-		"data",
-		"github_commits.json"
-	)
-	const commitContents = fs.readFileSync(commitDataPath, "utf8")
-	const commits: CommitsByDate[] = JSON.parse(commitContents)
+	const rawCommits = await prisma.commits.findMany({
+		select: {
+			date: true,
+			repo_name: true,
+			messages: true,
+		},
+	})
+
+	const commitsMap: any = {}
+	for (let i = 0; i < rawCommits.length; i++) {
+		const commit = rawCommits[i]
+		const d = new Date(commit.date).toLocaleDateString()
+		if (commitsMap[d] === undefined) {
+			const commitsByDate = rawCommits.filter(
+				(c) => d === new Date(c.date).toLocaleDateString()
+			)
+			commitsMap[d] = {
+				date: d,
+				commits: commitsByDate.map((c) => ({
+					repoName: c.repo_name,
+					date: c.date.toISOString(),
+					message: c.messages,
+				})),
+			}
+		}
+	}
+
+	const commits: CommitsByDate[] = []
+	for (const key in commitsMap) {
+		commits.push(commitsMap[key])
+	}
 
 	// 最近のリリースを取得
-	const releaseDataPath = path.join(
-		process.cwd(),
-		"data",
-		"github_releases.json"
-	)
-	const releaseContents = fs.readFileSync(releaseDataPath, "utf8")
-	const releases: ReleaseByDate[] = JSON.parse(releaseContents)
+	const rawReleases: Release[] = await prisma.releases
+		.findMany({
+			select: {
+				date: true,
+				repo_name: true,
+				tag_name: true,
+				body: true,
+			},
+		})
+		.then((rawReleases) => {
+			return rawReleases.map((raw) => {
+				return {
+					date: raw.date.toISOString(),
+					repoName: raw.repo_name,
+					tagName: raw.tag_name,
+					body: raw.body,
+					bodyHtml: null,
+				}
+			})
+		})
 
+	const releasesMap: any = {}
+	for (let i = 0; i < rawReleases.length; i++) {
+		const release = rawReleases[i]
+		const d = new Date(release.date).toLocaleDateString()
+		if (releasesMap[d] === undefined) {
+			const releasesByDate = rawReleases.filter(
+				(r) => d === new Date(r.date).toLocaleDateString()
+			)
+			releasesMap[d] = {
+				date: d,
+				releases: releasesByDate,
+			}
+		}
+	}
+
+	const releases: ReleaseByDate[] = []
+	for (const key in releasesMap) {
+		releases.push(releasesMap[key])
+	}
+
+	// body(markdown)を変換したものをbodyHtmlに書き込む
 	for (let i = 0; i < releases.length; i++) {
 		for (let j = 0; j < releases[i].releases.length; j++) {
 			const release = releases[i].releases[j]

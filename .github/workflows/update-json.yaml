@@ -22,9 +22,9 @@ jobs:
     - name: Fetch GitHub API and update database
       run: |
         npm install
-        node --loader ts-node/esm ./workflows/github_repos.js
-        node --loader ts-node/esm ./workflows/github_commits.js
-        node --loader ts-node/esm ./workflows/github_releases.js
+        node --loader ts-node/esm ./workflows/github_repos.mjs
+        node --loader ts-node/esm ./workflows/github_commits.mjs
+        node --loader ts-node/esm ./workflows/github_releases.mjs
 
     - name: Commit and push if it changed
       run: |

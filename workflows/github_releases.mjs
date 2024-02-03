@@ -1,5 +1,5 @@
-import { github, repos as repo_info } from "./utils.js"
-import prisma from "../lib/prisma.ts"
+import { github, repos as repo_info } from "./utils.mjs"
+import prisma from "../lib/prisma.mts"
 
 async function get_releases() {
   let releases = []
