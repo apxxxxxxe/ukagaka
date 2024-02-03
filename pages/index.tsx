@@ -10,6 +10,7 @@ import markdownToHtml, {
 	makeGitHubReleaseDescription,
 } from "utils/markdownToHtml"
 import prisma from "lib/prisma"
+import axios from "axios"
 
 type Piece = {
 	type: string
@@ -27,36 +28,18 @@ type PushedAt = {
 	pushedAt: string
 }
 
-type CommitsByDate = {
-	date: string
-	commits: Commit[]
-}
-
-type Commit = {
+export type Commit = {
 	repoName: string
 	date: string
-	message: string[]
+	messages: string[]
 }
 
-const isCommitsByDate = (item: any): item is CommitsByDate => {
-	return item.commits !== undefined
-}
-
-type ReleaseByDate = {
-	date: string
-	releases: Release[]
-}
-
-type Release = {
+export type Release = {
 	repoName: string
 	date: string
 	tagName: string
 	body: string
 	bodyHtml: string | null
-}
-
-const isReleaseByDate = (item: any): item is ReleaseByDate => {
-	return item.releases !== undefined
 }
 
 const imageRoot = `/contents/index/`
@@ -222,107 +205,18 @@ export async function getServerSideProps() {
 		pushedAt: raw.pushed_at.toISOString(),
 	}))
 
-	// 最近のコミットを取得
-	const rawCommits = await prisma.commits.findMany({
-		select: {
-			date: true,
-			repo_name: true,
-			messages: true,
-		},
-	})
-
-	const commitsMap: any = {}
-	for (let i = 0; i < rawCommits.length; i++) {
-		const commit = rawCommits[i]
-		const d = new Date(commit.date).toLocaleDateString()
-		if (commitsMap[d] === undefined) {
-			const commitsByDate = rawCommits.filter(
-				(c) => d === new Date(c.date).toLocaleDateString()
-			)
-			commitsMap[d] = {
-				date: d,
-				commits: commitsByDate.map((c) => ({
-					repoName: c.repo_name,
-					date: c.date.toISOString(),
-					message: c.messages,
-				})),
-			}
-		}
-	}
-
-	const commits: CommitsByDate[] = []
-	for (const key in commitsMap) {
-		commits.push(commitsMap[key])
-	}
-
-	// 最近のリリースを取得
-	const rawReleases: Release[] = await prisma.releases
-		.findMany({
-			select: {
-				date: true,
-				repo_name: true,
-				tag_name: true,
-				body: true,
-			},
-		})
-		.then((rawReleases) => {
-			return rawReleases.map((raw) => {
-				return {
-					date: raw.date.toISOString(),
-					repoName: raw.repo_name,
-					tagName: raw.tag_name,
-					body: raw.body,
-					bodyHtml: null,
-				}
-			})
-		})
-
-	const releasesMap: any = {}
-	for (let i = 0; i < rawReleases.length; i++) {
-		const release = rawReleases[i]
-		const d = new Date(release.date).toLocaleDateString()
-		if (releasesMap[d] === undefined) {
-			const releasesByDate = rawReleases.filter(
-				(r) => d === new Date(r.date).toLocaleDateString()
-			)
-			releasesMap[d] = {
-				date: d,
-				releases: releasesByDate,
-			}
-		}
-	}
-
-	const releases: ReleaseByDate[] = []
-	for (const key in releasesMap) {
-		releases.push(releasesMap[key])
-	}
-
-	// body(markdown)を変換したものをbodyHtmlに書き込む
-	for (let i = 0; i < releases.length; i++) {
-		for (let j = 0; j < releases[i].releases.length; j++) {
-			const release = releases[i].releases[j]
-			if (release.body !== "") {
-				releases[i].releases[j].bodyHtml = await markdownToHtml(
-					release.body
-				)
-			} else {
-				releases[i].releases[j].bodyHtml = null
-			}
-		}
-	}
-
-	let updates: (CommitsByDate | ReleaseByDate)[] = [...commits, ...releases]
+	// let updates: (CommitsByDate | ReleaseByDate)[] = [...commits, ...releases]
 
 	// sort by date
 	// 両方dateを持つので区別の必要はない
-	updates = updates.sort((a, b) => {
-		return new Date(b.date).getTime() - new Date(a.date).getTime()
-	})
+	// updates = updates.sort((a, b) => {
+	// 	return new Date(b.date).getTime() - new Date(a.date).getTime()
+	// })
 
 	return {
 		props: {
 			pushedAts: pushedAts,
-			updates: updates,
+			// updates: updates,
 		},
 	}
 }
@@ -339,207 +233,223 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: PushedAt[]) {
 	const pieceTypes = getAllPieceTypes(pieceAry)
 	return (
 		<>
-			{pieceTypes.map((type) => {
-				return (
-					<>
-						<div className="flex flex-col">
-							<h3 className="article-h3">{type}</h3>
-							{pieces
-								.filter((piece) => piece.type === type)
-								.map((piece) => {
-									let pushedAt = pushedAts.find(
-										(p) => p.repoName === piece.repoName
-									)
-									if (pushedAt) {
-										pushedAt.pushedAt = formatDate(
-											pushedAt.pushedAt
-										)
-									} else {
-										pushedAt = {
-											repoName: piece.repoName,
-											pushedAt: "取得失敗",
-										}
-									}
-									return (
-										<div
-											id={piece.repoName}
-											className="flex flex-col items-center md:flex-row md:items-normal p-4 px-3 mb-8 border-solid border border-gray/[0.2] rounded-lg shadow-md"
-											key={`piece-${piece.repoName}`}
-										>
-											<Image
-												className="w-min my-auto"
-												width={234}
-												height={60}
-												src={piece.bannerImg}
-												alt={`${piece.title}のバナー`}
-											/>
-											<div className="w-full mx-5 mt-3 md:mt-0">
-												<div className="flex flex-row items-center">
+			{pieceTypes.map((type) => (
+				<div key={`piece-${type}`} className="flex flex-col">
+					<h3 className="article-h3">{type}</h3>
+					{pieces
+						.filter((piece) => piece.type === type)
+						.map((piece) => {
+							let pushedAt = pushedAts.find(
+								(p) => p.repoName === piece.repoName
+							)
+							if (pushedAt) {
+								pushedAt.pushedAt = formatDate(
+									pushedAt.pushedAt
+								)
+							} else {
+								pushedAt = {
+									repoName: piece.repoName,
+									pushedAt: "取得失敗",
+								}
+							}
+							return (
+								<div
+									id={piece.repoName}
+									className="flex flex-col items-center md:flex-row md:items-normal p-4 px-3 mb-8 border-solid border border-gray/[0.2] rounded-lg shadow-md"
+									key={`piece-${piece.repoName}`}
+								>
+									<Image
+										className="w-min my-auto"
+										width={234}
+										height={60}
+										src={piece.bannerImg}
+										alt={`${piece.title}のバナー`}
+									/>
+									<div className="w-full mx-5 mt-3 md:mt-0">
+										<div className="flex flex-row items-center">
+											<Link
+												href={`https://github.com/apxxxxxxe/${piece.repoName}#readme`}
+												className="grow font-bold hover:underline"
+											>
+												{piece.title}
+											</Link>
+											<p className="ml-2 grow-0 text-sm text-darkgray">
+												最終更新: {pushedAt.pushedAt}
+											</p>
+										</div>
+										<div>
+											<div className="my-3 text-sm">
+												{piece.description}
+											</div>
+											<div className="flex flex-row items-center justify-end">
+												{piece.fileName === "" ? (
+													<p>[制作中]</p>
+												) : (
 													<Link
-														href={`https://github.com/apxxxxxxe/${piece.repoName}#readme`}
-														className="grow font-bold hover:underline"
+														href={`https://github.com/apxxxxxxe/${piece.repoName}/releases/latest/download/${piece.fileName}`}
 													>
-														{piece.title}
+														<figure>
+															<img
+																className="rounded-md h-6"
+																src={`https://img.shields.io/github/v/release/apxxxxxxe/${piece.repoName}?color=%23${piece.color}&label=${piece.fileName}&logo=github&style=flat-square`}
+																alt="ダウンロード"
+															/>
+														</figure>
 													</Link>
-													<p className="ml-2 grow-0 text-sm text-darkgray">
-														最終更新:{" "}
-														{pushedAt.pushedAt}
-													</p>
-												</div>
-												<div>
-													<div className="my-3 text-sm">
-														{piece.description}
-													</div>
-													<div className="flex flex-row items-center justify-end">
-														{piece.fileName ===
-														"" ? (
-															<p>[制作中]</p>
-														) : (
-															<Link
-																href={`https://github.com/apxxxxxxe/${piece.repoName}/releases/latest/download/${piece.fileName}`}
-															>
-																<figure>
-																	<img
-																		className="rounded-md h-6"
-																		src={`https://img.shields.io/github/v/release/apxxxxxxe/${piece.repoName}?color=%23${piece.color}&label=${piece.fileName}&logo=github&style=flat-square`}
-																		alt="ダウンロード"
-																	/>
-																</figure>
-															</Link>
-														)}
-													</div>
-												</div>
+												)}
 											</div>
 										</div>
-									)
-								})}
-						</div>
-					</>
-				)
-			})}
+									</div>
+								</div>
+							)
+						})}
+				</div>
+			))}
 		</>
 	)
 }
 
-const renderCommitsByDate = (commitByDate: CommitsByDate) => (
-	<div
-		className="p-5 mb-5 mx-5 border-solid border border-gray/[0.6] rounded-lg shadow-md md:w-3/4 mx-auto"
-		key={`commitByDate-${commitByDate.date}`}
-	>
-		<h2 className="text-xl font-bold mb-3">
-			{formatDate(commitByDate.date)}
-		</h2>
-		{commitByDate.commits.map((commit: Commit) => (
-			<div className="ml-5" key={`${commit.date}-${commit.repoName}}`}>
-				<h3 className="font-bold mb-1">
-					<span
-						className="mr-1"
-						style={{
-							color: `#${
-								pieces.find(
-									(piece) =>
-										piece.repoName === commit.repoName
-								)?.color
-							}`,
-						}}
-					>
-						●
-					</span>
-					<Link
-						href={`#${commit.repoName}`}
-						className="grow font-bold hover:underline"
-					>
-						{pieceNameByRepoName(commit.repoName)}
-					</Link>
-				</h3>
-				<ol className="list-disc ml-11 mb-3">
-					{commit.message.map((mes) => (
-						<li key={`${commit.date}-${mes}`}>
-							{mes.split("\n").map((line, idx) => {
-								if (line === "") {
-									return ""
-								}
-								return (
-									<>
-										{line}
-										{idx < mes.split("\n").length - 1 ? (
-											<br />
-										) : (
-											""
-										)}
-									</>
-								)
-							})}
-						</li>
-					))}
-				</ol>
-			</div>
-		))}
-		<GoodButton id={`commitByDate-${commitByDate.date}`} align="end" />
-	</div>
-)
-
-const renderReleasesByDate = (releasesByDate: ReleaseByDate) => {
+const renderCommit = (commit: Commit) => {
 	return (
-		<div
-			className="p-5 mb-5 mx-5 border-solid border border-gray/[0.6] rounded-lg shadow-md md:w-3/4 mx-auto"
-			key={`releaseByDate-${releasesByDate.date}`}
-		>
-			<h2 className="text-xl font-bold mb-3">
-				{formatDate(releasesByDate.date)}
-			</h2>
-			{releasesByDate.releases.map((release: Release) => (
-				<div
-					className="ml-5"
-					key={`${release.date}-${release.tagName}`}
+		<div className="ml-5" key={`${commit.date}-${commit.repoName}}`}>
+			<h3 className="font-bold mb-1">
+				<span
+					className="mr-1"
+					style={{
+						color: `#${
+							pieces.find(
+								(piece) => piece.repoName === commit.repoName
+							)?.color
+						}`,
+					}}
 				>
-					<h2 className="text-xl font-bold mb-1">
-						<span
-							className="mr-1"
-							style={{
-								color: `#${
-									pieces.find(
-										(piece) =>
-											piece.repoName === release.repoName
-									)?.color
-								}`,
-							}}
-						>
-							●
-						</span>
-						<Link
-							href={`https://github.com/apxxxxxxe/${release.repoName}/releases/tag/${release.tagName}`}
-							className="grow font-bold hover:underline"
-						>
-							{`${pieceNameByRepoName(
-								release.repoName
-							)} Release ${release.tagName}`}
-						</Link>
-					</h2>
-					<p className="ml-3 my-3">
-						{release.bodyHtml !== null
-							? makeGitHubReleaseDescription(release.bodyHtml)
-							: release.body}
-					</p>
-				</div>
-			))}
-			<GoodButton
-				id={`commitByDate-${releasesByDate.date}`}
-				align="end"
-			/>
+					●
+				</span>
+				<Link
+					href={`#${commit.repoName}`}
+					className="grow font-bold hover:underline"
+				>
+					{pieceNameByRepoName(commit.repoName)}
+				</Link>
+			</h3>
+			<ol className="list-disc ml-11 mb-3">
+				{commit.messages.map((mes, idx) => (
+					<li key={`commit-${commit.date}-${mes}-${idx}`}>
+						{mes.split("\n").map((line, idx) => {
+							if (line === "") {
+								return ""
+							}
+							return (
+								<>
+									{line}
+									{idx < mes.split("\n").length - 1 ? (
+										<br />
+									) : (
+										""
+									)}
+								</>
+							)
+						})}
+					</li>
+				))}
+			</ol>
 		</div>
 	)
 }
 
-const Page: NextPage = ({
-	pushedAts,
-	updates,
-}: {
-	pushedAts: PushedAt[]
-	updates: (CommitsByDate | ReleaseByDate)[]
-}) => {
+const renderRelease = (release: Release) => (
+	<div className="ml-5" key={`${release.date}-${release.tagName}`}>
+		<h2 className="text-xl font-bold mb-1">
+			<span
+				className="mr-1"
+				style={{
+					color: `#${
+						pieces.find(
+							(piece) => piece.repoName === release.repoName
+						)?.color
+					}`,
+				}}
+			>
+				●
+			</span>
+			<Link
+				href={`https://github.com/apxxxxxxe/${release.repoName}/releases/tag/${release.tagName}`}
+				className="grow font-bold hover:underline"
+			>
+				{`${pieceNameByRepoName(release.repoName)} Release ${
+					release.tagName
+				}`}
+			</Link>
+		</h2>
+		<p className="ml-3 my-3">
+			{release.bodyHtml !== null
+				? makeGitHubReleaseDescription(release.bodyHtml)
+				: release.body}
+		</p>
+	</div>
+)
+
+type UpdatesByDate = {
+	date: string
+	updates: (Commit | Release)[]
+}
+
+const makeUpdatesByDate = (updates: (Commit | Release)[]) => {
+	let dateMap: any = {}
+
+	for (let i = 0; i < updates.length; i++) {
+		const update = updates[i]
+		const d = new Date(update.date).toLocaleDateString()
+		if (dateMap[d] === undefined) {
+			const updatesByDate = updates.filter(
+				(u) => d === new Date(u.date).toLocaleDateString()
+			)
+			updatesByDate.sort((a, b) => {
+				return new Date(b.date).getTime() - new Date(a.date).getTime()
+			})
+			dateMap[d] = {
+				date: d,
+				updates: updatesByDate,
+			}
+		}
+	}
+
+	const updatesByDates: UpdatesByDate[] = []
+	for (const key in dateMap) {
+		updatesByDates.push(dateMap[key])
+	}
+	return updatesByDates
+}
+
+const renderUpdates = (updatesByDate: UpdatesByDate) => {
+	const updateDoms: JSX.Element[] = []
+	updatesByDate.updates.forEach((update) => {
+		if ("messages" in update) {
+			updateDoms.push(renderCommit(update))
+		} else {
+			updateDoms.push(renderRelease(update))
+		}
+	})
+
+	return (
+		<div
+			className="p-5 mb-5 mx-5 border-solid border border-gray/[0.6] rounded-lg shadow-md md:w-3/4 mx-auto"
+			key={`updatesByDate-${updatesByDate.date}`}
+		>
+			<h2 className="text-xl font-bold mb-3">
+				{formatDate(updatesByDate.date)}
+			</h2>
+			{updateDoms}
+			<GoodButton id={`commitByDate-${updatesByDate.date}`} align="end" />
+		</div>
+	)
+}
+
+const Page: NextPage = ({ pushedAts }: { pushedAts: PushedAt[] }) => {
 	const [showCommits, setShowCommits] = useState(true)
 	const [showReleases, setShowReleases] = useState(true)
+	const [commits, setCommits] = useState<Commit[]>([])
+	const [releases, setReleases] = useState<Release[]>([])
 	const [updateDoms, setUpdateDoms] = useState<JSX.Element[]>([])
 	const numPerUpdate = 10
 	const [page, setPage] = useState(1)
@@ -564,33 +474,85 @@ const Page: NextPage = ({
 	}, [updateObserverRef, scrollObserver])
 
 	useEffect(() => {
-		const fetchMoreUpdates = async () => {
-			const doms: JSX.Element[] = []
-			for (let i = 0; i < page * numPerUpdate; i++) {
-				if (i >= updates.length) {
-					setShowMore(false)
-					break
-				}
-				const update = updates[i]
-				if (isCommitsByDate(update) && showCommits) {
-					doms.push(renderCommitsByDate(update as CommitsByDate))
-				} else if (isReleaseByDate(update) && showReleases) {
-					doms.push(renderReleasesByDate(update as ReleaseByDate))
-				} else {
-					continue
-				}
+		const fetchMoreCommits = async () => {
+			let params: any = {
+				count: numPerUpdate,
 			}
-			setUpdateDoms([...doms])
-			setShowMore(updates.length > page * numPerUpdate)
+			if (commits.length > 0) {
+				params.end = commits[commits.length - 1].date
+			}
+			await axios
+				.get(`/api/commits`, {
+					params: params,
+				})
+				.then((res) => {
+					setShowMore(res.data.length === numPerUpdate)
+					setCommits([...commits, ...(res.data as Commit[])])
+				})
+				.catch((err) => {
+					setShowMore(false)
+					console.error(err)
+				})
 		}
-		fetchMoreUpdates()
+		const fetchMoreReleases = async () => {
+			let params: any = {
+				count: numPerUpdate,
+			}
+			if (releases.length > 0) {
+				params.end = releases[releases.length - 1].date
+			}
+			await axios
+				.get(`/api/releases`, {
+					params: params,
+				})
+				.then(async (res) => {
+					setShowMore(res.data.length === numPerUpdate)
+
+					// body(markdown)を変換したものをbodyHtmlに書き込む
+					const rels = res.data as Release[]
+					for (let i = 0; i < rels.length; i++) {
+						if (rels[i].body !== "") {
+							rels[i].bodyHtml = await markdownToHtml(
+								rels[i].body
+							)
+						} else {
+							rels[i].bodyHtml = null
+						}
+					}
+
+					setReleases([...releases, ...rels])
+				})
+				.catch((err) => {
+					setShowMore(false)
+					console.error(err)
+				})
+		}
+
+		async function fetchData() {
+			const promises = []
+			if (showCommits) {
+				promises.push(fetchMoreCommits())
+			}
+			if (showReleases) {
+				promises.push(fetchMoreReleases())
+			}
+			await Promise.all(promises)
+		}
+		fetchData()
 	}, [page])
 
 	useEffect(() => {
-		setUpdateDoms([])
-		setShowMore(updates.length > page * numPerUpdate)
-		setPage(1)
-	}, [showCommits, showReleases])
+		const updates: (Commit | Release)[] = []
+		if (showCommits) {
+			updates.push(...commits)
+		}
+		if (showReleases) {
+			updates.push(...releases)
+		}
+		const updatesByDate = makeUpdatesByDate(updates)
+		const updateDoms = updatesByDate.map(renderUpdates)
+		setUpdateDoms(updateDoms)
+	}, [commits, releases, showCommits, showReleases])
 
 	return (
 		<Layout title="INDEX" contentDirection="row">
