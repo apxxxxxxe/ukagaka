@@ -23,7 +23,7 @@ type Piece = {
 	description: JSX.Element
 }
 
-type PushedAt = {
+type Repository = {
 	repoName: string
 	pushedAt: string
 }
@@ -200,23 +200,14 @@ export async function getServerSideProps() {
 		},
 	})
 
-	const pushedAts: PushedAt[] = rawPushedAts.map((raw) => ({
+	const pushedAts: Repository[] = rawPushedAts.map((raw) => ({
 		repoName: raw.repo_name,
 		pushedAt: raw.pushed_at.toISOString(),
 	}))
 
-	// let updates: (CommitsByDate | ReleaseByDate)[] = [...commits, ...releases]
-
-	// sort by date
-	// 両方dateを持つので区別の必要はない
-	// updates = updates.sort((a, b) => {
-	// 	return new Date(b.date).getTime() - new Date(a.date).getTime()
-	// })
-
 	return {
 		props: {
 			pushedAts: pushedAts,
-			// updates: updates,
 		},
 	}
 }
@@ -229,7 +220,7 @@ function getAllPieceTypes(pieceAry: Piece[]): string[] {
 	return Array.from(new Set(types))
 }
 
-function getPiecesElement(pieceAry: Piece[], pushedAts: PushedAt[]) {
+function getPiecesElement(pieceAry: Piece[], pushedAts: Repository[]) {
 	const pieceTypes = getAllPieceTypes(pieceAry)
 	return (
 		<>
@@ -311,7 +302,7 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: PushedAt[]) {
 
 const renderCommit = (commit: Commit) => {
 	return (
-		<div className="ml-5" key={`${commit.date}-${commit.repoName}}`}>
+		<div className="ml-5" key={`commit-${commit.date}-${commit.repoName}}`}>
 			<h3 className="font-bold mb-1">
 				<span
 					className="mr-1"
@@ -358,7 +349,7 @@ const renderCommit = (commit: Commit) => {
 }
 
 const renderRelease = (release: Release) => (
-	<div className="ml-5" key={`${release.date}-${release.tagName}`}>
+	<div className="ml-5" key={`release-${release.date}-${release.tagName}`}>
 		<h2 className="text-xl font-bold mb-1">
 			<span
 				className="mr-1"
@@ -381,11 +372,11 @@ const renderRelease = (release: Release) => (
 				}`}
 			</Link>
 		</h2>
-		<p className="ml-3 my-3">
+		<div className="ml-3 my-3">
 			{release.bodyHtml !== null
 				? makeGitHubReleaseDescription(release.bodyHtml)
 				: release.body}
-		</p>
+		</div>
 	</div>
 )
 
@@ -418,6 +409,7 @@ const makeUpdatesByDate = (updates: (Commit | Release)[]) => {
 	for (const key in dateMap) {
 		updatesByDates.push(dateMap[key])
 	}
+
 	return updatesByDates
 }
 
@@ -445,14 +437,13 @@ const renderUpdates = (updatesByDate: UpdatesByDate) => {
 	)
 }
 
-const Page: NextPage = ({ pushedAts }: { pushedAts: PushedAt[] }) => {
+const Page: NextPage = ({ pushedAts }: { pushedAts: Repository[] }) => {
 	const [showCommits, setShowCommits] = useState(true)
 	const [showReleases, setShowReleases] = useState(true)
-	const [commits, setCommits] = useState<Commit[]>([])
-	const [releases, setReleases] = useState<Release[]>([])
 	const [updateDoms, setUpdateDoms] = useState<JSX.Element[]>([])
+	const commits = useRef<Commit[]>([])
+	const releases = useRef<Release[]>([])
 	const numPerUpdate = 10
-	const [page, setPage] = useState(1)
 	const [showMore, setShowMore] = useState(true)
 	const updateObserverRef = useRef<HTMLDivElement>(null)
 
@@ -460,7 +451,89 @@ const Page: NextPage = ({ pushedAts }: { pushedAts: PushedAt[] }) => {
 		(node: HTMLDivElement) => {
 			new IntersectionObserver((entries) => {
 				if (entries[0].isIntersecting) {
-					setPage((p) => p + 1)
+					const fetchMoreCommits = async () => {
+						let showMoreCommits = true
+						let params: any = {
+							count: numPerUpdate,
+						}
+						if (commits.current.length > 0) {
+							params.end =
+								commits.current[commits.current.length - 1].date
+						}
+						await axios
+							.get(`/api/commits`, {
+								params: params,
+							})
+							.then((res) => {
+								showMoreCommits =
+									res.data.length === numPerUpdate
+								commits.current = [
+									...commits.current,
+									...res.data,
+								]
+								console.log(commits.current)
+							})
+							.catch((err) => {
+								showMoreCommits = false
+								console.error(err)
+							})
+						return showMoreCommits
+					}
+					const fetchMoreReleases = async () => {
+						let showMoreReleases = true
+						let params: any = {
+							count: numPerUpdate,
+						}
+						if (releases.current.length > 0) {
+							params.end =
+								releases.current[
+									releases.current.length - 1
+								].date
+						}
+						await axios
+							.get(`/api/releases`, {
+								params: params,
+							})
+							.then(async (res) => {
+								showMoreReleases =
+									res.data.length === numPerUpdate
+
+								// body(markdown)を変換したものをbodyHtmlに書き込む
+								const rels = res.data as Release[]
+								for (let i = 0; i < rels.length; i++) {
+									if (rels[i].body !== "") {
+										rels[i].bodyHtml = await markdownToHtml(
+											rels[i].body
+										)
+									} else {
+										rels[i].bodyHtml = null
+									}
+								}
+								releases.current = [
+									...releases.current,
+									...rels,
+								]
+								console.log(releases.current)
+							})
+							.catch((err) => {
+								showMoreReleases = false
+								console.error(err)
+							})
+						return showMoreReleases
+					}
+
+					const fetchMore = async () => {
+						const promises = []
+						if (showCommits) {
+							promises.push(fetchMoreCommits())
+						}
+						if (showReleases) {
+							promises.push(fetchMoreReleases())
+						}
+						const results = await Promise.all(promises)
+						setShowMore(() => results.some((r) => r))
+					}
+					fetchMore()
 				}
 			}).observe(node)
 		},
@@ -474,85 +547,12 @@ const Page: NextPage = ({ pushedAts }: { pushedAts: PushedAt[] }) => {
 	}, [updateObserverRef, scrollObserver])
 
 	useEffect(() => {
-		const fetchMoreCommits = async () => {
-			let params: any = {
-				count: numPerUpdate,
-			}
-			if (commits.length > 0) {
-				params.end = commits[commits.length - 1].date
-			}
-			await axios
-				.get(`/api/commits`, {
-					params: params,
-				})
-				.then((res) => {
-					setShowMore(res.data.length === numPerUpdate)
-					setCommits([...commits, ...(res.data as Commit[])])
-				})
-				.catch((err) => {
-					setShowMore(false)
-					console.error(err)
-				})
-		}
-		const fetchMoreReleases = async () => {
-			let params: any = {
-				count: numPerUpdate,
-			}
-			if (releases.length > 0) {
-				params.end = releases[releases.length - 1].date
-			}
-			await axios
-				.get(`/api/releases`, {
-					params: params,
-				})
-				.then(async (res) => {
-					setShowMore(res.data.length === numPerUpdate)
-
-					// body(markdown)を変換したものをbodyHtmlに書き込む
-					const rels = res.data as Release[]
-					for (let i = 0; i < rels.length; i++) {
-						if (rels[i].body !== "") {
-							rels[i].bodyHtml = await markdownToHtml(
-								rels[i].body
-							)
-						} else {
-							rels[i].bodyHtml = null
-						}
-					}
-
-					setReleases([...releases, ...rels])
-				})
-				.catch((err) => {
-					setShowMore(false)
-					console.error(err)
-				})
-		}
-
-		async function fetchData() {
-			const promises = []
-			if (showCommits) {
-				promises.push(fetchMoreCommits())
-			}
-			if (showReleases) {
-				promises.push(fetchMoreReleases())
-			}
-			await Promise.all(promises)
-		}
-		fetchData()
-	}, [page])
-
-	useEffect(() => {
-		const updates: (Commit | Release)[] = []
-		if (showCommits) {
-			updates.push(...commits)
-		}
-		if (showReleases) {
-			updates.push(...releases)
-		}
-		const updatesByDate = makeUpdatesByDate(updates)
-		const updateDoms = updatesByDate.map(renderUpdates)
-		setUpdateDoms(updateDoms)
-	}, [commits, releases, showCommits, showReleases])
+		const updates: (Commit | Release)[] = [
+			showCommits ? commits.current : [],
+			showReleases ? releases.current : [],
+		].flat(1)
+		setUpdateDoms(makeUpdatesByDate(updates).map(renderUpdates))
+	}, [showCommits, showReleases])
 
 	return (
 		<Layout title="INDEX" contentDirection="row">
