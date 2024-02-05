@@ -6,10 +6,10 @@ export default async function handler(
 	req: NextApiRequest,
 	res: NextApiResponse
 ) {
-	const start: string = (req.query.start ||
-		new Date(0).toISOString()) as string
+	const monthAgo = new Date()
+	monthAgo.setMonth(monthAgo.getMonth() - 1)
+	const start: string = (req.query.start || monthAgo.toISOString()) as string
 	const end: string = (req.query.end || new Date().toISOString()) as string
-	const count: number = parseInt(req.query.count as string)
 
 	const rawReleases = await prisma.releases.findMany({
 		where: {
@@ -21,17 +21,15 @@ export default async function handler(
 		orderBy: {
 			date: "desc",
 		},
-		take: count,
 	})
 
 	const releases: Release[] = rawReleases.map((release) => {
-		return {
-			repoName: release.repo_name,
-			date: new Date(release.date).toISOString(),
-			tagName: release.tag_name,
-			body: release.body,
-			bodyHtml: null,
-		}
+		return new Release(
+			release.repo_name,
+			new Date(release.date).toISOString(),
+			release.tag_name,
+			release.body
+		)
 	})
 
 	res.status(200).json(releases)
