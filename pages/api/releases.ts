@@ -24,12 +24,13 @@ export default async function handler(
 	})
 
 	const releases: Release[] = rawReleases.map((release) => {
-		return new Release(
-			release.repo_name,
-			new Date(release.date).toISOString(),
-			release.tag_name,
-			release.body
-		)
+		return {
+			repoName: release.repo_name,
+			date: new Date(release.date).toISOString(),
+			tagName: release.tag_name,
+			body: release.body,
+			bodyHtml: null,
+		}
 	})
 
 	res.status(200).json(releases)

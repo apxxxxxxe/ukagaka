@@ -24,11 +24,11 @@ export default async function handler(
 	})
 
 	const commits: Commit[] = rawCommits.map((commit) => {
-		return new Commit(
-			commit.repo_name,
-			new Date(commit.date).toISOString(),
-			commit.messages
-		)
+		return {
+			repoName: commit.repo_name,
+			date: new Date(commit.date).toISOString(),
+			messages: commit.messages,
+		}
 	})
 
 	res.status(200).json(commits)
