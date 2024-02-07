@@ -63,7 +63,7 @@ export default async function handler(
 	}
 
 	// if last_date is not today, reset today_count
-	if (good.last_date.toDateString() !== now.toDateString()) {
+	if (good.last_date.toISOString().slice(0, 10) !== nowISO.slice(0, 10)) {
 		good = await prisma.good_count.update({
 			where: {
 				id: good.id,
