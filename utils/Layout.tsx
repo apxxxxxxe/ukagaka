@@ -23,11 +23,17 @@ const menuItem = (name: string, currentSlug: string): JSX.Element => {
 	)
 }
 
+type Props = {
+	children: React.ReactNode
+	title?: string
+	contentDirection?: "row" | "col"
+}
+
 export default function Layout({
 	children,
 	title = "",
 	contentDirection = "row",
-}): JSX.Element {
+}: Props): JSX.Element {
 	const router = useRouter()
 	const siteTitle = "おわらない"
 
@@ -68,7 +74,9 @@ export default function Layout({
 					{menuItem("tips", router.pathname)}
 					{menuItem("blog", router.pathname)}
 				</div>
-				{children}
+				<div className={`flex flex-${contentDirection}`}>
+					{children}
+				</div>
 				<div className="bg-black h-32"></div>
 			</div>
 		</>

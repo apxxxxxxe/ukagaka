@@ -538,9 +538,7 @@ const Page: NextPage = ({ pushedAts, commits, releases }: Props) => {
 					/>{" "}
 					アーカイブ更新情報
 				</div>
-					<div className="overflow-y-auto h-96 mb-5">
-						{updateDoms}
-					</div>
+				<div className="overflow-y-auto h-96 mb-5">{updateDoms}</div>
 				<h2 className="article-h2">配布物</h2>
 				<div className="mt-3">
 					{getPiecesElement(pieces, pushedAts)}
