@@ -4,7 +4,7 @@ import Image from "next/image"
 import Layout from "utils/Layout"
 import GoodButton from "utils/goodButton"
 import { GoodLimit } from "pages/api/good"
-import { Suspense, useState } from "react"
+import { useState } from "react"
 import { Checkbox } from "@mui/material"
 import markdownToHtml, {
 	makeGitHubReleaseDescription,
@@ -538,17 +538,9 @@ const Page: NextPage = ({ pushedAts, commits, releases }: Props) => {
 					/>{" "}
 					アーカイブ更新情報
 				</div>
-				<Suspense
-					fallback={
-						<div className="loader-wrapper">
-							<div className="loader"></div>
-						</div>
-					}
-				>
 					<div className="overflow-y-auto h-96 mb-5">
 						{updateDoms}
 					</div>
-				</Suspense>
 				<h2 className="article-h2">配布物</h2>
 				<div className="mt-3">
 					{getPiecesElement(pieces, pushedAts)}
