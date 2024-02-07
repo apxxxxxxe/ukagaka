@@ -497,7 +497,6 @@ const renderUpdates = (updatesByDate: UpdatesByDate) => {
 				{formatDate(updatesByDate.date)}
 			</h2>
 			{updateDoms.map((updateDom) => updateDom)}
-			<GoodButton id={`commitByDate-${updatesByDate.date}`} align="end" />
 		</div>
 	)
 }
