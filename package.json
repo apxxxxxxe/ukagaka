@@ -11,8 +11,8 @@
 		"lint": "next lint",
 		"export": "next export",
 		"format": "run-script-os",
-		"format:linux": "prettier --write --ignore-path .gitignore --tab-width 4 --use-tabs --no-semi './**/*.{js,jsx,ts,tsx,json,css,scss}'",
-		"format:win32": "prettier --write --ignore-path .gitignore --tab-width 4 --use-tabs --no-semi .\\**\\*.{js,jsx,ts,tsx,json,css,scss}"
+		"format:linux": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css,scss}'",
+		"format:win32": "prettier --write --ignore-path .gitignore .\\**\\*.{js,jsx,ts,tsx,json,css,scss}"
 	},
 	"dependencies": {
 		"@emotion/react": "^11.11.3",
