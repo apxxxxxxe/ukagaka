@@ -38,8 +38,8 @@ export default async function handler(
 	// await sql`SET timezone TO 'UTC'`
 	await prisma.$executeRaw`SET timezone TO 'UTC'`
 
-	const now = new Date().toUTCString()
-	const nowISO = new Date().toISOString()
+	const now = new Date()
+	const nowISO = now.toISOString()
 
 	// await sql`SELECT * FROM good_count WHERE ip = ${ip} AND id = ${id}`
 	let good = await prisma.good_count.findFirst({
@@ -63,8 +63,16 @@ export default async function handler(
 	}
 
 	// if last_date is not today, reset today_count
-	const dataA = good.last_date.toUTCString()
-	if (dataA.slice(0, 16) !== now.slice(0, 16)) {
+	if (good.last_date.toDateString() !== now.toDateString()) {
+		good = await prisma.good_count.update({
+			where: {
+				id: good.id,
+			},
+			data: {
+				last_date: nowISO,
+				today_count: 0,
+			},
+		})
 	}
 
 	if (req.method === "GET") {
