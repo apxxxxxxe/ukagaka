@@ -1,16 +1,20 @@
-import { NextPage } from "next"
+import { NextPage, GetStaticProps } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import Layout from "utils/Layout"
 import GoodButton from "utils/goodButton"
 import { GoodLimit } from "pages/api/good"
-import { useState, useEffect } from "react"
+import { Suspense, useState } from "react"
 import { Checkbox } from "@mui/material"
 import markdownToHtml, {
 	makeGitHubReleaseDescription,
 } from "utils/markdownToHtml"
 import prisma from "lib/prisma"
 import axios from "axios"
+
+const axiosInstance = axios.create({
+	baseURL: process.env.API_URL || process.env.NEXT_PUBLIC_API_URL,
+})
 
 type Piece = {
 	type: string
@@ -32,6 +36,83 @@ export type Commit = {
 	repoName: string
 	date: string
 	messages: string[]
+}
+
+const fetchFromDB = () => {
+	const fetchMoreCommits = async (start: string, end: string) => {
+		let commits: Commit[] = []
+		let params: any = {}
+		params.start = start
+		params.end = end
+		await axiosInstance
+			.get(`/commits`, {
+				params: params,
+			})
+			.then((res) => {
+				commits = res.data
+			})
+			.catch((err) => {
+				console.error(err)
+			})
+		return commits
+	}
+
+	const fetchMoreReleases = async (start: string, end: string) => {
+		let releases: Release[] = []
+		let params: any = {}
+		params.start = start
+		params.end = end
+		await axiosInstance
+			.get(`/releases`, {
+				params: params,
+			})
+			.then(async (res) => {
+				for (const raw of res.data) {
+					const release = raw as Release
+					// body(markdown)を変換したものをbodyHtmlに書き込む
+					if (release.body !== "") {
+						release.bodyHtml = await markdownToHtml(release.body)
+					}
+					releases.push(release)
+				}
+			})
+			.catch((err) => {
+				console.error(err)
+			})
+		return releases
+	}
+
+	const start = new Date(0).toISOString()
+	const end = new Date().toISOString()
+	const promises = []
+	promises.push(fetchMoreCommits(start, end))
+	promises.push(fetchMoreReleases(start, end))
+	return Promise.all(promises)
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+	// Piecesのリポジトリの最終更新日を取得
+	const rawPushedAts = await prisma.repos.findMany({
+		select: {
+			repo_name: true,
+			pushed_at: true,
+		},
+	})
+
+	const pushedAts: Repository[] = rawPushedAts.map((raw) => ({
+		repoName: raw.repo_name,
+		pushedAt: raw.pushed_at.toISOString(),
+	}))
+
+	const [commits, releases] = await fetchFromDB()
+	return {
+		props: {
+			pushedAts: pushedAts,
+			commits: commits,
+			releases: releases,
+		},
+		revalidate: 60 * 60, // 1時間ごとに再生成
+	}
 }
 
 const renderCommit = (commit: Commit) => {
@@ -276,27 +357,6 @@ const formatDate = (dateString: string): string => {
 	)
 }
 
-export async function getServerSideProps() {
-	// Piecesのリポジトリの最終更新日を取得
-	const rawPushedAts = await prisma.repos.findMany({
-		select: {
-			repo_name: true,
-			pushed_at: true,
-		},
-	})
-
-	const pushedAts: Repository[] = rawPushedAts.map((raw) => ({
-		repoName: raw.repo_name,
-		pushedAt: raw.pushed_at.toISOString(),
-	}))
-
-	return {
-		props: {
-			pushedAts: pushedAts,
-		},
-	}
-}
-
 function getAllPieceTypes(pieceAry: Piece[]): string[] {
 	const types = []
 	pieceAry.forEach((piece: Piece) => {
@@ -442,75 +502,23 @@ const renderUpdates = (updatesByDate: UpdatesByDate) => {
 	)
 }
 
-const Page: NextPage = ({ pushedAts }: { pushedAts: Repository[] }) => {
+type Props = {
+	pushedAts: Repository[]
+	commits: Commit[]
+	releases: Release[]
+}
+
+const Page: NextPage = ({ pushedAts, commits, releases }: Props) => {
 	const [showCommits, setShowCommits] = useState(true)
 	const [showReleases, setShowReleases] = useState(true)
-	const [isFetching, setIsFetching] = useState(false)
-	const [commits, setCommits] = useState<Commit[]>([])
-	const [releases, setReleases] = useState<Release[]>([])
 
-	useEffect(() => {
-		const fetchFromDB = async () => {
-			const fetchMoreCommits = async (start: string, end: string) => {
-				let params: any = {}
-				params.start = start
-				params.end = end
-				await axios
-					.get(`/api/commits`, {
-						params: params,
-					})
-					.then((res) => {
-						setCommits(res.data)
-					})
-					.catch((err) => {
-						console.error(err)
-					})
-			}
-
-			const fetchMoreReleases = async (start: string, end: string) => {
-				let params: any = {}
-				params.start = start
-				params.end = end
-				await axios
-					.get(`/api/releases`, {
-						params: params,
-					})
-					.then(async (res) => {
-						res.data.length > 0
-
-						for (const raw of res.data) {
-							const release = raw as Release
-							// body(markdown)を変換したものをbodyHtmlに書き込む
-							if (release.body !== "") {
-								release.bodyHtml = await markdownToHtml(
-									release.body
-								)
-							}
-							releases.push(release)
-						}
-						setReleases(releases)
-					})
-					.catch((err) => {
-						console.error(err)
-					})
-			}
-
-			setIsFetching(true)
-			const start = new Date(0).toISOString()
-			const end = new Date().toISOString()
-			const promises = []
-			promises.push(fetchMoreCommits(start, end))
-			promises.push(fetchMoreReleases(start, end))
-			await Promise.all(promises)
-			setIsFetching(false)
-			console.log("fetch done")
-		}
-		fetchFromDB()
-	}, [])
-
-	const c: Commit[] = showCommits ? commits : []
-	const r: Release[] = showReleases ? releases : []
-	const updates = [...c, ...r]
+	const updates: (Commit | Release)[] = []
+	if (showCommits) {
+		updates.push(...commits)
+	}
+	if (showReleases) {
+		updates.push(...releases)
+	}
 	const updateDoms = makeUpdatesByDate(updates).map(renderUpdates)
 
 	return (
@@ -530,16 +538,17 @@ const Page: NextPage = ({ pushedAts }: { pushedAts: Repository[] }) => {
 					/>{" "}
 					アーカイブ更新情報
 				</div>
-				<div className="overflow-y-auto h-96 mb-5">
-					{updateDoms}
-					<div>
-						{isFetching && (
-							<div className="loader-wrapper">
-								<div className="loader"></div>
-							</div>
-						)}
+				<Suspense
+					fallback={
+						<div className="loader-wrapper">
+							<div className="loader"></div>
+						</div>
+					}
+				>
+					<div className="overflow-y-auto h-96 mb-5">
+						{updateDoms}
 					</div>
-				</div>
+				</Suspense>
 				<h2 className="article-h2">配布物</h2>
 				<div className="mt-3">
 					{getPiecesElement(pieces, pushedAts)}
