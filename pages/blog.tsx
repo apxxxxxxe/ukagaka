@@ -14,7 +14,7 @@ export const getStaticProps = async () => {
 }
 
 const Home: NextPage<Props> = ({ allPosts }) => (
-	<Layout title="Blog" contentDirection="column">
+	<Layout title="Blog" contentDirection="col">
 		<div className="article-container mx-auto">
 			<h1 className="article-h1">Blog</h1>
 			<p>記事一覧（新着順）</p>

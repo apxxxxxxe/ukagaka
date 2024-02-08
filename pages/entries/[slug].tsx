@@ -74,6 +74,7 @@ const Post: NextPage<Props> = ({ post, ogpDatas }) => (
 				<section>
 					{rawHtmlToDom(post.content, post.slug, ogpDatas)}
 				</section>
+				<GoodButton id={`post-${post.slug}`} align="end" />
 			</div>
 			<div className="toc-container">
 				<h2 className="toc-h2">もくじ</h2>
