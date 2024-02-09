@@ -25,6 +25,7 @@ jobs:
         POSTGRES_URL_NON_POOLING: ${{ secrets.POSTGRES_URL_NON_POOLING }}
       run: |
         npm install
+        npx prisma generate
         node --loader ts-node/esm ./workflows/github_repos.mjs
         node --loader ts-node/esm ./workflows/github_commits.mjs
         node --loader ts-node/esm ./workflows/github_releases.mjs
