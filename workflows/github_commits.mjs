@@ -22,7 +22,8 @@ async function get_commits() {
       if (
         data[i].commit.message.includes("md5") ||
         data[i].commit.message.includes("CI") ||
-        data[i].commit.message.includes("Merge branch")
+        data[i].commit.message.includes("Merge branch") ||
+        data[i].commit.message.includes("Merge pull request")
       ) {
         continue
       }
