@@ -1,7 +1,17 @@
 import { github, repos as repo_info } from "./utils.mjs"
 import prisma from "../lib/prisma.mts"
+import { Feed } from 'feed';
+import fs from 'fs';
+
+function is_ignored_commit(message) {
+  message.includes("md5") ||
+    message.includes("CI") ||
+    message.includes("Merge branch") ||
+    message.includes("Merge pull request")
+}
 
 async function get_commits() {
+  let commitsForRss = []
   let commits = []
   for (const repo of repo_info) {
     const response = await github.get(
@@ -16,15 +26,20 @@ async function get_commits() {
     })
     console.log("data: ", data.length)
 
+    for (const commit of data) {
+      if (is_ignored_commit(commit.commit.message)) {
+        continue
+      }
+      commitsForRss.push({
+        repo: repo,
+        commit: commit,
+      })
+    }
+
     let tmpMessages = []
     for (let i = 0; i < data.length - 1; i++) {
       // 特定のコミットメッセージは無視する
-      if (
-        data[i].commit.message.includes("md5") ||
-        data[i].commit.message.includes("CI") ||
-        data[i].commit.message.includes("Merge branch") ||
-        data[i].commit.message.includes("Merge pull request")
-      ) {
+      if (is_ignored_commit(data[i].commit.message)) {
         continue
       }
 
@@ -91,6 +106,65 @@ async function get_commits() {
     const result = await Promise.all(promises)
     console.log("result: ", result)
   }
+
+  commitsForRss = commitsForRss.flat()
+  commitsForRss.sort((a, b) => {
+    return (
+      new Date(b.commit.committer.date) -
+      new Date(a.commit.committer.date)
+    )
+  })
+  return commitsForRss
 }
 
-get_commits()
+function generatedRssFeed(posts) {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || '';
+  const date = new Date();
+  // author の情報を書き換える
+  const author = {
+    name: 'sample',
+    email: 'sample@sample.com',
+    link: 'https://...com',
+  };
+
+  // デフォルトになる feed の情報
+  const feed = new Feed({
+    title: 'おわらない | 更新履歴',
+    description: process.env.NEXT_PUBLIC_BASE_DISC,
+    id: baseUrl,
+    link: baseUrl,
+    language: 'ja',
+    image: `${baseUrl}/favicon.png`,  // image には OGP 画像でなくファビコンを指定
+    copyright: `All rights reserved ${date.getFullYear()}, ${author.name}`,
+    updated: date,
+    feedLinks: {
+      rss2: `${baseUrl}/rss/feed.xml`,
+    },
+    author: author,
+  });
+
+  // feed で定義した情報から各記事での変更点を宣言
+  posts.forEach((post) => {
+    // post のプロパティ情報は使用しているオブジェクトの形式に合わせる
+    const url = post.url;
+    feed.addItem({
+      title: `${post.repo} | ${post.commit.commit.message}`,
+      description: post.commit.commit.message,
+      id: url,
+      link: url,
+      content: post.commit.commit.message,
+      date: new Date(post.commit.commit.committer.date),
+    });
+  });
+
+  // フィード情報を public/rss 配下にディレクトリを作って保存
+  fs.mkdirSync('./public/rss', { recursive: true });
+  fs.writeFileSync('./public/rss/feed.xml', feed.rss2());
+}
+
+async function main() {
+  const commits = await get_commits()
+  generatedRssFeed(commits)
+}
+
+main()
