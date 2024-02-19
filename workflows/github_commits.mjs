@@ -4,7 +4,7 @@ import { Feed } from 'feed';
 import fs from 'fs';
 
 function is_ignored_commit(message) {
-  message.includes("md5") ||
+  return message.includes("md5") ||
     message.includes("CI") ||
     message.includes("Merge branch") ||
     message.includes("Merge pull request")
