@@ -11,7 +11,6 @@ import markdownToHtml, {
 } from "utils/markdownToHtml"
 import prisma from "lib/prisma"
 import axios from "axios"
-import { MaterialSymbol } from "react-material-symbols"
 
 const axiosInstance = axios.create({
   baseURL: process.env.API_URL || process.env.NEXT_PUBLIC_API_URL,
@@ -528,7 +527,11 @@ const Page: NextPage = ({ pushedAts, commits, releases }: Props) => {
             href="/rss/feed.xml"
             className="article-a flex flex-row items-center ml-2"
           >
-            <MaterialSymbol icon="rss_feed" size={28} />
+            <img
+              className="h-5"
+              src="rss-icon.png"
+              alt="RSS"
+            />
           </Link>
         </div>
         <div className="flex flex-row items-center justify-center mb-3">
