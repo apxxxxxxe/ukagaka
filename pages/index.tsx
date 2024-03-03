@@ -529,7 +529,7 @@ const Page: NextPage = ({ pushedAts, commits, releases }: Props) => {
           >
             <img
               className="h-5"
-              src="rss-icon.png"
+              src="rss-icon.svg"
               alt="RSS"
             />
           </Link>
