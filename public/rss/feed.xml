@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Sat, 17 Feb 2024 07:31:48 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 04 Mar 2024 00:17:59 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -14,6 +14,72 @@
             <link></link>
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
+        <item>
+            <title><![CDATA[Haine | replace_with_checkのスコープ判定がうまく動いていなかったのを修正]]></title>
+            <pubDate>Wed, 28 Feb 2024 02:41:34 GMT</pubDate>
+            <description><![CDATA[replace_with_checkのスコープ判定がうまく動いていなかったのを修正]]></description>
+            <content:encoded><![CDATA[replace_with_checkのスコープ判定がうまく動いていなかったのを修正]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 構造体Talkに識別子を追加 & ランダムトークのみ構造体Talkで管理するように]]></title>
+            <pubDate>Wed, 28 Feb 2024 02:41:34 GMT</pubDate>
+            <description><![CDATA[構造体Talkに識別子を追加 & ランダムトークのみ構造体Talkで管理するように]]></description>
+            <content:encoded><![CDATA[構造体Talkに識別子を追加 & ランダムトークのみ構造体Talkで管理するように]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | idle_thresholdを定数として定義するように]]></title>
+            <pubDate>Wed, 28 Feb 2024 02:41:34 GMT</pubDate>
+            <description><![CDATA[idle_thresholdを定数として定義するように]]></description>
+            <content:encoded><![CDATA[idle_thresholdを定数として定義するように]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | TouchInfoで触り反応を定義するように]]></title>
+            <pubDate>Wed, 28 Feb 2024 02:41:34 GMT</pubDate>
+            <description><![CDATA[TouchInfoで触り反応を定義するように]]></description>
+            <content:encoded><![CDATA[TouchInfoで触り反応を定義するように]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | ランダムトーク整理]]></title>
+            <pubDate>Wed, 21 Feb 2024 17:06:58 GMT</pubDate>
+            <description><![CDATA[ランダムトーク整理]]></description>
+            <content:encoded><![CDATA[ランダムトーク整理]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | タグ内部が置換されていたのを修正]]></title>
+            <pubDate>Mon, 19 Feb 2024 16:39:08 GMT</pubDate>
+            <description><![CDATA[タグ内部が置換されていたのを修正]]></description>
+            <content:encoded><![CDATA[タグ内部が置換されていたのを修正]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 一部の口パーツから口パクを削除]]></title>
+            <pubDate>Sun, 18 Feb 2024 15:22:56 GMT</pubDate>
+            <description><![CDATA[一部の口パーツから口パクを削除]]></description>
+            <content:encoded><![CDATA[一部の口パーツから口パクを削除]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | randomtalk]]></title>
+            <pubDate>Sun, 18 Feb 2024 15:22:28 GMT</pubDate>
+            <description><![CDATA[randomtalk]]></description>
+            <content:encoded><![CDATA[randomtalk]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 初回起動のバルーンサーフェスを修正]]></title>
+            <pubDate>Sun, 18 Feb 2024 15:22:15 GMT</pubDate>
+            <description><![CDATA[初回起動のバルーンサーフェスを修正]]></description>
+            <content:encoded><![CDATA[初回起動のバルーンサーフェスを修正]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 質問トーク修正]]></title>
+            <pubDate>Sun, 18 Feb 2024 15:21:51 GMT</pubDate>
+            <description><![CDATA[質問トーク修正]]></description>
+            <content:encoded><![CDATA[質問トーク修正]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 起動時の不必要なウェイトを削除]]></title>
+            <pubDate>Sun, 18 Feb 2024 15:20:10 GMT</pubDate>
+            <description><![CDATA[起動時の不必要なウェイトを削除]]></description>
+            <content:encoded><![CDATA[起動時の不必要なウェイトを削除]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Haine | OnFirstBoot]]></title>
             <pubDate>Thu, 15 Feb 2024 15:59:26 GMT</pubDate>
@@ -33,34 +99,10 @@
             <content:encoded><![CDATA[add requirements check to build.ps1]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | Merge pull request #22 from apxxxxxxe/shade-with-immersiverate
-
-没入度に応じて上半身に影がかかるように変更]]></title>
-            <pubDate>Tue, 13 Feb 2024 16:38:53 GMT</pubDate>
-            <description><![CDATA[Merge pull request #22 from apxxxxxxe/shade-with-immersiverate
-
-没入度に応じて上半身に影がかかるように変更]]></description>
-            <content:encoded><![CDATA[Merge pull request #22 from apxxxxxxe/shade-with-immersiverate
-
-没入度に応じて上半身に影がかかるように変更]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[Haine | 没入度に応じて上半身に影がかかるように変更]]></title>
             <pubDate>Tue, 13 Feb 2024 16:37:57 GMT</pubDate>
             <description><![CDATA[没入度に応じて上半身に影がかかるように変更]]></description>
             <content:encoded><![CDATA[没入度に応じて上半身に影がかかるように変更]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | Merge pull request #21 from apxxxxxxe/workflow
-
-ignore build.*]]></title>
-            <pubDate>Tue, 13 Feb 2024 00:37:31 GMT</pubDate>
-            <description><![CDATA[Merge pull request #21 from apxxxxxxe/workflow
-
-ignore build.*]]></description>
-            <content:encoded><![CDATA[Merge pull request #21 from apxxxxxxe/workflow
-
-ignore build.*]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | ignore build.*]]></title>
@@ -69,46 +111,10 @@ ignore build.*]]></content:encoded>
             <content:encoded><![CDATA[ignore build.*]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | Merge branch 'main' of https://github.com/apxxxxxxe/Haine]]></title>
-            <pubDate>Tue, 13 Feb 2024 00:31:49 GMT</pubDate>
-            <description><![CDATA[Merge branch 'main' of https://github.com/apxxxxxxe/Haine]]></description>
-            <content:encoded><![CDATA[Merge branch 'main' of https://github.com/apxxxxxxe/Haine]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | update md5, dll and surfaces.txt]]></title>
-            <pubDate>Tue, 13 Feb 2024 00:31:41 GMT</pubDate>
-            <description><![CDATA[update md5, dll and surfaces.txt]]></description>
-            <content:encoded><![CDATA[update md5, dll and surfaces.txt]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | Merge pull request #20 from apxxxxxxe/workflow
-
-workflow]]></title>
-            <pubDate>Tue, 13 Feb 2024 00:31:26 GMT</pubDate>
-            <description><![CDATA[Merge pull request #20 from apxxxxxxe/workflow
-
-workflow]]></description>
-            <content:encoded><![CDATA[Merge pull request #20 from apxxxxxxe/workflow
-
-workflow]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[Haine | workflow]]></title>
             <pubDate>Tue, 13 Feb 2024 00:30:49 GMT</pubDate>
             <description><![CDATA[workflow]]></description>
             <content:encoded><![CDATA[workflow]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | Merge pull request #19 from apxxxxxxe/workflow
-
-workflow]]></title>
-            <pubDate>Tue, 13 Feb 2024 00:27:54 GMT</pubDate>
-            <description><![CDATA[Merge pull request #19 from apxxxxxxe/workflow
-
-workflow]]></description>
-            <content:encoded><![CDATA[Merge pull request #19 from apxxxxxxe/workflow
-
-workflow]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | workflow]]></title>
@@ -117,142 +123,16 @@ workflow]]></content:encoded>
             <content:encoded><![CDATA[workflow]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | Merge pull request #18 from apxxxxxxe/workflow
-
-surfaces-mixerがインストールされていなかったのを修正]]></title>
-            <pubDate>Tue, 13 Feb 2024 00:21:04 GMT</pubDate>
-            <description><![CDATA[Merge pull request #18 from apxxxxxxe/workflow
-
-surfaces-mixerがインストールされていなかったのを修正]]></description>
-            <content:encoded><![CDATA[Merge pull request #18 from apxxxxxxe/workflow
-
-surfaces-mixerがインストールされていなかったのを修正]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[Haine | surfaces-mixerがインストールされていなかったのを修正]]></title>
             <pubDate>Tue, 13 Feb 2024 00:20:47 GMT</pubDate>
             <description><![CDATA[surfaces-mixerがインストールされていなかったのを修正]]></description>
             <content:encoded><![CDATA[surfaces-mixerがインストールされていなかったのを修正]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | update md5, dll and surfaces.txt]]></title>
-            <pubDate>Tue, 13 Feb 2024 00:15:39 GMT</pubDate>
-            <description><![CDATA[update md5, dll and surfaces.txt]]></description>
-            <content:encoded><![CDATA[update md5, dll and surfaces.txt]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | Merge pull request #17 from apxxxxxxe/working
-
-update workflow]]></title>
-            <pubDate>Tue, 13 Feb 2024 00:08:31 GMT</pubDate>
-            <description><![CDATA[Merge pull request #17 from apxxxxxxe/working
-
-update workflow]]></description>
-            <content:encoded><![CDATA[Merge pull request #17 from apxxxxxxe/working
-
-update workflow]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[Haine | update workflow]]></title>
             <pubDate>Tue, 13 Feb 2024 00:08:06 GMT</pubDate>
             <description><![CDATA[update workflow]]></description>
             <content:encoded><![CDATA[update workflow]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | update md5 & dll]]></title>
-            <pubDate>Mon, 12 Feb 2024 23:56:39 GMT</pubDate>
-            <description><![CDATA[update md5 & dll]]></description>
-            <content:encoded><![CDATA[update md5 & dll]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | Merge pull request #16 from apxxxxxxe/build-script
-
-build script]]></title>
-            <pubDate>Mon, 12 Feb 2024 23:51:09 GMT</pubDate>
-            <description><![CDATA[Merge pull request #16 from apxxxxxxe/build-script
-
-build script]]></description>
-            <content:encoded><![CDATA[Merge pull request #16 from apxxxxxxe/build-script
-
-build script]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | build script]]></title>
-            <pubDate>Mon, 12 Feb 2024 23:50:17 GMT</pubDate>
-            <description><![CDATA[build script]]></description>
-            <content:encoded><![CDATA[build script]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | Merge pull request #15 from apxxxxxxe/build-script
-
-build script]]></title>
-            <pubDate>Mon, 12 Feb 2024 23:46:56 GMT</pubDate>
-            <description><![CDATA[Merge pull request #15 from apxxxxxxe/build-script
-
-build script]]></description>
-            <content:encoded><![CDATA[Merge pull request #15 from apxxxxxxe/build-script
-
-build script]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | build script]]></title>
-            <pubDate>Mon, 12 Feb 2024 23:46:05 GMT</pubDate>
-            <description><![CDATA[build script]]></description>
-            <content:encoded><![CDATA[build script]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | update md5 & dll]]></title>
-            <pubDate>Mon, 12 Feb 2024 14:53:57 GMT</pubDate>
-            <description><![CDATA[update md5 & dll]]></description>
-            <content:encoded><![CDATA[update md5 & dll]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | Merge pull request #14 from apxxxxxxe/develop
-
-Develop]]></title>
-            <pubDate>Mon, 12 Feb 2024 14:48:28 GMT</pubDate>
-            <description><![CDATA[Merge pull request #14 from apxxxxxxe/develop
-
-Develop]]></description>
-            <content:encoded><![CDATA[Merge pull request #14 from apxxxxxxe/develop
-
-Develop]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | Merge remote-tracking branch 'origin/main' into develop]]></title>
-            <pubDate>Mon, 12 Feb 2024 14:48:16 GMT</pubDate>
-            <description><![CDATA[Merge remote-tracking branch 'origin/main' into develop]]></description>
-            <content:encoded><![CDATA[Merge remote-tracking branch 'origin/main' into develop]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 表情調整]]></title>
-            <pubDate>Mon, 12 Feb 2024 14:47:00 GMT</pubDate>
-            <description><![CDATA[表情調整]]></description>
-            <content:encoded><![CDATA[表情調整]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 口パーツ追加]]></title>
-            <pubDate>Mon, 12 Feb 2024 14:45:28 GMT</pubDate>
-            <description><![CDATA[口パーツ追加]]></description>
-            <content:encoded><![CDATA[口パーツ追加]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | Merge branch 'develop' of https://github.com/apxxxxxxe/Haine into develop]]></title>
-            <pubDate>Mon, 12 Feb 2024 12:01:04 GMT</pubDate>
-            <description><![CDATA[Merge branch 'develop' of https://github.com/apxxxxxxe/Haine into develop]]></description>
-            <content:encoded><![CDATA[Merge branch 'develop' of https://github.com/apxxxxxxe/Haine into develop]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | loadingのquicksectionを削除]]></title>
-            <pubDate>Mon, 12 Feb 2024 12:00:48 GMT</pubDate>
-            <description><![CDATA[loadingのquicksectionを削除]]></description>
-            <content:encoded><![CDATA[loadingのquicksectionを削除]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Youto | md5 fix~]]></title>
-            <pubDate>Fri, 24 Feb 2023 12:10:34 GMT</pubDate>
-            <description><![CDATA[md5 fix~]]></description>
-            <content:encoded><![CDATA[md5 fix~]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
@@ -265,18 +145,6 @@ Develop]]></content:encoded>
             <pubDate>Thu, 23 Feb 2023 12:35:29 GMT</pubDate>
             <description><![CDATA[add: 単語を追加(+39)]]></description>
             <content:encoded><![CDATA[add: 単語を追加(+39)]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Youto | Merge branch 'main' of https://github.com/apxxxxxxe/Youto]]></title>
-            <pubDate>Thu, 23 Feb 2023 12:14:35 GMT</pubDate>
-            <description><![CDATA[Merge branch 'main' of https://github.com/apxxxxxxe/Youto]]></description>
-            <content:encoded><![CDATA[Merge branch 'main' of https://github.com/apxxxxxxe/Youto]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Youto | md5 fix~]]></title>
-            <pubDate>Wed, 04 Jan 2023 13:39:04 GMT</pubDate>
-            <description><![CDATA[md5 fix~]]></description>
-            <content:encoded><![CDATA[md5 fix~]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | update: craftman]]></title>
@@ -297,22 +165,10 @@ Develop]]></content:encoded>
             <content:encoded><![CDATA[rename: txt-^>dic]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Youto | md5 fix~]]></title>
-            <pubDate>Fri, 18 Nov 2022 13:24:25 GMT</pubDate>
-            <description><![CDATA[md5 fix~]]></description>
-            <content:encoded><![CDATA[md5 fix~]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
             <pubDate>Fri, 18 Nov 2022 13:22:56 GMT</pubDate>
             <description><![CDATA[add: ランダムトーク+1]]></description>
             <content:encoded><![CDATA[add: ランダムトーク+1]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Youto | md5 fix~]]></title>
-            <pubDate>Sun, 30 Oct 2022 11:56:13 GMT</pubDate>
-            <description><![CDATA[md5 fix~]]></description>
-            <content:encoded><![CDATA[md5 fix~]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | update: 羊が喋るときのサーフェスを変更]]></title>
@@ -327,22 +183,10 @@ Develop]]></content:encoded>
             <content:encoded><![CDATA[update: yaya.dll]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Youto | md5 fix~]]></title>
-            <pubDate>Mon, 24 Oct 2022 03:10:02 GMT</pubDate>
-            <description><![CDATA[md5 fix~]]></description>
-            <content:encoded><![CDATA[md5 fix~]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[Youto | add: ランダムトーク+3]]></title>
             <pubDate>Mon, 24 Oct 2022 03:08:18 GMT</pubDate>
             <description><![CDATA[add: ランダムトーク+3]]></description>
             <content:encoded><![CDATA[add: ランダムトーク+3]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Youto | md5 fix~]]></title>
-            <pubDate>Fri, 22 Jul 2022 01:12:38 GMT</pubDate>
-            <description><![CDATA[md5 fix~]]></description>
-            <content:encoded><![CDATA[md5 fix~]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | fix: さくらスクリプトの記述が壊れていたのを修正]]></title>
@@ -361,12 +205,6 @@ Develop]]></content:encoded>
             <pubDate>Sun, 26 Jun 2022 22:57:33 GMT</pubDate>
             <description><![CDATA[Update readme.md]]></description>
             <content:encoded><![CDATA[Update readme.md]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Youto | md5 fix~]]></title>
-            <pubDate>Fri, 24 Jun 2022 20:15:10 GMT</pubDate>
-            <description><![CDATA[md5 fix~]]></description>
-            <content:encoded><![CDATA[md5 fix~]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | Revert "update: homeurlを微修正"
@@ -417,12 +255,6 @@ This reverts commit e126ba9d229c8501cec4c6927d38e6acda9f75b1.]]></content:encode
             <content:encoded><![CDATA[Create readme.md]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Youto | md5 fix~]]></title>
-            <pubDate>Thu, 16 Jun 2022 09:34:37 GMT</pubDate>
-            <description><![CDATA[md5 fix~]]></description>
-            <content:encoded><![CDATA[md5 fix~]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[Youto | update: yaya.dll]]></title>
             <pubDate>Thu, 16 Jun 2022 09:32:26 GMT</pubDate>
             <description><![CDATA[update: yaya.dll]]></description>
@@ -433,12 +265,6 @@ This reverts commit e126ba9d229c8501cec4c6927d38e6acda9f75b1.]]></content:encode
             <pubDate>Mon, 13 Jun 2022 09:06:05 GMT</pubDate>
             <description><![CDATA[update: workflow]]></description>
             <content:encoded><![CDATA[update: workflow]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[thumbelina-shell | md5 fix~]]></title>
-            <pubDate>Sat, 03 Feb 2024 17:22:36 GMT</pubDate>
-            <description><![CDATA[md5 fix~]]></description>
-            <content:encoded><![CDATA[md5 fix~]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | ゴミを除去]]></title>
@@ -495,12 +321,6 @@ This reverts commit e126ba9d229c8501cec4c6927d38e6acda9f75b1.]]></content:encode
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[thumbelina-shell | md5 fix~]]></title>
-            <pubDate>Fri, 26 Jan 2024 11:23:36 GMT</pubDate>
-            <description><![CDATA[md5 fix~]]></description>
-            <content:encoded><![CDATA[md5 fix~]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[thumbelina-shell | 首元きせかえを1つ追加]]></title>
             <pubDate>Fri, 26 Jan 2024 11:23:02 GMT</pubDate>
             <description><![CDATA[首元きせかえを1つ追加]]></description>
@@ -523,12 +343,6 @@ This reverts commit e126ba9d229c8501cec4c6927d38e6acda9f75b1.]]></content:encode
             <pubDate>Fri, 26 Jan 2024 11:23:02 GMT</pubDate>
             <description><![CDATA[袖から腕がはみ出ていたのを修正]]></description>
             <content:encoded><![CDATA[袖から腕がはみ出ていたのを修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[thumbelina-shell | md5 fix~]]></title>
-            <pubDate>Fri, 26 Jan 2024 11:23:02 GMT</pubDate>
-            <description><![CDATA[md5 fix~]]></description>
-            <content:encoded><![CDATA[md5 fix~]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | デフォルト着せ替え構成を変更]]></title>
@@ -687,36 +501,6 @@ This reverts commit e126ba9d229c8501cec4c6927d38e6acda9f75b1.]]></content:encode
             <content:encoded><![CDATA[update: workflowsを更新]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[kirinokougai | md5 fix~]]></title>
-            <pubDate>Thu, 21 Apr 2022 03:07:21 GMT</pubDate>
-            <description><![CDATA[md5 fix~]]></description>
-            <content:encoded><![CDATA[md5 fix~]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[kirinokougai | Rename md5-CI-build to md5-CI-build.yaml]]></title>
-            <pubDate>Thu, 21 Apr 2022 03:06:44 GMT</pubDate>
-            <description><![CDATA[Rename md5-CI-build to md5-CI-build.yaml]]></description>
-            <content:encoded><![CDATA[Rename md5-CI-build to md5-CI-build.yaml]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[kirinokougai | Update md5-CI-build]]></title>
-            <pubDate>Thu, 21 Apr 2022 03:05:42 GMT</pubDate>
-            <description><![CDATA[Update md5-CI-build]]></description>
-            <content:encoded><![CDATA[Update md5-CI-build]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[kirinokougai | Update md5-CI-build]]></title>
-            <pubDate>Thu, 21 Apr 2022 02:16:56 GMT</pubDate>
-            <description><![CDATA[Update md5-CI-build]]></description>
-            <content:encoded><![CDATA[Update md5-CI-build]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[kirinokougai | Create md5-CI-build]]></title>
-            <pubDate>Thu, 21 Apr 2022 01:56:42 GMT</pubDate>
-            <description><![CDATA[Create md5-CI-build]]></description>
-            <content:encoded><![CDATA[Create md5-CI-build]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[kirinokougai | Update descript.txt
 
 fix homeurl]]></title>
@@ -783,12 +567,6 @@ fix homeurl]]></content:encoded>
             <content:encoded><![CDATA[first commit]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[GhostSpeaker | update md5 & dll]]></title>
-            <pubDate>Thu, 18 Jan 2024 06:11:56 GMT</pubDate>
-            <description><![CDATA[update md5 & dll]]></description>
-            <content:encoded><![CDATA[update md5 & dll]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[GhostSpeaker | update: workflow]]></title>
             <pubDate>Thu, 18 Jan 2024 06:07:13 GMT</pubDate>
             <description><![CDATA[update: workflow]]></description>
@@ -807,22 +585,10 @@ fix homeurl]]></content:encoded>
             <content:encoded><![CDATA[clippy fix]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[GhostSpeaker | update md5 & dll]]></title>
-            <pubDate>Sun, 24 Dec 2023 04:33:15 GMT</pubDate>
-            <description><![CDATA[update md5 & dll]]></description>
-            <content:encoded><![CDATA[update md5 & dll]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[GhostSpeaker | update: 終了時に読み上げの終了を待つかどうかを切り替えられるように]]></title>
             <pubDate>Sun, 24 Dec 2023 04:29:36 GMT</pubDate>
             <description><![CDATA[update: 終了時に読み上げの終了を待つかどうかを切り替えられるように]]></description>
             <content:encoded><![CDATA[update: 終了時に読み上げの終了を待つかどうかを切り替えられるように]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostSpeaker | update md5 & dll]]></title>
-            <pubDate>Fri, 22 Dec 2023 14:02:17 GMT</pubDate>
-            <description><![CDATA[update md5 & dll]]></description>
-            <content:encoded><![CDATA[update md5 & dll]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | Update README.md]]></title>
@@ -831,22 +597,10 @@ fix homeurl]]></content:encoded>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[GhostSpeaker | update md5 & dll]]></title>
-            <pubDate>Thu, 21 Dec 2023 12:19:01 GMT</pubDate>
-            <description><![CDATA[update md5 & dll]]></description>
-            <content:encoded><![CDATA[update md5 & dll]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[GhostSpeaker | update: \p[2]以降の声質を指定可能&デフォルトで無しに]]></title>
             <pubDate>Thu, 21 Dec 2023 12:17:04 GMT</pubDate>
             <description><![CDATA[update: \p[2]以降の声質を指定可能&デフォルトで無しに]]></description>
             <content:encoded><![CDATA[update: \p[2]以降の声質を指定可能&デフォルトで無しに]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostSpeaker | update md5 & dll]]></title>
-            <pubDate>Mon, 18 Dec 2023 09:44:05 GMT</pubDate>
-            <description><![CDATA[update md5 & dll]]></description>
-            <content:encoded><![CDATA[update md5 & dll]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | fix: さくらスクリプト消去時に周辺の数字が消えていたのを修正
@@ -856,36 +610,6 @@ Bouyomiで起きてた問題と同原因]]></title>
 Bouyomiで起きてた問題と同原因]]></description>
             <content:encoded><![CDATA[fix: さくらスクリプト消去時に周辺の数字が消えていたのを修正
 Bouyomiで起きてた問題と同原因]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostSpeaker | update md5 & dll]]></title>
-            <pubDate>Sat, 16 Dec 2023 07:17:09 GMT</pubDate>
-            <description><![CDATA[update md5 & dll]]></description>
-            <content:encoded><![CDATA[update md5 & dll]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostSpeaker | fix: md5buildignore.txt]]></title>
-            <pubDate>Sat, 16 Dec 2023 07:12:08 GMT</pubDate>
-            <description><![CDATA[fix: md5buildignore.txt]]></description>
-            <content:encoded><![CDATA[fix: md5buildignore.txt]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostSpeaker | update md5 & dll]]></title>
-            <pubDate>Sat, 16 Dec 2023 06:50:53 GMT</pubDate>
-            <description><![CDATA[update md5 & dll]]></description>
-            <content:encoded><![CDATA[update md5 & dll]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostSpeaker | Merge branch 'main' of https://github.com/apxxxxxxe/GhostSpeaker]]></title>
-            <pubDate>Sat, 16 Dec 2023 06:38:15 GMT</pubDate>
-            <description><![CDATA[Merge branch 'main' of https://github.com/apxxxxxxe/GhostSpeaker]]></description>
-            <content:encoded><![CDATA[Merge branch 'main' of https://github.com/apxxxxxxe/GhostSpeaker]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostSpeaker | update md5 & dll]]></title>
-            <pubDate>Sat, 16 Dec 2023 06:38:10 GMT</pubDate>
-            <description><![CDATA[update md5 & dll]]></description>
-            <content:encoded><![CDATA[update md5 & dll]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | add: install.txt]]></title>
@@ -900,34 +624,16 @@ Bouyomiで起きてた問題と同原因]]></content:encoded>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[GhostSpeaker | update md5 & dll]]></title>
-            <pubDate>Wed, 13 Dec 2023 00:26:58 GMT</pubDate>
-            <description><![CDATA[update md5 & dll]]></description>
-            <content:encoded><![CDATA[update md5 & dll]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[GhostSpeaker | Update README.md]]></title>
             <pubDate>Wed, 13 Dec 2023 00:21:53 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[GhostSpeaker | update md5 & dll]]></title>
-            <pubDate>Wed, 13 Dec 2023 00:19:27 GMT</pubDate>
-            <description><![CDATA[update md5 & dll]]></description>
-            <content:encoded><![CDATA[update md5 & dll]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[GhostSpeaker | Update README.md]]></title>
             <pubDate>Wed, 13 Dec 2023 00:13:38 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostSpeaker | update md5 & dll]]></title>
-            <pubDate>Tue, 12 Dec 2023 23:59:51 GMT</pubDate>
-            <description><![CDATA[update md5 & dll]]></description>
-            <content:encoded><![CDATA[update md5 & dll]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | update: readme]]></title>
@@ -966,22 +672,10 @@ Bouyomiで起きてた問題と同原因]]></content:encoded>
             <content:encoded><![CDATA[fix: 棒読みちゃん以外で分割がスキップされていたのを修正]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Ukaing | update md5 & dll]]></title>
-            <pubDate>Thu, 30 Nov 2023 18:13:18 GMT</pubDate>
-            <description><![CDATA[update md5 & dll]]></description>
-            <content:encoded><![CDATA[update md5 & dll]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[Ukaing | update: 自動更新機能を追加]]></title>
             <pubDate>Thu, 30 Nov 2023 18:09:00 GMT</pubDate>
             <description><![CDATA[update: 自動更新機能を追加]]></description>
             <content:encoded><![CDATA[update: 自動更新機能を追加]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Ukaing | update md5 & dll]]></title>
-            <pubDate>Thu, 30 Nov 2023 16:38:00 GMT</pubDate>
-            <description><![CDATA[update md5 & dll]]></description>
-            <content:encoded><![CDATA[update md5 & dll]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Ukaing | update: urlクレートでcraftmanurlが有効なurlかどうかを判別するように
@@ -999,22 +693,10 @@ Bouyomiで起きてた問題と同原因]]></content:encoded>
             <content:encoded><![CDATA[fix: Discordを再起動した場合に意図しない挙動をしていたのを修正]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Ukaing | update md5 & dll]]></title>
-            <pubDate>Fri, 27 Oct 2023 18:59:52 GMT</pubDate>
-            <description><![CDATA[update md5 & dll]]></description>
-            <content:encoded><![CDATA[update md5 & dll]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[Ukaing | init]]></title>
             <pubDate>Fri, 27 Oct 2023 18:52:23 GMT</pubDate>
             <description><![CDATA[init]]></description>
             <content:encoded><![CDATA[init]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostWardrobe | md5 fix~]]></title>
-            <pubDate>Mon, 10 Apr 2023 11:54:04 GMT</pubDate>
-            <description><![CDATA[md5 fix~]]></description>
-            <content:encoded><![CDATA[md5 fix~]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | update: OnGhostInfoUpdateでshell.datの変更をフックしOnSecondChangeで保存処理を発火するように]]></title>
@@ -1035,12 +717,6 @@ Bouyomiで起きてた問題と同原因]]></content:encoded>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[GhostWardrobe | md5 fix~]]></title>
-            <pubDate>Sun, 09 Apr 2023 07:29:34 GMT</pubDate>
-            <description><![CDATA[md5 fix~]]></description>
-            <content:encoded><![CDATA[md5 fix~]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[GhostWardrobe | fix: 不要なサーフェス変更をしないように]]></title>
             <pubDate>Sun, 09 Apr 2023 07:28:35 GMT</pubDate>
             <description><![CDATA[fix: 不要なサーフェス変更をしないように]]></description>
@@ -1051,18 +727,6 @@ Bouyomiで起きてた問題と同原因]]></content:encoded>
             <pubDate>Sun, 09 Apr 2023 07:23:13 GMT</pubDate>
             <description><![CDATA[fix: UTF-8のdescript.txtに対応]]></description>
             <content:encoded><![CDATA[fix: UTF-8のdescript.txtに対応]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostWardrobe | update: md5からCRC32に変更]]></title>
-            <pubDate>Sun, 09 Apr 2023 03:30:36 GMT</pubDate>
-            <description><![CDATA[update: md5からCRC32に変更]]></description>
-            <content:encoded><![CDATA[update: md5からCRC32に変更]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostWardrobe | update: 保存データ名をCRC32からmd5に変更]]></title>
-            <pubDate>Sat, 08 Apr 2023 22:25:08 GMT</pubDate>
-            <description><![CDATA[update: 保存データ名をCRC32からmd5に変更]]></description>
-            <content:encoded><![CDATA[update: 保存データ名をCRC32からmd5に変更]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | update: OnSecondChangeではなくtimerraisepluginでリロード後の処理を発火するように]]></title>
@@ -1113,22 +777,10 @@ Bouyomiで起きてた問題と同原因]]></content:encoded>
             <content:encoded><![CDATA[Update draft.yaml]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[GhostWardrobe | md5 fix~]]></title>
-            <pubDate>Fri, 07 Apr 2023 12:44:56 GMT</pubDate>
-            <description><![CDATA[md5 fix~]]></description>
-            <content:encoded><![CDATA[md5 fix~]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[GhostWardrobe | update: \![chenge,shell]を\![reload,shell]に変更]]></title>
             <pubDate>Fri, 07 Apr 2023 12:40:10 GMT</pubDate>
             <description><![CDATA[update: \![chenge,shell]を\![reload,shell]に変更]]></description>
             <content:encoded><![CDATA[update: \![chenge,shell]を\![reload,shell]に変更]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostWardrobe | md5 fix~]]></title>
-            <pubDate>Thu, 06 Apr 2023 07:12:56 GMT</pubDate>
-            <description><![CDATA[md5 fix~]]></description>
-            <content:encoded><![CDATA[md5 fix~]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | Initial Commit]]></title>
@@ -1137,10 +789,10 @@ Bouyomiで起きてた問題と同原因]]></content:encoded>
             <content:encoded><![CDATA[Initial Commit]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Bouyomi | CI]]></title>
-            <pubDate>Sat, 28 Oct 2023 12:21:19 GMT</pubDate>
-            <description><![CDATA[CI]]></description>
-            <content:encoded><![CDATA[CI]]></content:encoded>
+            <title><![CDATA[Bouyomi | GhostSpeakerについての言及をREADME.mdに追加]]></title>
+            <pubDate>Wed, 21 Feb 2024 15:54:38 GMT</pubDate>
+            <description><![CDATA[GhostSpeakerについての言及をREADME.mdに追加]]></description>
+            <content:encoded><![CDATA[GhostSpeakerについての言及をREADME.mdに追加]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | fix]]></title>
@@ -1149,22 +801,10 @@ Bouyomiで起きてた問題と同原因]]></content:encoded>
             <content:encoded><![CDATA[fix]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Bouyomi | CI]]></title>
-            <pubDate>Sat, 28 Oct 2023 11:55:28 GMT</pubDate>
-            <description><![CDATA[CI]]></description>
-            <content:encoded><![CDATA[CI]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[Bouyomi | add: configにNoVoiceByDefaultを追加]]></title>
             <pubDate>Sat, 28 Oct 2023 11:52:56 GMT</pubDate>
             <description><![CDATA[add: configにNoVoiceByDefaultを追加]]></description>
             <content:encoded><![CDATA[add: configにNoVoiceByDefaultを追加]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Bouyomi | CI]]></title>
-            <pubDate>Sun, 22 Oct 2023 07:28:19 GMT</pubDate>
-            <description><![CDATA[CI]]></description>
-            <content:encoded><![CDATA[CI]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | fix: さくらスクリプト消去時に周辺の数字が消えていたのを修正
@@ -1176,22 +816,10 @@ Bouyomiで起きてた問題と同原因]]></content:encoded>
 「\n123」の1が消えたりしていた]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Bouyomi | CI]]></title>
-            <pubDate>Sat, 21 Oct 2023 13:05:58 GMT</pubDate>
-            <description><![CDATA[CI]]></description>
-            <content:encoded><![CDATA[CI]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[Bouyomi | Update README.md]]></title>
             <pubDate>Sat, 21 Oct 2023 13:03:32 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Bouyomi | CI]]></title>
-            <pubDate>Fri, 20 Oct 2023 20:58:54 GMT</pubDate>
-            <description><![CDATA[CI]]></description>
-            <content:encoded><![CDATA[CI]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | update: 同時起動するエンジンのパスは配列で管理するように]]></title>
@@ -1221,34 +849,16 @@ SAPIForVOICEVOXの「エンジンエラーを通知する」設定を切れば�
             <content:encoded><![CDATA[update: BouyomiChan_path.txtに記載されたBouyomiChan.exeを起動時に実行するように]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Bouyomi | CI]]></title>
-            <pubDate>Wed, 05 Apr 2023 11:04:23 GMT</pubDate>
-            <description><![CDATA[CI]]></description>
-            <content:encoded><![CDATA[CI]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[Bouyomi | fix: 文頭の\0セリフが読まれない場合があるのを修正]]></title>
             <pubDate>Wed, 05 Apr 2023 11:01:43 GMT</pubDate>
             <description><![CDATA[fix: 文頭の\0セリフが読まれない場合があるのを修正]]></description>
             <content:encoded><![CDATA[fix: 文頭の\0セリフが読まれない場合があるのを修正]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Bouyomi | CI]]></title>
-            <pubDate>Wed, 05 Apr 2023 10:51:07 GMT</pubDate>
-            <description><![CDATA[CI]]></description>
-            <content:encoded><![CDATA[CI]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[Bouyomi | update: base64デコード機能を削除]]></title>
             <pubDate>Wed, 05 Apr 2023 10:45:55 GMT</pubDate>
             <description><![CDATA[update: base64デコード機能を削除]]></description>
             <content:encoded><![CDATA[update: base64デコード機能を削除]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Bouyomi | CI]]></title>
-            <pubDate>Tue, 14 Feb 2023 04:15:22 GMT</pubDate>
-            <description><![CDATA[CI]]></description>
-            <content:encoded><![CDATA[CI]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | update: エラーログをbouyomi.logに出力するように]]></title>
@@ -1261,12 +871,6 @@ SAPIForVOICEVOXの「エンジンエラーを通知する」設定を切れば�
             <pubDate>Tue, 14 Feb 2023 04:01:52 GMT</pubDate>
             <description><![CDATA[update: config.jsonにない設定項目は初期値で書き込むように]]></description>
             <content:encoded><![CDATA[update: config.jsonにない設定項目は初期値で書き込むように]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Bouyomi | CI]]></title>
-            <pubDate>Tue, 14 Feb 2023 02:14:11 GMT</pubDate>
-            <description><![CDATA[CI]]></description>
-            <content:encoded><![CDATA[CI]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | update: さくらスクリプト\h,\uに対応]]></title>
@@ -1299,28 +903,10 @@ SAPIForVOICEVOXの「エンジンエラーを通知する」設定を切れば�
             <content:encoded><![CDATA[fix: 起動時の更新が動いていなかったのを修正]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Bouyomi | CI]]></title>
-            <pubDate>Wed, 18 Jan 2023 15:20:21 GMT</pubDate>
-            <description><![CDATA[CI]]></description>
-            <content:encoded><![CDATA[CI]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[Bouyomi | update: メニューに現在バージョンを表示するように]]></title>
             <pubDate>Wed, 18 Jan 2023 15:17:50 GMT</pubDate>
             <description><![CDATA[update: メニューに現在バージョンを表示するように]]></description>
             <content:encoded><![CDATA[update: メニューに現在バージョンを表示するように]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Bouyomi | update: 起動時に更新するように]]></title>
-            <pubDate>Wed, 18 Jan 2023 15:16:51 GMT</pubDate>
-            <description><![CDATA[update: 起動時に更新するように]]></description>
-            <content:encoded><![CDATA[update: 起動時に更新するように]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Bouyomi | CI]]></title>
-            <pubDate>Wed, 28 Dec 2022 04:57:17 GMT</pubDate>
-            <description><![CDATA[CI]]></description>
-            <content:encoded><![CDATA[CI]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[recentghosts | Update README.md]]></title>
@@ -1353,12 +939,6 @@ SAPIForVOICEVOXの「エンジンエラーを通知する」設定を切れば�
             <content:encoded><![CDATA[Create README.md]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[recentghosts | md5 fix~]]></title>
-            <pubDate>Thu, 21 Jul 2022 08:15:42 GMT</pubDate>
-            <description><![CDATA[md5 fix~]]></description>
-            <content:encoded><![CDATA[md5 fix~]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[recentghosts | first commit]]></title>
             <pubDate>Thu, 21 Jul 2022 07:44:23 GMT</pubDate>
             <description><![CDATA[first commit]]></description>
@@ -1375,12 +955,6 @@ SAPIForVOICEVOXの「エンジンエラーを通知する」設定を切れば�
             <pubDate>Sun, 11 Dec 2022 12:39:09 GMT</pubDate>
             <description><![CDATA[fix: 動作に関係ない部分の変更]]></description>
             <content:encoded><![CDATA[fix: 動作に関係ない部分の変更]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[shioriupdater | Merge branch 'main' of https://github.com/apxxxxxxe/shioriupdater]]></title>
-            <pubDate>Mon, 04 Jul 2022 12:22:53 GMT</pubDate>
-            <description><![CDATA[Merge branch 'main' of https://github.com/apxxxxxxe/shioriupdater]]></description>
-            <content:encoded><![CDATA[Merge branch 'main' of https://github.com/apxxxxxxe/shioriupdater]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | Update README.md]]></title>
@@ -1501,12 +1075,6 @@ SAPIForVOICEVOXの「エンジンエラーを通知する」設定を切れば�
             <pubDate>Sun, 29 May 2022 12:18:05 GMT</pubDate>
             <description><![CDATA[add: .gitignore]]></description>
             <content:encoded><![CDATA[add: .gitignore]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[shioriupdater | Merge branch 'main' of https://github.com/apxxxxxxe/shioriupdater]]></title>
-            <pubDate>Sun, 29 May 2022 12:17:18 GMT</pubDate>
-            <description><![CDATA[Merge branch 'main' of https://github.com/apxxxxxxe/shioriupdater]]></description>
-            <content:encoded><![CDATA[Merge branch 'main' of https://github.com/apxxxxxxe/shioriupdater]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | update: 一時ファイル削除処理を変更]]></title>
