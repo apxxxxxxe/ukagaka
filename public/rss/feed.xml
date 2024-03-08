@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Thu, 07 Mar 2024 00:14:32 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 08 Mar 2024 00:17:52 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -1011,6 +1011,12 @@ Bouyomiで起きてた問題と同原因]]></content:encoded>
             <content:encoded><![CDATA[Initial Commit]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[Bouyomi | Update README.md]]></title>
+            <pubDate>Thu, 07 Mar 2024 12:37:41 GMT</pubDate>
+            <description><![CDATA[Update README.md]]></description>
+            <content:encoded><![CDATA[Update README.md]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[Bouyomi | GhostSpeakerについての言及をREADME.mdに追加]]></title>
             <pubDate>Wed, 21 Feb 2024 15:54:38 GMT</pubDate>
             <description><![CDATA[GhostSpeakerについての言及をREADME.mdに追加]]></description>
@@ -1123,12 +1129,6 @@ SAPIForVOICEVOXの「エンジンエラーを通知する」設定を切れば�
             <pubDate>Wed, 18 Jan 2023 15:44:52 GMT</pubDate>
             <description><![CDATA[fix: 起動時の更新が動いていなかったのを修正]]></description>
             <content:encoded><![CDATA[fix: 起動時の更新が動いていなかったのを修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Bouyomi | update: メニューに現在バージョンを表示するように]]></title>
-            <pubDate>Wed, 18 Jan 2023 15:17:50 GMT</pubDate>
-            <description><![CDATA[update: メニューに現在バージョンを表示するように]]></description>
-            <content:encoded><![CDATA[update: メニューに現在バージョンを表示するように]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[recentghosts | Update README.md]]></title>
