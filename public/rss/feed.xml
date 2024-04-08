@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Sun, 07 Apr 2024 00:20:05 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 08 Apr 2024 00:18:11 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -427,6 +427,12 @@ This reverts commit e126ba9d229c8501cec4c6927d38e6acda9f75b1.]]></content:encode
             <pubDate>Sat, 25 Nov 2023 15:16:26 GMT</pubDate>
             <description><![CDATA[update: 着せ替えメニューを手動で定義するように: 一部着せ替えを非表示]]></description>
             <content:encoded><![CDATA[update: 着せ替えメニューを手動で定義するように: 一部着せ替えを非表示]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[kirinokougai | number]]></title>
+            <pubDate>Sun, 07 Apr 2024 09:54:21 GMT</pubDate>
+            <description><![CDATA[number]]></description>
+            <content:encoded><![CDATA[number]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | sstpmessageと本文が被らないように描画範囲を調整]]></title>
