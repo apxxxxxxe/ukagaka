@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Mon, 15 Apr 2024 02:34:46 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 16 Apr 2024 00:17:32 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -15,124 +15,178 @@
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
         <item>
-            <title><![CDATA[Haine | replace_with_checkのスコープ判定がうまく動いていなかったのを修正]]></title>
-            <pubDate>Wed, 28 Feb 2024 02:41:34 GMT</pubDate>
-            <description><![CDATA[replace_with_checkのスコープ判定がうまく動いていなかったのを修正]]></description>
-            <content:encoded><![CDATA[replace_with_checkのスコープ判定がうまく動いていなかったのを修正]]></content:encoded>
+            <title><![CDATA[Haine | 初回起動の一連のイベントが終了するまでランダムトークしないように]]></title>
+            <pubDate>Mon, 15 Apr 2024 10:09:27 GMT</pubDate>
+            <description><![CDATA[初回起動の一連のイベントが終了するまでランダムトークしないように]]></description>
+            <content:encoded><![CDATA[初回起動の一連のイベントが終了するまでランダムトークしないように]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | 構造体Talkに識別子を追加 & ランダムトークのみ構造体Talkで管理するように]]></title>
-            <pubDate>Wed, 28 Feb 2024 02:41:34 GMT</pubDate>
-            <description><![CDATA[構造体Talkに識別子を追加 & ランダムトークのみ構造体Talkで管理するように]]></description>
-            <content:encoded><![CDATA[構造体Talkに識別子を追加 & ランダムトークのみ構造体Talkで管理するように]]></content:encoded>
+            <title><![CDATA[Haine | aroused中の触り反応を追加]]></title>
+            <pubDate>Mon, 15 Apr 2024 10:09:08 GMT</pubDate>
+            <description><![CDATA[aroused中の触り反応を追加]]></description>
+            <content:encoded><![CDATA[aroused中の触り反応を追加]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | idle_thresholdを定数として定義するように]]></title>
-            <pubDate>Wed, 28 Feb 2024 02:41:34 GMT</pubDate>
-            <description><![CDATA[idle_thresholdを定数として定義するように]]></description>
-            <content:encoded><![CDATA[idle_thresholdを定数として定義するように]]></content:encoded>
+            <title><![CDATA[Haine | 初回に突き飛ばすイベントを追加]]></title>
+            <pubDate>Sun, 14 Apr 2024 14:46:11 GMT</pubDate>
+            <description><![CDATA[初回に突き飛ばすイベントを追加]]></description>
+            <content:encoded><![CDATA[初回に突き飛ばすイベントを追加]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | TouchInfoで触り反応を定義するように]]></title>
-            <pubDate>Wed, 28 Feb 2024 02:41:34 GMT</pubDate>
-            <description><![CDATA[TouchInfoで触り反応を定義するように]]></description>
-            <content:encoded><![CDATA[TouchInfoで触り反応を定義するように]]></content:encoded>
+            <title><![CDATA[Haine | craftmanurl修正]]></title>
+            <pubDate>Sun, 14 Apr 2024 13:22:58 GMT</pubDate>
+            <description><![CDATA[craftmanurl修正]]></description>
+            <content:encoded><![CDATA[craftmanurl修正]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | ランダムトーク整理]]></title>
-            <pubDate>Wed, 21 Feb 2024 17:06:58 GMT</pubDate>
-            <description><![CDATA[ランダムトーク整理]]></description>
-            <content:encoded><![CDATA[ランダムトーク整理]]></content:encoded>
+            <title><![CDATA[Haine | 初回起動時に一瞬ハイネが見えていたのを修正]]></title>
+            <pubDate>Sun, 14 Apr 2024 13:22:50 GMT</pubDate>
+            <description><![CDATA[初回起動時に一瞬ハイネが見えていたのを修正]]></description>
+            <content:encoded><![CDATA[初回起動時に一瞬ハイネが見えていたのを修正]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | タグ内部が置換されていたのを修正]]></title>
-            <pubDate>Mon, 19 Feb 2024 16:39:08 GMT</pubDate>
-            <description><![CDATA[タグ内部が置換されていたのを修正]]></description>
-            <content:encoded><![CDATA[タグ内部が置換されていたのを修正]]></content:encoded>
+            <title><![CDATA[Haine | サーフェス調整]]></title>
+            <pubDate>Sun, 14 Apr 2024 03:15:15 GMT</pubDate>
+            <description><![CDATA[サーフェス調整]]></description>
+            <content:encoded><![CDATA[サーフェス調整]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | 一部の口パーツから口パクを削除]]></title>
-            <pubDate>Sun, 18 Feb 2024 15:22:56 GMT</pubDate>
-            <description><![CDATA[一部の口パーツから口パクを削除]]></description>
-            <content:encoded><![CDATA[一部の口パーツから口パクを削除]]></content:encoded>
+            <title><![CDATA[Haine | デバッグ用キー変更]]></title>
+            <pubDate>Sun, 14 Apr 2024 03:15:00 GMT</pubDate>
+            <description><![CDATA[デバッグ用キー変更]]></description>
+            <content:encoded><![CDATA[デバッグ用キー変更]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | randomtalk]]></title>
-            <pubDate>Sun, 18 Feb 2024 15:22:28 GMT</pubDate>
-            <description><![CDATA[randomtalk]]></description>
-            <content:encoded><![CDATA[randomtalk]]></content:encoded>
+            <title><![CDATA[Haine | ……で口パクしないように]]></title>
+            <pubDate>Sun, 14 Apr 2024 03:14:13 GMT</pubDate>
+            <description><![CDATA[……で口パクしないように]]></description>
+            <content:encoded><![CDATA[……で口パクしないように]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | 初回起動のバルーンサーフェスを修正]]></title>
-            <pubDate>Sun, 18 Feb 2024 15:22:15 GMT</pubDate>
-            <description><![CDATA[初回起動のバルーンサーフェスを修正]]></description>
-            <content:encoded><![CDATA[初回起動のバルーンサーフェスを修正]]></content:encoded>
+            <title><![CDATA[Haine | 初回起動直後のメニュー表示を変更]]></title>
+            <pubDate>Sun, 14 Apr 2024 03:13:04 GMT</pubDate>
+            <description><![CDATA[初回起動直後のメニュー表示を変更]]></description>
+            <content:encoded><![CDATA[初回起動直後のメニュー表示を変更]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | 質問トーク修正]]></title>
-            <pubDate>Sun, 18 Feb 2024 15:21:51 GMT</pubDate>
-            <description><![CDATA[質問トーク修正]]></description>
-            <content:encoded><![CDATA[質問トーク修正]]></content:encoded>
+            <title><![CDATA[Haine | smoothblinkの置換条件を変更]]></title>
+            <pubDate>Sun, 14 Apr 2024 03:12:46 GMT</pubDate>
+            <description><![CDATA[smoothblinkの置換条件を変更]]></description>
+            <content:encoded><![CDATA[smoothblinkの置換条件を変更]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | 起動時の不必要なウェイトを削除]]></title>
-            <pubDate>Sun, 18 Feb 2024 15:20:10 GMT</pubDate>
-            <description><![CDATA[起動時の不必要なウェイトを削除]]></description>
-            <content:encoded><![CDATA[起動時の不必要なウェイトを削除]]></content:encoded>
+            <title><![CDATA[Haine | きせかえパーツで演出用の黒塗り２と没入度用のパーツを別途用意するように]]></title>
+            <pubDate>Sun, 14 Apr 2024 03:11:58 GMT</pubDate>
+            <description><![CDATA[きせかえパーツで演出用の黒塗り２と没入度用のパーツを別途用意するように]]></description>
+            <content:encoded><![CDATA[きせかえパーツで演出用の黒塗り２と没入度用のパーツを別途用意するように]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | OnFirstBoot]]></title>
-            <pubDate>Thu, 15 Feb 2024 15:59:26 GMT</pubDate>
-            <description><![CDATA[OnFirstBoot]]></description>
-            <content:encoded><![CDATA[OnFirstBoot]]></content:encoded>
+            <title><![CDATA[Haine | OnFirstBootを削除: OnBootから条件分岐するように]]></title>
+            <pubDate>Sun, 14 Apr 2024 03:11:58 GMT</pubDate>
+            <description><![CDATA[OnFirstBootを削除: OnBootから条件分岐するように]]></description>
+            <content:encoded><![CDATA[OnFirstBootを削除: OnBootから条件分岐するように]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | TranslateOptionを追加]]></title>
-            <pubDate>Thu, 15 Feb 2024 15:55:44 GMT</pubDate>
-            <description><![CDATA[TranslateOptionを追加]]></description>
-            <content:encoded><![CDATA[TranslateOptionを追加]]></content:encoded>
+            <title><![CDATA[Haine | 時報を１ページに収めるように]]></title>
+            <pubDate>Sun, 14 Apr 2024 03:11:58 GMT</pubDate>
+            <description><![CDATA[時報を１ページに収めるように]]></description>
+            <content:encoded><![CDATA[時報を１ページに収めるように]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | add requirements check to build.ps1]]></title>
-            <pubDate>Thu, 15 Feb 2024 12:44:34 GMT</pubDate>
-            <description><![CDATA[add requirements check to build.ps1]]></description>
-            <content:encoded><![CDATA[add requirements check to build.ps1]]></content:encoded>
+            <title><![CDATA[Haine | バルーンを閉じたときに右下の表示を消去するように]]></title>
+            <pubDate>Sun, 14 Apr 2024 03:11:58 GMT</pubDate>
+            <description><![CDATA[バルーンを閉じたときに右下の表示を消去するように]]></description>
+            <content:encoded><![CDATA[バルーンを閉じたときに右下の表示を消去するように]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | 没入度に応じて上半身に影がかかるように変更]]></title>
-            <pubDate>Tue, 13 Feb 2024 16:37:57 GMT</pubDate>
-            <description><![CDATA[没入度に応じて上半身に影がかかるように変更]]></description>
-            <content:encoded><![CDATA[没入度に応じて上半身に影がかかるように変更]]></content:encoded>
+            <title><![CDATA[Haine | ランダムトークにEventFlagによる出現条件を設定できるように]]></title>
+            <pubDate>Sun, 14 Apr 2024 03:11:25 GMT</pubDate>
+            <description><![CDATA[ランダムトークにEventFlagによる出現条件を設定できるように]]></description>
+            <content:encoded><![CDATA[ランダムトークにEventFlagによる出現条件を設定できるように]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | ignore build.*]]></title>
-            <pubDate>Tue, 13 Feb 2024 00:35:09 GMT</pubDate>
-            <description><![CDATA[ignore build.*]]></description>
-            <content:encoded><![CDATA[ignore build.*]]></content:encoded>
+            <title><![CDATA[Haine | EventFlags:check()の引数を&EventFlagに]]></title>
+            <pubDate>Sun, 14 Apr 2024 03:11:25 GMT</pubDate>
+            <description><![CDATA[EventFlags:check()の引数を&EventFlagに]]></description>
+            <content:encoded><![CDATA[EventFlags:check()の引数を&EventFlagに]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | workflow]]></title>
-            <pubDate>Tue, 13 Feb 2024 00:30:49 GMT</pubDate>
-            <description><![CDATA[workflow]]></description>
-            <content:encoded><![CDATA[workflow]]></content:encoded>
+            <title><![CDATA[Haine | トーク追加]]></title>
+            <pubDate>Sun, 14 Apr 2024 03:04:15 GMT</pubDate>
+            <description><![CDATA[トーク追加]]></description>
+            <content:encoded><![CDATA[トーク追加]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | workflow]]></title>
-            <pubDate>Tue, 13 Feb 2024 00:27:36 GMT</pubDate>
-            <description><![CDATA[workflow]]></description>
-            <content:encoded><![CDATA[workflow]]></content:encoded>
+            <title><![CDATA[Haine | 透明サーフェスからの瞬き補完の修正]]></title>
+            <pubDate>Sun, 07 Apr 2024 06:24:55 GMT</pubDate>
+            <description><![CDATA[透明サーフェスからの瞬き補完の修正]]></description>
+            <content:encoded><![CDATA[透明サーフェスからの瞬き補完の修正]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | surfaces-mixerがインストールされていなかったのを修正]]></title>
-            <pubDate>Tue, 13 Feb 2024 00:20:47 GMT</pubDate>
-            <description><![CDATA[surfaces-mixerがインストールされていなかったのを修正]]></description>
-            <content:encoded><![CDATA[surfaces-mixerがインストールされていなかったのを修正]]></content:encoded>
+            <title><![CDATA[Haine | クイックセクション内で置換時のウェイトが削除されていなかったのを修正]]></title>
+            <pubDate>Sat, 06 Apr 2024 17:33:50 GMT</pubDate>
+            <description><![CDATA[クイックセクション内で置換時のウェイトが削除されていなかったのを修正]]></description>
+            <content:encoded><![CDATA[クイックセクション内で置換時のウェイトが削除されていなかったのを修正]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | update workflow]]></title>
-            <pubDate>Tue, 13 Feb 2024 00:08:06 GMT</pubDate>
-            <description><![CDATA[update workflow]]></description>
-            <content:encoded><![CDATA[update workflow]]></content:encoded>
+            <title><![CDATA[Haine | 透明サーフェスを定義]]></title>
+            <pubDate>Sat, 06 Apr 2024 07:13:50 GMT</pubDate>
+            <description><![CDATA[透明サーフェスを定義]]></description>
+            <content:encoded><![CDATA[透明サーフェスを定義]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 笑い目も瞬き補完の対象に]]></title>
+            <pubDate>Sat, 06 Apr 2024 06:42:06 GMT</pubDate>
+            <description><![CDATA[笑い目も瞬き補完の対象に]]></description>
+            <content:encoded><![CDATA[笑い目も瞬き補完の対象に]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | fix surface]]></title>
+            <pubDate>Sat, 06 Apr 2024 06:26:53 GMT</pubDate>
+            <description><![CDATA[fix surface]]></description>
+            <content:encoded><![CDATA[fix surface]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | fix OnSmoothBlink::from_close]]></title>
+            <pubDate>Sat, 06 Apr 2024 05:36:40 GMT</pubDate>
+            <description><![CDATA[fix OnSmoothBlink::from_close]]></description>
+            <content:encoded><![CDATA[fix OnSmoothBlink::from_close]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 瞬き補完の変更に合わせてsurfaces-mixer出力時に余分にサーフェスを出力するように]]></title>
+            <pubDate>Sat, 06 Apr 2024 05:26:44 GMT</pubDate>
+            <description><![CDATA[瞬き補完の変更に合わせてsurfaces-mixer出力時に余分にサーフェスを出力するように]]></description>
+            <content:encoded><![CDATA[瞬き補完の変更に合わせてsurfaces-mixer出力時に余分にサーフェスを出力するように]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | OnSmoothBlink]]></title>
+            <pubDate>Fri, 05 Apr 2024 17:08:41 GMT</pubDate>
+            <description><![CDATA[OnSmoothBlink]]></description>
+            <content:encoded><![CDATA[OnSmoothBlink]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | まばたき補完が使われていなかったのを実装]]></title>
+            <pubDate>Thu, 04 Apr 2024 13:43:13 GMT</pubDate>
+            <description><![CDATA[まばたき補完が使われていなかったのを実装]]></description>
+            <content:encoded><![CDATA[まばたき補完が使われていなかったのを実装]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | talk]]></title>
+            <pubDate>Thu, 04 Apr 2024 12:46:49 GMT</pubDate>
+            <description><![CDATA[talk]]></description>
+            <content:encoded><![CDATA[talk]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | さわり反応の調整準備]]></title>
+            <pubDate>Tue, 26 Mar 2024 12:48:12 GMT</pubDate>
+            <description><![CDATA[さわり反応の調整準備]]></description>
+            <content:encoded><![CDATA[さわり反応の調整準備]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | talk]]></title>
+            <pubDate>Tue, 26 Mar 2024 12:47:51 GMT</pubDate>
+            <description><![CDATA[talk]]></description>
+            <content:encoded><![CDATA[talk]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
