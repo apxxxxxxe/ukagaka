@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Tue, 16 Apr 2024 00:17:32 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 17 Apr 2024 00:18:02 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -14,6 +14,18 @@
             <link></link>
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
+        <item>
+            <title><![CDATA[Haine | OnBalloon**を削除
+
+これらが発生するときにStatusがおかしくなっていたため]]></title>
+            <pubDate>Tue, 16 Apr 2024 16:19:30 GMT</pubDate>
+            <description><![CDATA[OnBalloon**を削除
+
+これらが発生するときにStatusがおかしくなっていたため]]></description>
+            <content:encoded><![CDATA[OnBalloon**を削除
+
+これらが発生するときにStatusがおかしくなっていたため]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Haine | 初回起動の一連のイベントが終了するまでランダムトークしないように]]></title>
             <pubDate>Mon, 15 Apr 2024 10:09:27 GMT</pubDate>
@@ -181,12 +193,6 @@
             <pubDate>Tue, 26 Mar 2024 12:48:12 GMT</pubDate>
             <description><![CDATA[さわり反応の調整準備]]></description>
             <content:encoded><![CDATA[さわり反応の調整準備]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | talk]]></title>
-            <pubDate>Tue, 26 Mar 2024 12:47:51 GMT</pubDate>
-            <description><![CDATA[talk]]></description>
-            <content:encoded><![CDATA[talk]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
