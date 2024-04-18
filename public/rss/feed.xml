@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Wed, 17 Apr 2024 00:18:02 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 18 Apr 2024 00:17:53 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -14,6 +14,12 @@
             <link></link>
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
+        <item>
+            <title><![CDATA[Haine | ランダムトーク追加]]></title>
+            <pubDate>Wed, 17 Apr 2024 16:03:29 GMT</pubDate>
+            <description><![CDATA[ランダムトーク追加]]></description>
+            <content:encoded><![CDATA[ランダムトーク追加]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Haine | OnBalloon**を削除
 
@@ -187,12 +193,6 @@
             <pubDate>Thu, 04 Apr 2024 12:46:49 GMT</pubDate>
             <description><![CDATA[talk]]></description>
             <content:encoded><![CDATA[talk]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | さわり反応の調整準備]]></title>
-            <pubDate>Tue, 26 Mar 2024 12:48:12 GMT</pubDate>
-            <description><![CDATA[さわり反応の調整準備]]></description>
-            <content:encoded><![CDATA[さわり反応の調整準備]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
