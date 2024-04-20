@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Fri, 19 Apr 2024 00:18:02 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 20 Apr 2024 00:17:43 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -14,6 +14,60 @@
             <link></link>
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
+        <item>
+            <title><![CDATA[Haine | 殴り反応の実装を変更&反応トーク追加]]></title>
+            <pubDate>Fri, 19 Apr 2024 17:05:49 GMT</pubDate>
+            <description><![CDATA[殴り反応の実装を変更&反応トーク追加]]></description>
+            <content:encoded><![CDATA[殴り反応の実装を変更&反応トーク追加]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 右下コメントを修正]]></title>
+            <pubDate>Fri, 19 Apr 2024 17:05:49 GMT</pubDate>
+            <description><![CDATA[右下コメントを修正]]></description>
+            <content:encoded><![CDATA[右下コメントを修正]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 殴りモード時のランダムトークショートカットキーの挙動を変更]]></title>
+            <pubDate>Fri, 19 Apr 2024 17:05:49 GMT</pubDate>
+            <description><![CDATA[殴りモード時のランダムトークショートカットキーの挙動を変更]]></description>
+            <content:encoded><![CDATA[殴りモード時のランダムトークショートカットキーの挙動を変更]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | トーク修正]]></title>
+            <pubDate>Fri, 19 Apr 2024 17:05:49 GMT</pubDate>
+            <description><![CDATA[トーク修正]]></description>
+            <content:encoded><![CDATA[トーク修正]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 初回殴りフラグがおかしかったのを修正]]></title>
+            <pubDate>Fri, 19 Apr 2024 17:05:49 GMT</pubDate>
+            <description><![CDATA[初回殴りフラグがおかしかったのを修正]]></description>
+            <content:encoded><![CDATA[初回殴りフラグがおかしかったのを修正]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 殴りモード時に殴り回数カウントを追加: 回数で反応が変化するように]]></title>
+            <pubDate>Fri, 19 Apr 2024 17:05:49 GMT</pubDate>
+            <description><![CDATA[殴りモード時に殴り回数カウントを追加: 回数で反応が変化するように]]></description>
+            <content:encoded><![CDATA[殴りモード時に殴り回数カウントを追加: 回数で反応が変化するように]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 初突き飛ばしを頭突き時の選択肢から実行するように]]></title>
+            <pubDate>Fri, 19 Apr 2024 17:05:49 GMT</pubDate>
+            <description><![CDATA[初突き飛ばしを頭突き時の選択肢から実行するように]]></description>
+            <content:encoded><![CDATA[初突き飛ばしを頭突き時の選択肢から実行するように]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | トーク修正]]></title>
+            <pubDate>Fri, 19 Apr 2024 17:05:49 GMT</pubDate>
+            <description><![CDATA[トーク修正]]></description>
+            <content:encoded><![CDATA[トーク修正]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 初回突き飛ばし終了まではランダムトークのショートカットキーを封印]]></title>
+            <pubDate>Fri, 19 Apr 2024 17:05:49 GMT</pubDate>
+            <description><![CDATA[初回突き飛ばし終了まではランダムトークのショートカットキーを封印]]></description>
+            <content:encoded><![CDATA[初回突き飛ばし終了まではランダムトークのショートカットキーを封印]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Haine | ランダムトーク追加]]></title>
             <pubDate>Wed, 17 Apr 2024 16:03:29 GMT</pubDate>
@@ -145,54 +199,6 @@
             <pubDate>Sat, 06 Apr 2024 17:33:50 GMT</pubDate>
             <description><![CDATA[クイックセクション内で置換時のウェイトが削除されていなかったのを修正]]></description>
             <content:encoded><![CDATA[クイックセクション内で置換時のウェイトが削除されていなかったのを修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 透明サーフェスを定義]]></title>
-            <pubDate>Sat, 06 Apr 2024 07:13:50 GMT</pubDate>
-            <description><![CDATA[透明サーフェスを定義]]></description>
-            <content:encoded><![CDATA[透明サーフェスを定義]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 笑い目も瞬き補完の対象に]]></title>
-            <pubDate>Sat, 06 Apr 2024 06:42:06 GMT</pubDate>
-            <description><![CDATA[笑い目も瞬き補完の対象に]]></description>
-            <content:encoded><![CDATA[笑い目も瞬き補完の対象に]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | fix surface]]></title>
-            <pubDate>Sat, 06 Apr 2024 06:26:53 GMT</pubDate>
-            <description><![CDATA[fix surface]]></description>
-            <content:encoded><![CDATA[fix surface]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | fix OnSmoothBlink::from_close]]></title>
-            <pubDate>Sat, 06 Apr 2024 05:36:40 GMT</pubDate>
-            <description><![CDATA[fix OnSmoothBlink::from_close]]></description>
-            <content:encoded><![CDATA[fix OnSmoothBlink::from_close]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 瞬き補完の変更に合わせてsurfaces-mixer出力時に余分にサーフェスを出力するように]]></title>
-            <pubDate>Sat, 06 Apr 2024 05:26:44 GMT</pubDate>
-            <description><![CDATA[瞬き補完の変更に合わせてsurfaces-mixer出力時に余分にサーフェスを出力するように]]></description>
-            <content:encoded><![CDATA[瞬き補完の変更に合わせてsurfaces-mixer出力時に余分にサーフェスを出力するように]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | OnSmoothBlink]]></title>
-            <pubDate>Fri, 05 Apr 2024 17:08:41 GMT</pubDate>
-            <description><![CDATA[OnSmoothBlink]]></description>
-            <content:encoded><![CDATA[OnSmoothBlink]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | まばたき補完が使われていなかったのを実装]]></title>
-            <pubDate>Thu, 04 Apr 2024 13:43:13 GMT</pubDate>
-            <description><![CDATA[まばたき補完が使われていなかったのを実装]]></description>
-            <content:encoded><![CDATA[まばたき補完が使われていなかったのを実装]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | talk]]></title>
-            <pubDate>Thu, 04 Apr 2024 12:46:49 GMT</pubDate>
-            <description><![CDATA[talk]]></description>
-            <content:encoded><![CDATA[talk]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
