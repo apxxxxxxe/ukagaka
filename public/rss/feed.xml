@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Sat, 20 Apr 2024 00:17:43 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 21 Apr 2024 00:19:27 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -14,6 +14,24 @@
             <link></link>
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
+        <item>
+            <title><![CDATA[Haine | remove makecmd]]></title>
+            <pubDate>Sat, 20 Apr 2024 09:48:41 GMT</pubDate>
+            <description><![CDATA[remove makecmd]]></description>
+            <content:encoded><![CDATA[remove makecmd]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | remove updates.txt.bak]]></title>
+            <pubDate>Sat, 20 Apr 2024 09:48:41 GMT</pubDate>
+            <description><![CDATA[remove updates.txt.bak]]></description>
+            <content:encoded><![CDATA[remove updates.txt.bak]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 殴り反応のトーク段階変化部分を関数として切り出し]]></title>
+            <pubDate>Sat, 20 Apr 2024 09:48:41 GMT</pubDate>
+            <description><![CDATA[殴り反応のトーク段階変化部分を関数として切り出し]]></description>
+            <content:encoded><![CDATA[殴り反応のトーク段階変化部分を関数として切り出し]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Haine | 殴り反応の実装を変更&反応トーク追加]]></title>
             <pubDate>Fri, 19 Apr 2024 17:05:49 GMT</pubDate>
@@ -181,24 +199,6 @@
             <pubDate>Sun, 14 Apr 2024 03:11:25 GMT</pubDate>
             <description><![CDATA[EventFlags:check()の引数を&EventFlagに]]></description>
             <content:encoded><![CDATA[EventFlags:check()の引数を&EventFlagに]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | トーク追加]]></title>
-            <pubDate>Sun, 14 Apr 2024 03:04:15 GMT</pubDate>
-            <description><![CDATA[トーク追加]]></description>
-            <content:encoded><![CDATA[トーク追加]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 透明サーフェスからの瞬き補完の修正]]></title>
-            <pubDate>Sun, 07 Apr 2024 06:24:55 GMT</pubDate>
-            <description><![CDATA[透明サーフェスからの瞬き補完の修正]]></description>
-            <content:encoded><![CDATA[透明サーフェスからの瞬き補完の修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | クイックセクション内で置換時のウェイトが削除されていなかったのを修正]]></title>
-            <pubDate>Sat, 06 Apr 2024 17:33:50 GMT</pubDate>
-            <description><![CDATA[クイックセクション内で置換時のウェイトが削除されていなかったのを修正]]></description>
-            <content:encoded><![CDATA[クイックセクション内で置換時のウェイトが削除されていなかったのを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
