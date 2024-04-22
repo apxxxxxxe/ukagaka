@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Sun, 21 Apr 2024 00:19:27 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 22 Apr 2024 00:19:13 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -14,6 +14,30 @@
             <link></link>
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
+        <item>
+            <title><![CDATA[Haine | エラーをSSPに通知するように]]></title>
+            <pubDate>Sun, 21 Apr 2024 16:45:34 GMT</pubDate>
+            <description><![CDATA[エラーをSSPに通知するように]]></description>
+            <content:encoded><![CDATA[エラーをSSPに通知するように]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 右下コメントをrouletteで選択するように]]></title>
+            <pubDate>Sun, 21 Apr 2024 16:45:34 GMT</pubDate>
+            <description><![CDATA[右下コメントをrouletteで選択するように]]></description>
+            <content:encoded><![CDATA[右下コメントをrouletteで選択するように]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | トーク修正]]></title>
+            <pubDate>Sun, 21 Apr 2024 16:45:34 GMT</pubDate>
+            <description><![CDATA[トーク修正]]></description>
+            <content:encoded><![CDATA[トーク修正]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | phased_talksのエラーハンドリングを追加]]></title>
+            <pubDate>Sun, 21 Apr 2024 16:45:34 GMT</pubDate>
+            <description><![CDATA[phased_talksのエラーハンドリングを追加]]></description>
+            <content:encoded><![CDATA[phased_talksのエラーハンドリングを追加]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Haine | remove makecmd]]></title>
             <pubDate>Sat, 20 Apr 2024 09:48:41 GMT</pubDate>
@@ -175,30 +199,6 @@
             <pubDate>Sun, 14 Apr 2024 03:11:58 GMT</pubDate>
             <description><![CDATA[OnFirstBootを削除: OnBootから条件分岐するように]]></description>
             <content:encoded><![CDATA[OnFirstBootを削除: OnBootから条件分岐するように]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 時報を１ページに収めるように]]></title>
-            <pubDate>Sun, 14 Apr 2024 03:11:58 GMT</pubDate>
-            <description><![CDATA[時報を１ページに収めるように]]></description>
-            <content:encoded><![CDATA[時報を１ページに収めるように]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | バルーンを閉じたときに右下の表示を消去するように]]></title>
-            <pubDate>Sun, 14 Apr 2024 03:11:58 GMT</pubDate>
-            <description><![CDATA[バルーンを閉じたときに右下の表示を消去するように]]></description>
-            <content:encoded><![CDATA[バルーンを閉じたときに右下の表示を消去するように]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | ランダムトークにEventFlagによる出現条件を設定できるように]]></title>
-            <pubDate>Sun, 14 Apr 2024 03:11:25 GMT</pubDate>
-            <description><![CDATA[ランダムトークにEventFlagによる出現条件を設定できるように]]></description>
-            <content:encoded><![CDATA[ランダムトークにEventFlagによる出現条件を設定できるように]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | EventFlags:check()の引数を&EventFlagに]]></title>
-            <pubDate>Sun, 14 Apr 2024 03:11:25 GMT</pubDate>
-            <description><![CDATA[EventFlags:check()の引数を&EventFlagに]]></description>
-            <content:encoded><![CDATA[EventFlags:check()の引数を&EventFlagに]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
