@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Tue, 30 Apr 2024 00:17:15 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 01 May 2024 00:19:36 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -14,6 +14,36 @@
             <link></link>
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
+        <item>
+            <title><![CDATA[Haine | 💬 殴りモード時に流血するように]]></title>
+            <pubDate>Tue, 30 Apr 2024 14:31:05 GMT</pubDate>
+            <description><![CDATA[💬 殴りモード時に流血するように]]></description>
+            <content:encoded><![CDATA[💬 殴りモード時に流血するように]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 🍱 流血パーツを追加]]></title>
+            <pubDate>Tue, 30 Apr 2024 14:29:31 GMT</pubDate>
+            <description><![CDATA[🍱 流血パーツを追加]]></description>
+            <content:encoded><![CDATA[🍱 流血パーツを追加]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | ⬆️  surfaces-mixerの更新に対応]]></title>
+            <pubDate>Tue, 30 Apr 2024 13:35:55 GMT</pubDate>
+            <description><![CDATA[⬆️  surfaces-mixerの更新に対応]]></description>
+            <content:encoded><![CDATA[⬆️  surfaces-mixerの更新に対応]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 💬 トーク推敲]]></title>
+            <pubDate>Mon, 29 Apr 2024 15:51:35 GMT</pubDate>
+            <description><![CDATA[💬 トーク推敲]]></description>
+            <content:encoded><![CDATA[💬 トーク推敲]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 🔥 不要な記述を削除]]></title>
+            <pubDate>Sun, 28 Apr 2024 15:05:31 GMT</pubDate>
+            <description><![CDATA[🔥 不要な記述を削除]]></description>
+            <content:encoded><![CDATA[🔥 不要な記述を削除]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Haine | 🐛 セーブデータ読み込み時にtalk_collectionに未定義のトークIDが残る可能性があったのを修正]]></title>
             <pubDate>Sat, 27 Apr 2024 17:08:46 GMT</pubDate>
@@ -169,36 +199,6 @@ volatility.touch_countとarousing_hit_countも削除]]></content:encoded>
             <pubDate>Sat, 20 Apr 2024 09:48:41 GMT</pubDate>
             <description><![CDATA[remove updates.txt.bak]]></description>
             <content:encoded><![CDATA[remove updates.txt.bak]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 殴り反応のトーク段階変化部分を関数として切り出し]]></title>
-            <pubDate>Sat, 20 Apr 2024 09:48:41 GMT</pubDate>
-            <description><![CDATA[殴り反応のトーク段階変化部分を関数として切り出し]]></description>
-            <content:encoded><![CDATA[殴り反応のトーク段階変化部分を関数として切り出し]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 殴り反応の実装を変更&反応トーク追加]]></title>
-            <pubDate>Fri, 19 Apr 2024 17:05:49 GMT</pubDate>
-            <description><![CDATA[殴り反応の実装を変更&反応トーク追加]]></description>
-            <content:encoded><![CDATA[殴り反応の実装を変更&反応トーク追加]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 右下コメントを修正]]></title>
-            <pubDate>Fri, 19 Apr 2024 17:05:49 GMT</pubDate>
-            <description><![CDATA[右下コメントを修正]]></description>
-            <content:encoded><![CDATA[右下コメントを修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 殴りモード時のランダムトークショートカットキーの挙動を変更]]></title>
-            <pubDate>Fri, 19 Apr 2024 17:05:49 GMT</pubDate>
-            <description><![CDATA[殴りモード時のランダムトークショートカットキーの挙動を変更]]></description>
-            <content:encoded><![CDATA[殴りモード時のランダムトークショートカットキーの挙動を変更]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | トーク修正]]></title>
-            <pubDate>Fri, 19 Apr 2024 17:05:49 GMT</pubDate>
-            <description><![CDATA[トーク修正]]></description>
-            <content:encoded><![CDATA[トーク修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
