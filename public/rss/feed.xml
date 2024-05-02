@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Wed, 01 May 2024 00:19:36 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 02 May 2024 00:17:56 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -14,6 +14,24 @@
             <link></link>
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
+        <item>
+            <title><![CDATA[Haine | ✨ 終了時に特定カテゴリの着せ替えをオフにするように]]></title>
+            <pubDate>Wed, 01 May 2024 12:50:49 GMT</pubDate>
+            <description><![CDATA[✨ 終了時に特定カテゴリの着せ替えをオフにするように]]></description>
+            <content:encoded><![CDATA[✨ 終了時に特定カテゴリの着せ替えをオフにするように]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | ♻️ まばたき補完処理をBlinkTransition型で管理するように]]></title>
+            <pubDate>Wed, 01 May 2024 12:48:38 GMT</pubDate>
+            <description><![CDATA[♻️ まばたき補完処理をBlinkTransition型で管理するように]]></description>
+            <content:encoded><![CDATA[♻️ まばたき補完処理をBlinkTransition型で管理するように]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 🔨 ビルドスクリプトを変更]]></title>
+            <pubDate>Wed, 01 May 2024 12:48:38 GMT</pubDate>
+            <description><![CDATA[🔨 ビルドスクリプトを変更]]></description>
+            <content:encoded><![CDATA[🔨 ビルドスクリプトを変更]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Haine | 💬 殴りモード時に流血するように]]></title>
             <pubDate>Tue, 30 Apr 2024 14:31:05 GMT</pubDate>
@@ -181,24 +199,6 @@ volatility.touch_countとarousing_hit_countも削除]]></content:encoded>
             <pubDate>Sun, 21 Apr 2024 04:16:48 GMT</pubDate>
             <description><![CDATA[トーク修正]]></description>
             <content:encoded><![CDATA[トーク修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | phased_talksのエラーハンドリングを追加]]></title>
-            <pubDate>Sat, 20 Apr 2024 13:15:35 GMT</pubDate>
-            <description><![CDATA[phased_talksのエラーハンドリングを追加]]></description>
-            <content:encoded><![CDATA[phased_talksのエラーハンドリングを追加]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | remove makecmd]]></title>
-            <pubDate>Sat, 20 Apr 2024 09:48:41 GMT</pubDate>
-            <description><![CDATA[remove makecmd]]></description>
-            <content:encoded><![CDATA[remove makecmd]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | remove updates.txt.bak]]></title>
-            <pubDate>Sat, 20 Apr 2024 09:48:41 GMT</pubDate>
-            <description><![CDATA[remove updates.txt.bak]]></description>
-            <content:encoded><![CDATA[remove updates.txt.bak]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
