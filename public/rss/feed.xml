@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Thu, 02 May 2024 00:17:56 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 03 May 2024 00:18:07 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -14,6 +14,18 @@
             <link></link>
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
+        <item>
+            <title><![CDATA[Haine | 💬 トーク推敲]]></title>
+            <pubDate>Thu, 02 May 2024 15:43:10 GMT</pubDate>
+            <description><![CDATA[💬 トーク推敲]]></description>
+            <content:encoded><![CDATA[💬 トーク推敲]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 🎨 BlinkTransition]]></title>
+            <pubDate>Thu, 02 May 2024 13:19:34 GMT</pubDate>
+            <description><![CDATA[🎨 BlinkTransition]]></description>
+            <content:encoded><![CDATA[🎨 BlinkTransition]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Haine | ✨ 終了時に特定カテゴリの着せ替えをオフにするように]]></title>
             <pubDate>Wed, 01 May 2024 12:50:49 GMT</pubDate>
@@ -181,24 +193,6 @@ volatility.touch_countとarousing_hit_countも削除]]></content:encoded>
             <pubDate>Sat, 27 Apr 2024 06:06:57 GMT</pubDate>
             <description><![CDATA[phased_talksのエラーハンドリングを変更]]></description>
             <content:encoded><![CDATA[phased_talksのエラーハンドリングを変更]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | エラーをSSPに通知するように]]></title>
-            <pubDate>Sun, 21 Apr 2024 08:22:04 GMT</pubDate>
-            <description><![CDATA[エラーをSSPに通知するように]]></description>
-            <content:encoded><![CDATA[エラーをSSPに通知するように]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 右下コメントをrouletteで選択するように]]></title>
-            <pubDate>Sun, 21 Apr 2024 04:17:25 GMT</pubDate>
-            <description><![CDATA[右下コメントをrouletteで選択するように]]></description>
-            <content:encoded><![CDATA[右下コメントをrouletteで選択するように]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | トーク修正]]></title>
-            <pubDate>Sun, 21 Apr 2024 04:16:48 GMT</pubDate>
-            <description><![CDATA[トーク修正]]></description>
-            <content:encoded><![CDATA[トーク修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
