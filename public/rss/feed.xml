@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Sat, 04 May 2024 00:17:40 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 05 May 2024 00:19:19 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -14,6 +14,12 @@
             <link></link>
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
+        <item>
+            <title><![CDATA[Haine | ♻️ BlinkTransitionのconstを削除]]></title>
+            <pubDate>Sat, 04 May 2024 14:52:02 GMT</pubDate>
+            <description><![CDATA[♻️ BlinkTransitionのconstを削除]]></description>
+            <content:encoded><![CDATA[♻️ BlinkTransitionのconstを削除]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Haine | 💬 トーク推敲]]></title>
             <pubDate>Thu, 02 May 2024 15:43:10 GMT</pubDate>
@@ -181,18 +187,6 @@ volatility.touch_countとarousing_hit_countも削除]]></content:encoded>
             <pubDate>Sat, 27 Apr 2024 06:06:57 GMT</pubDate>
             <description><![CDATA[mouse_dialog()の各パーツ処理を関数に分割]]></description>
             <content:encoded><![CDATA[mouse_dialog()の各パーツ処理を関数に分割]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | refactor mouse_dialog()]]></title>
-            <pubDate>Sat, 27 Apr 2024 06:06:57 GMT</pubDate>
-            <description><![CDATA[refactor mouse_dialog()]]></description>
-            <content:encoded><![CDATA[refactor mouse_dialog()]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | phased_talksのエラーハンドリングを変更]]></title>
-            <pubDate>Sat, 27 Apr 2024 06:06:57 GMT</pubDate>
-            <description><![CDATA[phased_talksのエラーハンドリングを変更]]></description>
-            <content:encoded><![CDATA[phased_talksのエラーハンドリングを変更]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
