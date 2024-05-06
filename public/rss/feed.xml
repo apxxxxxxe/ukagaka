@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Sun, 05 May 2024 00:19:19 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 06 May 2024 00:18:39 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -633,6 +633,30 @@ fix homeurl]]></content:encoded>
             <content:encoded><![CDATA[first commit]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[GhostSpeaker | 🔖  v1.0.0]]></title>
+            <pubDate>Sun, 05 May 2024 14:23:26 GMT</pubDate>
+            <description><![CDATA[🔖  v1.0.0]]></description>
+            <content:encoded><![CDATA[🔖  v1.0.0]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[GhostSpeaker | ♻️  dummy -> no_voice]]></title>
+            <pubDate>Sun, 05 May 2024 14:22:35 GMT</pubDate>
+            <description><![CDATA[♻️  dummy -> no_voice]]></description>
+            <content:encoded><![CDATA[♻️  dummy -> no_voice]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[GhostSpeaker | ✨ バージョンアップ時に1度だけ実行する処理を追加]]></title>
+            <pubDate>Sun, 05 May 2024 14:19:53 GMT</pubDate>
+            <description><![CDATA[✨ バージョンアップ時に1度だけ実行する処理を追加]]></description>
+            <content:encoded><![CDATA[✨ バージョンアップ時に1度だけ実行する処理を追加]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[GhostSpeaker | 💥 InitialVoiceを追加: 声質未設定時に読み上げる声質を選択可能に]]></title>
+            <pubDate>Sun, 05 May 2024 14:16:12 GMT</pubDate>
+            <description><![CDATA[💥 InitialVoiceを追加: 声質未設定時に読み上げる声質を選択可能に]]></description>
+            <content:encoded><![CDATA[💥 InitialVoiceを追加: 声質未設定時に読み上げる声質を選択可能に]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[GhostSpeaker | build(deps): bump tracing from 0.1.39 to 0.1.40
 
 Bumps [tracing](https://github.com/tokio-rs/tracing) from 0.1.39 to 0.1.40.
@@ -940,24 +964,6 @@ Bouyomiで起きてた問題と同原因]]></content:encoded>
             <pubDate>Sat, 16 Dec 2023 06:37:58 GMT</pubDate>
             <description><![CDATA[add: install.txt]]></description>
             <content:encoded><![CDATA[add: install.txt]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostSpeaker | Update README.md]]></title>
-            <pubDate>Sat, 16 Dec 2023 06:33:28 GMT</pubDate>
-            <description><![CDATA[Update README.md]]></description>
-            <content:encoded><![CDATA[Update README.md]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostSpeaker | Update README.md]]></title>
-            <pubDate>Wed, 13 Dec 2023 00:21:53 GMT</pubDate>
-            <description><![CDATA[Update README.md]]></description>
-            <content:encoded><![CDATA[Update README.md]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostSpeaker | Update README.md]]></title>
-            <pubDate>Wed, 13 Dec 2023 00:13:38 GMT</pubDate>
-            <description><![CDATA[Update README.md]]></description>
-            <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Ukaing | update: 自動更新機能を追加]]></title>
