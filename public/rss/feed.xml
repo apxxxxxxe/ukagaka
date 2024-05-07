@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Mon, 06 May 2024 00:18:39 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 07 May 2024 00:18:30 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -633,6 +633,72 @@ fix homeurl]]></content:encoded>
             <content:encoded><![CDATA[first commit]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[GhostSpeaker | Update readme.txt]]></title>
+            <pubDate>Mon, 06 May 2024 06:16:56 GMT</pubDate>
+            <description><![CDATA[Update readme.txt]]></description>
+            <content:encoded><![CDATA[Update readme.txt]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[GhostSpeaker | Update readme.txt]]></title>
+            <pubDate>Mon, 06 May 2024 06:16:07 GMT</pubDate>
+            <description><![CDATA[Update readme.txt]]></description>
+            <content:encoded><![CDATA[Update readme.txt]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[GhostSpeaker | Update README.md]]></title>
+            <pubDate>Mon, 06 May 2024 06:15:33 GMT</pubDate>
+            <description><![CDATA[Update README.md]]></description>
+            <content:encoded><![CDATA[Update README.md]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[GhostSpeaker | 🔖  v1.0.2]]></title>
+            <pubDate>Mon, 06 May 2024 05:58:11 GMT</pubDate>
+            <description><![CDATA[🔖  v1.0.2]]></description>
+            <content:encoded><![CDATA[🔖  v1.0.2]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[GhostSpeaker | 🐛 互換性維持処理の発生条件を修正]]></title>
+            <pubDate>Mon, 06 May 2024 05:56:19 GMT</pubDate>
+            <description><![CDATA[🐛 互換性維持処理の発生条件を修正]]></description>
+            <content:encoded><![CDATA[🐛 互換性維持処理の発生条件を修正]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[GhostSpeaker | 🐛 GhostSpeaker由来のスクリプトが読み上げられることがあったのを修正]]></title>
+            <pubDate>Mon, 06 May 2024 05:35:38 GMT</pubDate>
+            <description><![CDATA[🐛 GhostSpeaker由来のスクリプトが読み上げられることがあったのを修正]]></description>
+            <content:encoded><![CDATA[🐛 GhostSpeaker由来のスクリプトが読み上げられることがあったのを修正]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[GhostSpeaker | 🩹  v1.0.xで互換性維持処理が動くように]]></title>
+            <pubDate>Mon, 06 May 2024 00:05:48 GMT</pubDate>
+            <description><![CDATA[🩹  v1.0.xで互換性維持処理が動くように]]></description>
+            <content:encoded><![CDATA[🩹  v1.0.xで互換性維持処理が動くように]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[GhostSpeaker | 🔖  v1.0.1]]></title>
+            <pubDate>Sun, 05 May 2024 16:32:21 GMT</pubDate>
+            <description><![CDATA[🔖  v1.0.1]]></description>
+            <content:encoded><![CDATA[🔖  v1.0.1]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[GhostSpeaker | 🐛 互換性維持用の処理がうまく動いていなかったのを修正]]></title>
+            <pubDate>Sun, 05 May 2024 16:21:42 GMT</pubDate>
+            <description><![CDATA[🐛 互換性維持用の処理がうまく動いていなかったのを修正]]></description>
+            <content:encoded><![CDATA[🐛 互換性維持用の処理がうまく動いていなかったのを修正]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[GhostSpeaker | 🧑‍💻 変数初期化時のdebug!が出力されるように]]></title>
+            <pubDate>Sun, 05 May 2024 16:08:38 GMT</pubDate>
+            <description><![CDATA[🧑‍💻 変数初期化時のdebug!が出力されるように]]></description>
+            <content:encoded><![CDATA[🧑‍💻 変数初期化時のdebug!が出力されるように]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[GhostSpeaker | 🐛  vars.yaml読み込み時、過去verに存在しないフィールドのパースに失敗していたのを修正]]></title>
+            <pubDate>Sun, 05 May 2024 16:07:34 GMT</pubDate>
+            <description><![CDATA[🐛  vars.yaml読み込み時、過去verに存在しないフィールドのパースに失敗していたのを修正]]></description>
+            <content:encoded><![CDATA[🐛  vars.yaml読み込み時、過去verに存在しないフィールドのパースに失敗していたのを修正]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[GhostSpeaker | 🔖  v1.0.0]]></title>
             <pubDate>Sun, 05 May 2024 14:23:26 GMT</pubDate>
             <description><![CDATA[🔖  v1.0.0]]></description>
@@ -919,51 +985,6 @@ Signed-off-by: dependabot[bot] <support@github.com>]]></content:encoded>
             <pubDate>Thu, 18 Jan 2024 06:07:13 GMT</pubDate>
             <description><![CDATA[update: workflow]]></description>
             <content:encoded><![CDATA[update: workflow]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostSpeaker | manual fix]]></title>
-            <pubDate>Thu, 28 Dec 2023 05:43:44 GMT</pubDate>
-            <description><![CDATA[manual fix]]></description>
-            <content:encoded><![CDATA[manual fix]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostSpeaker | clippy fix]]></title>
-            <pubDate>Wed, 27 Dec 2023 15:34:20 GMT</pubDate>
-            <description><![CDATA[clippy fix]]></description>
-            <content:encoded><![CDATA[clippy fix]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostSpeaker | update: 終了時に読み上げの終了を待つかどうかを切り替えられるように]]></title>
-            <pubDate>Sun, 24 Dec 2023 04:29:36 GMT</pubDate>
-            <description><![CDATA[update: 終了時に読み上げの終了を待つかどうかを切り替えられるように]]></description>
-            <content:encoded><![CDATA[update: 終了時に読み上げの終了を待つかどうかを切り替えられるように]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostSpeaker | Update README.md]]></title>
-            <pubDate>Fri, 22 Dec 2023 13:56:45 GMT</pubDate>
-            <description><![CDATA[Update README.md]]></description>
-            <content:encoded><![CDATA[Update README.md]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostSpeaker | update: \p[2]以降の声質を指定可能&デフォルトで無しに]]></title>
-            <pubDate>Thu, 21 Dec 2023 12:17:04 GMT</pubDate>
-            <description><![CDATA[update: \p[2]以降の声質を指定可能&デフォルトで無しに]]></description>
-            <content:encoded><![CDATA[update: \p[2]以降の声質を指定可能&デフォルトで無しに]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostSpeaker | fix: さくらスクリプト消去時に周辺の数字が消えていたのを修正
-Bouyomiで起きてた問題と同原因]]></title>
-            <pubDate>Mon, 18 Dec 2023 09:39:41 GMT</pubDate>
-            <description><![CDATA[fix: さくらスクリプト消去時に周辺の数字が消えていたのを修正
-Bouyomiで起きてた問題と同原因]]></description>
-            <content:encoded><![CDATA[fix: さくらスクリプト消去時に周辺の数字が消えていたのを修正
-Bouyomiで起きてた問題と同原因]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[GhostSpeaker | add: install.txt]]></title>
-            <pubDate>Sat, 16 Dec 2023 06:37:58 GMT</pubDate>
-            <description><![CDATA[add: install.txt]]></description>
-            <content:encoded><![CDATA[add: install.txt]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Ukaing | update: 自動更新機能を追加]]></title>
