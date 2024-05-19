@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Sat, 18 May 2024 00:18:15 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 19 May 2024 00:20:07 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -14,6 +14,24 @@
             <link></link>
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
+        <item>
+            <title><![CDATA[Haine | 💬 スカート反応時の頬染めを無くした]]></title>
+            <pubDate>Sat, 18 May 2024 17:45:38 GMT</pubDate>
+            <description><![CDATA[💬 スカート反応時の頬染めを無くした]]></description>
+            <content:encoded><![CDATA[💬 スカート反応時の頬染めを無くした]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 💥 Talk構造体にcallbackを追加
+
+- ランダムトークをRandamTalk構造体で管理するように]]></title>
+            <pubDate>Sat, 18 May 2024 17:43:26 GMT</pubDate>
+            <description><![CDATA[💥 Talk構造体にcallbackを追加
+
+- ランダムトークをRandamTalk構造体で管理するように]]></description>
+            <content:encoded><![CDATA[💥 Talk構造体にcallbackを追加
+
+- ランダムトークをRandamTalk構造体で管理するように]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Haine | ♻️ BlinkTransitionのconstを削除]]></title>
             <pubDate>Sat, 04 May 2024 14:52:02 GMT</pubDate>
@@ -163,30 +181,6 @@ volatility.touch_countとarousing_hit_countも削除]]></description>
             <content:encoded><![CDATA[first_and_othersをphased_talksで置き換え
 
 volatility.touch_countとarousing_hit_countも削除]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | トーク修正]]></title>
-            <pubDate>Sat, 27 Apr 2024 06:06:57 GMT</pubDate>
-            <description><![CDATA[トーク修正]]></description>
-            <content:encoded><![CDATA[トーク修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | aroused状態のtキー反応がおかしかったのを修正]]></title>
-            <pubDate>Sat, 27 Apr 2024 06:06:57 GMT</pubDate>
-            <description><![CDATA[aroused状態のtキー反応がおかしかったのを修正]]></description>
-            <content:encoded><![CDATA[aroused状態のtキー反応がおかしかったのを修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | refactor new_mouse_response()]]></title>
-            <pubDate>Sat, 27 Apr 2024 06:06:57 GMT</pubDate>
-            <description><![CDATA[refactor new_mouse_response()]]></description>
-            <content:encoded><![CDATA[refactor new_mouse_response()]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | mouse_dialog()の各パーツ処理を関数に分割]]></title>
-            <pubDate>Sat, 27 Apr 2024 06:06:57 GMT</pubDate>
-            <description><![CDATA[mouse_dialog()の各パーツ処理を関数に分割]]></description>
-            <content:encoded><![CDATA[mouse_dialog()の各パーツ処理を関数に分割]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
