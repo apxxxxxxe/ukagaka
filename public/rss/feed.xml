@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Mon, 20 May 2024 00:19:07 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 21 May 2024 00:19:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -14,6 +14,42 @@
             <link></link>
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
+        <item>
+            <title><![CDATA[Haine | ✨ 累計ランダムトーク数をカウントするように
+
+LoreIntroductionは10回トークしたら開放]]></title>
+            <pubDate>Mon, 20 May 2024 15:11:05 GMT</pubDate>
+            <description><![CDATA[✨ 累計ランダムトーク数をカウントするように
+
+LoreIntroductionは10回トークしたら開放]]></description>
+            <content:encoded><![CDATA[✨ 累計ランダムトーク数をカウントするように
+
+LoreIntroductionは10回トークしたら開放]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 💬 \0のセリフが\1に流れていたのを修正]]></title>
+            <pubDate>Mon, 20 May 2024 12:42:09 GMT</pubDate>
+            <description><![CDATA[💬 \0のセリフが\1に流れていたのを修正]]></description>
+            <content:encoded><![CDATA[💬 \0のセリフが\1に流れていたのを修正]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 🐛 初めて突き飛ばすときにキャンセルしてもフラグが立っていたのを修正]]></title>
+            <pubDate>Mon, 20 May 2024 12:39:32 GMT</pubDate>
+            <description><![CDATA[🐛 初めて突き飛ばすときにキャンセルしてもフラグが立っていたのを修正]]></description>
+            <content:encoded><![CDATA[🐛 初めて突き飛ばすときにキャンセルしてもフラグが立っていたのを修正]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | ✨ フラグ管理を追加]]></title>
+            <pubDate>Mon, 20 May 2024 10:02:31 GMT</pubDate>
+            <description><![CDATA[✨ フラグ管理を追加]]></description>
+            <content:encoded><![CDATA[✨ フラグ管理を追加]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 💬 改行が正しくなかったのを修正]]></title>
+            <pubDate>Mon, 20 May 2024 10:01:21 GMT</pubDate>
+            <description><![CDATA[💬 改行が正しくなかったのを修正]]></description>
+            <content:encoded><![CDATA[💬 改行が正しくなかったのを修正]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Haine | 👷 ビルドスクリプトを変更]]></title>
             <pubDate>Sun, 19 May 2024 10:36:47 GMT</pubDate>
@@ -103,66 +139,6 @@
             <pubDate>Mon, 29 Apr 2024 15:51:35 GMT</pubDate>
             <description><![CDATA[💬 トーク推敲]]></description>
             <content:encoded><![CDATA[💬 トーク推敲]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 🔥 不要な記述を削除]]></title>
-            <pubDate>Sun, 28 Apr 2024 15:05:31 GMT</pubDate>
-            <description><![CDATA[🔥 不要な記述を削除]]></description>
-            <content:encoded><![CDATA[🔥 不要な記述を削除]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 🐛 セーブデータ読み込み時にtalk_collectionに未定義のトークIDが残る可能性があったのを修正]]></title>
-            <pubDate>Sat, 27 Apr 2024 17:08:46 GMT</pubDate>
-            <description><![CDATA[🐛 セーブデータ読み込み時にtalk_collectionに未定義のトークIDが残る可能性があったのを修正]]></description>
-            <content:encoded><![CDATA[🐛 セーブデータ読み込み時にtalk_collectionに未定義のトークIDが残る可能性があったのを修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 🚸 メニュー表示時にゲージ表示後に閉じるボタンが表示されていたのを修正]]></title>
-            <pubDate>Sat, 27 Apr 2024 17:08:46 GMT</pubDate>
-            <description><![CDATA[🚸 メニュー表示時にゲージ表示後に閉じるボタンが表示されていたのを修正]]></description>
-            <content:encoded><![CDATA[🚸 メニュー表示時にゲージ表示後に閉じるボタンが表示されていたのを修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | ⚰️ 不要なuseを削除]]></title>
-            <pubDate>Sat, 27 Apr 2024 17:08:46 GMT</pubDate>
-            <description><![CDATA[⚰️ 不要なuseを削除]]></description>
-            <content:encoded><![CDATA[⚰️ 不要なuseを削除]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 💬 過去に没にしたトークからいくつかサルベージした]]></title>
-            <pubDate>Sat, 27 Apr 2024 06:06:57 GMT</pubDate>
-            <description><![CDATA[💬 過去に没にしたトークからいくつかサルベージした]]></description>
-            <content:encoded><![CDATA[💬 過去に没にしたトークからいくつかサルベージした]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 🚸 アンカートーク展開時の演出を変更]]></title>
-            <pubDate>Sat, 27 Apr 2024 06:06:57 GMT</pubDate>
-            <description><![CDATA[🚸 アンカートーク展開時の演出を変更]]></description>
-            <content:encoded><![CDATA[🚸 アンカートーク展開時の演出を変更]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 🐛 アンカートークの\Cが効いていなかったのを修正]]></title>
-            <pubDate>Sat, 27 Apr 2024 06:06:57 GMT</pubDate>
-            <description><![CDATA[🐛 アンカートークの\Cが効いていなかったのを修正]]></description>
-            <content:encoded><![CDATA[🐛 アンカートークの\Cが効いていなかったのを修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | トーク修正]]></title>
-            <pubDate>Sat, 27 Apr 2024 06:06:57 GMT</pubDate>
-            <description><![CDATA[トーク修正]]></description>
-            <content:encoded><![CDATA[トーク修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | reset_if_timeover]]></title>
-            <pubDate>Sat, 27 Apr 2024 06:06:57 GMT</pubDate>
-            <description><![CDATA[reset_if_timeover]]></description>
-            <content:encoded><![CDATA[reset_if_timeover]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | BOOK_TOPICSを追加]]></title>
-            <pubDate>Sat, 27 Apr 2024 06:06:57 GMT</pubDate>
-            <description><![CDATA[BOOK_TOPICSを追加]]></description>
-            <content:encoded><![CDATA[BOOK_TOPICSを追加]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
