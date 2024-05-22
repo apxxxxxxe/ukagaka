@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Wed, 22 May 2024 00:18:12 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 22 May 2024 13:15:43 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -18,6 +18,8 @@
             <title><![CDATA[Haine | ✨ 累計ランダムトーク数をカウントするように
 
 LoreIntroductionは10回トークしたら開放]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Mon, 20 May 2024 15:11:05 GMT</pubDate>
             <description><![CDATA[✨ 累計ランダムトーク数をカウントするように
 
@@ -28,42 +30,56 @@ LoreIntroductionは10回トークしたら開放]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | 💬 \0のセリフが\1に流れていたのを修正]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Mon, 20 May 2024 12:42:09 GMT</pubDate>
             <description><![CDATA[💬 \0のセリフが\1に流れていたのを修正]]></description>
             <content:encoded><![CDATA[💬 \0のセリフが\1に流れていたのを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | 🐛 初めて突き飛ばすときにキャンセルしてもフラグが立っていたのを修正]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Mon, 20 May 2024 12:39:32 GMT</pubDate>
             <description><![CDATA[🐛 初めて突き飛ばすときにキャンセルしてもフラグが立っていたのを修正]]></description>
             <content:encoded><![CDATA[🐛 初めて突き飛ばすときにキャンセルしてもフラグが立っていたのを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | ✨ フラグ管理を追加]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Mon, 20 May 2024 10:02:31 GMT</pubDate>
             <description><![CDATA[✨ フラグ管理を追加]]></description>
             <content:encoded><![CDATA[✨ フラグ管理を追加]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | 💬 改行が正しくなかったのを修正]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Mon, 20 May 2024 10:01:21 GMT</pubDate>
             <description><![CDATA[💬 改行が正しくなかったのを修正]]></description>
             <content:encoded><![CDATA[💬 改行が正しくなかったのを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | 👷 ビルドスクリプトを変更]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Sun, 19 May 2024 10:36:47 GMT</pubDate>
             <description><![CDATA[👷 ビルドスクリプトを変更]]></description>
             <content:encoded><![CDATA[👷 ビルドスクリプトを変更]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | 🐛 GHAの文法ミスを修正]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Sun, 19 May 2024 00:59:50 GMT</pubDate>
             <description><![CDATA[🐛 GHAの文法ミスを修正]]></description>
             <content:encoded><![CDATA[🐛 GHAの文法ミスを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | 💬 スカート反応時の頬染めを無くした]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Sat, 18 May 2024 17:45:38 GMT</pubDate>
             <description><![CDATA[💬 スカート反応時の頬染めを無くした]]></description>
             <content:encoded><![CDATA[💬 スカート反応時の頬染めを無くした]]></content:encoded>
@@ -72,6 +88,8 @@ LoreIntroductionは10回トークしたら開放]]></content:encoded>
             <title><![CDATA[Haine | 💥 Talk構造体にcallbackを追加
 
 - ランダムトークをRandamTalk構造体で管理するように]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Sat, 18 May 2024 17:43:26 GMT</pubDate>
             <description><![CDATA[💥 Talk構造体にcallbackを追加
 
@@ -82,132 +100,176 @@ LoreIntroductionは10回トークしたら開放]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | ♻️ BlinkTransitionのconstを削除]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Sat, 04 May 2024 14:52:02 GMT</pubDate>
             <description><![CDATA[♻️ BlinkTransitionのconstを削除]]></description>
             <content:encoded><![CDATA[♻️ BlinkTransitionのconstを削除]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | 💬 トーク推敲]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Thu, 02 May 2024 15:43:10 GMT</pubDate>
             <description><![CDATA[💬 トーク推敲]]></description>
             <content:encoded><![CDATA[💬 トーク推敲]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | 🎨 BlinkTransition]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Thu, 02 May 2024 13:19:34 GMT</pubDate>
             <description><![CDATA[🎨 BlinkTransition]]></description>
             <content:encoded><![CDATA[🎨 BlinkTransition]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | ✨ 終了時に特定カテゴリの着せ替えをオフにするように]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Wed, 01 May 2024 12:50:49 GMT</pubDate>
             <description><![CDATA[✨ 終了時に特定カテゴリの着せ替えをオフにするように]]></description>
             <content:encoded><![CDATA[✨ 終了時に特定カテゴリの着せ替えをオフにするように]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | ♻️ まばたき補完処理をBlinkTransition型で管理するように]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Wed, 01 May 2024 12:48:38 GMT</pubDate>
             <description><![CDATA[♻️ まばたき補完処理をBlinkTransition型で管理するように]]></description>
             <content:encoded><![CDATA[♻️ まばたき補完処理をBlinkTransition型で管理するように]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | 🔨 ビルドスクリプトを変更]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Wed, 01 May 2024 12:48:38 GMT</pubDate>
             <description><![CDATA[🔨 ビルドスクリプトを変更]]></description>
             <content:encoded><![CDATA[🔨 ビルドスクリプトを変更]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | 💬 殴りモード時に流血するように]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Tue, 30 Apr 2024 14:31:05 GMT</pubDate>
             <description><![CDATA[💬 殴りモード時に流血するように]]></description>
             <content:encoded><![CDATA[💬 殴りモード時に流血するように]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | 🍱 流血パーツを追加]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Tue, 30 Apr 2024 14:29:31 GMT</pubDate>
             <description><![CDATA[🍱 流血パーツを追加]]></description>
             <content:encoded><![CDATA[🍱 流血パーツを追加]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | ⬆️  surfaces-mixerの更新に対応]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Tue, 30 Apr 2024 13:35:55 GMT</pubDate>
             <description><![CDATA[⬆️  surfaces-mixerの更新に対応]]></description>
             <content:encoded><![CDATA[⬆️  surfaces-mixerの更新に対応]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Haine | 💬 トーク推敲]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
             <pubDate>Mon, 29 Apr 2024 15:51:35 GMT</pubDate>
             <description><![CDATA[💬 トーク推敲]]></description>
             <content:encoded><![CDATA[💬 トーク推敲]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Fri, 24 Feb 2023 12:08:12 GMT</pubDate>
             <description><![CDATA[add: ランダムトーク+1]]></description>
             <content:encoded><![CDATA[add: ランダムトーク+1]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: 単語を追加(+39)]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Thu, 23 Feb 2023 12:35:29 GMT</pubDate>
             <description><![CDATA[add: 単語を追加(+39)]]></description>
             <content:encoded><![CDATA[add: 単語を追加(+39)]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | update: craftman]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Wed, 04 Jan 2023 13:37:36 GMT</pubDate>
             <description><![CDATA[update: craftman]]></description>
             <content:encoded><![CDATA[update: craftman]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | update: descript.txt]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Tue, 27 Dec 2022 23:07:00 GMT</pubDate>
             <description><![CDATA[update: descript.txt]]></description>
             <content:encoded><![CDATA[update: descript.txt]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | rename: txt-^>dic]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Sun, 11 Dec 2022 06:16:36 GMT</pubDate>
             <description><![CDATA[rename: txt-^>dic]]></description>
             <content:encoded><![CDATA[rename: txt-^>dic]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Fri, 18 Nov 2022 13:22:56 GMT</pubDate>
             <description><![CDATA[add: ランダムトーク+1]]></description>
             <content:encoded><![CDATA[add: ランダムトーク+1]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | update: 羊が喋るときのサーフェスを変更]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Sun, 30 Oct 2022 11:54:42 GMT</pubDate>
             <description><![CDATA[update: 羊が喋るときのサーフェスを変更]]></description>
             <content:encoded><![CDATA[update: 羊が喋るときのサーフェスを変更]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | update: yaya.dll]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Sun, 30 Oct 2022 11:53:19 GMT</pubDate>
             <description><![CDATA[update: yaya.dll]]></description>
             <content:encoded><![CDATA[update: yaya.dll]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+3]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Mon, 24 Oct 2022 03:08:18 GMT</pubDate>
             <description><![CDATA[add: ランダムトーク+3]]></description>
             <content:encoded><![CDATA[add: ランダムトーク+3]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | fix: さくらスクリプトの記述が壊れていたのを修正]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Fri, 22 Jul 2022 01:10:57 GMT</pubDate>
             <description><![CDATA[fix: さくらスクリプトの記述が壊れていたのを修正]]></description>
             <content:encoded><![CDATA[fix: さくらスクリプトの記述が壊れていたのを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | update: readme.md]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Mon, 04 Jul 2022 12:13:50 GMT</pubDate>
             <description><![CDATA[update: readme.md]]></description>
             <content:encoded><![CDATA[update: readme.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | Update readme.md]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Sun, 26 Jun 2022 22:57:33 GMT</pubDate>
             <description><![CDATA[Update readme.md]]></description>
             <content:encoded><![CDATA[Update readme.md]]></content:encoded>
@@ -216,6 +278,8 @@ LoreIntroductionは10回トークしたら開放]]></content:encoded>
             <title><![CDATA[Youto | Revert "update: homeurlを微修正"
 
 This reverts commit e126ba9d229c8501cec4c6927d38e6acda9f75b1.]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Fri, 24 Jun 2022 20:13:24 GMT</pubDate>
             <description><![CDATA[Revert "update: homeurlを微修正"
 
@@ -226,294 +290,392 @@ This reverts commit e126ba9d229c8501cec4c6927d38e6acda9f75b1.]]></content:encode
         </item>
         <item>
             <title><![CDATA[Youto | update: homeurlを微修正]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Fri, 24 Jun 2022 12:11:53 GMT</pubDate>
             <description><![CDATA[update: homeurlを微修正]]></description>
             <content:encoded><![CDATA[update: homeurlを微修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | fix: 終了トーク後に終了しない不具合を修正]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Mon, 20 Jun 2022 14:42:32 GMT</pubDate>
             <description><![CDATA[fix: 終了トーク後に終了しない不具合を修正]]></description>
             <content:encoded><![CDATA[fix: 終了トーク後に終了しない不具合を修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: Web拍手機能を追加]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Sat, 18 Jun 2022 12:53:55 GMT</pubDate>
             <description><![CDATA[add: Web拍手機能を追加]]></description>
             <content:encoded><![CDATA[add: Web拍手機能を追加]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | update: yaya.dll]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Sat, 18 Jun 2022 12:53:15 GMT</pubDate>
             <description><![CDATA[update: yaya.dll]]></description>
             <content:encoded><![CDATA[update: yaya.dll]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | Update readme.md]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Thu, 16 Jun 2022 09:41:01 GMT</pubDate>
             <description><![CDATA[Update readme.md]]></description>
             <content:encoded><![CDATA[Update readme.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | Create readme.md]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Thu, 16 Jun 2022 09:37:41 GMT</pubDate>
             <description><![CDATA[Create readme.md]]></description>
             <content:encoded><![CDATA[Create readme.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | update: yaya.dll]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Thu, 16 Jun 2022 09:32:26 GMT</pubDate>
             <description><![CDATA[update: yaya.dll]]></description>
             <content:encoded><![CDATA[update: yaya.dll]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | update: workflow]]></title>
+            <link>https://github.com/apxxxxxxe/Youto</link>
+            <guid>https://github.com/apxxxxxxe/Youto</guid>
             <pubDate>Mon, 13 Jun 2022 09:06:05 GMT</pubDate>
             <description><![CDATA[update: workflow]]></description>
             <content:encoded><![CDATA[update: workflow]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | ゴミを除去]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Sat, 03 Feb 2024 17:22:09 GMT</pubDate>
             <description><![CDATA[ゴミを除去]]></description>
             <content:encoded><![CDATA[ゴミを除去]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | 白ソファの色味を調整]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Sat, 03 Feb 2024 17:18:23 GMT</pubDate>
             <description><![CDATA[白ソファの色味を調整]]></description>
             <content:encoded><![CDATA[白ソファの色味を調整]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | 眉を調整]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Wed, 31 Jan 2024 16:32:13 GMT</pubDate>
             <description><![CDATA[眉を調整]]></description>
             <content:encoded><![CDATA[眉を調整]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | 肌を修正]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Mon, 29 Jan 2024 09:34:45 GMT</pubDate>
             <description><![CDATA[肌を修正]]></description>
             <content:encoded><![CDATA[肌を修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | タイツを不透明にして減色]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Mon, 29 Jan 2024 09:34:11 GMT</pubDate>
             <description><![CDATA[タイツを不透明にして減色]]></description>
             <content:encoded><![CDATA[タイツを不透明にして減色]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | 腕のドット抜けを修正]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Sat, 27 Jan 2024 06:52:55 GMT</pubDate>
             <description><![CDATA[腕のドット抜けを修正]]></description>
             <content:encoded><![CDATA[腕のドット抜けを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | 存在しない画像をaddidしていたのを修正]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Fri, 26 Jan 2024 12:57:08 GMT</pubDate>
             <description><![CDATA[存在しない画像をaddidしていたのを修正]]></description>
             <content:encoded><![CDATA[存在しない画像をaddidしていたのを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | 画像にゴミが入っていたのを修正]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Fri, 26 Jan 2024 11:28:06 GMT</pubDate>
             <description><![CDATA[画像にゴミが入っていたのを修正]]></description>
             <content:encoded><![CDATA[画像にゴミが入っていたのを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Fri, 26 Jan 2024 11:26:51 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | 首元きせかえを1つ追加]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Fri, 26 Jan 2024 11:23:02 GMT</pubDate>
             <description><![CDATA[首元きせかえを1つ追加]]></description>
             <content:encoded><![CDATA[首元きせかえを1つ追加]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | 切り時(前髪)を調整]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Fri, 26 Jan 2024 11:23:02 GMT</pubDate>
             <description><![CDATA[切り時(前髪)を調整]]></description>
             <content:encoded><![CDATA[切り時(前髪)を調整]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | ソファ白の色味を調整]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Fri, 26 Jan 2024 11:23:02 GMT</pubDate>
             <description><![CDATA[ソファ白の色味を調整]]></description>
             <content:encoded><![CDATA[ソファ白の色味を調整]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | 袖から腕がはみ出ていたのを修正]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Fri, 26 Jan 2024 11:23:02 GMT</pubDate>
             <description><![CDATA[袖から腕がはみ出ていたのを修正]]></description>
             <content:encoded><![CDATA[袖から腕がはみ出ていたのを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | デフォルト着せ替え構成を変更]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Fri, 26 Jan 2024 11:23:02 GMT</pubDate>
             <description><![CDATA[デフォルト着せ替え構成を変更]]></description>
             <content:encoded><![CDATA[デフォルト着せ替え構成を変更]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | ソファ3種(椅子)を追加]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Fri, 26 Jan 2024 11:23:02 GMT</pubDate>
             <description><![CDATA[ソファ3種(椅子)を追加]]></description>
             <content:encoded><![CDATA[ソファ3種(椅子)を追加]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | 肌を調整]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Thu, 25 Jan 2024 14:35:25 GMT</pubDate>
             <description><![CDATA[肌を調整]]></description>
             <content:encoded><![CDATA[肌を調整]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | 切り時(前髪)を追加]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Thu, 25 Jan 2024 09:28:27 GMT</pubDate>
             <description><![CDATA[切り時(前髪)を追加]]></description>
             <content:encoded><![CDATA[切り時(前髪)を追加]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | ナチュラル(前髪)を調整]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Wed, 24 Jan 2024 16:19:03 GMT</pubDate>
             <description><![CDATA[ナチュラル(前髪)を調整]]></description>
             <content:encoded><![CDATA[ナチュラル(前髪)を調整]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | ふさふさ長を追加]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Wed, 24 Jan 2024 13:31:22 GMT</pubDate>
             <description><![CDATA[ふさふさ長を追加]]></description>
             <content:encoded><![CDATA[ふさふさ長を追加]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | 肌色を減色して調整]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Tue, 23 Jan 2024 01:53:26 GMT</pubDate>
             <description><![CDATA[肌色を減色して調整]]></description>
             <content:encoded><![CDATA[肌色を減色して調整]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | 顔の輪郭を調整]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Thu, 18 Jan 2024 12:20:53 GMT</pubDate>
             <description><![CDATA[顔の輪郭を調整]]></description>
             <content:encoded><![CDATA[顔の輪郭を調整]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | workflowsが重複して実行されないように]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Thu, 18 Jan 2024 12:08:05 GMT</pubDate>
             <description><![CDATA[workflowsが重複して実行されないように]]></description>
             <content:encoded><![CDATA[workflowsが重複して実行されないように]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | ふさふさ(髪+)から光沢を除去]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Thu, 18 Jan 2024 12:05:27 GMT</pubDate>
             <description><![CDATA[ふさふさ(髪+)から光沢を除去]]></description>
             <content:encoded><![CDATA[ふさふさ(髪+)から光沢を除去]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | 耳の位置を調整]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Thu, 18 Jan 2024 12:04:25 GMT</pubDate>
             <description><![CDATA[耳の位置を調整]]></description>
             <content:encoded><![CDATA[耳の位置を調整]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | update: 髪の微調整]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Sun, 26 Nov 2023 00:19:23 GMT</pubDate>
             <description><![CDATA[update: 髪の微調整]]></description>
             <content:encoded><![CDATA[update: 髪の微調整]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | update: 肌のコントラストを下げた]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Sat, 25 Nov 2023 15:16:44 GMT</pubDate>
             <description><![CDATA[update: 肌のコントラストを下げた]]></description>
             <content:encoded><![CDATA[update: 肌のコントラストを下げた]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | update: 着せ替えメニューを手動で定義するように: 一部着せ替えを非表示]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
             <pubDate>Sat, 25 Nov 2023 15:16:26 GMT</pubDate>
             <description><![CDATA[update: 着せ替えメニューを手動で定義するように: 一部着せ替えを非表示]]></description>
             <content:encoded><![CDATA[update: 着せ替えメニューを手動で定義するように: 一部着せ替えを非表示]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | number]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Sun, 07 Apr 2024 09:54:21 GMT</pubDate>
             <description><![CDATA[number]]></description>
             <content:encoded><![CDATA[number]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | sstpmessageと本文が被らないように描画範囲を調整]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Sun, 17 Mar 2024 01:47:32 GMT</pubDate>
             <description><![CDATA[sstpmessageと本文が被らないように描画範囲を調整]]></description>
             <content:encoded><![CDATA[sstpmessageと本文が被らないように描画範囲を調整]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | フォントサイズとsstpマーカーの座標を修正]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Sat, 06 Jan 2024 08:49:26 GMT</pubDate>
             <description><![CDATA[フォントサイズとsstpマーカーの座標を修正]]></description>
             <content:encoded><![CDATA[フォントサイズとsstpマーカーの座標を修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | Update readme.md]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Wed, 10 Aug 2022 12:14:52 GMT</pubDate>
             <description><![CDATA[Update readme.md]]></description>
             <content:encoded><![CDATA[Update readme.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | Update readme.md]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Wed, 10 Aug 2022 11:06:45 GMT</pubDate>
             <description><![CDATA[Update readme.md]]></description>
             <content:encoded><![CDATA[Update readme.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | Update readme.md]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Sun, 26 Jun 2022 22:54:34 GMT</pubDate>
             <description><![CDATA[Update readme.md]]></description>
             <content:encoded><![CDATA[Update readme.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | update: homeurlを微修正]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Fri, 24 Jun 2022 20:15:19 GMT</pubDate>
             <description><![CDATA[update: homeurlを微修正]]></description>
             <content:encoded><![CDATA[update: homeurlを微修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | update: homeurlを変更]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Fri, 24 Jun 2022 12:13:34 GMT</pubDate>
             <description><![CDATA[update: homeurlを変更]]></description>
             <content:encoded><![CDATA[update: homeurlを変更]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | update: サーフェスの順番を変更]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Mon, 30 May 2022 03:36:02 GMT</pubDate>
             <description><![CDATA[update: サーフェスの順番を変更]]></description>
             <content:encoded><![CDATA[update: サーフェスの順番を変更]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | Update readme.md]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Mon, 23 May 2022 13:32:47 GMT</pubDate>
             <description><![CDATA[Update readme.md]]></description>
             <content:encoded><![CDATA[Update readme.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | Create readme.md]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Mon, 23 May 2022 13:31:51 GMT</pubDate>
             <description><![CDATA[Create readme.md]]></description>
             <content:encoded><![CDATA[Create readme.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | update: kero側でもsakura側のサーフェスを使えるように]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Sat, 14 May 2022 07:39:08 GMT</pubDate>
             <description><![CDATA[update: kero側でもsakura側のサーフェスを使えるように]]></description>
             <content:encoded><![CDATA[update: kero側でもsakura側のサーフェスを使えるように]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | update: フォントサイズを大きくした]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Mon, 25 Apr 2022 13:33:25 GMT</pubDate>
             <description><![CDATA[update: フォントサイズを大きくした]]></description>
             <content:encoded><![CDATA[update: フォントサイズを大きくした]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | update: workflowsを更新]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Sat, 23 Apr 2022 14:01:09 GMT</pubDate>
             <description><![CDATA[update: workflowsを更新]]></description>
             <content:encoded><![CDATA[update: workflowsを更新]]></content:encoded>
@@ -522,6 +684,8 @@ This reverts commit e126ba9d229c8501cec4c6927d38e6acda9f75b1.]]></content:encode
             <title><![CDATA[kirinokougai | Update descript.txt
 
 fix homeurl]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Thu, 21 Apr 2022 01:39:00 GMT</pubDate>
             <description><![CDATA[Update descript.txt
 
@@ -532,150 +696,200 @@ fix homeurl]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | update: フォントを変更]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Sun, 30 Jan 2022 13:05:12 GMT</pubDate>
             <description><![CDATA[update: フォントを変更]]></description>
             <content:encoded><![CDATA[update: フォントを変更]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | add: license.txt]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Tue, 25 Jan 2022 07:37:03 GMT</pubDate>
             <description><![CDATA[add: license.txt]]></description>
             <content:encoded><![CDATA[add: license.txt]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | フォントを変更]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Tue, 25 Jan 2022 06:53:42 GMT</pubDate>
             <description><![CDATA[フォントを変更]]></description>
             <content:encoded><![CDATA[フォントを変更]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | フォントを変更・同梱]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Wed, 05 Jan 2022 23:44:49 GMT</pubDate>
             <description><![CDATA[フォントを変更・同梱]]></description>
             <content:encoded><![CDATA[フォントを変更・同梱]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | homeurlを追加]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Fri, 24 Dec 2021 11:12:15 GMT</pubDate>
             <description><![CDATA[homeurlを追加]]></description>
             <content:encoded><![CDATA[homeurlを追加]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | 作者urlを追加]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Thu, 23 Dec 2021 13:03:11 GMT</pubDate>
             <description><![CDATA[作者urlを追加]]></description>
             <content:encoded><![CDATA[作者urlを追加]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | フォルダ名を変更]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Thu, 23 Dec 2021 12:54:04 GMT</pubDate>
             <description><![CDATA[フォルダ名を変更]]></description>
             <content:encoded><![CDATA[フォルダ名を変更]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | テキストをUTF-8に変更]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Thu, 23 Dec 2021 12:51:44 GMT</pubDate>
             <description><![CDATA[テキストをUTF-8に変更]]></description>
             <content:encoded><![CDATA[テキストをUTF-8に変更]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | first commit]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
             <pubDate>Thu, 23 Dec 2021 12:48:32 GMT</pubDate>
             <description><![CDATA[first commit]]></description>
             <content:encoded><![CDATA[first commit]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Tue, 07 May 2024 13:41:46 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | Update readme.txt]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Mon, 06 May 2024 06:16:56 GMT</pubDate>
             <description><![CDATA[Update readme.txt]]></description>
             <content:encoded><![CDATA[Update readme.txt]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | Update readme.txt]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Mon, 06 May 2024 06:16:07 GMT</pubDate>
             <description><![CDATA[Update readme.txt]]></description>
             <content:encoded><![CDATA[Update readme.txt]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Mon, 06 May 2024 06:15:33 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | 🔖  v1.0.2]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Mon, 06 May 2024 05:58:11 GMT</pubDate>
             <description><![CDATA[🔖  v1.0.2]]></description>
             <content:encoded><![CDATA[🔖  v1.0.2]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | 🐛 互換性維持処理の発生条件を修正]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Mon, 06 May 2024 05:56:19 GMT</pubDate>
             <description><![CDATA[🐛 互換性維持処理の発生条件を修正]]></description>
             <content:encoded><![CDATA[🐛 互換性維持処理の発生条件を修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | 🐛 GhostSpeaker由来のスクリプトが読み上げられることがあったのを修正]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Mon, 06 May 2024 05:35:38 GMT</pubDate>
             <description><![CDATA[🐛 GhostSpeaker由来のスクリプトが読み上げられることがあったのを修正]]></description>
             <content:encoded><![CDATA[🐛 GhostSpeaker由来のスクリプトが読み上げられることがあったのを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | 🩹  v1.0.xで互換性維持処理が動くように]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Mon, 06 May 2024 00:05:48 GMT</pubDate>
             <description><![CDATA[🩹  v1.0.xで互換性維持処理が動くように]]></description>
             <content:encoded><![CDATA[🩹  v1.0.xで互換性維持処理が動くように]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | 🔖  v1.0.1]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Sun, 05 May 2024 16:32:21 GMT</pubDate>
             <description><![CDATA[🔖  v1.0.1]]></description>
             <content:encoded><![CDATA[🔖  v1.0.1]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | 🐛 互換性維持用の処理がうまく動いていなかったのを修正]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Sun, 05 May 2024 16:21:42 GMT</pubDate>
             <description><![CDATA[🐛 互換性維持用の処理がうまく動いていなかったのを修正]]></description>
             <content:encoded><![CDATA[🐛 互換性維持用の処理がうまく動いていなかったのを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | 🧑‍💻 変数初期化時のdebug!が出力されるように]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Sun, 05 May 2024 16:08:38 GMT</pubDate>
             <description><![CDATA[🧑‍💻 変数初期化時のdebug!が出力されるように]]></description>
             <content:encoded><![CDATA[🧑‍💻 変数初期化時のdebug!が出力されるように]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | 🐛  vars.yaml読み込み時、過去verに存在しないフィールドのパースに失敗していたのを修正]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Sun, 05 May 2024 16:07:34 GMT</pubDate>
             <description><![CDATA[🐛  vars.yaml読み込み時、過去verに存在しないフィールドのパースに失敗していたのを修正]]></description>
             <content:encoded><![CDATA[🐛  vars.yaml読み込み時、過去verに存在しないフィールドのパースに失敗していたのを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | 🔖  v1.0.0]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Sun, 05 May 2024 14:23:26 GMT</pubDate>
             <description><![CDATA[🔖  v1.0.0]]></description>
             <content:encoded><![CDATA[🔖  v1.0.0]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | ♻️  dummy -> no_voice]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Sun, 05 May 2024 14:22:35 GMT</pubDate>
             <description><![CDATA[♻️  dummy -> no_voice]]></description>
             <content:encoded><![CDATA[♻️  dummy -> no_voice]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | ✨ バージョンアップ時に1度だけ実行する処理を追加]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Sun, 05 May 2024 14:19:53 GMT</pubDate>
             <description><![CDATA[✨ バージョンアップ時に1度だけ実行する処理を追加]]></description>
             <content:encoded><![CDATA[✨ バージョンアップ時に1度だけ実行する処理を追加]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostSpeaker | 💥 InitialVoiceを追加: 声質未設定時に読み上げる声質を選択可能に]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Sun, 05 May 2024 14:16:12 GMT</pubDate>
             <description><![CDATA[💥 InitialVoiceを追加: 声質未設定時に読み上げる声質を選択可能に]]></description>
             <content:encoded><![CDATA[💥 InitialVoiceを追加: 声質未設定時に読み上げる声質を選択可能に]]></content:encoded>
@@ -694,6 +908,8 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] <support@github.com>]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Tue, 05 Mar 2024 02:12:38 GMT</pubDate>
             <description><![CDATA[build(deps): bump tracing from 0.1.39 to 0.1.40
 
@@ -736,6 +952,8 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] <support@github.com>]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Tue, 05 Mar 2024 02:12:26 GMT</pubDate>
             <description><![CDATA[build(deps): bump unsafe-libyaml from 0.2.9 to 0.2.10
 
@@ -778,6 +996,8 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] <support@github.com>]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Tue, 05 Mar 2024 02:12:16 GMT</pubDate>
             <description><![CDATA[build(deps): bump openssl from 0.10.57 to 0.10.64
 
@@ -821,6 +1041,8 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] <support@github.com>]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Tue, 05 Mar 2024 02:11:34 GMT</pubDate>
             <description><![CDATA[build(deps): bump h2 from 0.3.21 to 0.3.24
 
@@ -865,6 +1087,8 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] <support@github.com>]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Tue, 05 Mar 2024 02:10:21 GMT</pubDate>
             <description><![CDATA[build(deps): bump shlex from 1.2.0 to 1.3.0
 
@@ -908,6 +1132,8 @@ updated-dependencies:
 ...
 
 Signed-off-by: dependabot[bot] <support@github.com>]]></title>
+            <link>https://github.com/apxxxxxxe/GhostSpeaker</link>
+            <guid>https://github.com/apxxxxxxe/GhostSpeaker</guid>
             <pubDate>Tue, 05 Mar 2024 02:09:07 GMT</pubDate>
             <description><![CDATA[build(deps): bump mio from 0.8.8 to 0.8.11
 
@@ -940,6 +1166,8 @@ Signed-off-by: dependabot[bot] <support@github.com>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Ukaing | update: 自動更新機能を追加]]></title>
+            <link>https://github.com/apxxxxxxe/Ukaing</link>
+            <guid>https://github.com/apxxxxxxe/Ukaing</guid>
             <pubDate>Thu, 30 Nov 2023 18:09:00 GMT</pubDate>
             <description><![CDATA[update: 自動更新機能を追加]]></description>
             <content:encoded><![CDATA[update: 自動更新機能を追加]]></content:encoded>
@@ -947,6 +1175,8 @@ Signed-off-by: dependabot[bot] <support@github.com>]]></content:encoded>
         <item>
             <title><![CDATA[Ukaing | update: urlクレートでcraftmanurlが有効なurlかどうかを判別するように
 無効なurlをボタンに使うとRich Presence全体が表示されなくなるので]]></title>
+            <link>https://github.com/apxxxxxxe/Ukaing</link>
+            <guid>https://github.com/apxxxxxxe/Ukaing</guid>
             <pubDate>Thu, 30 Nov 2023 16:32:53 GMT</pubDate>
             <description><![CDATA[update: urlクレートでcraftmanurlが有効なurlかどうかを判別するように
 無効なurlをボタンに使うとRich Presence全体が表示されなくなるので]]></description>
@@ -955,126 +1185,168 @@ Signed-off-by: dependabot[bot] <support@github.com>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Ukaing | fix: Discordを再起動した場合に意図しない挙動をしていたのを修正]]></title>
+            <link>https://github.com/apxxxxxxe/Ukaing</link>
+            <guid>https://github.com/apxxxxxxe/Ukaing</guid>
             <pubDate>Mon, 06 Nov 2023 17:54:21 GMT</pubDate>
             <description><![CDATA[fix: Discordを再起動した場合に意図しない挙動をしていたのを修正]]></description>
             <content:encoded><![CDATA[fix: Discordを再起動した場合に意図しない挙動をしていたのを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Ukaing | init]]></title>
+            <link>https://github.com/apxxxxxxe/Ukaing</link>
+            <guid>https://github.com/apxxxxxxe/Ukaing</guid>
             <pubDate>Fri, 27 Oct 2023 18:52:23 GMT</pubDate>
             <description><![CDATA[init]]></description>
             <content:encoded><![CDATA[init]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | update: OnGhostInfoUpdateでshell.datの変更をフックしOnSecondChangeで保存処理を発火するように]]></title>
+            <link>https://github.com/apxxxxxxe/GhostWardrobe</link>
+            <guid>https://github.com/apxxxxxxe/GhostWardrobe</guid>
             <pubDate>Mon, 10 Apr 2023 11:52:22 GMT</pubDate>
             <description><![CDATA[update: OnGhostInfoUpdateでshell.datの変更をフックしOnSecondChangeで保存処理を発火するように]]></description>
             <content:encoded><![CDATA[update: OnGhostInfoUpdateでshell.datの変更をフックしOnSecondChangeで保存処理を発火するように]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | fix: shell.dat更新前に読み取りが行われていたのを修正]]></title>
+            <link>https://github.com/apxxxxxxe/GhostWardrobe</link>
+            <guid>https://github.com/apxxxxxxe/GhostWardrobe</guid>
             <pubDate>Sun, 09 Apr 2023 12:25:24 GMT</pubDate>
             <description><![CDATA[fix: shell.dat更新前に読み取りが行われていたのを修正]]></description>
             <content:encoded><![CDATA[fix: shell.dat更新前に読み取りが行われていたのを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/GhostWardrobe</link>
+            <guid>https://github.com/apxxxxxxe/GhostWardrobe</guid>
             <pubDate>Sun, 09 Apr 2023 07:50:26 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | fix: 不要なサーフェス変更をしないように]]></title>
+            <link>https://github.com/apxxxxxxe/GhostWardrobe</link>
+            <guid>https://github.com/apxxxxxxe/GhostWardrobe</guid>
             <pubDate>Sun, 09 Apr 2023 07:28:35 GMT</pubDate>
             <description><![CDATA[fix: 不要なサーフェス変更をしないように]]></description>
             <content:encoded><![CDATA[fix: 不要なサーフェス変更をしないように]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | fix: UTF-8のdescript.txtに対応]]></title>
+            <link>https://github.com/apxxxxxxe/GhostWardrobe</link>
+            <guid>https://github.com/apxxxxxxe/GhostWardrobe</guid>
             <pubDate>Sun, 09 Apr 2023 07:23:13 GMT</pubDate>
             <description><![CDATA[fix: UTF-8のdescript.txtに対応]]></description>
             <content:encoded><![CDATA[fix: UTF-8のdescript.txtに対応]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | update: OnSecondChangeではなくtimerraisepluginでリロード後の処理を発火するように]]></title>
+            <link>https://github.com/apxxxxxxe/GhostWardrobe</link>
+            <guid>https://github.com/apxxxxxxe/GhostWardrobe</guid>
             <pubDate>Sat, 08 Apr 2023 22:24:06 GMT</pubDate>
             <description><![CDATA[update: OnSecondChangeではなくtimerraisepluginでリロード後の処理を発火するように]]></description>
             <content:encoded><![CDATA[update: OnSecondChangeではなくtimerraisepluginでリロード後の処理を発火するように]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | update: README.md]]></title>
+            <link>https://github.com/apxxxxxxe/GhostWardrobe</link>
+            <guid>https://github.com/apxxxxxxe/GhostWardrobe</guid>
             <pubDate>Sat, 08 Apr 2023 15:36:15 GMT</pubDate>
             <description><![CDATA[update: README.md]]></description>
             <content:encoded><![CDATA[update: README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | add: 起動時にネットワーク更新を行うように]]></title>
+            <link>https://github.com/apxxxxxxe/GhostWardrobe</link>
+            <guid>https://github.com/apxxxxxxe/GhostWardrobe</guid>
             <pubDate>Sat, 08 Apr 2023 15:14:09 GMT</pubDate>
             <description><![CDATA[add: 起動時にネットワーク更新を行うように]]></description>
             <content:encoded><![CDATA[add: 起動時にネットワーク更新を行うように]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | update: 読み込みメニューでは全キャラクターの読み込み選択肢を一覧表示するように]]></title>
+            <link>https://github.com/apxxxxxxe/GhostWardrobe</link>
+            <guid>https://github.com/apxxxxxxe/GhostWardrobe</guid>
             <pubDate>Sat, 08 Apr 2023 15:11:20 GMT</pubDate>
             <description><![CDATA[update: 読み込みメニューでは全キャラクターの読み込み選択肢を一覧表示するように]]></description>
             <content:encoded><![CDATA[update: 読み込みメニューでは全キャラクターの読み込み選択肢を一覧表示するように]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | update: 複数キャラクターに対応]]></title>
+            <link>https://github.com/apxxxxxxe/GhostWardrobe</link>
+            <guid>https://github.com/apxxxxxxe/GhostWardrobe</guid>
             <pubDate>Sat, 08 Apr 2023 13:12:36 GMT</pubDate>
             <description><![CDATA[update: 複数キャラクターに対応]]></description>
             <content:encoded><![CDATA[update: 複数キャラクターに対応]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | fix: きせかえ定義の変数格納にsakura.bindgroup.defaultが含まれていたのを修正]]></title>
+            <link>https://github.com/apxxxxxxe/GhostWardrobe</link>
+            <guid>https://github.com/apxxxxxxe/GhostWardrobe</guid>
             <pubDate>Sat, 08 Apr 2023 07:49:57 GMT</pubDate>
             <description><![CDATA[fix: きせかえ定義の変数格納にsakura.bindgroup.defaultが含まれていたのを修正]]></description>
             <content:encoded><![CDATA[fix: きせかえ定義の変数格納にsakura.bindgroup.defaultが含まれていたのを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | update: 半角スペースを含むゴースト・シェルに対応]]></title>
+            <link>https://github.com/apxxxxxxe/GhostWardrobe</link>
+            <guid>https://github.com/apxxxxxxe/GhostWardrobe</guid>
             <pubDate>Fri, 07 Apr 2023 14:22:51 GMT</pubDate>
             <description><![CDATA[update: 半角スペースを含むゴースト・シェルに対応]]></description>
             <content:encoded><![CDATA[update: 半角スペースを含むゴースト・シェルに対応]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | Update draft.yaml]]></title>
+            <link>https://github.com/apxxxxxxe/GhostWardrobe</link>
+            <guid>https://github.com/apxxxxxxe/GhostWardrobe</guid>
             <pubDate>Fri, 07 Apr 2023 12:49:56 GMT</pubDate>
             <description><![CDATA[Update draft.yaml]]></description>
             <content:encoded><![CDATA[Update draft.yaml]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | update: \![chenge,shell]を\![reload,shell]に変更]]></title>
+            <link>https://github.com/apxxxxxxe/GhostWardrobe</link>
+            <guid>https://github.com/apxxxxxxe/GhostWardrobe</guid>
             <pubDate>Fri, 07 Apr 2023 12:40:10 GMT</pubDate>
             <description><![CDATA[update: \![chenge,shell]を\![reload,shell]に変更]]></description>
             <content:encoded><![CDATA[update: \![chenge,shell]を\![reload,shell]に変更]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | Initial Commit]]></title>
+            <link>https://github.com/apxxxxxxe/GhostWardrobe</link>
+            <guid>https://github.com/apxxxxxxe/GhostWardrobe</guid>
             <pubDate>Thu, 06 Apr 2023 07:07:45 GMT</pubDate>
             <description><![CDATA[Initial Commit]]></description>
             <content:encoded><![CDATA[Initial Commit]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Thu, 07 Mar 2024 12:37:41 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | GhostSpeakerについての言及をREADME.mdに追加]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Wed, 21 Feb 2024 15:54:38 GMT</pubDate>
             <description><![CDATA[GhostSpeakerについての言及をREADME.mdに追加]]></description>
             <content:encoded><![CDATA[GhostSpeakerについての言及をREADME.mdに追加]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | fix]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Sat, 28 Oct 2023 12:19:12 GMT</pubDate>
             <description><![CDATA[fix]]></description>
             <content:encoded><![CDATA[fix]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | add: configにNoVoiceByDefaultを追加]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Sat, 28 Oct 2023 11:52:56 GMT</pubDate>
             <description><![CDATA[add: configにNoVoiceByDefaultを追加]]></description>
             <content:encoded><![CDATA[add: configにNoVoiceByDefaultを追加]]></content:encoded>
@@ -1082,6 +1354,8 @@ Signed-off-by: dependabot[bot] <support@github.com>]]></content:encoded>
         <item>
             <title><![CDATA[Bouyomi | fix: さくらスクリプト消去時に周辺の数字が消えていたのを修正
 「\n123」の1が消えたりしていた]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Sat, 21 Oct 2023 17:44:15 GMT</pubDate>
             <description><![CDATA[fix: さくらスクリプト消去時に周辺の数字が消えていたのを修正
 「\n123」の1が消えたりしていた]]></description>
@@ -1090,12 +1364,16 @@ Signed-off-by: dependabot[bot] <support@github.com>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Sat, 21 Oct 2023 13:03:32 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | update: 同時起動するエンジンのパスは配列で管理するように]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Fri, 20 Oct 2023 20:54:23 GMT</pubDate>
             <description><![CDATA[update: 同時起動するエンジンのパスは配列で管理するように]]></description>
             <content:encoded><![CDATA[update: 同時起動するエンジンのパスは配列で管理するように]]></content:encoded>
@@ -1103,6 +1381,8 @@ Signed-off-by: dependabot[bot] <support@github.com>]]></content:encoded>
         <item>
             <title><![CDATA[Bouyomi | remove: NoWordPhrase
 SAPIForVOICEVOXの「エンジンエラーを通知する」設定を切ればよいと気付いたので]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Fri, 06 Oct 2023 12:42:14 GMT</pubDate>
             <description><![CDATA[remove: NoWordPhrase
 SAPIForVOICEVOXの「エンジンエラーを通知する」設定を切ればよいと気付いたので]]></description>
@@ -1111,168 +1391,224 @@ SAPIForVOICEVOXの「エンジンエラーを通知する」設定を切れば�
         </item>
         <item>
             <title><![CDATA[Bouyomi | update: 音声合成エンジンのパスはconfig.jsonに記述するように]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Fri, 06 Oct 2023 03:55:26 GMT</pubDate>
             <description><![CDATA[update: 音声合成エンジンのパスはconfig.jsonに記述するように]]></description>
             <content:encoded><![CDATA[update: 音声合成エンジンのパスはconfig.jsonに記述するように]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | update: BouyomiChan_path.txtに記載されたBouyomiChan.exeを起動時に実行するように]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Thu, 05 Oct 2023 09:38:05 GMT</pubDate>
             <description><![CDATA[update: BouyomiChan_path.txtに記載されたBouyomiChan.exeを起動時に実行するように]]></description>
             <content:encoded><![CDATA[update: BouyomiChan_path.txtに記載されたBouyomiChan.exeを起動時に実行するように]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | fix: 文頭の\0セリフが読まれない場合があるのを修正]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Wed, 05 Apr 2023 11:01:43 GMT</pubDate>
             <description><![CDATA[fix: 文頭の\0セリフが読まれない場合があるのを修正]]></description>
             <content:encoded><![CDATA[fix: 文頭の\0セリフが読まれない場合があるのを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | update: base64デコード機能を削除]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Wed, 05 Apr 2023 10:45:55 GMT</pubDate>
             <description><![CDATA[update: base64デコード機能を削除]]></description>
             <content:encoded><![CDATA[update: base64デコード機能を削除]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | update: エラーログをbouyomi.logに出力するように]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Tue, 14 Feb 2023 04:12:16 GMT</pubDate>
             <description><![CDATA[update: エラーログをbouyomi.logに出力するように]]></description>
             <content:encoded><![CDATA[update: エラーログをbouyomi.logに出力するように]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | update: config.jsonにない設定項目は初期値で書き込むように]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Tue, 14 Feb 2023 04:01:52 GMT</pubDate>
             <description><![CDATA[update: config.jsonにない設定項目は初期値で書き込むように]]></description>
             <content:encoded><![CDATA[update: config.jsonにない設定項目は初期値で書き込むように]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | update: さくらスクリプト\h,\uに対応]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Tue, 14 Feb 2023 02:10:57 GMT</pubDate>
             <description><![CDATA[update: さくらスクリプト\h,\uに対応]]></description>
             <content:encoded><![CDATA[update: さくらスクリプト\h,\uに対応]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | fix: 機械2が機械1として表記されていたのを修正]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Tue, 14 Feb 2023 01:56:41 GMT</pubDate>
             <description><![CDATA[fix: 機械2が機械1として表記されていたのを修正]]></description>
             <content:encoded><![CDATA[fix: 機械2が機械1として表記されていたのを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | fix: 自動更新時にゴースト側のバルーンを閉じることがあったのを修正(暫定)]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Fri, 20 Jan 2023 12:53:30 GMT</pubDate>
             <description><![CDATA[fix: 自動更新時にゴースト側のバルーンを閉じることがあったのを修正(暫定)]]></description>
             <content:encoded><![CDATA[fix: 自動更新時にゴースト側のバルーンを閉じることがあったのを修正(暫定)]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | update: craftman]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Wed, 18 Jan 2023 15:51:27 GMT</pubDate>
             <description><![CDATA[update: craftman]]></description>
             <content:encoded><![CDATA[update: craftman]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Bouyomi | fix: 起動時の更新が動いていなかったのを修正]]></title>
+            <link>https://github.com/apxxxxxxe/Bouyomi</link>
+            <guid>https://github.com/apxxxxxxe/Bouyomi</guid>
             <pubDate>Wed, 18 Jan 2023 15:44:52 GMT</pubDate>
             <description><![CDATA[fix: 起動時の更新が動いていなかったのを修正]]></description>
             <content:encoded><![CDATA[fix: 起動時の更新が動いていなかったのを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[recentghosts | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/recentghosts</link>
+            <guid>https://github.com/apxxxxxxe/recentghosts</guid>
             <pubDate>Sat, 23 Jul 2022 14:11:16 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[recentghosts | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/recentghosts</link>
+            <guid>https://github.com/apxxxxxxe/recentghosts</guid>
             <pubDate>Thu, 21 Jul 2022 11:16:05 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[recentghosts | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/recentghosts</link>
+            <guid>https://github.com/apxxxxxxe/recentghosts</guid>
             <pubDate>Thu, 21 Jul 2022 11:13:23 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[recentghosts | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/recentghosts</link>
+            <guid>https://github.com/apxxxxxxe/recentghosts</guid>
             <pubDate>Thu, 21 Jul 2022 10:16:28 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[recentghosts | Create README.md]]></title>
+            <link>https://github.com/apxxxxxxe/recentghosts</link>
+            <guid>https://github.com/apxxxxxxe/recentghosts</guid>
             <pubDate>Thu, 21 Jul 2022 10:13:19 GMT</pubDate>
             <description><![CDATA[Create README.md]]></description>
             <content:encoded><![CDATA[Create README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[recentghosts | first commit]]></title>
+            <link>https://github.com/apxxxxxxe/recentghosts</link>
+            <guid>https://github.com/apxxxxxxe/recentghosts</guid>
             <pubDate>Thu, 21 Jul 2022 07:44:23 GMT</pubDate>
             <description><![CDATA[first commit]]></description>
             <content:encoded><![CDATA[first commit]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | update: readme]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Sun, 11 Dec 2022 12:42:34 GMT</pubDate>
             <description><![CDATA[update: readme]]></description>
             <content:encoded><![CDATA[update: readme]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | fix: 動作に関係ない部分の変更]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Sun, 11 Dec 2022 12:39:09 GMT</pubDate>
             <description><![CDATA[fix: 動作に関係ない部分の変更]]></description>
             <content:encoded><![CDATA[fix: 動作に関係ない部分の変更]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Mon, 04 Jul 2022 12:22:26 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | update: readme.md]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Mon, 04 Jul 2022 12:20:50 GMT</pubDate>
             <description><![CDATA[update: readme.md]]></description>
             <content:encoded><![CDATA[update: readme.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | update: readme.md]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Mon, 04 Jul 2022 12:18:20 GMT</pubDate>
             <description><![CDATA[update: readme.md]]></description>
             <content:encoded><![CDATA[update: readme.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Mon, 04 Jul 2022 12:04:50 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Sun, 26 Jun 2022 23:01:09 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Thu, 16 Jun 2022 10:02:53 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Mon, 13 Jun 2022 11:38:10 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Fri, 10 Jun 2022 13:09:39 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Thu, 02 Jun 2022 06:51:45 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
@@ -1280,6 +1616,8 @@ SAPIForVOICEVOXの「エンジンエラーを通知する」設定を切れば�
         <item>
             <title><![CDATA[shioriupdater | update: ファイルの新旧の比較方法を変更
 比較する値を更新日時からバージョン情報に変更]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Mon, 30 May 2022 23:53:22 GMT</pubDate>
             <description><![CDATA[update: ファイルの新旧の比較方法を変更
 比較する値を更新日時からバージョン情報に変更]]></description>
@@ -1289,6 +1627,8 @@ SAPIForVOICEVOXの「エンジンエラーを通知する」設定を切れば�
         <item>
             <title><![CDATA[shioriupdater | update: エラーハンドリング処理を変更
 ファイル内容コピーに失敗した場合のエラーハンドリングを変更]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Mon, 30 May 2022 22:34:05 GMT</pubDate>
             <description><![CDATA[update: エラーハンドリング処理を変更
 ファイル内容コピーに失敗した場合のエラーハンドリングを変更]]></description>
@@ -1297,66 +1637,88 @@ SAPIForVOICEVOXの「エンジンエラーを通知する」設定を切れば�
         </item>
         <item>
             <title><![CDATA[shioriupdater | fix: release.sh]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Sun, 29 May 2022 23:34:29 GMT</pubDate>
             <description><![CDATA[fix: release.sh]]></description>
             <content:encoded><![CDATA[fix: release.sh]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | fix: typo]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Sun, 29 May 2022 14:18:16 GMT</pubDate>
             <description><![CDATA[fix: typo]]></description>
             <content:encoded><![CDATA[fix: typo]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | update: ファイル探索中のエラーハンドリング処理を追加]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Sun, 29 May 2022 14:16:30 GMT</pubDate>
             <description><![CDATA[update: ファイル探索中のエラーハンドリング処理を追加]]></description>
             <content:encoded><![CDATA[update: ファイル探索中のエラーハンドリング処理を追加]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | add: release.sh]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Sun, 29 May 2022 14:11:31 GMT</pubDate>
             <description><![CDATA[add: release.sh]]></description>
             <content:encoded><![CDATA[add: release.sh]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Sun, 29 May 2022 12:31:11 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | update: 諸々の記述を整形]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Sun, 29 May 2022 12:21:46 GMT</pubDate>
             <description><![CDATA[update: 諸々の記述を整形]]></description>
             <content:encoded><![CDATA[update: 諸々の記述を整形]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | update: 更新カウント処理を変更]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Sun, 29 May 2022 12:21:31 GMT</pubDate>
             <description><![CDATA[update: 更新カウント処理を変更]]></description>
             <content:encoded><![CDATA[update: 更新カウント処理を変更]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | add: .gitignore]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Sun, 29 May 2022 12:18:05 GMT</pubDate>
             <description><![CDATA[add: .gitignore]]></description>
             <content:encoded><![CDATA[add: .gitignore]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | update: 一時ファイル削除処理を変更]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Sun, 29 May 2022 12:16:56 GMT</pubDate>
             <description><![CDATA[update: 一時ファイル削除処理を変更]]></description>
             <content:encoded><![CDATA[update: 一時ファイル削除処理を変更]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Sun, 29 May 2022 11:04:00 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | add: セルフアップデート機能を追加]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Sun, 29 May 2022 03:20:26 GMT</pubDate>
             <description><![CDATA[add: セルフアップデート機能を追加]]></description>
             <content:encoded><![CDATA[add: セルフアップデート機能を追加]]></content:encoded>
@@ -1364,6 +1726,8 @@ SAPIForVOICEVOXの「エンジンエラーを通知する」設定を切れば�
         <item>
             <title><![CDATA[shioriupdater | fix: Unzip関数を修正
 no such directoryが出る場合があった]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Sun, 29 May 2022 00:32:46 GMT</pubDate>
             <description><![CDATA[fix: Unzip関数を修正
 no such directoryが出る場合があった]]></description>
@@ -1372,60 +1736,80 @@ no such directoryが出る場合があった]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | update: 更新日時が一緒ならスキップするように]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Sat, 28 May 2022 13:51:47 GMT</pubDate>
             <description><![CDATA[update: 更新日時が一緒ならスキップするように]]></description>
             <content:encoded><![CDATA[update: 更新日時が一緒ならスキップするように]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | add: --versionオプションを追加]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Sat, 28 May 2022 07:52:38 GMT</pubDate>
             <description><![CDATA[add: --versionオプションを追加]]></description>
             <content:encoded><![CDATA[add: --versionオプションを追加]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[shioriupdater | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/shioriupdater</link>
+            <guid>https://github.com/apxxxxxxe/shioriupdater</guid>
             <pubDate>Sat, 28 May 2022 07:47:39 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[sunset-sunrise-saori | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/sunset-sunrise-saori</link>
+            <guid>https://github.com/apxxxxxxe/sunset-sunrise-saori</guid>
             <pubDate>Mon, 04 Jul 2022 12:26:10 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[sunset-sunrise-saori | update: 緯度,経度,標準時を引数で指定可能に]]></title>
+            <link>https://github.com/apxxxxxxe/sunset-sunrise-saori</link>
+            <guid>https://github.com/apxxxxxxe/sunset-sunrise-saori</guid>
             <pubDate>Wed, 22 Jun 2022 03:57:49 GMT</pubDate>
             <description><![CDATA[update: 緯度,経度,標準時を引数で指定可能に]]></description>
             <content:encoded><![CDATA[update: 緯度,経度,標準時を引数で指定可能に]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[sunset-sunrise-saori | update: デリミタを変更]]></title>
+            <link>https://github.com/apxxxxxxe/sunset-sunrise-saori</link>
+            <guid>https://github.com/apxxxxxxe/sunset-sunrise-saori</guid>
             <pubDate>Wed, 22 Jun 2022 03:57:16 GMT</pubDate>
             <description><![CDATA[update: デリミタを変更]]></description>
             <content:encoded><![CDATA[update: デリミタを変更]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[sunset-sunrise-saori | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/sunset-sunrise-saori</link>
+            <guid>https://github.com/apxxxxxxe/sunset-sunrise-saori</guid>
             <pubDate>Wed, 22 Jun 2022 03:41:16 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[sunset-sunrise-saori | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/sunset-sunrise-saori</link>
+            <guid>https://github.com/apxxxxxxe/sunset-sunrise-saori</guid>
             <pubDate>Sat, 18 Jun 2022 09:30:35 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[sunset-sunrise-saori | Update README.md]]></title>
+            <link>https://github.com/apxxxxxxe/sunset-sunrise-saori</link>
+            <guid>https://github.com/apxxxxxxe/sunset-sunrise-saori</guid>
             <pubDate>Fri, 17 Jun 2022 12:39:00 GMT</pubDate>
             <description><![CDATA[Update README.md]]></description>
             <content:encoded><![CDATA[Update README.md]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[sunset-sunrise-saori | Initial commit]]></title>
+            <link>https://github.com/apxxxxxxe/sunset-sunrise-saori</link>
+            <guid>https://github.com/apxxxxxxe/sunset-sunrise-saori</guid>
             <pubDate>Fri, 17 Jun 2022 12:26:11 GMT</pubDate>
             <description><![CDATA[Initial commit]]></description>
             <content:encoded><![CDATA[Initial commit]]></content:encoded>
