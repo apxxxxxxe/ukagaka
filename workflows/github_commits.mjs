@@ -146,7 +146,7 @@ function generatedRssFeed(posts) {
   // feed で定義した情報から各記事での変更点を宣言
   posts.forEach((post) => {
     // post のプロパティ情報は使用しているオブジェクトの形式に合わせる
-    const url = post.url;
+    const url = `https://github.com/apxxxxxxe/${post.repo}`
     feed.addItem({
       title: `${post.repo} | ${post.commit.commit.message}`,
       description: post.commit.commit.message,
