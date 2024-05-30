@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Wed, 29 May 2024 00:19:11 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 30 May 2024 00:19:09 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -14,6 +14,14 @@
             <link></link>
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
+        <item>
+            <title><![CDATA[Haine | 💬 触り反応がなかった部位の反応トークを追加]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Wed, 29 May 2024 14:23:15 GMT</pubDate>
+            <description><![CDATA[💬 触り反応がなかった部位の反応トークを追加]]></description>
+            <content:encoded><![CDATA[💬 触り反応がなかった部位の反応トークを追加]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Haine | 🚸 没入度による影の濃度の最大値を増やした]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
@@ -146,22 +154,6 @@ PRマージ後のブランチ削除はGHAがなくともやってくれている
             <pubDate>Sat, 25 May 2024 19:57:45 GMT</pubDate>
             <description><![CDATA[♻️ 初回起動要素をbootend.rsからfirst_boot.rsに移動]]></description>
             <content:encoded><![CDATA[♻️ 初回起動要素をbootend.rsからfirst_boot.rsに移動]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | ♻️  on_ai_talkの各処理を切り出し]]></title>
-            <link>https://github.com/apxxxxxxe/Haine</link>
-            <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Sat, 25 May 2024 19:50:06 GMT</pubDate>
-            <description><![CDATA[♻️  on_ai_talkの各処理を切り出し]]></description>
-            <content:encoded><![CDATA[♻️  on_ai_talkの各処理を切り出し]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | ♻️ aitalk.rsからトーク要素をrandomtalk.rsに切り出し]]></title>
-            <link>https://github.com/apxxxxxxe/Haine</link>
-            <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Sat, 25 May 2024 13:05:37 GMT</pubDate>
-            <description><![CDATA[♻️ aitalk.rsからトーク要素をrandomtalk.rsに切り出し]]></description>
-            <content:encoded><![CDATA[♻️ aitalk.rsからトーク要素をrandomtalk.rsに切り出し]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
