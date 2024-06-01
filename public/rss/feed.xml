@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Fri, 31 May 2024 00:18:12 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 01 Jun 2024 00:20:03 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -14,6 +14,14 @@
             <link></link>
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
+        <item>
+            <title><![CDATA[Haine | 🐛 初回起動が終わるまでメニュー以外の触り反応トークが起こらないように]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Fri, 31 May 2024 12:38:01 GMT</pubDate>
+            <description><![CDATA[🐛 初回起動が終わるまでメニュー以外の触り反応トークが起こらないように]]></description>
+            <content:encoded><![CDATA[🐛 初回起動が終わるまでメニュー以外の触り反応トークが起こらないように]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Haine | 💬 触り反応がなかった部位の反応トークを追加]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
@@ -130,30 +138,6 @@ PRマージ後のブランチ削除はGHAがなくともやってくれている
             <pubDate>Mon, 27 May 2024 13:18:20 GMT</pubDate>
             <description><![CDATA[🐛 没入度開放トークが正しく動いていなかったのを修正]]></description>
             <content:encoded><![CDATA[🐛 没入度開放トークが正しく動いていなかったのを修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | ✨ トーク発生条件を整理]]></title>
-            <link>https://github.com/apxxxxxxe/Haine</link>
-            <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Sun, 26 May 2024 08:37:51 GMT</pubDate>
-            <description><![CDATA[✨ トーク発生条件を整理]]></description>
-            <content:encoded><![CDATA[✨ トーク発生条件を整理]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 🎨 Cargo fmt]]></title>
-            <link>https://github.com/apxxxxxxe/Haine</link>
-            <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Sun, 26 May 2024 04:24:44 GMT</pubDate>
-            <description><![CDATA[🎨 Cargo fmt]]></description>
-            <content:encoded><![CDATA[🎨 Cargo fmt]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | ♻️ 初回起動要素をbootend.rsからfirst_boot.rsに移動]]></title>
-            <link>https://github.com/apxxxxxxe/Haine</link>
-            <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Sat, 25 May 2024 19:57:45 GMT</pubDate>
-            <description><![CDATA[♻️ 初回起動要素をbootend.rsからfirst_boot.rsに移動]]></description>
-            <content:encoded><![CDATA[♻️ 初回起動要素をbootend.rsからfirst_boot.rsに移動]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
