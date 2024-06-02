@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Sat, 01 Jun 2024 00:20:03 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 02 Jun 2024 00:20:17 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -130,14 +130,6 @@ PRマージ後のブランチ削除はGHAがなくともやってくれている
             <content:encoded><![CDATA[✅ テストを追加・整理
 
 初回起動から一連のフラグ管理のテストを追加・出力を見ていただけのなんちゃってテストを成功/失敗で見るものに修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 🐛 没入度開放トークが正しく動いていなかったのを修正]]></title>
-            <link>https://github.com/apxxxxxxe/Haine</link>
-            <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Mon, 27 May 2024 13:18:20 GMT</pubDate>
-            <description><![CDATA[🐛 没入度開放トークが正しく動いていなかったのを修正]]></description>
-            <content:encoded><![CDATA[🐛 没入度開放トークが正しく動いていなかったのを修正]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
@@ -528,6 +520,14 @@ This reverts commit e126ba9d229c8501cec4c6927d38e6acda9f75b1.]]></content:encode
             <pubDate>Sat, 25 Nov 2023 15:16:26 GMT</pubDate>
             <description><![CDATA[update: 着せ替えメニューを手動で定義するように: 一部着せ替えを非表示]]></description>
             <content:encoded><![CDATA[update: 着せ替えメニューを手動で定義するように: 一部着せ替えを非表示]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[kirinokougai | 書斎の画像を差し替え]]></title>
+            <link>https://github.com/apxxxxxxe/kirinokougai</link>
+            <guid>https://github.com/apxxxxxxe/kirinokougai</guid>
+            <pubDate>Sat, 01 Jun 2024 17:34:27 GMT</pubDate>
+            <description><![CDATA[書斎の画像を差し替え]]></description>
+            <content:encoded><![CDATA[書斎の画像を差し替え]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | number]]></title>
