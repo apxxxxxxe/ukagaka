@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Sun, 02 Jun 2024 00:20:17 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 03 Jun 2024 00:19:17 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -15,121 +15,122 @@
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
         <item>
-            <title><![CDATA[Haine | 🐛 初回起動が終わるまでメニュー以外の触り反応トークが起こらないように]]></title>
+            <title><![CDATA[Haine | Update readme.md]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Fri, 31 May 2024 12:38:01 GMT</pubDate>
-            <description><![CDATA[🐛 初回起動が終わるまでメニュー以外の触り反応トークが起こらないように]]></description>
-            <content:encoded><![CDATA[🐛 初回起動が終わるまでメニュー以外の触り反応トークが起こらないように]]></content:encoded>
+            <pubDate>Sun, 02 Jun 2024 06:12:28 GMT</pubDate>
+            <description><![CDATA[Update readme.md]]></description>
+            <content:encoded><![CDATA[Update readme.md]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | 💬 触り反応がなかった部位の反応トークを追加]]></title>
+            <title><![CDATA[Haine | 🚸 ひと息つくコマンドで没入度を0にするように]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Wed, 29 May 2024 14:23:15 GMT</pubDate>
-            <description><![CDATA[💬 触り反応がなかった部位の反応トークを追加]]></description>
-            <content:encoded><![CDATA[💬 触り反応がなかった部位の反応トークを追加]]></content:encoded>
+            <pubDate>Sun, 02 Jun 2024 05:53:43 GMT</pubDate>
+            <description><![CDATA[🚸 ひと息つくコマンドで没入度を0にするように]]></description>
+            <content:encoded><![CDATA[🚸 ひと息つくコマンドで没入度を0にするように]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | 🚸 没入度による影の濃度の最大値を増やした]]></title>
-            <link>https://github.com/apxxxxxxe/Haine</link>
-            <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Tue, 28 May 2024 14:22:33 GMT</pubDate>
-            <description><![CDATA[🚸 没入度による影の濃度の最大値を増やした]]></description>
-            <content:encoded><![CDATA[🚸 没入度による影の濃度の最大値を増やした]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 🎨 初回場所移動時の開放ダイアログの表記を修正]]></title>
-            <link>https://github.com/apxxxxxxe/Haine</link>
-            <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Tue, 28 May 2024 14:00:59 GMT</pubDate>
-            <description><![CDATA[🎨 初回場所移動時の開放ダイアログの表記を修正]]></description>
-            <content:encoded><![CDATA[🎨 初回場所移動時の開放ダイアログの表記を修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | ✅ Fix]]></title>
-            <link>https://github.com/apxxxxxxe/Haine</link>
-            <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Tue, 28 May 2024 09:11:56 GMT</pubDate>
-            <description><![CDATA[✅ Fix]]></description>
-            <content:encoded><![CDATA[✅ Fix]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | ✅  test.ymlの条件からpull_requiestを削除
+            <title><![CDATA[Haine | 🐛 アンカーを何度も押せてしまうのを修正
 
-pushがあればいいと判断]]></title>
+同じIDのアンカーは連続で押せないようにした]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Tue, 28 May 2024 09:03:30 GMT</pubDate>
-            <description><![CDATA[✅  test.ymlの条件からpull_requiestを削除
+            <pubDate>Sun, 02 Jun 2024 05:50:16 GMT</pubDate>
+            <description><![CDATA[🐛 アンカーを何度も押せてしまうのを修正
 
-pushがあればいいと判断]]></description>
-            <content:encoded><![CDATA[✅  test.ymlの条件からpull_requiestを削除
+同じIDのアンカーは連続で押せないようにした]]></description>
+            <content:encoded><![CDATA[🐛 アンカーを何度も押せてしまうのを修正
 
-pushがあればいいと判断]]></content:encoded>
+同じIDのアンカーは連続で押せないようにした]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | ✅  dllのビルドはテストが成功した場合のみ行うように]]></title>
+            <title><![CDATA[Haine | 🐛 各TalkTypeについて既読トークが0のとき未読トーク再生が失敗していたのを修正]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Tue, 28 May 2024 09:01:14 GMT</pubDate>
-            <description><![CDATA[✅  dllのビルドはテストが成功した場合のみ行うように]]></description>
-            <content:encoded><![CDATA[✅  dllのビルドはテストが成功した場合のみ行うように]]></content:encoded>
+            <pubDate>Sun, 02 Jun 2024 03:01:09 GMT</pubDate>
+            <description><![CDATA[🐛 各TalkTypeについて既読トークが0のとき未読トーク再生が失敗していたのを修正]]></description>
+            <content:encoded><![CDATA[🐛 各TalkTypeについて既読トークが0のとき未読トーク再生が失敗していたのを修正]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | ✅ テストを修正]]></title>
+            <title><![CDATA[Haine | ✅ 初期ユーザ名を設定する処理を追加]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Mon, 27 May 2024 17:33:11 GMT</pubDate>
-            <description><![CDATA[✅ テストを修正]]></description>
-            <content:encoded><![CDATA[✅ テストを修正]]></content:encoded>
+            <pubDate>Sun, 02 Jun 2024 01:41:38 GMT</pubDate>
+            <description><![CDATA[✅ 初期ユーザ名を設定する処理を追加]]></description>
+            <content:encoded><![CDATA[✅ 初期ユーザ名を設定する処理を追加]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | 💚 不要なGHAを削除
-PRマージ後のブランチ削除はGHAがなくともやってくれている]]></title>
+            <title><![CDATA[Haine | ✨ 最小化から復帰したときにトークするまでの時間をリセットするように]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Mon, 27 May 2024 17:08:35 GMT</pubDate>
-            <description><![CDATA[💚 不要なGHAを削除
-PRマージ後のブランチ削除はGHAがなくともやってくれている]]></description>
-            <content:encoded><![CDATA[💚 不要なGHAを削除
-PRマージ後のブランチ削除はGHAがなくともやってくれている]]></content:encoded>
+            <pubDate>Sun, 02 Jun 2024 01:29:25 GMT</pubDate>
+            <description><![CDATA[✨ 最小化から復帰したときにトークするまでの時間をリセットするように]]></description>
+            <content:encoded><![CDATA[✨ 最小化から復帰したときにトークするまでの時間をリセットするように]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | 🔥 低品質なテストを削除
-
-確率で失敗するテスト]]></title>
+            <title><![CDATA[Haine | ✨ ユーザ名変更機能を追加]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Mon, 27 May 2024 15:30:02 GMT</pubDate>
-            <description><![CDATA[🔥 低品質なテストを削除
-
-確率で失敗するテスト]]></description>
-            <content:encoded><![CDATA[🔥 低品質なテストを削除
-
-確率で失敗するテスト]]></content:encoded>
+            <pubDate>Sun, 02 Jun 2024 01:28:30 GMT</pubDate>
+            <description><![CDATA[✨ ユーザ名変更機能を追加]]></description>
+            <content:encoded><![CDATA[✨ ユーザ名変更機能を追加]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | ✅ 自動テストを追加]]></title>
+            <title><![CDATA[Haine | 🧑‍💻 デバッグ用処理を変更]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Mon, 27 May 2024 15:30:02 GMT</pubDate>
-            <description><![CDATA[✅ 自動テストを追加]]></description>
-            <content:encoded><![CDATA[✅ 自動テストを追加]]></content:encoded>
+            <pubDate>Sun, 02 Jun 2024 01:03:32 GMT</pubDate>
+            <description><![CDATA[🧑‍💻 デバッグ用処理を変更]]></description>
+            <content:encoded><![CDATA[🧑‍💻 デバッグ用処理を変更]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | ✅ テストを追加・整理
-
-初回起動から一連のフラグ管理のテストを追加・出力を見ていただけのなんちゃってテストを成功/失敗で見るものに修正]]></title>
+            <title><![CDATA[Haine | 🐛 OnNotifyUserInfoによるユーザ名設定が効いていなかったのを修正]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Mon, 27 May 2024 15:30:01 GMT</pubDate>
-            <description><![CDATA[✅ テストを追加・整理
-
-初回起動から一連のフラグ管理のテストを追加・出力を見ていただけのなんちゃってテストを成功/失敗で見るものに修正]]></description>
-            <content:encoded><![CDATA[✅ テストを追加・整理
-
-初回起動から一連のフラグ管理のテストを追加・出力を見ていただけのなんちゃってテストを成功/失敗で見るものに修正]]></content:encoded>
+            <pubDate>Sun, 02 Jun 2024 01:03:32 GMT</pubDate>
+            <description><![CDATA[🐛 OnNotifyUserInfoによるユーザ名設定が効いていなかったのを修正]]></description>
+            <content:encoded><![CDATA[🐛 OnNotifyUserInfoによるユーザ名設定が効いていなかったのを修正]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 🐛 ダブルクリックでメニューが開かなくなっていたのを修正]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Sun, 02 Jun 2024 01:03:32 GMT</pubDate>
+            <description><![CDATA[🐛 ダブルクリックでメニューが開かなくなっていたのを修正]]></description>
+            <content:encoded><![CDATA[🐛 ダブルクリックでメニューが開かなくなっていたのを修正]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 🎨 ランダムトーク開放処理を累計トーク数カウントの直後に移動]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Sun, 02 Jun 2024 01:03:32 GMT</pubDate>
+            <description><![CDATA[🎨 ランダムトーク開放処理を累計トーク数カウントの直後に移動]]></description>
+            <content:encoded><![CDATA[🎨 ランダムトーク開放処理を累計トーク数カウントの直後に移動]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 💬 トーク修正]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Sun, 02 Jun 2024 01:03:32 GMT</pubDate>
+            <description><![CDATA[💬 トーク修正]]></description>
+            <content:encoded><![CDATA[💬 トーク修正]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 💬 トーク修正]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Sun, 02 Jun 2024 00:54:00 GMT</pubDate>
+            <description><![CDATA[💬 トーク修正]]></description>
+            <content:encoded><![CDATA[💬 トーク修正]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 🎨 トーク統計画面のレイアウトを調整]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Sat, 01 Jun 2024 08:07:26 GMT</pubDate>
+            <description><![CDATA[🎨 トーク統計画面のレイアウトを調整]]></description>
+            <content:encoded><![CDATA[🎨 トーク統計画面のレイアウトを調整]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
