@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Tue, 04 Jun 2024 00:18:46 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 05 Jun 2024 00:18:32 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -307,6 +307,14 @@ This reverts commit e126ba9d229c8501cec4c6927d38e6acda9f75b1.]]></content:encode
             <content:encoded><![CDATA[update: workflow]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[thumbelina-shell | 緑ソファの色味を調整]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
+            <pubDate>Tue, 04 Jun 2024 15:49:06 GMT</pubDate>
+            <description><![CDATA[緑ソファの色味を調整]]></description>
+            <content:encoded><![CDATA[緑ソファの色味を調整]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[thumbelina-shell | ゴミを除去]]></title>
             <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
             <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
@@ -505,22 +513,6 @@ This reverts commit e126ba9d229c8501cec4c6927d38e6acda9f75b1.]]></content:encode
             <pubDate>Sun, 26 Nov 2023 00:19:23 GMT</pubDate>
             <description><![CDATA[update: 髪の微調整]]></description>
             <content:encoded><![CDATA[update: 髪の微調整]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[thumbelina-shell | update: 肌のコントラストを下げた]]></title>
-            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
-            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
-            <pubDate>Sat, 25 Nov 2023 15:16:44 GMT</pubDate>
-            <description><![CDATA[update: 肌のコントラストを下げた]]></description>
-            <content:encoded><![CDATA[update: 肌のコントラストを下げた]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[thumbelina-shell | update: 着せ替えメニューを手動で定義するように: 一部着せ替えを非表示]]></title>
-            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
-            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
-            <pubDate>Sat, 25 Nov 2023 15:16:26 GMT</pubDate>
-            <description><![CDATA[update: 着せ替えメニューを手動で定義するように: 一部着せ替えを非表示]]></description>
-            <content:encoded><![CDATA[update: 着せ替えメニューを手動で定義するように: 一部着せ替えを非表示]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | 書斎の画像を差し替え]]></title>
