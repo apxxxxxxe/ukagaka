@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Sun, 09 Jun 2024 00:21:21 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 10 Jun 2024 00:19:43 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -14,6 +14,28 @@
             <link></link>
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
+        <item>
+            <title><![CDATA[Haine | 💥  requried_flags -> required_condition]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Sun, 09 Jun 2024 06:50:50 GMT</pubDate>
+            <description><![CDATA[💥  requried_flags -> required_condition]]></description>
+            <content:encoded><![CDATA[💥  requried_flags -> required_condition]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 💬 トーク修正・追加
+
+InformationHaineSuicideを追加]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Sun, 09 Jun 2024 04:19:36 GMT</pubDate>
+            <description><![CDATA[💬 トーク修正・追加
+
+InformationHaineSuicideを追加]]></description>
+            <content:encoded><![CDATA[💬 トーク修正・追加
+
+InformationHaineSuicideを追加]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Haine | Update readme.md]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
@@ -99,38 +121,6 @@
             <pubDate>Sun, 02 Jun 2024 01:03:32 GMT</pubDate>
             <description><![CDATA[🐛 ダブルクリックでメニューが開かなくなっていたのを修正]]></description>
             <content:encoded><![CDATA[🐛 ダブルクリックでメニューが開かなくなっていたのを修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 🎨 ランダムトーク開放処理を累計トーク数カウントの直後に移動]]></title>
-            <link>https://github.com/apxxxxxxe/Haine</link>
-            <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Sun, 02 Jun 2024 01:03:32 GMT</pubDate>
-            <description><![CDATA[🎨 ランダムトーク開放処理を累計トーク数カウントの直後に移動]]></description>
-            <content:encoded><![CDATA[🎨 ランダムトーク開放処理を累計トーク数カウントの直後に移動]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 💬 トーク修正]]></title>
-            <link>https://github.com/apxxxxxxe/Haine</link>
-            <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Sun, 02 Jun 2024 01:03:32 GMT</pubDate>
-            <description><![CDATA[💬 トーク修正]]></description>
-            <content:encoded><![CDATA[💬 トーク修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 💬 トーク修正]]></title>
-            <link>https://github.com/apxxxxxxe/Haine</link>
-            <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Sun, 02 Jun 2024 00:54:00 GMT</pubDate>
-            <description><![CDATA[💬 トーク修正]]></description>
-            <content:encoded><![CDATA[💬 トーク修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 🎨 トーク統計画面のレイアウトを調整]]></title>
-            <link>https://github.com/apxxxxxxe/Haine</link>
-            <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Sat, 01 Jun 2024 08:07:26 GMT</pubDate>
-            <description><![CDATA[🎨 トーク統計画面のレイアウトを調整]]></description>
-            <content:encoded><![CDATA[🎨 トーク統計画面のレイアウトを調整]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
@@ -1152,6 +1142,17 @@ Signed-off-by: dependabot[bot] <support@github.com>]]></content:encoded>
             <pubDate>Fri, 27 Oct 2023 18:52:23 GMT</pubDate>
             <description><![CDATA[init]]></description>
             <content:encoded><![CDATA[init]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[GhostWardrobe | Shellリロード直後に続けて保存イベントをraiseするように
+SSP 2.6.73の変更によって可能になった]]></title>
+            <link>https://github.com/apxxxxxxe/GhostWardrobe</link>
+            <guid>https://github.com/apxxxxxxe/GhostWardrobe</guid>
+            <pubDate>Sun, 09 Jun 2024 11:47:04 GMT</pubDate>
+            <description><![CDATA[Shellリロード直後に続けて保存イベントをraiseするように
+SSP 2.6.73の変更によって可能になった]]></description>
+            <content:encoded><![CDATA[Shellリロード直後に続けて保存イベントをraiseするように
+SSP 2.6.73の変更によって可能になった]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[GhostWardrobe | update: OnGhostInfoUpdateでshell.datの変更をフックしOnSecondChangeで保存処理を発火するように]]></title>
