@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Mon, 17 Jun 2024 00:20:08 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 18 Jun 2024 00:19:25 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -14,6 +14,20 @@
             <link></link>
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
+        <item>
+            <title><![CDATA[Haine | 🐛 瞬き補完時にスコープが\1のままになることがあったのを修正
+
+ひと息つくコマンドの直後などに発生していた]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Mon, 17 Jun 2024 13:40:07 GMT</pubDate>
+            <description><![CDATA[🐛 瞬き補完時にスコープが\1のままになることがあったのを修正
+
+ひと息つくコマンドの直後などに発生していた]]></description>
+            <content:encoded><![CDATA[🐛 瞬き補完時にスコープが\1のままになることがあったのを修正
+
+ひと息つくコマンドの直後などに発生していた]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Haine | ✅ 従者トーク・ロアトークの開放処理のテストを追加]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
@@ -105,14 +119,6 @@ InformationHaineSuicideを追加]]></content:encoded>
             <pubDate>Sun, 02 Jun 2024 03:01:09 GMT</pubDate>
             <description><![CDATA[🐛 各TalkTypeについて既読トークが0のとき未読トーク再生が失敗していたのを修正]]></description>
             <content:encoded><![CDATA[🐛 各TalkTypeについて既読トークが0のとき未読トーク再生が失敗していたのを修正]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | ✅ 初期ユーザ名を設定する処理を追加]]></title>
-            <link>https://github.com/apxxxxxxe/Haine</link>
-            <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Sun, 02 Jun 2024 01:41:38 GMT</pubDate>
-            <description><![CDATA[✅ 初期ユーザ名を設定する処理を追加]]></description>
-            <content:encoded><![CDATA[✅ 初期ユーザ名を設定する処理を追加]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
