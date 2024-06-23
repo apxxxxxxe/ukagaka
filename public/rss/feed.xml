@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Sat, 22 Jun 2024 00:18:42 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 23 Jun 2024 00:20:37 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -14,6 +14,14 @@
             <link></link>
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
+        <item>
+            <title><![CDATA[Haine | ✨ 素早いまばたきを追加]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Sat, 22 Jun 2024 06:25:32 GMT</pubDate>
+            <description><![CDATA[✨ 素早いまばたきを追加]]></description>
+            <content:encoded><![CDATA[✨ 素早いまばたきを追加]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Haine | 🐛 起動直後sexial反応の条件を関数にまとめて一元管理するように]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
@@ -97,28 +105,6 @@
             <pubDate>Tue, 11 Jun 2024 16:17:51 GMT</pubDate>
             <description><![CDATA[✨ 累計起動回数を記録するように]]></description>
             <content:encoded><![CDATA[✨ 累計起動回数を記録するように]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 💥  requried_flags -> required_condition]]></title>
-            <link>https://github.com/apxxxxxxe/Haine</link>
-            <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Sun, 09 Jun 2024 06:50:50 GMT</pubDate>
-            <description><![CDATA[💥  requried_flags -> required_condition]]></description>
-            <content:encoded><![CDATA[💥  requried_flags -> required_condition]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 💬 トーク修正・追加
-
-InformationHaineSuicideを追加]]></title>
-            <link>https://github.com/apxxxxxxe/Haine</link>
-            <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Sun, 09 Jun 2024 04:19:36 GMT</pubDate>
-            <description><![CDATA[💬 トーク修正・追加
-
-InformationHaineSuicideを追加]]></description>
-            <content:encoded><![CDATA[💬 トーク修正・追加
-
-InformationHaineSuicideを追加]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
@@ -293,6 +279,14 @@ This reverts commit e126ba9d229c8501cec4c6927d38e6acda9f75b1.]]></content:encode
             <pubDate>Mon, 13 Jun 2022 09:06:05 GMT</pubDate>
             <description><![CDATA[update: workflow]]></description>
             <content:encoded><![CDATA[update: workflow]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[thumbelina-shell | 靴+1]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
+            <pubDate>Sat, 22 Jun 2024 16:51:38 GMT</pubDate>
+            <description><![CDATA[靴+1]]></description>
+            <content:encoded><![CDATA[靴+1]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[thumbelina-shell | 緑ソファの色味を調整]]></title>
@@ -493,14 +487,6 @@ This reverts commit e126ba9d229c8501cec4c6927d38e6acda9f75b1.]]></content:encode
             <pubDate>Thu, 18 Jan 2024 12:04:25 GMT</pubDate>
             <description><![CDATA[耳の位置を調整]]></description>
             <content:encoded><![CDATA[耳の位置を調整]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[thumbelina-shell | update: 髪の微調整]]></title>
-            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
-            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
-            <pubDate>Sun, 26 Nov 2023 00:19:23 GMT</pubDate>
-            <description><![CDATA[update: 髪の微調整]]></description>
-            <content:encoded><![CDATA[update: 髪の微調整]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | 書斎の画像を差し替え]]></title>
