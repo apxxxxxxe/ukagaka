@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Thu, 18 Jul 2024 00:19:34 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 19 Jul 2024 00:19:26 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -281,6 +281,14 @@ This reverts commit e126ba9d229c8501cec4c6927d38e6acda9f75b1.]]></content:encode
             <content:encoded><![CDATA[update: workflow]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[thumbelina-shell | デフォルト前髪を調整]]></title>
+            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
+            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
+            <pubDate>Thu, 18 Jul 2024 12:57:16 GMT</pubDate>
+            <description><![CDATA[デフォルト前髪を調整]]></description>
+            <content:encoded><![CDATA[デフォルト前髪を調整]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[thumbelina-shell | 口パーツを調整]]></title>
             <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
             <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
@@ -439,22 +447,6 @@ This reverts commit e126ba9d229c8501cec4c6927d38e6acda9f75b1.]]></content:encode
             <pubDate>Fri, 26 Jan 2024 11:23:02 GMT</pubDate>
             <description><![CDATA[デフォルト着せ替え構成を変更]]></description>
             <content:encoded><![CDATA[デフォルト着せ替え構成を変更]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[thumbelina-shell | ソファ3種(椅子)を追加]]></title>
-            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
-            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
-            <pubDate>Fri, 26 Jan 2024 11:23:02 GMT</pubDate>
-            <description><![CDATA[ソファ3種(椅子)を追加]]></description>
-            <content:encoded><![CDATA[ソファ3種(椅子)を追加]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[thumbelina-shell | 肌を調整]]></title>
-            <link>https://github.com/apxxxxxxe/thumbelina-shell</link>
-            <guid>https://github.com/apxxxxxxe/thumbelina-shell</guid>
-            <pubDate>Thu, 25 Jan 2024 14:35:25 GMT</pubDate>
-            <description><![CDATA[肌を調整]]></description>
-            <content:encoded><![CDATA[肌を調整]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[kirinokougai | 書斎の画像を差し替え]]></title>
