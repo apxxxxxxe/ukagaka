@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Wed, 24 Jul 2024 00:20:35 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 25 Jul 2024 00:19:35 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -15,96 +15,194 @@
         </image>
         <copyright>All rights reserved 2024, sample</copyright>
         <item>
-            <title><![CDATA[Haine | ✨ 素早いまばたきを追加]]></title>
+            <title><![CDATA[Haine | 🐛 書斎から居間に戻るまでに想定より１回多くランダムトークが必要だったのを修正]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Sat, 22 Jun 2024 06:25:32 GMT</pubDate>
-            <description><![CDATA[✨ 素早いまばたきを追加]]></description>
-            <content:encoded><![CDATA[✨ 素早いまばたきを追加]]></content:encoded>
+            <pubDate>Wed, 24 Jul 2024 12:12:39 GMT</pubDate>
+            <description><![CDATA[🐛 書斎から居間に戻るまでに想定より１回多くランダムトークが必要だったのを修正]]></description>
+            <content:encoded><![CDATA[🐛 書斎から居間に戻るまでに想定より１回多くランダムトークが必要だったのを修正]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | 🐛 起動直後sexial反応の条件を関数にまとめて一元管理するように]]></title>
+            <title><![CDATA[Haine | ✅ テストを最新の状態に合わせて整備]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Wed, 19 Jun 2024 12:34:25 GMT</pubDate>
-            <description><![CDATA[🐛 起動直後sexial反応の条件を関数にまとめて一元管理するように]]></description>
-            <content:encoded><![CDATA[🐛 起動直後sexial反応の条件を関数にまとめて一元管理するように]]></content:encoded>
+            <pubDate>Wed, 24 Jul 2024 12:12:39 GMT</pubDate>
+            <description><![CDATA[✅ テストを最新の状態に合わせて整備]]></description>
+            <content:encoded><![CDATA[✅ テストを最新の状態に合わせて整備]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | 💬 右下コメントのコンセプト変更
+            <title><![CDATA[Haine | ✨ 没入度の扱いを変更: ユーザが働きかけることで没頭から戻ってこれるシステムに]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Wed, 24 Jul 2024 11:49:34 GMT</pubDate>
+            <description><![CDATA[✨ 没入度の扱いを変更: ユーザが働きかけることで没頭から戻ってこれるシステムに]]></description>
+            <content:encoded><![CDATA[✨ 没入度の扱いを変更: ユーザが働きかけることで没頭から戻ってこれるシステムに]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 💥 @@@@@で囲まれた部分はon_translateの対象外とするように]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Wed, 24 Jul 2024 11:49:04 GMT</pubDate>
+            <description><![CDATA[💥 @@@@@で囲まれた部分はon_translateの対象外とするように]]></description>
+            <content:encoded><![CDATA[💥 @@@@@で囲まれた部分はon_translateの対象外とするように]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | ✨ replace_dialog_for_nomouthmoveを追加]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Wed, 24 Jul 2024 11:48:57 GMT</pubDate>
+            <description><![CDATA[✨ replace_dialog_for_nomouthmoveを追加]]></description>
+            <content:encoded><![CDATA[✨ replace_dialog_for_nomouthmoveを追加]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 💬 書斎モード時のさわり反応を別枠で用意するように]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Wed, 24 Jul 2024 11:48:09 GMT</pubDate>
+            <description><![CDATA[💬 書斎モード時のさわり反応を別枠で用意するように]]></description>
+            <content:encoded><![CDATA[💬 書斎モード時のさわり反応を別枠で用意するように]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 🚸 書斎モードの影の表示処理を変更]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Wed, 24 Jul 2024 11:48:01 GMT</pubDate>
+            <description><![CDATA[🚸 書斎モードの影の表示処理を変更]]></description>
+            <content:encoded><![CDATA[🚸 書斎モードの影の表示処理を変更]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 🚸 場所によって没入度の表示を変えるように]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Wed, 24 Jul 2024 11:39:08 GMT</pubDate>
+            <description><![CDATA[🚸 場所によって没入度の表示を変えるように]]></description>
+            <content:encoded><![CDATA[🚸 場所によって没入度の表示を変えるように]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 💬 没入度解説文を変更]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Wed, 24 Jul 2024 11:38:55 GMT</pubDate>
+            <description><![CDATA[💬 没入度解説文を変更]]></description>
+            <content:encoded><![CDATA[💬 没入度解説文を変更]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 💬 書斎トークを独白調に変更]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Wed, 24 Jul 2024 11:38:41 GMT</pubDate>
+            <description><![CDATA[💬 書斎トークを独白調に変更]]></description>
+            <content:encoded><![CDATA[💬 書斎トークを独白調に変更]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | ✨ 没入度の変更処理を関数化]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Wed, 24 Jul 2024 11:38:34 GMT</pubDate>
+            <description><![CDATA[✨ 没入度の変更処理を関数化]]></description>
+            <content:encoded><![CDATA[✨ 没入度の変更処理を関数化]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 🚸 影の深さを変更]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Wed, 24 Jul 2024 11:38:12 GMT</pubDate>
+            <description><![CDATA[🚸 影の深さを変更]]></description>
+            <content:encoded><![CDATA[🚸 影の深さを変更]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | ✨ 没入度リセット処理を一般化して使いやすいように]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Wed, 24 Jul 2024 11:37:51 GMT</pubDate>
+            <description><![CDATA[✨ 没入度リセット処理を一般化して使いやすいように]]></description>
+            <content:encoded><![CDATA[✨ 没入度リセット処理を一般化して使いやすいように]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | ✨ reset_immersion]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Wed, 24 Jul 2024 11:37:42 GMT</pubDate>
+            <description><![CDATA[✨ reset_immersion]]></description>
+            <content:encoded><![CDATA[✨ reset_immersion]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 💥 ひと息つくコマンドを削除
 
-キャラクターを明確に持たせた]]></title>
+没入度リセット処理は別の方法で実装するため]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Tue, 18 Jun 2024 17:23:04 GMT</pubDate>
-            <description><![CDATA[💬 右下コメントのコンセプト変更
+            <pubDate>Wed, 24 Jul 2024 11:37:36 GMT</pubDate>
+            <description><![CDATA[💥 ひと息つくコマンドを削除
 
-キャラクターを明確に持たせた]]></description>
-            <content:encoded><![CDATA[💬 右下コメントのコンセプト変更
+没入度リセット処理は別の方法で実装するため]]></description>
+            <content:encoded><![CDATA[💥 ひと息つくコマンドを削除
 
-キャラクターを明確に持たせた]]></content:encoded>
+没入度リセット処理は別の方法で実装するため]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | 💥 StatusをGlobalに持つのをやめてその都度reqから取り出すように]]></title>
+            <title><![CDATA[Haine | ✅ エラーメッセージを詳細化]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Tue, 18 Jun 2024 17:22:22 GMT</pubDate>
-            <description><![CDATA[💥 StatusをGlobalに持つのをやめてその都度reqから取り出すように]]></description>
-            <content:encoded><![CDATA[💥 StatusをGlobalに持つのをやめてその都度reqから取り出すように]]></content:encoded>
+            <pubDate>Wed, 24 Jul 2024 11:36:22 GMT</pubDate>
+            <description><![CDATA[✅ エラーメッセージを詳細化]]></description>
+            <content:encoded><![CDATA[✅ エラーメッセージを詳細化]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | 🚸 メニューの閉じるボタンを右上に移動]]></title>
+            <title><![CDATA[Haine | ♻  マウス反応処理のリファクタリング]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Tue, 18 Jun 2024 16:46:10 GMT</pubDate>
-            <description><![CDATA[🚸 メニューの閉じるボタンを右上に移動]]></description>
-            <content:encoded><![CDATA[🚸 メニューの閉じるボタンを右上に移動]]></content:encoded>
+            <pubDate>Wed, 24 Jul 2024 11:34:59 GMT</pubDate>
+            <description><![CDATA[♻  マウス反応処理のリファクタリング]]></description>
+            <content:encoded><![CDATA[♻  マウス反応処理のリファクタリング]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | 🐛 瞬き補完時にスコープが\1のままになることがあったのを修正
-
-ひと息つくコマンドの直後などに発生していた]]></title>
+            <title><![CDATA[Haine | ♻  complete_shadow -> render_shadow]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Mon, 17 Jun 2024 13:40:07 GMT</pubDate>
-            <description><![CDATA[🐛 瞬き補完時にスコープが\1のままになることがあったのを修正
-
-ひと息つくコマンドの直後などに発生していた]]></description>
-            <content:encoded><![CDATA[🐛 瞬き補完時にスコープが\1のままになることがあったのを修正
-
-ひと息つくコマンドの直後などに発生していた]]></content:encoded>
+            <pubDate>Wed, 24 Jul 2024 11:34:45 GMT</pubDate>
+            <description><![CDATA[♻  complete_shadow -> render_shadow]]></description>
+            <content:encoded><![CDATA[♻  complete_shadow -> render_shadow]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | ✅ 従者トーク・ロアトークの開放処理のテストを追加]]></title>
+            <title><![CDATA[Haine | 🚸 トーク統計画面で現在地のトークのみ表示するように]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Tue, 11 Jun 2024 16:48:24 GMT</pubDate>
-            <description><![CDATA[✅ 従者トーク・ロアトークの開放処理のテストを追加]]></description>
-            <content:encoded><![CDATA[✅ 従者トーク・ロアトークの開放処理のテストを追加]]></content:encoded>
+            <pubDate>Wed, 24 Jul 2024 11:34:25 GMT</pubDate>
+            <description><![CDATA[🚸 トーク統計画面で現在地のトークのみ表示するように]]></description>
+            <content:encoded><![CDATA[🚸 トーク統計画面で現在地のトークのみ表示するように]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | 🎨 各種トーク開放条件をrequired_conditionに記述するように]]></title>
+            <title><![CDATA[Haine | ♻️ remove unwrap]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Tue, 11 Jun 2024 16:29:05 GMT</pubDate>
-            <description><![CDATA[🎨 各種トーク開放条件をrequired_conditionに記述するように]]></description>
-            <content:encoded><![CDATA[🎨 各種トーク開放条件をrequired_conditionに記述するように]]></content:encoded>
+            <pubDate>Wed, 24 Jul 2024 11:33:49 GMT</pubDate>
+            <description><![CDATA[♻️ remove unwrap]]></description>
+            <content:encoded><![CDATA[♻️ remove unwrap]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | ✨ 過去トーク導入の解放条件を累計起動回数に変更]]></title>
+            <title><![CDATA[Haine | ♻️ 没トークを外部テキストファイルに書くように]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Tue, 11 Jun 2024 16:19:05 GMT</pubDate>
-            <description><![CDATA[✨ 過去トーク導入の解放条件を累計起動回数に変更]]></description>
-            <content:encoded><![CDATA[✨ 過去トーク導入の解放条件を累計起動回数に変更]]></content:encoded>
+            <pubDate>Wed, 24 Jul 2024 11:33:30 GMT</pubDate>
+            <description><![CDATA[♻️ 没トークを外部テキストファイルに書くように]]></description>
+            <content:encoded><![CDATA[♻️ 没トークを外部テキストファイルに書くように]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Haine | ✨ 累計起動回数を記録するように]]></title>
+            <title><![CDATA[Haine | ➖ 使っていないクレートを削除]]></title>
             <link>https://github.com/apxxxxxxe/Haine</link>
             <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Tue, 11 Jun 2024 16:17:51 GMT</pubDate>
-            <description><![CDATA[✨ 累計起動回数を記録するように]]></description>
-            <content:encoded><![CDATA[✨ 累計起動回数を記録するように]]></content:encoded>
+            <pubDate>Wed, 24 Jul 2024 11:33:30 GMT</pubDate>
+            <description><![CDATA[➖ 使っていないクレートを削除]]></description>
+            <content:encoded><![CDATA[➖ 使っていないクレートを削除]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Haine | 💬 トーク推敲]]></title>
+            <link>https://github.com/apxxxxxxe/Haine</link>
+            <guid>https://github.com/apxxxxxxe/Haine</guid>
+            <pubDate>Wed, 24 Jul 2024 11:33:26 GMT</pubDate>
+            <description><![CDATA[💬 トーク推敲]]></description>
+            <content:encoded><![CDATA[💬 トーク推敲]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
