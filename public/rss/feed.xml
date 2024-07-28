@@ -4,7 +4,7 @@
         <title>おわらない | 更新履歴</title>
         <link></link>
         <description>undefined</description>
-        <lastBuildDate>Sat, 27 Jul 2024 00:19:13 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 28 Jul 2024 00:22:10 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ja</language>
@@ -165,20 +165,6 @@
             <pubDate>Wed, 24 Jul 2024 11:37:42 GMT</pubDate>
             <description><![CDATA[✨ reset_immersion]]></description>
             <content:encoded><![CDATA[✨ reset_immersion]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Haine | 💥 ひと息つくコマンドを削除
-
-没入度リセット処理は別の方法で実装するため]]></title>
-            <link>https://github.com/apxxxxxxe/Haine</link>
-            <guid>https://github.com/apxxxxxxe/Haine</guid>
-            <pubDate>Wed, 24 Jul 2024 11:37:36 GMT</pubDate>
-            <description><![CDATA[💥 ひと息つくコマンドを削除
-
-没入度リセット処理は別の方法で実装するため]]></description>
-            <content:encoded><![CDATA[💥 ひと息つくコマンドを削除
-
-没入度リセット処理は別の方法で実装するため]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Youto | add: ランダムトーク+1]]></title>
