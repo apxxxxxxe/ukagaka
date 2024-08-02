@@ -6,15 +6,12 @@ import GoodButton from "utils/goodButton"
 import { GoodLimit } from "pages/api/good"
 import { useState } from "react"
 import { Checkbox } from "@mui/material"
+import { useEffect } from "react"
 import markdownToHtml, {
   makeGitHubReleaseDescription,
 } from "utils/markdownToHtml"
-import prisma from "lib/prisma"
-import axios from "axios"
-
-const axiosInstance = axios.create({
-  baseURL: process.env.API_URL || process.env.NEXT_PUBLIC_API_URL,
-})
+import fs from "fs"
+import path from "path"
 
 type Piece = {
   type: string
@@ -28,102 +25,77 @@ type Piece = {
 }
 
 type Repository = {
-  repoName: string
-  pushedAt: string
+  name: string
+  pushed_at: string
 }
 
-export type Commit = {
-  repoName: string
-  date: string
+export type CommitGroup = {
+  repo: string
+  datetime: string
   messages: string[]
 }
 
-const fetchFromDB = () => {
-  const fetchMoreCommits = async (start: string, end: string) => {
-    let commits: Commit[] = []
-    let params: any = {}
-    params.start = start
-    params.end = end
-    await axiosInstance
-      .get(`/commits`, {
-        params: params,
-      })
-      .then((res) => {
-        commits = res.data
-      })
-      .catch((err) => {
-        console.error(err)
-      })
-    return commits
-  }
-
-  const fetchMoreReleases = async (start: string, end: string) => {
-    let releases: Release[] = []
-    let params: any = {}
-    params.start = start
-    params.end = end
-    await axiosInstance
-      .get(`/releases`, {
-        params: params,
-      })
-      .then(async (res) => {
-        for (const raw of res.data) {
-          const release = raw as Release
-          // body(markdown)を変換したものをbodyHtmlに書き込む
-          if (release.body !== "") {
-            release.bodyHtml = await markdownToHtml(release.body)
-          }
-          releases.push(release)
-        }
-      })
-      .catch((err) => {
-        console.error(err)
-      })
-    return releases
-  }
-
-  const start = new Date(0).toISOString()
-  const end = new Date().toISOString()
-  const promises = []
-  promises.push(fetchMoreCommits(start, end))
-  promises.push(fetchMoreReleases(start, end))
-  return Promise.all(promises)
+type CommitsByDate = {
+  date: string
+  commits: CommitGroup[]
 }
 
 export const getStaticProps: GetStaticProps = async () => {
   // Piecesのリポジトリの最終更新日を取得
-  const rawPushedAts = await prisma.repos.findMany({
-    select: {
-      repo_name: true,
-      pushed_at: true,
-    },
-  })
+  const repoDataPath = path.join(process.cwd(), "data", "repositories.json")
+  const repoContents = fs.readFileSync(repoDataPath, "utf8")
+  const pushedAts: Repository[] = JSON.parse(repoContents)
+  console.log(pushedAts)
 
-  const pushedAts: Repository[] = rawPushedAts.map((raw) => ({
-    repoName: raw.repo_name,
-    pushedAt: raw.pushed_at.toISOString(),
-  }))
+  // 最近のコミットを取得
+  const commitDataPath = path.join(
+    process.cwd(),
+    "data",
+    "commits_by_date.json"
+  )
+  const commitContents = fs.readFileSync(commitDataPath, "utf8")
+  const commits: CommitsByDate[] = JSON.parse(commitContents)
+  console.log(commits)
 
-  const [commits, releases] = await fetchFromDB()
+  // 最近のリリースを取得
+  const releaseDataPath = path.join(
+    process.cwd(),
+    "data",
+    "releases_by_date.json"
+  )
+  const releaseContents = fs.readFileSync(releaseDataPath, "utf8")
+  const releasesByDate: ReleasesByDate[] = JSON.parse(releaseContents)
+
+  for (let i = 0; i < releasesByDate.length; i++) {
+    for (let j = 0; j < releasesByDate[i].releases.length; j++) {
+      const body = releasesByDate[i].releases[j].body
+      if (body !== "") {
+        releasesByDate[i].releases[j].body_html = await markdownToHtml(body)
+      } else {
+        releasesByDate[i].releases[j].body_html = null
+      }
+    }
+  }
+
   return {
     props: {
       pushedAts: pushedAts,
       commits: commits,
-      releases: releases,
+      releases: releasesByDate,
     },
     revalidate: 60 * 60, // 1時間ごとに再生成
   }
 }
 
-const renderCommit = (commit: Commit) => {
+const renderCommit = (commit: CommitGroup) => {
   return (
-    <div className="ml-5" key={`commit-${commit.date}-${commit.repoName}}`}>
+    <div className="ml-5" key={`commit-${commit.datetime}-${commit.repo}}`}>
       <h3 className="font-bold mb-1">
         <span
           className="mr-1"
           style={{
             color: `#${pieces.find(
-              (piece) => piece.repoName === commit.repoName
+              (piece) => piece.repoName === commit.repo
             )?.color
               }`,
           }}
@@ -131,15 +103,15 @@ const renderCommit = (commit: Commit) => {
           ●
         </span>
         <Link
-          href={`#${commit.repoName}`}
+          href={`#${commit.repo}`}
           className="grow font-bold hover:underline"
         >
-          {pieceNameByRepoName(commit.repoName)}
+          {pieceNameByRepoName(commit.repo)}
         </Link>
       </h3>
       <ol className="list-disc ml-11 mb-3">
         {commit.messages.map((mes) => (
-          <li key={`${commit.date}-${mes}`}>
+          <li key={`${commit.datetime}-${mes}`}>
             {mes.split("\n").map((line, idx) => {
               if (line === "") {
                 return ""
@@ -163,25 +135,30 @@ const renderCommit = (commit: Commit) => {
 }
 
 export type Release = {
-  repoName: string
-  date: string
-  tagName: string
+  repo: string
+  datetime: string
+  tag_name: string
   body: string
-  bodyHtml: string | null
+  body_html: string | null
+}
+
+type ReleasesByDate = {
+  date: string
+  releases: Release[]
 }
 
 const renderRelease = (release: Release) => {
   return (
     <div
       className="ml-5"
-      key={`release-${release.date}-${release.tagName}`}
+      key={`release-${release.datetime}-${release.tag_name}`}
     >
       <h2 className="text-xl font-bold mb-1">
         <span
           className="mr-1"
           style={{
             color: `#${pieces.find(
-              (piece) => piece.repoName === release.repoName
+              (piece) => piece.repoName === release.repo
             )?.color
               }`,
           }}
@@ -189,16 +166,16 @@ const renderRelease = (release: Release) => {
           ●
         </span>
         <Link
-          href={`https://github.com/apxxxxxxe/${release.repoName}/releases/tag/${release.tagName}`}
+          href={`https://github.com/apxxxxxxe/${release.repo}/releases/tag/${release.tag_name}`}
           className="grow font-bold hover:underline"
         >
-          {`${pieceNameByRepoName(release.repoName)} Release ${release.tagName
+          {`${pieceNameByRepoName(release.repo)} Release ${release.tag_name
             }`}
         </Link>
       </h2>
       <div className="ml-3 my-3">
-        {release.bodyHtml !== null
-          ? makeGitHubReleaseDescription(release.bodyHtml)
+        {release.body_html !== null
+          ? makeGitHubReleaseDescription(release.body_html)
           : release.body}
       </div>
     </div>
@@ -373,16 +350,16 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: Repository[]) {
             .filter((piece) => piece.type === type)
             .map((piece) => {
               let pushedAt = pushedAts.find(
-                (p) => p.repoName === piece.repoName
+                (p) => p.name === piece.repoName
               )
               if (pushedAt) {
-                pushedAt.pushedAt = formatDate(
-                  pushedAt.pushedAt
+                pushedAt.pushed_at = formatDate(
+                  pushedAt.pushed_at
                 )
               } else {
                 pushedAt = {
-                  repoName: piece.repoName,
-                  pushedAt: "取得失敗",
+                  name: piece.repoName,
+                  pushed_at: "取得失敗",
                 }
               }
               return (
@@ -407,7 +384,7 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: Repository[]) {
                         {piece.title}
                       </Link>
                       <p className="ml-2 grow-0 text-sm text-darkgray">
-                        最終更新: {pushedAt.pushedAt}
+                        最終更新: {pushedAt.pushed_at}
                       </p>
                     </div>
                     <div>
@@ -444,25 +421,38 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: Repository[]) {
 
 type UpdatesByDate = {
   date: string
-  updates: (Commit | Release)[]
+  updates: (CommitGroup | Release)[]
 }
 
-const makeUpdatesByDate = (updates: (Commit | Release)[]) => {
+const makeUpdatesByDate = (updates: (CommitsByDate | ReleasesByDate)[]) => {
   let dateMap: any = {}
 
   for (let i = 0; i < updates.length; i++) {
-    const update = updates[i]
-    const d = new Date(update.date).toLocaleDateString()
-    if (dateMap[d] === undefined) {
-      const updatesByDate = updates.filter(
-        (u) => d === new Date(u.date).toLocaleDateString()
-      )
-      updatesByDate.sort((a, b) => {
-        return new Date(b.date).getTime() - new Date(a.date).getTime()
+    let updateGroup: CommitsByDate | ReleasesByDate = updates[i]
+    let beans: CommitGroup[] | Release[];
+    if ("commits" in updateGroup) {
+      beans = (updateGroup as CommitsByDate).commits
+    } else {
+      beans = (updateGroup as ReleasesByDate).releases
+    }
+    let d = updateGroup.date
+    if (d in dateMap) {
+      let ary = dateMap[d].updates.concat(beans)
+      ary.sort((a: CommitGroup | Release, b: CommitGroup | Release) => {
+        if ("tag_name" in a && !("tag_name" in b)) {
+          return -1
+        }
+        if (a.datetime < b.datetime) {
+          return 1
+        } else {
+          return -1
+        }
       })
+      dateMap[d].updates = ary
+    } else {
       dateMap[d] = {
         date: d,
-        updates: updatesByDate,
+        updates: beans,
       }
     }
   }
@@ -500,22 +490,31 @@ const renderUpdates = (updatesByDate: UpdatesByDate) => {
 
 type Props = {
   pushedAts: Repository[]
-  commits: Commit[]
-  releases: Release[]
+  commits: CommitsByDate[]
+  releases: ReleasesByDate[]
 }
 
 const Page: NextPage = ({ pushedAts, commits, releases }: Props) => {
   const [showCommits, setShowCommits] = useState(true)
   const [showReleases, setShowReleases] = useState(true)
+  const [updates, setUpdates] = useState<(CommitsByDate | ReleasesByDate)[]>([])
+  const [updateDoms, setUpdateDoms] = useState<JSX.Element[]>([])
 
-  const updates: (Commit | Release)[] = []
-  if (showCommits) {
-    updates.push(...commits)
-  }
-  if (showReleases) {
-    updates.push(...releases)
-  }
-  const updateDoms = makeUpdatesByDate(updates).map(renderUpdates)
+
+  useEffect(() => {
+    let updates: (CommitsByDate | ReleasesByDate)[] = []
+    if (showCommits) {
+      updates.push(...commits)
+    }
+    if (showReleases) {
+      updates.push(...releases)
+    }
+    setUpdates(updates)
+  }, [showCommits, showReleases])
+
+  useEffect(() => {
+    setUpdateDoms(makeUpdatesByDate(updates).map(renderUpdates))
+  }, [updates])
 
   return (
     <Layout title="INDEX" contentDirection="row">
