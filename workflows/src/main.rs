@@ -43,20 +43,14 @@ async fn run() -> Result<(), Box<dyn std::error::Error>> {
 
     let mut all_commits = Vec::new();
     for repo in REPOS.iter() {
-        let file = format!("response_{}.txt", repo);
-        let response = match std::fs::read_to_string(file.clone()) {
-            Ok(text) => text,
-            Err(_) => {
-                let url = format!("https://api.github.com/repos/{}/{}/commits", OWNER, repo);
-                let response = client
-                    .get(&url)
-                    .header("User-Agent", "reqwest")
-                    .send()
-                    .await?;
-                let r = response.text().await?;
-                std::fs::write(file, &r)?;
-                r
-            }
+        let response = {
+            let url = format!("https://api.github.com/repos/{}/{}/commits", OWNER, repo);
+            let response = client
+                .get(&url)
+                .header("User-Agent", "reqwest")
+                .send()
+                .await?;
+            response.text().await?
         };
         let commits = parse_commit(repo, response)?;
         all_commits.extend(commits);
@@ -74,20 +68,14 @@ async fn run() -> Result<(), Box<dyn std::error::Error>> {
 
     let mut all_repos = Vec::new();
     for repo in REPOS.iter() {
-        let file = format!("repo_response_{}.txt", repo);
-        let response = match std::fs::read_to_string(file.clone()) {
-            Ok(text) => text,
-            Err(_) => {
-                let url = format!("https://api.github.com/repos/{}/{}", OWNER, repo);
-                let response = client
-                    .get(&url)
-                    .header("User-Agent", "reqwest")
-                    .send()
-                    .await?;
-                let r = response.text().await?;
-                std::fs::write(file, &r)?;
-                r
-            }
+        let response = {
+            let url = format!("https://api.github.com/repos/{}/{}", OWNER, repo);
+            let response = client
+                .get(&url)
+                .header("User-Agent", "reqwest")
+                .send()
+                .await?;
+            response.text().await?
         };
         all_repos.push(serde_json::from_str::<Repository>(&response)?);
     }
@@ -95,20 +83,14 @@ async fn run() -> Result<(), Box<dyn std::error::Error>> {
 
     let mut all_releases = Vec::new();
     for repo in REPOS.iter() {
-        let file = format!("release_response_{}.txt", repo);
-        let response = match std::fs::read_to_string(file.clone()) {
-            Ok(text) => text,
-            Err(_) => {
-                let url = format!("https://api.github.com/repos/{}/{}/releases", OWNER, repo);
-                let response = client
-                    .get(&url)
-                    .header("User-Agent", "reqwest")
-                    .send()
-                    .await?;
-                let r = response.text().await?;
-                std::fs::write(file, &r)?;
-                r
-            }
+        let response = {
+            let url = format!("https://api.github.com/repos/{}/{}/releases", OWNER, repo);
+            let response = client
+                .get(&url)
+                .header("User-Agent", "reqwest")
+                .send()
+                .await?;
+            response.text().await?
         };
         let raw_releases: Vec<RawRelease> = serde_json::from_str(&response)?;
         all_releases.extend(
