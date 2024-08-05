@@ -1,8 +1,6 @@
 import { NextPage, GetStaticProps } from "next"
 import Link from "next/link"
 import Layout from "utils/Layout"
-import GoodButton from "utils/goodButton"
-import { GoodLimit } from "pages/api/good"
 import markdownToHtml, {
   makeGitHubReleaseDescription,
 } from "utils/markdownToHtml"
@@ -553,16 +551,6 @@ const Page: NextPage = ({ pushedAts, commits, releases }: Props) => {
             </Link>
           </li>
         </ul>
-        <div className="mt-20 flex flex-col items-center">
-          <GoodButton id="index" align="center" />
-          <div className="mt-2 text-sm text-darkgray">
-            <p>
-              いいねボタンはそれぞれ1日{GoodLimit}回まで押せます。
-              <br />
-              押しても何も起きませんが、作者の励みになります。
-            </p>
-          </div>
-        </div>
       </div>
     </Layout>
   )

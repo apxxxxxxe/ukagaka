@@ -5,7 +5,6 @@ import Layout, { formatDate } from "utils/Layout"
 import markdownToHtml, { rawHtmlToDom } from "utils/markdownToHtml"
 import getOgpData, { getFloatingURLs } from "utils/getOgpData"
 import TableOfContent from "utils/toc"
-import GoodButton from "utils/goodButton"
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
@@ -74,7 +73,6 @@ const Post: NextPage<Props> = ({ post, ogpDatas }) => (
 				<section>
 					{rawHtmlToDom(post.content, post.slug, ogpDatas)}
 				</section>
-				<GoodButton id={`post-${post.slug}`} align="end" />
 			</div>
 			<div className="toc-container">
 				<h2 className="toc-h2">もくじ</h2>
