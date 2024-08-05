@@ -1,6 +1,5 @@
 import { NextPage, GetStaticProps } from "next"
 import Link from "next/link"
-import Image from "next/image"
 import Layout from "utils/Layout"
 import GoodButton from "utils/goodButton"
 import { GoodLimit } from "pages/api/good"
@@ -368,10 +367,8 @@ function getPiecesElement(pieceAry: Piece[], pushedAts: Repository[]) {
                   className="flex flex-col items-center md:flex-row md:items-normal p-4 px-3 mb-8 border-solid border border-gray/[0.2] rounded-lg shadow-md"
                   key={`piece-${piece.repoName}`}
                 >
-                  <Image
+                  <img
                     className="w-min my-auto"
-                    width={234}
-                    height={60}
                     src={piece.bannerImg}
                     alt={`${piece.title}のバナー`}
                   />
