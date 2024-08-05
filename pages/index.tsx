@@ -79,7 +79,6 @@ export const getStaticProps: GetStaticProps = async () => {
       commits: commits,
       releases: releasesByDate,
     },
-    revalidate: 60 * 60, // 1時間ごとに再生成
   }
 }
 
