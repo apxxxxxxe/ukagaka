@@ -3,9 +3,6 @@ import Link from "next/link"
 import Layout from "utils/Layout"
 import GoodButton from "utils/goodButton"
 import { GoodLimit } from "pages/api/good"
-import { useState } from "react"
-import { Checkbox } from "@mui/material"
-import { useEffect } from "react"
 import markdownToHtml, {
   makeGitHubReleaseDescription,
 } from "utils/markdownToHtml"
@@ -492,33 +489,10 @@ type Props = {
 }
 
 const Page: NextPage = ({ pushedAts, commits, releases }: Props) => {
-  const [showCommits, setShowCommits] = useState(true)
-  const [showReleases, setShowReleases] = useState(true)
-  const [updates, setUpdates] = useState<(CommitsByDate | ReleasesByDate)[]>([])
-  const [updateDoms, setUpdateDoms] = useState<JSX.Element[]>([])
-
-
-  useEffect(() => {
-    let updates: (CommitsByDate | ReleasesByDate)[] = []
-    if (showCommits) {
-      updates.push(...commits)
-    }
-    if (showReleases) {
-      updates.push(...releases)
-    }
-    setUpdates(updates)
-
-    return () => {
-      setUpdates([])
-    }
-  }, [showCommits, showReleases])
-
-  useEffect(() => {
-    setUpdateDoms(makeUpdatesByDate(updates).map(renderUpdates))
-    return () => {
-      setUpdateDoms([])
-    }
-  }, [updates])
+  let uds: (CommitsByDate | ReleasesByDate)[] = []
+  uds.push(...commits)
+  uds.push(...releases)
+  let updateDoms = makeUpdatesByDate(uds).map(renderUpdates)
 
   return (
     <Layout title="INDEX" contentDirection="row">
@@ -536,18 +510,6 @@ const Page: NextPage = ({ pushedAts, commits, releases }: Props) => {
               alt="RSS"
             />
           </Link>
-        </div>
-        <div className="flex flex-row items-center justify-center mb-3">
-          <Checkbox
-            checked={showCommits}
-            onChange={() => setShowCommits(!showCommits)}
-          />{" "}
-          ネットワーク更新情報
-          <Checkbox
-            checked={showReleases}
-            onChange={() => setShowReleases(!showReleases)}
-          />{" "}
-          アーカイブ更新情報
         </div>
         <div className="overflow-y-auto h-96 mb-5">{updateDoms}</div>
         <h2 className="article-h2">配布物</h2>
