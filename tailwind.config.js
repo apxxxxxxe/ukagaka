@@ -7,11 +7,6 @@ module.exports = {
 	],
 	darkMode: false, // or 'media' or 'class'
 	theme: {
-		fontFamily: {
-			sans: ["Open Sans", "HackGen", "sans-serif"],
-			tegaki: ["klee", "sans-serif"],
-			tegakibold: ["klee-semibold", "sans-serif"],
-		},
 		colors: {
 			darkblue: "#1e2130",
 			black: "#30383a",

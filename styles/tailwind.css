@@ -2,21 +2,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
-
-@font-face {
-	font-family: "klee";
-	src: url(/fonts/Klee/KleeOne-Regular.ttf);
-}
-@font-face {
-	font-family: "klee-semibold";
-	src: url(/fonts/Klee/KleeOne-SemiBold.ttf);
-}
-@font-face {
-	font-family: "HackGen";
-	src: url(/fonts/HackGen/HackGen-Regular.ttf);
-}
-
 @layer components {
 	.article-container {
 		@apply container order-2 md:order-1 w-11/12 mx-auto my-5 flex flex-col bg-white md:m-5 p-10 rounded-xl shadow-md;

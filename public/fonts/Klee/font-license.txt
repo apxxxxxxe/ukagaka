@@ -1,5 +1,0 @@
-KleeOne-Regular.ttf
-KleeOne-SemiBold.ttf
-以上のフォントは以下ライセンスのもとで使用されています。
-Licensed under SIL Open Font License 1.1 (http://scripts.sil.org/OFL)
-Copyright 2020 The Klee Project Authors (https://github.com/fontworks-fonts/Klee)
