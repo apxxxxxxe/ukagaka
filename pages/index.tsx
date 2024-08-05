@@ -507,10 +507,17 @@ const Page: NextPage = ({ pushedAts, commits, releases }: Props) => {
       updates.push(...releases)
     }
     setUpdates(updates)
+
+    return () => {
+      setUpdates([])
+    }
   }, [showCommits, showReleases])
 
   useEffect(() => {
     setUpdateDoms(makeUpdatesByDate(updates).map(renderUpdates))
+    return () => {
+      setUpdateDoms([])
+    }
   }, [updates])
 
   return (
