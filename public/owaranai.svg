@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="99.395081mm"
+   height="27.57493mm"
+   viewBox="0 0 99.395081 27.57493"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.1 (91b66b0783, 2023-11-16)"
+   sodipodi:docname="owaranai.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.72426347"
+     inkscape:cx="396.95499"
+     inkscape:cy="450.8028"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g4" />
+  <defs
+     id="defs1">
+    <rect
+       x="194.68054"
+       y="434.92459"
+       width="345.17825"
+       height="37.279251"
+       id="rect3" />
+    <rect
+       x="73.177788"
+       y="341.03613"
+       width="372.79251"
+       height="214.01051"
+       id="rect1" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g4">
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-46.022426,-93.579843)"
+         id="text1"
+         style="white-space:pre;shape-inside:url(#rect1);display:inline;fill:#000000" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.0765px;font-family:'Klee One';-inkscape-font-specification:'Klee One';letter-spacing:-1.32292px;fill:#ffffff;stroke-width:1.83971;fill-opacity:1"
+         x="-3.3777039"
+         y="16.976828"
+         id="text2"><tspan
+           sodipodi:role="line"
+           id="tspan2"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Klee One';-inkscape-font-specification:'Klee One Semi-Bold';letter-spacing:-1.32292px;stroke-width:1.83971;fill:#ffffff;fill-opacity:1"
+           x="-3.3777039"
+           y="16.976828">おわらない</tspan></text>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.3772883,0,0,0.3772883,-73.138746,-142.57252)"
+         id="text3"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:14.9606px;font-family:'Klee One';-inkscape-font-specification:'Klee One Semi-Bold';letter-spacing:0px;white-space:pre;shape-inside:url(#rect3);display:inline;fill:#ffffff;fill-opacity:1"><tspan
+           x="194.67969"
+           y="449.95923"
+           id="tspan12"><tspan
+             style="font-weight:normal;font-family:'UD Digi Kyokasho NP-R';-inkscape-font-specification:'UD Digi Kyokasho NP-R'"
+             id="tspan1">伺</tspan><tspan
+             style="font-weight:normal;font-family:'UD Digi Kyokasho NP-R';-inkscape-font-specification:'UD Digi Kyokasho NP-R'"
+             id="tspan5">か</tspan><tspan
+             style="font-weight:normal;font-family:'UD Digi Kyokasho NP-R';-inkscape-font-specification:'UD Digi Kyokasho NP-R'"
+             id="tspan6">関連</tspan><tspan
+             style="font-weight:normal;font-family:'UD Digi Kyokasho NP-R';-inkscape-font-specification:'UD Digi Kyokasho NP-R'"
+             id="tspan7">の</tspan><tspan
+             style="font-weight:normal;font-family:'UD Digi Kyokasho NP-R';-inkscape-font-specification:'UD Digi Kyokasho NP-R'"
+             id="tspan8">配布物</tspan><tspan
+             style="font-weight:normal;font-family:'UD Digi Kyokasho NP-R';-inkscape-font-specification:'UD Digi Kyokasho NP-R'"
+             id="tspan9">を</tspan><tspan
+             style="font-weight:normal;font-family:'UD Digi Kyokasho NP-R';-inkscape-font-specification:'UD Digi Kyokasho NP-R'"
+             id="tspan10">置</tspan><tspan
+             style="font-weight:normal;font-family:'UD Digi Kyokasho NP-R';-inkscape-font-specification:'UD Digi Kyokasho NP-R'"
+             id="tspan11">くところ</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'UD Digi Kyokasho NP-R';-inkscape-font-specification:'UD Digi Kyokasho NP-R';letter-spacing:0px;fill:#000000;stroke-width:0.264583"
+         x="-65.749359"
+         y="14.918311"
+         id="text4"><tspan
+           sodipodi:role="line"
+           id="tspan4"
+           style="stroke-width:0.264583"
+           x="-65.749359"
+           y="14.918311" /></text>
+    </g>
+  </g>
+</svg>

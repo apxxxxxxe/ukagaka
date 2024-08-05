@@ -59,12 +59,11 @@ export default function Layout({
 					<div className="bg-rain">
 						<div className="backdrop-blur-xs h-40 flex flex-row items-center bg-darkblue/[0.6]">
 							<div className="text-white mx-auto md:ml-40 md:mr-0">
-								<h1 className="text-5xl font-tegakibold">
-									おわらない
-								</h1>
-								<p className="text-sm ml-2 mt-1.5 font-sans">
-									伺か関連の配布物を置くところ
-								</p>
+								<img
+									src="owaranai.svg"
+									alt="おわらない"
+									className="w-60"
+								/>
 							</div>
 						</div>
 					</div>
