@@ -30,6 +30,10 @@ export type Article = {
 	summery: string
 }
 
+export interface ArticleForRender extends Article {
+	html: string
+}
+
 export const markdownToPost = (fullPath: string, fields: string[] = []) => {
 	const fileContents = fs.readFileSync(fullPath, "utf8")
 	const { data, content } = matter(fileContents)
