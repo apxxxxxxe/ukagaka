@@ -50,7 +50,7 @@ export default function Layout({
 				<title>{pageTitle}</title>
 				<link
 					rel="shortcut icon"
-					href="favicon.ico"
+					href="/favicon.ico"
 					type="image/vnd.microsoft.icon"
 				/>
 			</Head>
