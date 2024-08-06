@@ -63,7 +63,7 @@ async fn run() -> Result<(), Box<dyn std::error::Error>> {
     let commits_by_date = generate_commits_by_date(&all_commits);
     std::fs::write(
         COMMIT_BY_DATE_FILE,
-        serde_json::to_string(&commits_by_date)?,
+        serde_json::to_string_pretty(&commits_by_date)?,
     )?;
 
     let mut all_repos = Vec::new();
@@ -79,7 +79,7 @@ async fn run() -> Result<(), Box<dyn std::error::Error>> {
         };
         all_repos.push(serde_json::from_str::<Repository>(&response)?);
     }
-    std::fs::write(REPOSITORIES_FILE, serde_json::to_string(&all_repos)?)?;
+    std::fs::write(REPOSITORIES_FILE, serde_json::to_string_pretty(&all_repos)?)?;
 
     let mut all_releases = Vec::new();
     for repo in REPOS.iter() {
@@ -102,7 +102,7 @@ async fn run() -> Result<(), Box<dyn std::error::Error>> {
     let releases_by_date = release::generate_releases_by_date(&all_releases);
     std::fs::write(
         RELEASES_BY_DATE_FILE,
-        serde_json::to_string(&releases_by_date)?,
+        serde_json::to_string_pretty(&releases_by_date)?,
     )?;
 
     Ok(())
