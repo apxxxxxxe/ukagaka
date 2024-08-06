@@ -73,7 +73,7 @@ export default function Layout({
 					{menuItem("tips", router.pathname)}
 					{menuItem("blog", router.pathname)}
 				</div>
-				<div className={`flex flex-${contentDirection}`}>
+				<div className={`flex flex-${contentDirection} justify-center`}>
 					{children}
 				</div>
 				<div className="bg-black h-32"></div>
