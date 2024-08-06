@@ -497,7 +497,7 @@ const Page: NextPage = ({ pushedAts, commits, releases }: Props) => {
 	let updateDoms = makeUpdatesByDate(uds).map(renderUpdates)
 
 	return (
-		<Layout title="INDEX" contentDirection="row">
+		<Layout title="INDEX">
 			<div className="article-container mx-auto">
 				<h1 className="article-h1">INDEX</h1>
 				<div className="article-h2 flex flex-row items-center">

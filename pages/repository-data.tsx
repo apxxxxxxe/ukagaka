@@ -55,7 +55,7 @@ export async function getStaticProps() {
 const Page: NextPage<Props> = ({ repos }) => {
 	console.log(repos)
 	return (
-		<Layout title="TIPS" contentDirection="row">
+		<Layout title="TIPS">
 			<div className="content main-container">
 				<h1>LIST</h1>
 				<section>apxxxxxxeのGitHubリポジトリの最終push順リスト</section>
