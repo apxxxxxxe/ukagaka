@@ -5,9 +5,11 @@ tags: ["git"]
 summery: "gitで過去のコミットを編集したり分割したりする方法"
 ---
 
+## TL;DL
+intaractive rebaseを使いましょう。
+
 ## はじめに
-gitでプロジェクトを管理しているとき、「過去のこのコミット、あれとこれの操作を一緒にまとめちゃってるけど分割したほうがいいな」と思ったことはありませんか？  
-先日そういう機会があったので調査をし、実現するところまでできたのでメモしておきます。
+gitでコミット分割の方法を調べたのでメモしておきます。
 
 ## 手順
 ### git logして該当コミット(とその1つ前のコミット)のSHAを確認
@@ -93,7 +95,7 @@ git rebase --continue
 Successfully rebased and updated refs/heads/main.
 ```
 
-これで過去のコミットを分割しなおすことができました。
+過去のコミットを分割しなおすことができました。
 
 ## 参考
 - [3.6 Git Branching - Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
