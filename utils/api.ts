@@ -58,7 +58,7 @@ export const markdownToPost = (fullPath: string, fields: string[] = []) => {
 			field === "tags" ||
 			field === "summery"
 		) {
-			items[field] = data[field]
+			items[field] = data[field] || ""
 		}
 	})
 
