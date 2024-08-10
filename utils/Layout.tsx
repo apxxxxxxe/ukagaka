@@ -1,6 +1,5 @@
 import Link from "next/link"
 import Head from "next/head"
-import { useRouter } from "next/router"
 import "react-material-symbols/rounded"
 
 export function formatDate(date: string) {
@@ -10,13 +9,12 @@ export function formatDate(date: string) {
 	return `${year}/${month}/${day}`
 }
 
-const menuItem = (name: string, currentSlug: string): JSX.Element => {
+const menuItem = (name: string): JSX.Element => {
 	const slug = name === "index" ? "" : `${name}`
-	const c = currentSlug === slug ? "menuitem-active" : ""
 
 	return (
 		<p className="text-center text-white text-md font px-5 my-2 py-0.5">
-			<Link href={`/${slug}`} as={`/${slug}`} className={c}>
+			<Link href={`/${slug}`} as={`/${slug}`}>
 				{name}
 			</Link>
 		</p>
@@ -29,7 +27,6 @@ type Props = {
 }
 
 export default function Layout({ children, title = "" }: Props): JSX.Element {
-	const router = useRouter()
 	const siteTitle = "おわらない"
 
 	let pageTitle: string
@@ -64,9 +61,9 @@ export default function Layout({ children, title = "" }: Props): JSX.Element {
 					</div>
 				</div>
 				<div className="flex flex-row justify-center divide-x divide-darkgray bg-black">
-					{menuItem("index", router.pathname)}
-					{menuItem("tips", router.pathname)}
-					{menuItem("blog", router.pathname)}
+					{menuItem("index")}
+					{menuItem("tips")}
+					{menuItem("blog")}
 				</div>
 				<div className={`flex flex-col md:flex-row justify-center`}>
 					{children}

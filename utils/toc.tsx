@@ -64,7 +64,7 @@ function useScrollSpy(ids: string[], options: IntersectionObserverInit) {
 function makeHeading(headings: HeadingType[], activeId: string) {
 	let lastLevel = 0
 	let result = <></>
-	let tmp = new Array<ReactElement>(6).fill(null)
+	let tmp = new Array<ReactElement>(6).fill(<></>)
 	const ulClass = "pl-5 text-sm"
 
 	const wrapUl = (ary: ReactElement[], i: number) => {
@@ -118,7 +118,7 @@ function makeHeading(headings: HeadingType[], activeId: string) {
 					{wrapUl(tmp, 0)}
 				</>
 			)
-			tmp = new Array<ReactElement>(6).fill(null)
+			tmp = new Array<ReactElement>(6).fill(<></>)
 			lastLevel = 0
 		}
 	}
@@ -136,8 +136,11 @@ function TableOfContent() {
 		headings.map(({ id }) => id),
 		{ rootMargin: "0% 0% -90% 0%" }
 	)
-	const result = makeHeading(headings, activeId)
+  if (activeId === undefined) {
+    return <></>
+  }
 
+	const result = makeHeading(headings, activeId!)
 	return <nav className="toc">{result}</nav>
 }
 

@@ -1,13 +1,8 @@
-import { NextPage, GetStaticProps } from "next"
 import Link from "next/link"
 import Layout from "utils/Layout"
-import markdownToHtml, {
-	makeGitHubReleaseDescription,
-} from "utils/markdownToHtml"
-import fs from "fs"
-import path from "path"
+import { makeGitHubReleaseDescription } from "utils/markdownToHtml"
 
-type Piece = {
+export type Piece = {
 	type: string
 	title: string
 	repoName: string
@@ -18,7 +13,7 @@ type Piece = {
 	description: JSX.Element
 }
 
-type Repository = {
+export type Repository = {
 	name: string
 	pushed_at: string
 }
@@ -29,57 +24,9 @@ export type CommitGroup = {
 	messages: string[]
 }
 
-type CommitsByDate = {
+export type CommitsByDate = {
 	date: string
 	commits: CommitGroup[]
-}
-
-export const getStaticProps: GetStaticProps = async () => {
-	// Piecesのリポジトリの最終更新日を取得
-	const repoDataPath = path.join(process.cwd(), "data", "repositories.json")
-	const repoContents = fs.readFileSync(repoDataPath, "utf8")
-	const pushedAts: Repository[] = JSON.parse(repoContents)
-	console.log(pushedAts)
-
-	// 最近のコミットを取得
-	const commitDataPath = path.join(
-		process.cwd(),
-		"data",
-		"commits_by_date.json"
-	)
-	const commitContents = fs.readFileSync(commitDataPath, "utf8")
-	const commits: CommitsByDate[] = JSON.parse(commitContents)
-	console.log(commits)
-
-	// 最近のリリースを取得
-	const releaseDataPath = path.join(
-		process.cwd(),
-		"data",
-		"releases_by_date.json"
-	)
-	const releaseContents = fs.readFileSync(releaseDataPath, "utf8")
-	const releasesByDate: ReleasesByDate[] = JSON.parse(releaseContents)
-
-	for (let i = 0; i < releasesByDate.length; i++) {
-		for (let j = 0; j < releasesByDate[i].releases.length; j++) {
-			const body = releasesByDate[i].releases[j].body
-			if (body !== "") {
-				releasesByDate[i].releases[j].body_html = await markdownToHtml(
-					body
-				)
-			} else {
-				releasesByDate[i].releases[j].body_html = null
-			}
-		}
-	}
-
-	return {
-		props: {
-			pushedAts: pushedAts,
-			commits: commits,
-			releases: releasesByDate,
-		},
-	}
 }
 
 const renderCommit = (commit: CommitGroup) => {
@@ -138,7 +85,7 @@ export type Release = {
 	body_html: string | null
 }
 
-type ReleasesByDate = {
+export type ReleasesByDate = {
 	date: string
 	releases: Release[]
 }
@@ -330,7 +277,7 @@ const formatDate = (dateString: string): string => {
 }
 
 function getAllPieceTypes(pieceAry: Piece[]): string[] {
-	const types = []
+	const types: string[] = []
 	pieceAry.forEach((piece: Piece) => {
 		types.push(piece.type)
 	})
@@ -490,7 +437,7 @@ type Props = {
 	releases: ReleasesByDate[]
 }
 
-const Page: NextPage = ({ pushedAts, commits, releases }: Props) => {
+const HomePage = ({ pushedAts, commits, releases }: Props) => {
 	let uds: (CommitsByDate | ReleasesByDate)[] = []
 	uds.push(...commits)
 	uds.push(...releases)
@@ -556,4 +503,4 @@ const Page: NextPage = ({ pushedAts, commits, releases }: Props) => {
 		</Layout>
 	)
 }
-export default Page
+export default HomePage

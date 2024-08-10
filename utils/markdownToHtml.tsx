@@ -145,7 +145,7 @@ export const rawHtmlToDom = (
 				})
 				let code = ""
 				if (hasProperty(child, "children")) {
-					code = child.children[0].data
+					code = child.children![0].data
 				}
 				return (
 					<div className="mb-4 mx-4 border-solid border border-gray/[0.6] shadow">
