@@ -1,5 +1,3 @@
-"use client"
-
 import Link from "next/link"
 import { Article } from "utils/api"
 import Layout, { formatDate } from "utils/Layout"
@@ -36,7 +34,7 @@ const HomePage = ({
 		</div>
 		<div className="toc-container">
 			<h2 className="toc-h2">もくじ</h2>
-			<TableOfContent />
+			<TableOfContent html={post.content}/>
 		</div>
 	</Layout>
 )

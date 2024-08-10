@@ -1,147 +1,53 @@
-import React, { useEffect, useState, useRef, ReactElement } from "react"
+import Link from "next/link"
+import { JSDOM } from "jsdom"
 
-type HeadingType = { id: string; text: string; level: number }
-function useHeadings() {
-	const [headings, setHeadings] = useState<HeadingType[]>([])
-	useEffect(() => {
-		const elements = Array.from(document.querySelectorAll("h2,h3"))
-			.filter((element) => element.id)
-			.map((element) => ({
-				id: element.id,
-				text: element.textContent ?? "",
-				level: Number(element.tagName.substring(1)),
-			}))
-		setHeadings(elements)
-	}, [])
-	return headings
+type TableOfContent = {
+  level: string
+  title: string
+  href: string
 }
 
-function getId(children: string) {
-	return children
-		.split(" ")
-		.map((word) => word.toLowerCase())
-		.join("-")
-}
+function TableOfContent({ html }: { html: string }) {
+  const dom = new JSDOM(html).window.document
+  const elements = dom.querySelectorAll<HTMLElement>("h2, h3")
+  const headers: TableOfContent[] = []
+  elements.forEach((element) => {
+    const level = element.tagName
+    const title = element.textContent || "error"
+    const href = "#" + element.id
+    const record = { level: level, title: title, href: href }
+    headers.push(record)
+  })
+  return (
+    <ul className="ml-5">
+      {headers.map((header) => {
+        if (header.level === "H2") {
+          return (
+            <li
+              key={header.title}
+              className={`font-bold list-disc`}
+            >
+              <Link href={header.href} as={header.href}>
+                {header.title}
+              </Link>
+            </li>
+          )
+        } else {
+          return (
+            <li
+              key={header.title}
+              className={`list-circle`}
+            >
+              <Link href={header.href} as={header.href}>
+                {header.title}
+              </Link>
+            </li>
+          )
+        }
+      })}
+    </ul>
 
-type HeadingProps = {
-	children: string
-	as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
-	id?: string
-}
-
-function Heading({ children, id, as: Element, ...props }: HeadingProps) {
-	const theId = id ?? getId(children)
-	return (
-		<Element id={theId} {...props}>
-			{children}
-		</Element>
-	)
-}
-
-function useScrollSpy(ids: string[], options: IntersectionObserverInit) {
-	const [activeId, setActiveId] = useState<string>()
-	const observer = useRef<IntersectionObserver>()
-	useEffect(() => {
-		const elements = ids.map((id) => document.getElementById(id))
-		observer.current?.disconnect()
-		observer.current = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if (entry?.isIntersecting) {
-					setActiveId(entry.target.id)
-				}
-			})
-		}, options)
-		elements.forEach((el) => {
-			if (el) {
-				observer.current?.observe(el)
-			}
-		})
-		return () => observer.current?.disconnect()
-	}, [ids, options])
-	return activeId
-}
-
-function makeHeading(headings: HeadingType[], activeId: string) {
-	let lastLevel = 0
-	let result = <></>
-	let tmp = new Array<ReactElement>(6).fill(<></>)
-	const ulClass = "pl-5 text-sm"
-
-	const wrapUl = (ary: ReactElement[], i: number) => {
-		if (i === ary.length - 1 && ary[i] === null) {
-			return <></>
-		} else if (i === ary.length - 1) {
-			return <ul className={ulClass}>{ary[i]}</ul>
-		} else if (ary[i] === null) {
-			return <>{wrapUl(ary, i + 1)}</>
-		}
-		return (
-			<ul className={ulClass}>
-				{ary[i]}
-				{wrapUl(ary, i + 1)}
-			</ul>
-		)
-	}
-
-	let i = 0
-	while (i < headings.length) {
-		const heading = headings[i]
-		if (heading.level >= lastLevel) {
-			const level = heading.level - 1
-			let c = "list-disc"
-			switch (level) {
-				case 2:
-					c = "list-circle"
-					break
-			}
-			tmp[level] = (
-				<>
-					{tmp[level]}
-					<li key={heading.id} className={c}>
-						<a
-							className={
-								activeId === heading.id ? "font-bold" : ""
-							}
-							href={`#${heading.id}`}
-						>
-							{heading.text}
-						</a>
-					</li>
-				</>
-			)
-			lastLevel = heading.level
-			i++
-		} else {
-			result = (
-				<>
-					{result}
-					{wrapUl(tmp, 0)}
-				</>
-			)
-			tmp = new Array<ReactElement>(6).fill(<></>)
-			lastLevel = 0
-		}
-	}
-	return (
-		<>
-			{result}
-			{wrapUl(tmp, 0)}
-		</>
-	)
-}
-
-function TableOfContent() {
-	const headings = useHeadings()
-	const activeId = useScrollSpy(
-		headings.map(({ id }) => id),
-		{ rootMargin: "0% 0% -90% 0%" }
-	)
-  if (activeId === undefined) {
-    return <></>
-  }
-
-	const result = makeHeading(headings, activeId!)
-	return <nav className="toc">{result}</nav>
+  )
 }
 
 export default TableOfContent

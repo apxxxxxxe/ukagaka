@@ -1,5 +1,3 @@
-"use client"
-
 import { rawHtmlToDom } from "utils/markdownToHtml"
 import Layout from "utils/Layout"
 import TableOfContent from "utils/toc"
@@ -14,7 +12,7 @@ const HomePage = ({ content, slug, ogpDatas }) => {
 			</div>
 			<div className="toc-container">
 				<h2 className="toc-h2">もくじ</h2>
-				<TableOfContent />
+				<TableOfContent html={content}/>
 			</div>
 		</Layout>
 	)
