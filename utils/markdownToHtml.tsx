@@ -45,7 +45,7 @@ export const rawHtmlToDom = (
 ): ReturnType<typeof parse> => {
 	const options = {
 		replace: (node: Element) => {
-			const imageRoot = `contents`
+			const imageRoot = `/contents`
 			if (node.name === "h1") {
 				node.attribs.class = "article-h1"
 			}
