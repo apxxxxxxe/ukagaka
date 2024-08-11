@@ -1,10 +1,14 @@
-use crate::commit::{generate_commits_by_date, parse_commit, sort_by_date, RssGenerator};
+use crate::blog_rss::load_all_front_matter;
+use crate::commit::{generate_commits_by_date, parse_commit, sort_by_date};
 use crate::release::RawRelease;
 use crate::repository::Repository;
+use crate::rss::RssGenerator;
 
+mod blog_rss;
 mod commit;
 mod release;
 mod repository;
+mod rss;
 
 const REPOS: [&str; 11] = [
     "Haine",
@@ -22,8 +26,10 @@ const REPOS: [&str; 11] = [
 
 pub const OWNER: &str = "apxxxxxxe";
 pub const BASE_URL: &str = "https://apxxxxxxe.dev/";
-pub const RSS_TITLE: &str = "おわらない | 更新履歴";
-const RSS_FILE: &str = "../public/rss/feed.xml";
+pub const UPDATES_RSS_TITLE: &str = "おわらない | 更新履歴";
+pub const BLOG_RSS_TITLE: &str = "おわらない | ブログ記事";
+const UPDATES_RSS_FILE: &str = "../public/rss/updates_rss.xml";
+const BLOG_RSS_FILE: &str = "../public/rss/blog_rss.xml";
 const COMMIT_BY_DATE_FILE: &str = "../data/commits_by_date.json";
 const REPOSITORIES_FILE: &str = "../data/repositories.json";
 const RELEASES_BY_DATE_FILE: &str = "../data/releases_by_date.json";
@@ -39,6 +45,10 @@ async fn main() {
 }
 
 async fn run() -> Result<(), Box<dyn std::error::Error>> {
+    let blog_data = load_all_front_matter()?;
+    let blog_rss_channel = blog_data.generate_rss();
+    std::fs::write(BLOG_RSS_FILE, blog_rss_channel.to_string())?;
+
     let client = reqwest::Client::new();
 
     let mut all_commits = Vec::new();
@@ -58,7 +68,7 @@ async fn run() -> Result<(), Box<dyn std::error::Error>> {
 
     sort_by_date(&mut all_commits);
     let rss = all_commits.generate_rss();
-    std::fs::write(RSS_FILE, rss.to_string())?;
+    std::fs::write(UPDATES_RSS_FILE, rss.to_string())?;
 
     let commits_by_date = generate_commits_by_date(&all_commits);
     std::fs::write(

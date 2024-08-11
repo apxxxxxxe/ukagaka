@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>おわらない | ブログ記事</title><link>https://apxxxxxxe.dev/</link><description></description><item><title>直近のゴーストをリスト表示するプラグインを作った</title><link>https://apxxxxxxe.dev//entries/recentghosts-intro</link><pubDate>2022-07-24T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
+## 要旨
+いっぱいゴーストがいるのでより便利な方法で管理したいと思いました。  
+思いつく方法は
+1. お気に入りのゴーストとその他のゴーストを別管理
+2. 起動したいゴーストを検索する
+3. 最近起動したゴーストをリスト表示
+
+3.のみ既存の機能になかったので**プラグインを作りました**。
+
+## きっかけ
+
+私の環境にはゴーストが700名ほどインストールされています。  
+どのゴーストさんも満遍なく起動したいとはいえ、このままではあまりにも無秩序です。  
+ある程度優先順位をつけ、探しやすくする必要があると考えました。  
+
+## アプローチ
+
+### 1. お気に入りのゴーストとその他のゴーストを分ける
+最初に思いつく方法でした。お気に入りは特別な枠で管理したいものです。  
+SSPでは、ゴーストのインストールディレクトリを複数設定することが可能です。(バルーンなども同様)  
+この機能を使うことで、お気に入り/それ以外のみならず、イベント別・ジャンル別など様々な分類が可能になります。
+
+### 2. 起動したいゴーストを検索する
+ユーザの需要をより即時的かつ直感的に叶える方法です。  
+これもSSPに該当する機能が搭載されています。  
+Ctrl+Eで開くエクスプローラーでCtrl+Fを押すと開く検索窓に単語を入力することで、ゴースト名はもちろん作者名、キャラクター名までもを対象にゴーストの検索が可能です。  
+とてもべんり
+
+### 3. 最近起動したゴーストのリストを作る
+[時間的局所性](https://ja.wikipedia.org/wiki/%E5%8F%82%E7%85%A7%E3%81%AE%E5%B1%80%E6%89%80%E6%80%A7)という概念があります。  
+ある時点で参照されたデータは近い未来に再度参照されることが多いというコンピュータ科学での考え方ですが、これは一般にも同じことが言えると思います。実際、よくテキストエディタに搭載されている「最近使ったファイル」には類似の思考が見えます。  
+ぜひこれをSSPでも使いたいと思ったのですが、SSPに最近起動したゴーストを表示する機能はありませんでした。（私が気付いてないだけであれば教えていただけると幸いです）  
+ということで**最近起動したゴーストをリスト表示するプラグインを作りました。**  
+[card:直近のゴースト - Github](https://github.com/apxxxxxxe/recentghosts)  
+
+## 「直近のゴースト」の簡単な説明
+![center:preview](https://raw.githubusercontent.com/apxxxxxxe/recentghosts/images/image.png)
+- 本プラグインを有効にしておくと、起動したゴーストが自動的に20件まで記録されます。  
+- メニューから本プラグインを実行するとリストが表示されます。
+- リストには各ゴーストの切り替え・呼び出し機能があります。
+
+ぜひおためしください。
+
+
+</p>]]></content:encoded></item><item><title>8/8にweb拍手を送っていただいた方へ</title><link>https://apxxxxxxe.dev//entries/webclap_response_20240808</link><pubDate>2024-08-10T00:00:00Z</pubDate><content:encoded><![CDATA[<p>こちらこそハイネを気にかけてくださってありがとうございます～～～
+
+2019年代に一度公開したときは完成度の低さに自分で恥ずかしくなっちゃって公開を停止していました
+
+現在も正式に公開するのはまだ先ですが、（おそらくご存じの通り）GitHubから開発中のデータをダウンロードできるようになっています
+
+クソデカ設定変更・仕様変更などが今後あることは否めませんがゆるくお付き合いいただければと思います
+</p>]]></content:encoded></item><item><title>サイト内部の更新</title><link>https://apxxxxxxe.dev//entries/static-update</link><pubDate>2024-08-07T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
+以前まではSSRを用いた動的サイトとして本サイトをデプロイしていましたが、  
+Next.jsのstatic exportを使ってサイトを静的に生成する形に更新しました。ちょっと早くなったかも
+
+ところで、この文のような記事にするまでもない雑記は一覧に全文を表示する形式にしました。  
+記事らしい記事の更新もできていないので、今後はマイクロブログっぽい使い方もしたりしつつなんとかこのスペースを活用していきたいですね
+</p>]]></content:encoded></item><item><title>gitで過去のコミットを編集したり分割したりする方法</title><link>https://apxxxxxxe.dev//entries/git-split</link><pubDate>2023-04-26T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
+## TL;DL
+intaractive rebaseを使いましょう。
+
+## はじめに
+gitでコミット分割の方法を調べたのでメモしておきます。
+
+## 手順
+### git logして該当コミット(とその1つ前のコミット)のSHAを確認
+```
+git log --oneline
+
+83f52e6 (HEAD -> main) hoge
+f1cae65 fuga
+b8929a2 piyo
+0fd0f4e hoge
+945b51e fuga
+18f60e3 piyo
+d6b8ce8 poyo
+```
+
+下から2番目の18f60e3のコミットを分割したいとします。  
+このとき、18f60e3,d6b8ce8の2コミットをのちに入力できるように記憶しておきます。
+
+### git rebaseで該当コミットを編集可能な状態にする
+```
+git rebase -i d6b8ce8
+```
+とするとエディタが開き、そこには
+```
+pick 18f60e3 piyo
+pick 945b51e fuga
+pick 0fd0f4e hoge
+pick b8929a2 piyo
+pick f1cae65 fuga
+pick 83f52e6 hoge
+
+# Rebase d6b8ce8..83f52e6 onto d6b8ce8 (6 commands)
+(以下省略)
+```
+
+のような記述がなされています。  
+今回いじりたいのは18f60e3なので、
+
+```
+edit 18f60e3 piyo
+pick 945b51e fuga
+pick 0fd0f4e hoge
+pick b8929a2 piyo
+pick f1cae65 fuga
+pick 83f52e6 hoge
+
+# Rebase d6b8ce8..83f52e6 onto d6b8ce8 (6 commands)
+(以下省略)
+```
+と文頭のpickをeditに変え、保存して閉じます。
+
+```
+Stopped at 18f60e3...  piyo
+You can amend the commit now, with
+
+  git commit --amend
+
+Once you are satisfied with your changes, run
+
+  git rebase --continue
+```
+
+と出力されれば成功。18f60e3が編集可能となりました。
+
+### git resetで変更をワーキングディレクトリに戻す
+現在、18f60e3での変更はヒストリー上にあるので、コミットし直すためにワーキングディレクトリまで引き戻します。
+
+```
+git reset HEAD~
+```
+
+
+### 変更をコミット
+git add, git commitで変更をコミットします。  
+ここでコミットを小分けにすることで、当初の目的であるコミット18f60e3の分割が叶います。
+
+### git rebase --continueでHEADにチェックアウトして終了
+コミットが完了したら、rebaseで編集モードを終了し、HEADへチェックアウトします。
+
+```
+git rebase --continue
+
+Successfully rebased and updated refs/heads/main.
+```
+
+過去のコミットを分割しなおすことができました。
+
+## 参考
+- [3.6 Git Branching - Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
+- [Gitで数個前のcommitを遡って分割する](https://ken-c-lo.hatenadiary.org/entry/20130706/1373092204?utm_source=pocket_saves)
+- [Git でブランチを上書きする](https://qiita.com/phanect/items/4353854cb0d962916acf?utm_source=pocket_saves)
+</p>]]></content:encoded></item><item><title>RSSフィードを活用しよう</title><link>https://apxxxxxxe.dev//entries/rss-rec</link><pubDate>2022-07-25T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
+
+</p>]]></content:encoded></item><item><title>このブログについて</title><link>https://apxxxxxxe.dev//entries/init</link><pubDate>2022-07-01T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
+このサイトのブログ部分では、TIPSに記載するほどまとまっていない伺か関連の文章や  
+その他プログラミング関連の文章を載せていきます。
+</p>]]></content:encoded></item><item><title>GutHub APIで遊ぼう！</title><link>https://apxxxxxxe.dev//entries/github-api</link><pubDate>2022-07-13T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
+## hoge
+
+</p>]]></content:encoded></item><item><title>cssのお勉強</title><link>https://apxxxxxxe.dev//entries/css-study</link><pubDate>2022-07-14T00:00:00Z</pubDate><content:encoded><![CDATA[<p>## 要素を指定する方法いろいろ
+### ある要素内にある要素（階層は問わない）
+```
+p span {
+    color: red;
+}
+```
+
+### ある要素の子要素（直下のみ）
+```
+p > span {
+    color: red;
+}
+```
+
+
+</p>]]></content:encoded></item><item><title>vimの正規表現とVSCodeの正規表現(鬼車)の対応</title><link>https://apxxxxxxe.dev//entries/vim-regex</link><pubDate>2022-07-05T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
+## 要旨
+VSCodeのシンタックス拡張機能をVimプラグインに移植したい場合、
+
+- [Vimのドキュメント](https://vim-jp.org/vimdoc-ja/pattern.html)
+- [VSCodeの正規表現ライブラリ(鬼車)のリファレンス](https://macromates.com/manual/ja/regular_expressions)
+
+を見比べて該当部分を書き換えようというだけの話…
+
+### 2023/03/12追記
+VSCodeのシンタックス拡張機能をそのままVimで利用可能にするプラグイン「[scorpeon](https://github.com/uga-rosa/scorpeon.vim)」があるのでこちらを使いましょう。  
+以下の文は読まなくてよいです。
+
+## モチベーション
+### ayayaについて
+先日、こんな拡張機能が開発・公開されました。  
+[card:ayaya-vs-code-extension](https://github.com/Taromati2/ayaya-vs-code-extension)
+エディタのデファクトスタンダードであるVSCodeでaya/yayaのシンタックスハイライトほか便利な機能を提供するものです。  
+ありがたい…
+
+### Vimに移植する
+ところで、筆者は開発の際に[Vim](https://vim-jp.org/)を使っています。「慣れればどんなエディタよりも快適に開発できる」という某ユーザーの声に惹かれて２年ほど使っていますが、文章編集が実際とても楽になりました。  
+なんとかして今回の拡張機能の恩恵を受けたかったのですが、Vimの編集能力を捨ててVSCodeに乗り換えるのはまだ厳しいものがありました。
+[VSCodeでVimのキーバインドを実現する拡張機能](https://github.com/VSCodeVim/Vim)や[裏で動くNeovimとVSCodeを同期させる拡張機能](https://github.com/vscode-neovim/vscode-neovim)はありますが、Vimに慣れた身体には違和感が強く、解決には至りません。  
+ayayaのライセンスはWTFPL(パブリックドメインと同等)ということで、Vimプラグインへの移植を目指します。
+
+## 正規表現の対応関係
+VSCodeの正規表現ライブラリは「鬼車」です。[日本語リファレンス](https://macromates.com/manual/ja/regular_expressions)があるのでありがたく参考にします。  
+Vimは[ドキュメント](https://vim-jp.org/vimdoc-ja/pattern.html)に正規表現についての記載があります。  
+以上を参考に、正規表現の記法の対応関係を表にまとめます。
+|種類    |VSCode|Vim       |
+|--------|------|----------|
+|先読み  |hoge  |fuga      |
+|単語境界|\\\\b |\\< と \\>|
+
+
+- (作業中、随時追記)
+</p>]]></content:encoded></item><item><title>TIPS</title><link>https://apxxxxxxe.dev//entries/tips</link><pubDate>2022-06-29T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
+## 「......」で口パクアニメーションしないようにしたい
+
+![center:……で口パクを止めている](kuchipaku.gif)
+
+### シェルの口パク
+
+[surfaces.txtのアニメーションインターバル定義](http://ssp.shillest.net/ukadoc/manual/descript_shell_surfaces.html#introduction_animationinterval)には、トークに合わせてanimationを動かすオプションのtalkがあります。
+これを使うとトーク時に口を動かす表現が実現できます。ただし、これは「……」のようなセリフ的には無言の部分でも口が動いてしまいます。解決策を考えましょう。
+
+### 解決策
+
+- **「……」をクイックセクション(\\\_q)で囲む。**
+
+クイックセクションには以下の特徴があります。
+1. クイックセクション内の文章は一瞬で表示される
+2. ただしウェイトは有効である
+
+クイックセクション内の文章は一瞬で表示されます。一瞬で表示されるということは、当然口パクの対象外になります。  
+いっぽうで、クイックセクション内でもウェイト(\\w9や\\\_w[500]など)は依然として有効です。
+
+すなわち、以下のようにさくらスクリプトを記述することで、口パクする/しないを指定することができます。
+
+```
+// before
+……あいうえお
+
+// after
+\_q…\_w[500]…\_w[500]\_qあいうえお
+```
+
+その都度ウェイトを仕込むのは大変なので、里々ならreplace.txt、YAYAならOnTranslateに置換処理を記述するとよいでしょう。
+
+##  トーク文章の表示速度を辞書側で調整したい
+
+SSPのデフォルト表示速度は50ms/文字(ユーザ側で調整可能)ですが、  
+早口、ゆったりの表現や長い文章をゆっくり表示したいなど、ゴースト側から表示速度を変更したいことがしばしばあります。
+
+### 実現するための考え方
+
+- 遅らせたい場合、１文字ごとにウェイト(\\\_w\[25\]など)を入れて表示速度を調整すればよい
+- 早めたい場合は上記に加えてさくらスクリプト\\\_qでデフォルトのウェイトを消す必要がある
+
+考え方自体は単純ですが、問題はどうやってウェイトを挿入するかです。
+機械的に1文字ごとにウェイトを入れようとすると、さくらスクリプトの記述が壊されてしまいます。
+```
+\_q -> \\_w[25]_\_w[25]q\_w[25] (さくらスクリプトが機能しない)
+```
+
+### 具体的な方法(YAYA)
+さくらスクリプトをRE_REPLACE関数で一時的に制御文字に置き換え、ウェイト挿入後に再度置換することで解決します。
+```
+AddWait
+{
+    // _argv[0]: 対象文字列
+    // _argv[1]: ウェイト[ms]
+    // メッセージスピードの標準は50ms これに加算すると考えて調整
+
+    _text = _argv[0]
+    _wait = '\_w[' + _argv[1] + ']'
+
+    // 適当な制御文字 YAYAは0x0を扱えないので0x1で
+    _tagmark = CHR(0x1)
+    // さくらスクリプトは_tagmarkに置き換えて退避
+    //(さくらスクリプト中にウェイト記述が挟まって破綻するのを防ぐ)
+    // 置換したさくらスクリプトは配列に保持しておいて適宜取り出す
+    _t = RE_REPLACE(_text, '\\_{0,2}[a-zA-Z0-9*!&\-+](\d|\[("([^"]|\\")+?"|([^\]]|\\\])+?)+?\])?', _tagmark)
+    _tags = RE_GETSTR
+
+    _tagcount = 0
+    _textlen = STRLEN(_argv[0])
+    _result = ""
+    for _i=0; _i<_textlen; _i++ {
+        _c = SUBSTR(_t, _i, 1)
+        if _c == _tagmark {
+            _result += _tags[_tagcount]
+            _tagcount += 1
+        }
+        else {
+            _result += _c + _wait // #1
+        }
+    }
+    _result
+}
+
+```
+OnTranslateInternal関数にこれを仕込むことでウェイトの調整がトーク全体に適用されます。
+
+##  連続して同じトークが来るのを避ける
+
+たくさんのトーク群からどのようにトークを選び、喋らせるかは、ゴーストの実在感・トークの没入感に関わります。  
+トーク選択の基本処理はSHIORIがよしなにやってくれていますが、デベロッパー側からある程度ルールを設定することも可能です。
+
+### 前提
+
+トーク被りを避け、出来るだけまんべんなくトークが選ばれるようにしたい。
+
+#### 里々
+
+『＄文「○」の重複回避』『＄単語群「○」の重複回避』を利用してトーク被りを回避できます。  
+詳しくは[こちら](http://soliton.sub.jp/satori/index.php?%E7%89%B9%E6%AE%8A%E5%A4%89%E6%95%B0#o772b719)を参照
+
+#### YAYA
+
+関数のオプション「nooverlap」を指定することでトーク被りを回避できます。  
+詳しくは[こちら](https://emily.shillest.net/ayaya/?%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB/%E6%96%87%E6%B3%95/2.%E9%96%A2%E6%95%B0#vce5bec3)を参照
+
+#### 提案:ルーレット選択アルゴリズムを実装する(YAYA)
+
+上記の方法では、直前のトークとの被りのみ考慮されます。つまり極端に言えば、トークがA,B,C,...と用意されているのに、
+
+```
+トークA -> トークB -> トークA
+```
+
+のような順番は依然としてありえます。  
+このトークさっき聞いたな？となるのはなるべく避けるべきです。  
+そこで提案したいのが[ルーレット選択アルゴリズム](https://ja.wikipedia.org/wiki/%E9%81%BA%E4%BC%9D%E7%9A%84%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0#:~:text=%E3%82%82%E3%81%AE%E3%81%8C%E3%81%82%E3%82%8B%E3%80%82-,%E3%83%AB%E3%83%BC%E3%83%AC%E3%83%83%E3%83%88%E9%81%B8%E6%8A%9E,-%5B%E7%B7%A8%E9%9B%86%5D)です。  
+実装方法として、
+
+- 各トークに重みを付け、それを考慮したランダム選択を行います。
+- 選択のたびに次の処理を行います。
+  - 選ばれたトークは重みを1に減らす
+  - 選ばれなかったトークは重みを一定数増やす
+
+これにより、トークが選ばれた直後は被る確率が最小になり、その後少しずつ確率が増えることで前述の問題を軽減し、より自然かつ満遍ないトークが可能になります。
+
+##### 実装例
+
+拙作ゴースト「[Crave The Grave](https://github.com/apxxxxxxe/Haine/blob/main/ghost/master/yaya_rouletteselection.dic)」で実装されています。
+
+##  トークを日本語的にいい感じのところで自動改行したい
+
+### トーク毎に改行にこだわるのは面倒
+
+ゴーストのトークを書く際、通常の文章と異なる最も大きな点は改行だと思います。  
+筆者は文章の中途半端なところで改行が挟まると読みづらいため、読みやすい部分で改行を入れるのですが、
+一般的なブログサイトは1行60文字程度であるのに対して、伺かの標準バルーンは24文字(全角、SSPデフォルト+の場合)であり、トークを書いていると改行が頻繁に来るなと感じています。
+そこで見栄えの良い改行を自動化し、デベロッパーがトークの内容に専念できるようにするにはどうすればよいかを考えました。
+
+### 文節を機械的に見分けて処理する
+
+見栄えの良い文章とは、すなわち意味の区切り=文節で改行が入っている文章です。
+例えば、
+```
+吾輩は猫である。名前はまだない。
+　どこで生れたか頓と見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。
+```
+という文章をバルーンで表示する場合、そのまま書き込むとこうなります。
+```
+吾輩は猫である。名前はまだない。
+　どこで生れたか頓と見当がつかぬ。何でも薄暗いじ
+めじめした所でニャーニャー泣いていた事だけは記憶
+している。吾輩はここで始めて人間というものを見た。
+```
+24文字の時点で機械的に折り返されています。ぶつ切りな印象です。  
+つぎに、以下で紹介する自動改行関数を通した場合こうなります。
+```
+吾輩は猫である。名前はまだない。
+　どこで生れたか頓と見当がつかぬ。何でも
+薄暗いじめじめした所でニャーニャー泣いて
+いた事だけは記憶している。吾輩はここで始めて
+人間というものを見た。
+```
+文節で改行しています。  
+従来より自然な印象が出ている気がします。
+
+### くわしい説明(YAYA)
+
+形態素解析ソフトMeCabを実装したSAORI([kisaragi.dll](https://github.com/ponapalt/csaori))で文章を単語に分解し、各品詞から文節を割り出すことが可能です。
+これを利用して、文章を文節ごとに改行する関数を作ります。
+
+- editing
+
+### 実装例
+
+拙作ゴースト「[Crave The Grave](https://github.com/apxxxxxxe/Haine/blob/main/ghost/master/yaya_insertlinefeed.dic)」で実装されています。
+
+## 栞を最新版にしよう
+
+### よい
+
+- 新機能が使える
+- バグが修正され、不自由/危険が解消される
+- 最新版をつかっているという安心感
+
+### わるい
+
+- 更新の手間(複数ゴースト等を抱えていると特に)
+
+### 解決策
+
+- [複数の栞ファイルを一括で更新するツール](https://github.com/apxxxxxxe/shioriupdater)を使う
+
+ただし現在の機能ではdllファイルを差し替えるのみなので、更新に伴って必要となる作業がある場合は手作業で行う必要がある。
+
+## ある着せ替えパーツの表示順をサーフェスによって変えたい
+
+![center:こういうサーフェスがある。](sode_sample.png)
+![center:袖を着せ替えパーツとしている。](sode_nashi.png)
+![center:腕を後ろで組むサーフェス(表示の優先度が胴>腕)を作りたいけれど、](sode_nashi_ushiro.png)
+![center:同一のanimation番号では胴<腕のままなので、後ろに表示されない。](sode_ushiro_failure.png)
+
+だからといって後手のみanimation番号を変えただけだと、別の着せ替えパーツとして認識されてしまう。
+
+#### 解決法
+**addid**([解説](http://ssp.shillest.net/ukadoc/manual/descript_shell.html#sakura.bindgroup*.addid,ID))を使うと複数のanimationをまとめて1つの着せ替えパーツとして定義できる。  
+上述のように後手を別アニメーションとして定義したあと、shellのdescript.txtに以下のように記述する。
+```
+sakura.bindoption.group,袖
+sakura.bindgroup505318.name,袖,長白
+sakura.bindgroup505318.addid,500168
+
+// 注
+// animation505318: 前手用の袖アニメーション
+// animation500168: 後手用の袖アニメーション
+```
+![center:やりたい動作が実現できた。](sode_ushiro_success.png)
+</p>]]></content:encoded></item></channel></rss>

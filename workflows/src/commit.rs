@@ -1,6 +1,7 @@
+use crate::rss::RssGenerator;
 use crate::BASE_URL;
+use crate::UPDATES_RSS_TITLE;
 use crate::OWNER;
-use crate::RSS_TITLE;
 use rss::ChannelBuilder;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
@@ -69,7 +70,7 @@ pub fn sort_by_date(commits: &mut [Commit]) {
 impl RssGenerator for Vec<Commit> {
     fn generate_rss(&self) -> rss::Channel {
         let mut channel = ChannelBuilder::default()
-            .title(RSS_TITLE)
+            .title(UPDATES_RSS_TITLE)
             .link(BASE_URL)
             .build();
         let mut items = Vec::new();
@@ -144,8 +145,4 @@ fn is_ignored_commit(message: &str) -> bool {
         "build(deps)",
     ];
     words.iter().any(|w| message.contains(w))
-}
-
-pub(super) trait RssGenerator {
-    fn generate_rss(&self) -> rss::Channel;
 }

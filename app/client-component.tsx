@@ -450,10 +450,10 @@ const HomePage = ({ pushedAts, commits, releases }: Props) => {
 				<div className="article-h2 flex flex-row items-center">
 					<h2>最近の更新</h2>
 					<Link
-						href="/rss/feed.xml"
+						href="/rss/updates_rss.xml"
 						className="article-a flex flex-row items-center ml-2"
 					>
-						<img className="h-5" src="rss-icon.svg" alt="RSS" />
+						<img className="h-5" src="/rss-icon.svg" alt="RSS" />
 					</Link>
 				</div>
 				<div className="overflow-y-auto h-96 mb-5">{updateDoms}</div>
