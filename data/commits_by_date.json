@@ -1,999 +1,1121 @@
 [
-	{
-		"date": "2024-08-05",
-		"commits": [
-			{
-				"repo": "Haine",
-				"datetime": "2024-08-05T09:07:05Z",
-				"messages": [
-					"依存クレートを最新にアップグレード",
-					"GHAで最新のstable rustを使うように",
-					"🧑💻.gitmessageを追加"
-				]
-			}
-		]
-	},
-	{
-		"date": "2024-08-04",
-		"commits": [
-			{
-				"repo": "Haine",
-				"datetime": "2024-08-04T13:52:33Z",
-				"messages": [
-					"⚡️ サウンド再生時に複数の音源を並列して再生できるように",
-					"✅ トーク推敲の影響でテストが失敗していたのを修正",
-					"♻️ 燭台描画処理を調整&関数として統合",
-					"🔥 使っていない関数を削除",
-					"🐛  unload時にSSPごと落ちていたのを修正",
-					"初回書斎モード終了時から没入度を固定できる機能が有効になるように",
-					"ランダムトーク時に没入度に変動がなかった場合も場所移動判定を行うように",
-					"燭台にマウスホイール上で火をつけられるように",
-					"話しかけるメニューは居間でのみ表示されるように",
-					"サウンド再生機能を追加",
-					"マッチ箱を追加: クリックで火をつけられるように"
-				]
-			}
-		]
-	},
-	{
-		"date": "2024-07-30",
-		"commits": [
-			{
-				"repo": "Haine",
-				"datetime": "2024-07-30T16:12:58Z",
-				"messages": [
-					"🐛 2回目以降興奮モードがオンにならなくなっていたのを修正"
-				]
-			}
-		]
-	},
-	{
-		"date": "2024-07-29",
-		"commits": [
-			{
-				"repo": "Haine",
-				"datetime": "2024-07-29T16:26:22Z",
-				"messages": [
-					"✅ 過去トーク開放トークが正しく開放されるかのテストを追加",
-					"✨ 起動時に過去トーク開放トークを発生させるように"
-				]
-			}
-		]
-	},
-	{
-		"date": "2024-07-28",
-		"commits": [
-			{
-				"repo": "Haine",
-				"datetime": "2024-07-28T16:43:55Z",
-				"messages": [
-					"ランダムトークまでに想定より1秒多く必要だったのを修正",
-					"Status::from_request()の返り値を変更",
-					"起動時に燭台を表示するように",
-					"使われていないイベントハンドラを削除",
-					"kero.name",
-					"💬トーク追加・推敲"
-				]
-			}
-		]
-	},
-	{
-		"date": "2024-07-19",
-		"commits": [
-			{
-				"repo": "thumbelina-shell",
-				"datetime": "2024-07-19T12:52:38Z",
-				"messages": ["顔パーツを調整", "口パーツを調整"]
-			}
-		]
-	},
-	{
-		"date": "2024-07-18",
-		"commits": [
-			{
-				"repo": "thumbelina-shell",
-				"datetime": "2024-07-18T12:57:16Z",
-				"messages": ["デフォルト前髪を調整"]
-			}
-		]
-	},
-	{
-		"date": "2024-07-06",
-		"commits": [
-			{
-				"repo": "thumbelina-shell",
-				"datetime": "2024-07-06T15:09:36Z",
-				"messages": ["口パーツを調整"]
-			}
-		]
-	},
-	{
-		"date": "2024-06-24",
-		"commits": [
-			{
-				"repo": "thumbelina-shell",
-				"datetime": "2024-06-24T16:47:01Z",
-				"messages": ["顔の輪郭を再調整", "顔パーツを調整"]
-			}
-		]
-	},
-	{
-		"date": "2024-06-23",
-		"commits": [
-			{
-				"repo": "thumbelina-shell",
-				"datetime": "2024-06-23T13:31:53Z",
-				"messages": ["靴+1"]
-			}
-		]
-	},
-	{
-		"date": "2024-06-22",
-		"commits": [
-			{
-				"repo": "thumbelina-shell",
-				"datetime": "2024-06-22T14:40:00Z",
-				"messages": ["靴+1"]
-			}
-		]
-	},
-	{
-		"date": "2024-06-09",
-		"commits": [
-			{
-				"repo": "GhostWardrobe",
-				"datetime": "2024-06-09T11:47:04Z",
-				"messages": [
-					"Shellリロード直後に続けて保存イベントをraiseするように\nSSP 2.6.73の変更によって可能になった"
-				]
-			}
-		]
-	},
-	{
-		"date": "2024-06-04",
-		"commits": [
-			{
-				"repo": "thumbelina-shell",
-				"datetime": "2024-06-04T15:49:06Z",
-				"messages": ["緑ソファの色味を調整"]
-			}
-		]
-	},
-	{
-		"date": "2024-06-01",
-		"commits": [
-			{
-				"repo": "kirinokougai",
-				"datetime": "2024-06-01T17:34:27Z",
-				"messages": ["書斎の画像を差し替え"]
-			}
-		]
-	},
-	{
-		"date": "2024-05-07",
-		"commits": [
-			{
-				"repo": "GhostSpeaker",
-				"datetime": "2024-05-07T13:41:46Z",
-				"messages": ["Update README.md"]
-			}
-		]
-	},
-	{
-		"date": "2024-05-06",
-		"commits": [
-			{
-				"repo": "GhostSpeaker",
-				"datetime": "2024-05-06T06:16:56Z",
-				"messages": [
-					"Update readme.txt",
-					"Update readme.txt",
-					"Update README.md",
-					"🔖  v1.0.2",
-					"🐛 互換性維持処理の発生条件を修正",
-					"🐛 GhostSpeaker由来のスクリプトが読み上げられることがあったのを修正",
-					"🩹  v1.0.xで互換性維持処理が動くように"
-				]
-			}
-		]
-	},
-	{
-		"date": "2024-05-05",
-		"commits": [
-			{
-				"repo": "GhostSpeaker",
-				"datetime": "2024-05-05T16:32:21Z",
-				"messages": [
-					"🔖  v1.0.1",
-					"🐛 互換性維持用の処理がうまく動いていなかったのを修正",
-					"🧑‍💻 変数初期化時のdebug!が出力されるように",
-					"🐛  vars.yaml読み込み時、過去verに存在しないフィールドのパースに失敗していたのを修正",
-					"🔖  v1.0.0",
-					"♻️  dummy -> no_voice",
-					"✨ バージョンアップ時に1度だけ実行する処理を追加",
-					"💥 InitialVoiceを追加: 声質未設定時に読み上げる声質を選択可能に"
-				]
-			}
-		]
-	},
-	{
-		"date": "2024-04-07",
-		"commits": [
-			{
-				"repo": "kirinokougai",
-				"datetime": "2024-04-07T09:54:21Z",
-				"messages": ["number"]
-			}
-		]
-	},
-	{
-		"date": "2024-03-17",
-		"commits": [
-			{
-				"repo": "kirinokougai",
-				"datetime": "2024-03-17T01:47:32Z",
-				"messages": ["sstpmessageと本文が被らないように描画範囲を調整"]
-			}
-		]
-	},
-	{
-		"date": "2024-03-07",
-		"commits": [
-			{
-				"repo": "Bouyomi",
-				"datetime": "2024-03-07T12:37:41Z",
-				"messages": ["Update README.md"]
-			}
-		]
-	},
-	{
-		"date": "2024-02-21",
-		"commits": [
-			{
-				"repo": "Bouyomi",
-				"datetime": "2024-02-21T15:45:21Z",
-				"messages": ["GhostSpeakerについての言及をREADME.mdに追加"]
-			}
-		]
-	},
-	{
-		"date": "2024-02-03",
-		"commits": [
-			{
-				"repo": "thumbelina-shell",
-				"datetime": "2024-02-03T17:22:09Z",
-				"messages": ["ゴミを除去", "白ソファの色味を調整"]
-			}
-		]
-	},
-	{
-		"date": "2024-01-31",
-		"commits": [
-			{
-				"repo": "thumbelina-shell",
-				"datetime": "2024-01-31T16:32:13Z",
-				"messages": ["眉を調整"]
-			}
-		]
-	},
-	{
-		"date": "2024-01-29",
-		"commits": [
-			{
-				"repo": "thumbelina-shell",
-				"datetime": "2024-01-29T09:34:45Z",
-				"messages": ["肌を修正", "タイツを不透明にして減色"]
-			}
-		]
-	},
-	{
-		"date": "2024-01-27",
-		"commits": [
-			{
-				"repo": "thumbelina-shell",
-				"datetime": "2024-01-27T06:52:55Z",
-				"messages": ["腕のドット抜けを修正"]
-			}
-		]
-	},
-	{
-		"date": "2024-01-26",
-		"commits": [
-			{
-				"repo": "thumbelina-shell",
-				"datetime": "2024-01-26T12:57:08Z",
-				"messages": [
-					"存在しない画像をaddidしていたのを修正",
-					"画像にゴミが入っていたのを修正",
-					"Update README.md",
-					"首元きせかえを1つ追加",
-					"切り時(前髪)を調整"
-				]
-			}
-		]
-	},
-	{
-		"date": "2024-01-06",
-		"commits": [
-			{
-				"repo": "kirinokougai",
-				"datetime": "2024-01-06T08:49:26Z",
-				"messages": ["フォントサイズとsstpマーカーの座標を修正"]
-			}
-		]
-	},
-	{
-		"date": "2023-11-30",
-		"commits": [
-			{
-				"repo": "Ukaing",
-				"datetime": "2023-11-30T18:08:35Z",
-				"messages": [
-					"update: 自動更新機能を追加",
-					"update: urlクレートでcraftmanurlが有効なurlかどうかを判別するように\n無効なurlをボタンに使うとRich Presence全体が表示されなくなるので"
-				]
-			}
-		]
-	},
-	{
-		"date": "2023-11-06",
-		"commits": [
-			{
-				"repo": "Ukaing",
-				"datetime": "2023-11-06T17:54:21Z",
-				"messages": [
-					"fix: Discordを再起動した場合に意図しない挙動をしていたのを修正"
-				]
-			}
-		]
-	},
-	{
-		"date": "2023-10-28",
-		"commits": [
-			{
-				"repo": "Bouyomi",
-				"datetime": "2023-10-28T12:17:47Z",
-				"messages": ["fix", "add: configにNoVoiceByDefaultを追加"]
-			}
-		]
-	},
-	{
-		"date": "2023-10-27",
-		"commits": [
-			{
-				"repo": "Ukaing",
-				"datetime": "2023-10-27T18:52:23Z",
-				"messages": ["init"]
-			}
-		]
-	},
-	{
-		"date": "2023-10-21",
-		"commits": [
-			{
-				"repo": "Bouyomi",
-				"datetime": "2023-10-21T17:44:15Z",
-				"messages": [
-					"fix: さくらスクリプト消去時に周辺の数字が消えていたのを修正\n「\\n123」の1が消えたりしていた",
-					"Update README.md"
-				]
-			}
-		]
-	},
-	{
-		"date": "2023-10-07",
-		"commits": [
-			{
-				"repo": "Bouyomi",
-				"datetime": "2023-10-07T12:55:25Z",
-				"messages": [
-					"update: 同時起動するエンジンのパスは配列で管理するように"
-				]
-			}
-		]
-	},
-	{
-		"date": "2023-10-06",
-		"commits": [
-			{
-				"repo": "Bouyomi",
-				"datetime": "2023-10-06T12:42:11Z",
-				"messages": [
-					"remove: NoWordPhrase\nSAPIForVOICEVOXの「エンジンエラーを通知する」設定を切ればよいと気付いたので",
-					"update: 音声合成エンジンのパスはconfig.jsonに記述するように"
-				]
-			}
-		]
-	},
-	{
-		"date": "2023-10-05",
-		"commits": [
-			{
-				"repo": "Bouyomi",
-				"datetime": "2023-10-05T09:38:05Z",
-				"messages": [
-					"update: BouyomiChan_path.txtに記載されたBouyomiChan.exeを起動時に実行するように"
-				]
-			}
-		]
-	},
-	{
-		"date": "2023-04-10",
-		"commits": [
-			{
-				"repo": "GhostWardrobe",
-				"datetime": "2023-04-10T11:52:22Z",
-				"messages": [
-					"update: OnGhostInfoUpdateでshell.datの変更をフックしOnSecondChangeで保存処理を発火するように"
-				]
-			}
-		]
-	},
-	{
-		"date": "2023-04-09",
-		"commits": [
-			{
-				"repo": "GhostWardrobe",
-				"datetime": "2023-04-09T12:20:15Z",
-				"messages": [
-					"fix: shell.dat更新前に読み取りが行われていたのを修正",
-					"Update README.md",
-					"fix: 不要なサーフェス変更をしないように",
-					"fix: UTF-8のdescript.txtに対応"
-				]
-			}
-		]
-	},
-	{
-		"date": "2023-04-08",
-		"commits": [
-			{
-				"repo": "GhostWardrobe",
-				"datetime": "2023-04-08T22:24:06Z",
-				"messages": [
-					"update: OnSecondChangeではなくtimerraisepluginでリロード後の処理を発火するように",
-					"update: README.md",
-					"add: 起動時にネットワーク更新を行うように",
-					"update: 読み込みメニューでは全キャラクターの読み込み選択肢を一覧表示するように",
-					"update: 複数キャラクターに対応",
-					"fix: きせかえ定義の変数格納にsakura.bindgroup.defaultが含まれていたのを修正"
-				]
-			}
-		]
-	},
-	{
-		"date": "2023-04-07",
-		"commits": [
-			{
-				"repo": "GhostWardrobe",
-				"datetime": "2023-04-07T14:22:51Z",
-				"messages": [
-					"update: 半角スペースを含むゴースト・シェルに対応",
-					"Update draft.yaml",
-					"update: \\![chenge,shell]を\\![reload,shell]に変更"
-				]
-			}
-		]
-	},
-	{
-		"date": "2023-04-06",
-		"commits": [
-			{
-				"repo": "GhostWardrobe",
-				"datetime": "2023-04-06T07:07:45Z",
-				"messages": ["Initial Commit"]
-			}
-		]
-	},
-	{
-		"date": "2023-04-05",
-		"commits": [
-			{
-				"repo": "Bouyomi",
-				"datetime": "2023-04-05T11:01:14Z",
-				"messages": [
-					"fix: 文頭の\\0セリフが読まれない場合があるのを修正",
-					"update: base64デコード機能を削除"
-				]
-			}
-		]
-	},
-	{
-		"date": "2023-02-24",
-		"commits": [
-			{
-				"repo": "Youto",
-				"datetime": "2023-02-24T12:01:30Z",
-				"messages": ["add: ランダムトーク+1"]
-			}
-		]
-	},
-	{
-		"date": "2023-02-23",
-		"commits": [
-			{
-				"repo": "Youto",
-				"datetime": "2023-02-23T12:17:02Z",
-				"messages": ["add: 単語を追加(+39)"]
-			}
-		]
-	},
-	{
-		"date": "2023-02-14",
-		"commits": [
-			{
-				"repo": "Bouyomi",
-				"datetime": "2023-02-14T04:02:15Z",
-				"messages": [
-					"update: エラーログをbouyomi.logに出力するように",
-					"update: config.jsonにない設定項目は初期値で書き込むように",
-					"update: さくらスクリプト\\h,\\uに対応",
-					"fix: 機械2が機械1として表記されていたのを修正"
-				]
-			}
-		]
-	},
-	{
-		"date": "2023-01-20",
-		"commits": [
-			{
-				"repo": "Bouyomi",
-				"datetime": "2023-01-20T12:52:50Z",
-				"messages": [
-					"fix: 自動更新時にゴースト側のバルーンを閉じることがあったのを修正(暫定)"
-				]
-			}
-		]
-	},
-	{
-		"date": "2023-01-18",
-		"commits": [
-			{
-				"repo": "Bouyomi",
-				"datetime": "2023-01-18T15:51:27Z",
-				"messages": [
-					"update: craftman",
-					"fix: 起動時の更新が動いていなかったのを修正"
-				]
-			}
-		]
-	},
-	{
-		"date": "2023-01-04",
-		"commits": [
-			{
-				"repo": "Youto",
-				"datetime": "2023-01-04T13:37:36Z",
-				"messages": ["update: craftman"]
-			}
-		]
-	},
-	{
-		"date": "2022-12-27",
-		"commits": [
-			{
-				"repo": "Youto",
-				"datetime": "2022-12-27T23:07:00Z",
-				"messages": ["update: descript.txt"]
-			}
-		]
-	},
-	{
-		"date": "2022-12-11",
-		"commits": [
-			{
-				"repo": "Youto",
-				"datetime": "2022-12-11T06:16:36Z",
-				"messages": ["rename: txt-^>dic"]
-			},
-			{
-				"repo": "shioriupdater",
-				"datetime": "2022-12-11T12:42:34Z",
-				"messages": ["update: readme", "fix: 動作に関係ない部分の変更"]
-			}
-		]
-	},
-	{
-		"date": "2022-11-18",
-		"commits": [
-			{
-				"repo": "Youto",
-				"datetime": "2022-11-18T13:22:56Z",
-				"messages": ["add: ランダムトーク+1"]
-			}
-		]
-	},
-	{
-		"date": "2022-10-30",
-		"commits": [
-			{
-				"repo": "Youto",
-				"datetime": "2022-10-30T11:54:42Z",
-				"messages": [
-					"update: 羊が喋るときのサーフェスを変更",
-					"update: yaya.dll"
-				]
-			}
-		]
-	},
-	{
-		"date": "2022-10-24",
-		"commits": [
-			{
-				"repo": "Youto",
-				"datetime": "2022-10-24T03:08:18Z",
-				"messages": ["add: ランダムトーク+3"]
-			}
-		]
-	},
-	{
-		"date": "2022-08-10",
-		"commits": [
-			{
-				"repo": "kirinokougai",
-				"datetime": "2022-08-10T12:14:52Z",
-				"messages": ["Update readme.md", "Update readme.md"]
-			}
-		]
-	},
-	{
-		"date": "2022-07-23",
-		"commits": [
-			{
-				"repo": "recentghosts",
-				"datetime": "2022-07-23T14:11:16Z",
-				"messages": ["Update README.md"]
-			}
-		]
-	},
-	{
-		"date": "2022-07-22",
-		"commits": [
-			{
-				"repo": "Youto",
-				"datetime": "2022-07-22T00:56:37Z",
-				"messages": ["fix: さくらスクリプトの記述が壊れていたのを修正"]
-			}
-		]
-	},
-	{
-		"date": "2022-07-21",
-		"commits": [
-			{
-				"repo": "recentghosts",
-				"datetime": "2022-07-21T11:16:05Z",
-				"messages": [
-					"Update README.md",
-					"Update README.md",
-					"Update README.md",
-					"Create README.md",
-					"first commit"
-				]
-			}
-		]
-	},
-	{
-		"date": "2022-07-04",
-		"commits": [
-			{
-				"repo": "Youto",
-				"datetime": "2022-07-04T12:11:54Z",
-				"messages": ["update: readme.md"]
-			},
-			{
-				"repo": "shioriupdater",
-				"datetime": "2022-07-04T12:20:50Z",
-				"messages": [
-					"update: readme.md",
-					"update: readme.md",
-					"Update README.md",
-					"Update README.md"
-				]
-			}
-		]
-	},
-	{
-		"date": "2022-06-26",
-		"commits": [
-			{
-				"repo": "Youto",
-				"datetime": "2022-06-26T22:57:33Z",
-				"messages": ["Update readme.md"]
-			},
-			{
-				"repo": "kirinokougai",
-				"datetime": "2022-06-26T22:54:34Z",
-				"messages": ["Update readme.md"]
-			},
-			{
-				"repo": "shioriupdater",
-				"datetime": "2022-06-26T23:01:09Z",
-				"messages": ["Update README.md"]
-			}
-		]
-	},
-	{
-		"date": "2022-06-24",
-		"commits": [
-			{
-				"repo": "Youto",
-				"datetime": "2022-06-24T20:13:24Z",
-				"messages": [
-					"Revert \"update: homeurlを微修正\"\n\nThis reverts commit e126ba9d229c8501cec4c6927d38e6acda9f75b1.",
-					"update: homeurlを微修正"
-				]
-			},
-			{
-				"repo": "kirinokougai",
-				"datetime": "2022-06-24T20:15:19Z",
-				"messages": ["update: homeurlを微修正", "update: homeurlを変更"]
-			}
-		]
-	},
-	{
-		"date": "2022-06-22",
-		"commits": [
-			{
-				"repo": "sunset-sunrise-saori",
-				"datetime": "2022-06-22T04:05:23Z",
-				"messages": [
-					"Update README.md",
-					"update: 緯度,経度,標準時を引数で指定可能に",
-					"update: デリミタを変更",
-					"Update README.md"
-				]
-			}
-		]
-	},
-	{
-		"date": "2022-06-20",
-		"commits": [
-			{
-				"repo": "Youto",
-				"datetime": "2022-06-20T14:42:32Z",
-				"messages": ["fix: 終了トーク後に終了しない不具合を修正"]
-			}
-		]
-	},
-	{
-		"date": "2022-06-18",
-		"commits": [
-			{
-				"repo": "Youto",
-				"datetime": "2022-06-18T12:53:44Z",
-				"messages": ["add: Web拍手機能を追加", "update: yaya.dll"]
-			},
-			{
-				"repo": "sunset-sunrise-saori",
-				"datetime": "2022-06-18T09:30:35Z",
-				"messages": ["Update README.md"]
-			}
-		]
-	},
-	{
-		"date": "2022-06-17",
-		"commits": [
-			{
-				"repo": "sunset-sunrise-saori",
-				"datetime": "2022-06-17T12:39:00Z",
-				"messages": ["Update README.md", "Initial commit"]
-			}
-		]
-	},
-	{
-		"date": "2022-06-16",
-		"commits": [
-			{
-				"repo": "Youto",
-				"datetime": "2022-06-16T09:41:01Z",
-				"messages": [
-					"Update readme.md",
-					"Create readme.md",
-					"update: yaya.dll"
-				]
-			},
-			{
-				"repo": "shioriupdater",
-				"datetime": "2022-06-16T10:02:53Z",
-				"messages": ["Update README.md"]
-			}
-		]
-	},
-	{
-		"date": "2022-06-13",
-		"commits": [
-			{
-				"repo": "Youto",
-				"datetime": "2022-06-13T09:06:05Z",
-				"messages": ["update: workflow"]
-			},
-			{
-				"repo": "shioriupdater",
-				"datetime": "2022-06-13T11:38:10Z",
-				"messages": ["Update README.md"]
-			}
-		]
-	},
-	{
-		"date": "2022-06-10",
-		"commits": [
-			{
-				"repo": "shioriupdater",
-				"datetime": "2022-06-10T13:09:39Z",
-				"messages": ["Update README.md"]
-			}
-		]
-	},
-	{
-		"date": "2022-06-02",
-		"commits": [
-			{
-				"repo": "shioriupdater",
-				"datetime": "2022-06-02T06:51:45Z",
-				"messages": ["Update README.md"]
-			}
-		]
-	},
-	{
-		"date": "2022-05-30",
-		"commits": [
-			{
-				"repo": "kirinokougai",
-				"datetime": "2022-05-30T03:36:02Z",
-				"messages": ["update: サーフェスの順番を変更"]
-			},
-			{
-				"repo": "shioriupdater",
-				"datetime": "2022-05-30T23:52:16Z",
-				"messages": [
-					"update: ファイルの新旧の比較方法を変更\n比較する値を更新日時からバージョン情報に変更",
-					"update: エラーハンドリング処理を変更\nファイル内容コピーに失敗した場合のエラーハンドリングを変更"
-				]
-			}
-		]
-	},
-	{
-		"date": "2022-05-29",
-		"commits": [
-			{
-				"repo": "shioriupdater",
-				"datetime": "2022-05-29T23:34:29Z",
-				"messages": [
-					"fix: release.sh",
-					"fix: typo",
-					"update: ファイル探索中のエラーハンドリング処理を追加",
-					"add: release.sh",
-					"Update README.md",
-					"update: 諸々の記述を整形",
-					"update: 更新カウント処理を変更",
-					"add: .gitignore",
-					"update: 一時ファイル削除処理を変更",
-					"Update README.md",
-					"add: セルフアップデート機能を追加",
-					"fix: Unzip関数を修正\nno such directoryが出る場合があった"
-				]
-			}
-		]
-	},
-	{
-		"date": "2022-05-28",
-		"commits": [
-			{
-				"repo": "shioriupdater",
-				"datetime": "2022-05-28T10:28:39Z",
-				"messages": [
-					"update: 更新日時が一緒ならスキップするように",
-					"add: --versionオプションを追加",
-					"Update README.md"
-				]
-			}
-		]
-	},
-	{
-		"date": "2022-05-23",
-		"commits": [
-			{
-				"repo": "kirinokougai",
-				"datetime": "2022-05-23T13:32:47Z",
-				"messages": ["Update readme.md", "Create readme.md"]
-			}
-		]
-	},
-	{
-		"date": "2022-05-13",
-		"commits": [
-			{
-				"repo": "kirinokougai",
-				"datetime": "2022-05-13T13:40:23Z",
-				"messages": [
-					"update: kero側でもsakura側のサーフェスを使えるように"
-				]
-			}
-		]
-	},
-	{
-		"date": "2022-04-25",
-		"commits": [
-			{
-				"repo": "kirinokougai",
-				"datetime": "2022-04-25T13:33:25Z",
-				"messages": ["update: フォントサイズを大きくした"]
-			}
-		]
-	},
-	{
-		"date": "2022-04-23",
-		"commits": [
-			{
-				"repo": "kirinokougai",
-				"datetime": "2022-04-23T13:55:15Z",
-				"messages": ["update: workflowsを更新"]
-			}
-		]
-	},
-	{
-		"date": "2022-04-21",
-		"commits": [
-			{
-				"repo": "kirinokougai",
-				"datetime": "2022-04-21T01:39:00Z",
-				"messages": ["Update descript.txt\n\nfix homeurl"]
-			}
-		]
-	},
-	{
-		"date": "2022-01-30",
-		"commits": [
-			{
-				"repo": "kirinokougai",
-				"datetime": "2022-01-30T13:05:12Z",
-				"messages": ["update: フォントを変更"]
-			}
-		]
-	},
-	{
-		"date": "2022-01-25",
-		"commits": [
-			{
-				"repo": "kirinokougai",
-				"datetime": "2022-01-25T07:37:03Z",
-				"messages": ["add: license.txt", "フォントを変更"]
-			}
-		]
-	},
-	{
-		"date": "2022-01-05",
-		"commits": [
-			{
-				"repo": "kirinokougai",
-				"datetime": "2022-01-05T23:44:49Z",
-				"messages": ["フォントを変更・同梱"]
-			}
-		]
-	},
-	{
-		"date": "2021-12-24",
-		"commits": [
-			{
-				"repo": "kirinokougai",
-				"datetime": "2021-12-24T11:12:15Z",
-				"messages": ["homeurlを追加"]
-			}
-		]
-	},
-	{
-		"date": "2021-12-23",
-		"commits": [
-			{
-				"repo": "kirinokougai",
-				"datetime": "2021-12-23T13:03:11Z",
-				"messages": [
-					"作者urlを追加",
-					"フォルダ名を変更",
-					"テキストをUTF-8に変更",
-					"first commit"
-				]
-			}
-		]
-	}
+  {
+    "date": "2024-08-05",
+    "commits": [
+      {
+        "repo": "Haine",
+        "datetime": "2024-08-05T09:07:05Z",
+        "messages": [
+          "依存クレートを最新にアップグレード",
+          "GHAで最新のstable rustを使うように",
+          "🧑💻.gitmessageを追加"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-08-04",
+    "commits": [
+      {
+        "repo": "Haine",
+        "datetime": "2024-08-04T13:52:33Z",
+        "messages": [
+          "⚡️ サウンド再生時に複数の音源を並列して再生できるように",
+          "✅ トーク推敲の影響でテストが失敗していたのを修正",
+          "♻️ 燭台描画処理を調整&関数として統合",
+          "🔥 使っていない関数を削除",
+          "🐛  unload時にSSPごと落ちていたのを修正",
+          "初回書斎モード終了時から没入度を固定できる機能が有効になるように",
+          "ランダムトーク時に没入度に変動がなかった場合も場所移動判定を行うように",
+          "燭台にマウスホイール上で火をつけられるように",
+          "話しかけるメニューは居間でのみ表示されるように",
+          "サウンド再生機能を追加",
+          "マッチ箱を追加: クリックで火をつけられるように"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-07-30",
+    "commits": [
+      {
+        "repo": "Haine",
+        "datetime": "2024-07-30T16:12:58Z",
+        "messages": [
+          "🐛 2回目以降興奮モードがオンにならなくなっていたのを修正"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-07-29",
+    "commits": [
+      {
+        "repo": "Haine",
+        "datetime": "2024-07-29T16:26:22Z",
+        "messages": [
+          "✅ 過去トーク開放トークが正しく開放されるかのテストを追加",
+          "✨ 起動時に過去トーク開放トークを発生させるように"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-07-28",
+    "commits": [
+      {
+        "repo": "Haine",
+        "datetime": "2024-07-28T16:43:55Z",
+        "messages": [
+          "ランダムトークまでに想定より1秒多く必要だったのを修正",
+          "Status::from_request()の返り値を変更",
+          "起動時に燭台を表示するように",
+          "使われていないイベントハンドラを削除",
+          "kero.name",
+          "💬トーク追加・推敲"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-07-19",
+    "commits": [
+      {
+        "repo": "thumbelina-shell",
+        "datetime": "2024-07-19T12:52:38Z",
+        "messages": [
+          "顔パーツを調整",
+          "口パーツを調整"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-07-18",
+    "commits": [
+      {
+        "repo": "thumbelina-shell",
+        "datetime": "2024-07-18T12:57:16Z",
+        "messages": [
+          "デフォルト前髪を調整"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-07-06",
+    "commits": [
+      {
+        "repo": "thumbelina-shell",
+        "datetime": "2024-07-06T15:09:36Z",
+        "messages": [
+          "口パーツを調整"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-06-24",
+    "commits": [
+      {
+        "repo": "thumbelina-shell",
+        "datetime": "2024-06-24T16:47:01Z",
+        "messages": [
+          "顔の輪郭を再調整",
+          "顔パーツを調整"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-06-23",
+    "commits": [
+      {
+        "repo": "thumbelina-shell",
+        "datetime": "2024-06-23T13:31:53Z",
+        "messages": [
+          "靴+1"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-06-22",
+    "commits": [
+      {
+        "repo": "thumbelina-shell",
+        "datetime": "2024-06-22T14:40:00Z",
+        "messages": [
+          "靴+1"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-06-09",
+    "commits": [
+      {
+        "repo": "GhostWardrobe",
+        "datetime": "2024-06-09T11:47:04Z",
+        "messages": [
+          "Shellリロード直後に続けて保存イベントをraiseするように\nSSP 2.6.73の変更によって可能になった"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-06-04",
+    "commits": [
+      {
+        "repo": "thumbelina-shell",
+        "datetime": "2024-06-04T15:49:06Z",
+        "messages": [
+          "緑ソファの色味を調整"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-06-01",
+    "commits": [
+      {
+        "repo": "kirinokougai",
+        "datetime": "2024-06-01T17:34:27Z",
+        "messages": [
+          "書斎の画像を差し替え"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-05-07",
+    "commits": [
+      {
+        "repo": "GhostSpeaker",
+        "datetime": "2024-05-07T13:41:46Z",
+        "messages": [
+          "Update README.md"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-05-06",
+    "commits": [
+      {
+        "repo": "GhostSpeaker",
+        "datetime": "2024-05-06T06:16:56Z",
+        "messages": [
+          "Update readme.txt",
+          "Update readme.txt",
+          "Update README.md",
+          "🔖  v1.0.2",
+          "🐛 互換性維持処理の発生条件を修正",
+          "🐛 GhostSpeaker由来のスクリプトが読み上げられることがあったのを修正",
+          "🩹  v1.0.xで互換性維持処理が動くように"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-05-05",
+    "commits": [
+      {
+        "repo": "GhostSpeaker",
+        "datetime": "2024-05-05T16:32:21Z",
+        "messages": [
+          "🔖  v1.0.1",
+          "🐛 互換性維持用の処理がうまく動いていなかったのを修正",
+          "🧑‍💻 変数初期化時のdebug!が出力されるように",
+          "🐛  vars.yaml読み込み時、過去verに存在しないフィールドのパースに失敗していたのを修正",
+          "🔖  v1.0.0",
+          "♻️  dummy -> no_voice",
+          "✨ バージョンアップ時に1度だけ実行する処理を追加",
+          "💥 InitialVoiceを追加: 声質未設定時に読み上げる声質を選択可能に"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-04-07",
+    "commits": [
+      {
+        "repo": "kirinokougai",
+        "datetime": "2024-04-07T09:54:21Z",
+        "messages": [
+          "number"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-03-17",
+    "commits": [
+      {
+        "repo": "kirinokougai",
+        "datetime": "2024-03-17T01:47:32Z",
+        "messages": [
+          "sstpmessageと本文が被らないように描画範囲を調整"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-03-07",
+    "commits": [
+      {
+        "repo": "Bouyomi",
+        "datetime": "2024-03-07T12:37:41Z",
+        "messages": [
+          "Update README.md"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-02-21",
+    "commits": [
+      {
+        "repo": "Bouyomi",
+        "datetime": "2024-02-21T15:45:21Z",
+        "messages": [
+          "GhostSpeakerについての言及をREADME.mdに追加"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-02-03",
+    "commits": [
+      {
+        "repo": "thumbelina-shell",
+        "datetime": "2024-02-03T17:22:09Z",
+        "messages": [
+          "ゴミを除去",
+          "白ソファの色味を調整"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-01-31",
+    "commits": [
+      {
+        "repo": "thumbelina-shell",
+        "datetime": "2024-01-31T16:32:13Z",
+        "messages": [
+          "眉を調整"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-01-29",
+    "commits": [
+      {
+        "repo": "thumbelina-shell",
+        "datetime": "2024-01-29T09:34:45Z",
+        "messages": [
+          "肌を修正",
+          "タイツを不透明にして減色"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-01-27",
+    "commits": [
+      {
+        "repo": "thumbelina-shell",
+        "datetime": "2024-01-27T06:52:55Z",
+        "messages": [
+          "腕のドット抜けを修正"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-01-26",
+    "commits": [
+      {
+        "repo": "thumbelina-shell",
+        "datetime": "2024-01-26T12:57:08Z",
+        "messages": [
+          "存在しない画像をaddidしていたのを修正",
+          "画像にゴミが入っていたのを修正",
+          "Update README.md",
+          "首元きせかえを1つ追加",
+          "切り時(前髪)を調整"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2024-01-06",
+    "commits": [
+      {
+        "repo": "kirinokougai",
+        "datetime": "2024-01-06T08:49:26Z",
+        "messages": [
+          "フォントサイズとsstpマーカーの座標を修正"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-11-30",
+    "commits": [
+      {
+        "repo": "Ukaing",
+        "datetime": "2023-11-30T18:08:35Z",
+        "messages": [
+          "update: 自動更新機能を追加",
+          "update: urlクレートでcraftmanurlが有効なurlかどうかを判別するように\n無効なurlをボタンに使うとRich Presence全体が表示されなくなるので"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-11-06",
+    "commits": [
+      {
+        "repo": "Ukaing",
+        "datetime": "2023-11-06T17:54:21Z",
+        "messages": [
+          "fix: Discordを再起動した場合に意図しない挙動をしていたのを修正"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-10-28",
+    "commits": [
+      {
+        "repo": "Bouyomi",
+        "datetime": "2023-10-28T12:17:47Z",
+        "messages": [
+          "fix",
+          "add: configにNoVoiceByDefaultを追加"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-10-27",
+    "commits": [
+      {
+        "repo": "Ukaing",
+        "datetime": "2023-10-27T18:52:23Z",
+        "messages": [
+          "init"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-10-21",
+    "commits": [
+      {
+        "repo": "Bouyomi",
+        "datetime": "2023-10-21T17:44:15Z",
+        "messages": [
+          "fix: さくらスクリプト消去時に周辺の数字が消えていたのを修正\n「\\n123」の1が消えたりしていた",
+          "Update README.md"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-10-07",
+    "commits": [
+      {
+        "repo": "Bouyomi",
+        "datetime": "2023-10-07T12:55:25Z",
+        "messages": [
+          "update: 同時起動するエンジンのパスは配列で管理するように"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-10-06",
+    "commits": [
+      {
+        "repo": "Bouyomi",
+        "datetime": "2023-10-06T12:42:11Z",
+        "messages": [
+          "remove: NoWordPhrase\nSAPIForVOICEVOXの「エンジンエラーを通知する」設定を切ればよいと気付いたので",
+          "update: 音声合成エンジンのパスはconfig.jsonに記述するように"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-10-05",
+    "commits": [
+      {
+        "repo": "Bouyomi",
+        "datetime": "2023-10-05T09:38:05Z",
+        "messages": [
+          "update: BouyomiChan_path.txtに記載されたBouyomiChan.exeを起動時に実行するように"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-04-10",
+    "commits": [
+      {
+        "repo": "GhostWardrobe",
+        "datetime": "2023-04-10T11:52:22Z",
+        "messages": [
+          "update: OnGhostInfoUpdateでshell.datの変更をフックしOnSecondChangeで保存処理を発火するように"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-04-09",
+    "commits": [
+      {
+        "repo": "GhostWardrobe",
+        "datetime": "2023-04-09T12:20:15Z",
+        "messages": [
+          "fix: shell.dat更新前に読み取りが行われていたのを修正",
+          "Update README.md",
+          "fix: 不要なサーフェス変更をしないように",
+          "fix: UTF-8のdescript.txtに対応"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-04-08",
+    "commits": [
+      {
+        "repo": "GhostWardrobe",
+        "datetime": "2023-04-08T22:24:06Z",
+        "messages": [
+          "update: OnSecondChangeではなくtimerraisepluginでリロード後の処理を発火するように",
+          "update: README.md",
+          "add: 起動時にネットワーク更新を行うように",
+          "update: 読み込みメニューでは全キャラクターの読み込み選択肢を一覧表示するように",
+          "update: 複数キャラクターに対応",
+          "fix: きせかえ定義の変数格納にsakura.bindgroup.defaultが含まれていたのを修正"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-04-07",
+    "commits": [
+      {
+        "repo": "GhostWardrobe",
+        "datetime": "2023-04-07T14:22:51Z",
+        "messages": [
+          "update: 半角スペースを含むゴースト・シェルに対応",
+          "Update draft.yaml",
+          "update: \\![chenge,shell]を\\![reload,shell]に変更"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-04-06",
+    "commits": [
+      {
+        "repo": "GhostWardrobe",
+        "datetime": "2023-04-06T07:07:45Z",
+        "messages": [
+          "Initial Commit"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-04-05",
+    "commits": [
+      {
+        "repo": "Bouyomi",
+        "datetime": "2023-04-05T11:01:14Z",
+        "messages": [
+          "fix: 文頭の\\0セリフが読まれない場合があるのを修正",
+          "update: base64デコード機能を削除"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-02-24",
+    "commits": [
+      {
+        "repo": "Youto",
+        "datetime": "2023-02-24T12:01:30Z",
+        "messages": [
+          "add: ランダムトーク+1"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-02-23",
+    "commits": [
+      {
+        "repo": "Youto",
+        "datetime": "2023-02-23T12:17:02Z",
+        "messages": [
+          "add: 単語を追加(+39)"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-02-14",
+    "commits": [
+      {
+        "repo": "Bouyomi",
+        "datetime": "2023-02-14T04:02:15Z",
+        "messages": [
+          "update: エラーログをbouyomi.logに出力するように",
+          "update: config.jsonにない設定項目は初期値で書き込むように",
+          "update: さくらスクリプト\\h,\\uに対応",
+          "fix: 機械2が機械1として表記されていたのを修正"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-01-20",
+    "commits": [
+      {
+        "repo": "Bouyomi",
+        "datetime": "2023-01-20T12:52:50Z",
+        "messages": [
+          "fix: 自動更新時にゴースト側のバルーンを閉じることがあったのを修正(暫定)"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-01-18",
+    "commits": [
+      {
+        "repo": "Bouyomi",
+        "datetime": "2023-01-18T15:51:27Z",
+        "messages": [
+          "update: craftman",
+          "fix: 起動時の更新が動いていなかったのを修正"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2023-01-04",
+    "commits": [
+      {
+        "repo": "Youto",
+        "datetime": "2023-01-04T13:37:36Z",
+        "messages": [
+          "update: craftman"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-12-27",
+    "commits": [
+      {
+        "repo": "Youto",
+        "datetime": "2022-12-27T23:07:00Z",
+        "messages": [
+          "update: descript.txt"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-12-11",
+    "commits": [
+      {
+        "repo": "Youto",
+        "datetime": "2022-12-11T06:16:36Z",
+        "messages": [
+          "rename: txt-^>dic"
+        ]
+      },
+      {
+        "repo": "shioriupdater",
+        "datetime": "2022-12-11T12:42:34Z",
+        "messages": [
+          "update: readme",
+          "fix: 動作に関係ない部分の変更"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-11-18",
+    "commits": [
+      {
+        "repo": "Youto",
+        "datetime": "2022-11-18T13:22:56Z",
+        "messages": [
+          "add: ランダムトーク+1"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-10-30",
+    "commits": [
+      {
+        "repo": "Youto",
+        "datetime": "2022-10-30T11:54:42Z",
+        "messages": [
+          "update: 羊が喋るときのサーフェスを変更",
+          "update: yaya.dll"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-10-24",
+    "commits": [
+      {
+        "repo": "Youto",
+        "datetime": "2022-10-24T03:08:18Z",
+        "messages": [
+          "add: ランダムトーク+3"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-08-10",
+    "commits": [
+      {
+        "repo": "kirinokougai",
+        "datetime": "2022-08-10T12:14:52Z",
+        "messages": [
+          "Update readme.md",
+          "Update readme.md"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-07-23",
+    "commits": [
+      {
+        "repo": "recentghosts",
+        "datetime": "2022-07-23T14:11:16Z",
+        "messages": [
+          "Update README.md"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-07-22",
+    "commits": [
+      {
+        "repo": "Youto",
+        "datetime": "2022-07-22T00:56:37Z",
+        "messages": [
+          "fix: さくらスクリプトの記述が壊れていたのを修正"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-07-21",
+    "commits": [
+      {
+        "repo": "recentghosts",
+        "datetime": "2022-07-21T11:16:05Z",
+        "messages": [
+          "Update README.md",
+          "Update README.md",
+          "Update README.md",
+          "Create README.md",
+          "first commit"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-07-04",
+    "commits": [
+      {
+        "repo": "Youto",
+        "datetime": "2022-07-04T12:11:54Z",
+        "messages": [
+          "update: readme.md"
+        ]
+      },
+      {
+        "repo": "shioriupdater",
+        "datetime": "2022-07-04T12:20:50Z",
+        "messages": [
+          "update: readme.md",
+          "update: readme.md",
+          "Update README.md",
+          "Update README.md"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-06-26",
+    "commits": [
+      {
+        "repo": "Youto",
+        "datetime": "2022-06-26T22:57:33Z",
+        "messages": [
+          "Update readme.md"
+        ]
+      },
+      {
+        "repo": "kirinokougai",
+        "datetime": "2022-06-26T22:54:34Z",
+        "messages": [
+          "Update readme.md"
+        ]
+      },
+      {
+        "repo": "shioriupdater",
+        "datetime": "2022-06-26T23:01:09Z",
+        "messages": [
+          "Update README.md"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-06-24",
+    "commits": [
+      {
+        "repo": "Youto",
+        "datetime": "2022-06-24T20:13:24Z",
+        "messages": [
+          "Revert \"update: homeurlを微修正\"\n\nThis reverts commit e126ba9d229c8501cec4c6927d38e6acda9f75b1.",
+          "update: homeurlを微修正"
+        ]
+      },
+      {
+        "repo": "kirinokougai",
+        "datetime": "2022-06-24T20:15:19Z",
+        "messages": [
+          "update: homeurlを微修正",
+          "update: homeurlを変更"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-06-22",
+    "commits": [
+      {
+        "repo": "sunset-sunrise-saori",
+        "datetime": "2022-06-22T04:05:23Z",
+        "messages": [
+          "Update README.md",
+          "update: 緯度,経度,標準時を引数で指定可能に",
+          "update: デリミタを変更",
+          "Update README.md"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-06-20",
+    "commits": [
+      {
+        "repo": "Youto",
+        "datetime": "2022-06-20T14:42:32Z",
+        "messages": [
+          "fix: 終了トーク後に終了しない不具合を修正"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-06-18",
+    "commits": [
+      {
+        "repo": "Youto",
+        "datetime": "2022-06-18T12:53:44Z",
+        "messages": [
+          "add: Web拍手機能を追加",
+          "update: yaya.dll"
+        ]
+      },
+      {
+        "repo": "sunset-sunrise-saori",
+        "datetime": "2022-06-18T09:30:35Z",
+        "messages": [
+          "Update README.md"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-06-17",
+    "commits": [
+      {
+        "repo": "sunset-sunrise-saori",
+        "datetime": "2022-06-17T12:39:00Z",
+        "messages": [
+          "Update README.md",
+          "Initial commit"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-06-16",
+    "commits": [
+      {
+        "repo": "Youto",
+        "datetime": "2022-06-16T09:41:01Z",
+        "messages": [
+          "Update readme.md",
+          "Create readme.md",
+          "update: yaya.dll"
+        ]
+      },
+      {
+        "repo": "shioriupdater",
+        "datetime": "2022-06-16T10:02:53Z",
+        "messages": [
+          "Update README.md"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-06-13",
+    "commits": [
+      {
+        "repo": "Youto",
+        "datetime": "2022-06-13T09:06:05Z",
+        "messages": [
+          "update: workflow"
+        ]
+      },
+      {
+        "repo": "shioriupdater",
+        "datetime": "2022-06-13T11:38:10Z",
+        "messages": [
+          "Update README.md"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-06-10",
+    "commits": [
+      {
+        "repo": "shioriupdater",
+        "datetime": "2022-06-10T13:09:39Z",
+        "messages": [
+          "Update README.md"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-06-02",
+    "commits": [
+      {
+        "repo": "shioriupdater",
+        "datetime": "2022-06-02T06:51:45Z",
+        "messages": [
+          "Update README.md"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-05-30",
+    "commits": [
+      {
+        "repo": "kirinokougai",
+        "datetime": "2022-05-30T03:36:02Z",
+        "messages": [
+          "update: サーフェスの順番を変更"
+        ]
+      },
+      {
+        "repo": "shioriupdater",
+        "datetime": "2022-05-30T23:52:16Z",
+        "messages": [
+          "update: ファイルの新旧の比較方法を変更\n比較する値を更新日時からバージョン情報に変更",
+          "update: エラーハンドリング処理を変更\nファイル内容コピーに失敗した場合のエラーハンドリングを変更"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-05-29",
+    "commits": [
+      {
+        "repo": "shioriupdater",
+        "datetime": "2022-05-29T23:34:29Z",
+        "messages": [
+          "fix: release.sh",
+          "fix: typo",
+          "update: ファイル探索中のエラーハンドリング処理を追加",
+          "add: release.sh",
+          "Update README.md",
+          "update: 諸々の記述を整形",
+          "update: 更新カウント処理を変更",
+          "add: .gitignore",
+          "update: 一時ファイル削除処理を変更",
+          "Update README.md",
+          "add: セルフアップデート機能を追加",
+          "fix: Unzip関数を修正\nno such directoryが出る場合があった"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-05-28",
+    "commits": [
+      {
+        "repo": "shioriupdater",
+        "datetime": "2022-05-28T10:28:39Z",
+        "messages": [
+          "update: 更新日時が一緒ならスキップするように",
+          "add: --versionオプションを追加",
+          "Update README.md"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-05-23",
+    "commits": [
+      {
+        "repo": "kirinokougai",
+        "datetime": "2022-05-23T13:32:47Z",
+        "messages": [
+          "Update readme.md",
+          "Create readme.md"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-05-13",
+    "commits": [
+      {
+        "repo": "kirinokougai",
+        "datetime": "2022-05-13T13:40:23Z",
+        "messages": [
+          "update: kero側でもsakura側のサーフェスを使えるように"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-04-25",
+    "commits": [
+      {
+        "repo": "kirinokougai",
+        "datetime": "2022-04-25T13:33:25Z",
+        "messages": [
+          "update: フォントサイズを大きくした"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-04-23",
+    "commits": [
+      {
+        "repo": "kirinokougai",
+        "datetime": "2022-04-23T13:55:15Z",
+        "messages": [
+          "update: workflowsを更新"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-04-21",
+    "commits": [
+      {
+        "repo": "kirinokougai",
+        "datetime": "2022-04-21T01:39:00Z",
+        "messages": [
+          "Update descript.txt\n\nfix homeurl"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-01-30",
+    "commits": [
+      {
+        "repo": "kirinokougai",
+        "datetime": "2022-01-30T13:05:12Z",
+        "messages": [
+          "update: フォントを変更"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-01-25",
+    "commits": [
+      {
+        "repo": "kirinokougai",
+        "datetime": "2022-01-25T07:37:03Z",
+        "messages": [
+          "add: license.txt",
+          "フォントを変更"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2022-01-05",
+    "commits": [
+      {
+        "repo": "kirinokougai",
+        "datetime": "2022-01-05T23:44:49Z",
+        "messages": [
+          "フォントを変更・同梱"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2021-12-24",
+    "commits": [
+      {
+        "repo": "kirinokougai",
+        "datetime": "2021-12-24T11:12:15Z",
+        "messages": [
+          "homeurlを追加"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2021-12-23",
+    "commits": [
+      {
+        "repo": "kirinokougai",
+        "datetime": "2021-12-23T13:03:11Z",
+        "messages": [
+          "作者urlを追加",
+          "フォルダ名を変更",
+          "テキストをUTF-8に変更",
+          "first commit"
+        ]
+      }
+    ]
+  }
 ]
