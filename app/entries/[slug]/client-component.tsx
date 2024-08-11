@@ -32,10 +32,7 @@ const HomePage = ({
 
 			<section>{rawHtmlToDom(post.content, post.slug, ogpDatas)}</section>
 		</div>
-		<div className="toc-container">
-			<h2 className="toc-h2">もくじ</h2>
-			<TableOfContent html={post.content}/>
-		</div>
+		<TableOfContent html={post.content} />
 	</Layout>
 )
 

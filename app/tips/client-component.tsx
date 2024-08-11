@@ -10,10 +10,7 @@ const HomePage = ({ content, slug, ogpDatas }) => {
 				<p className="mb-4">開発中の備忘録をTIPS形式で掲載しています</p>
 				<div>{rawHtmlToDom(content, slug, ogpDatas)}</div>
 			</div>
-			<div className="toc-container">
-				<h2 className="toc-h2">もくじ</h2>
-				<TableOfContent html={content}/>
-			</div>
+			<TableOfContent html={content} />
 		</Layout>
 	)
 }
