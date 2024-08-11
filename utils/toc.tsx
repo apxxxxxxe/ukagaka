@@ -36,7 +36,7 @@ function TableOfContent({
 						return (
 							<li
 								key={header.title}
-								className={`font-bold list-disc`}
+								className={`font-bold list-disc hover:underline`}
 							>
 								<Link href={header.href} as={header.href}>
 									{header.title}
@@ -45,7 +45,10 @@ function TableOfContent({
 						)
 					} else {
 						return (
-							<li key={header.title} className={`list-circle`}>
+							<li
+								key={header.title}
+								className={`list-circle hover:underline`}
+							>
 								<Link href={header.href} as={header.href}>
 									{header.title}
 								</Link>
