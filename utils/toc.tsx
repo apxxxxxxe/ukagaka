@@ -30,13 +30,13 @@ function TableOfContent({
 	return (
 		<div className="toc-container">
 			<h2 className="toc-h2">{title}</h2>
-			<ul className="ml-5">
+			<ol className="toc-ol">
 				{headers.map((header) => {
 					if (header.level === "H2") {
 						return (
 							<li
 								key={header.title}
-								className={`font-bold list-disc hover:underline`}
+								className={`hover:underline font-bold toc-li toc-item-H2`}
 							>
 								<Link href={header.href} as={header.href}>
 									{header.title}
@@ -47,7 +47,7 @@ function TableOfContent({
 						return (
 							<li
 								key={header.title}
-								className={`list-circle hover:underline`}
+								className={`hover:underline toc-li toc-item-H3`}
 							>
 								<Link href={header.href} as={header.href}>
 									{header.title}
@@ -56,7 +56,7 @@ function TableOfContent({
 						)
 					}
 				})}
-			</ul>
+			</ol>
 		</div>
 	)
 }
