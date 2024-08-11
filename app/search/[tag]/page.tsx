@@ -15,7 +15,7 @@ export const generateStaticParams = async () => {
 	console.log(tags)
 
 	// url encode
-	return tags.map((tag) => ({ tag: encodeURIComponent(tag) }))
+	return tags.map((tag) => ({ tag: tag }))
 }
 
 const getProps = async ({ tag }: { tag: string }) => {
