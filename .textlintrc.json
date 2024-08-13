@@ -1,0 +1,9 @@
+{
+	"plugins": {},
+	"filters": {},
+	"rules": {
+		"sentence-length": {
+			"max": 75
+		}
+	}
+}
