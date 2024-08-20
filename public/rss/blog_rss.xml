@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>おわらない | ブログ記事</title><link>https://apxxxxxxe.dev/</link><description></description><item><title>vimの正規表現とVSCodeの正規表現(鬼車)の対応</title><link>https://apxxxxxxe.dev//entries/vim-regex</link><pubDate>2022-07-05T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>おわらない | ブログ記事</title><link>https://apxxxxxxe.dev/</link><description></description><item><title>RSSフィードを活用しよう</title><link>https://apxxxxxxe.dev//entries/rss-rec</link><pubDate>2022-07-25T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
+
+</p>]]></content:encoded></item><item><title>8/8にweb拍手を送っていただいた方へ</title><link>https://apxxxxxxe.dev//entries/webclap_response_20240808</link><pubDate>2024-08-10T00:00:00Z</pubDate><content:encoded><![CDATA[<p>こちらこそハイネを気にかけてくださってありがとうございます～～～
+
+2019年代に一度公開したときは完成度の低さに自分で恥ずかしくなっちゃって公開を停止していました
+
+現在も正式に公開するのはまだ先ですが、（おそらくご存じの通り）GitHubから開発中のデータをダウンロードできるようになっています
+
+すでに当時から大幅な変更が入っており、今後も設定変更・仕様変更などがあることは否めませんがゆるくお付き合いいただければと思います
+</p>]]></content:encoded></item><item><title>このブログについて</title><link>https://apxxxxxxe.dev//entries/init</link><pubDate>2022-07-01T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
+このサイトのブログ部分では、TIPSに記載するほどまとまっていない伺か関連の文章や  
+その他プログラミング関連の文章を載せていきます。
+</p>]]></content:encoded></item><item><title>vimの正規表現とVSCodeの正規表現(鬼車)の対応</title><link>https://apxxxxxxe.dev//entries/vim-regex</link><pubDate>2022-07-05T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
 ## 要旨
 VSCodeのシンタックス拡張機能をVimプラグインに移植したい場合、
 
@@ -35,105 +47,45 @@ Vimは[ドキュメント](https://vim-jp.org/vimdoc-ja/pattern.html)に正規�
 
 
 - (作業中、随時追記)
-</p>]]></content:encoded></item><item><title>RSSフィードを活用しよう</title><link>https://apxxxxxxe.dev//entries/rss-rec</link><pubDate>2022-07-25T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
+</p>]]></content:encoded></item><item><title>左右分割キーボードを初めて買った話</title><link>https://apxxxxxxe.dev//entries/my_new_gear_md600</link><pubDate>2024-08-12T00:00:00Z</pubDate><content:encoded><![CDATA[<p>左右分割キーボードを初めて購入した。買ったのは Mistel の MD600 Alpha Rhino
 
-</p>]]></content:encoded></item><item><title>gitで過去のコミットを編集したり分割したりする方法</title><link>https://apxxxxxxe.dev//entries/git-split</link><pubDate>2023-04-26T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
-## TL;DL
-intaractive rebaseを使いましょう。
+## 購入の経緯
+最近 PC 作業中に肩がこるなと感じることが多くなってきた。  
+キーボード周りに改善の余地があると考え調べていたところ、左右分割キーボードが肩こり改善に効果的であるという情報を得た。(腕を広げた姿勢で入力できるのが良いらしい)
 
-## はじめに
-gitでコミット分割の方法を調べたのでメモしておきます。
+左右分割キーボードについて知識はまるでなかったけど、しいて言えば自作キーボードでたまに見るなーという感じだった。(後日調べたところ、このとき思い浮かべていたのは[keyball](https://shirogane-lab.net/items/64b8f8693ee3fd0045280190)だった)
 
-## 手順
-### git logして該当コミット(とその1つ前のコミット)のSHAを確認
-```
-git log --oneline
+現時点で自作キーボードは未体験。へんてこな形をしたキーボードを自作するのは面白そうだけど、初めてが重なってハードルが高いかなと思ったので今回自作は断念した。
 
-83f52e6 (HEAD -> main) hoge
-f1cae65 fuga
-b8929a2 piyo
-0fd0f4e hoge
-945b51e fuga
-18f60e3 piyo
-d6b8ce8 poyo
-```
+自作を諦めるということで既製品の左右分割キーボードを探していたところ、[MD600](https://mistelkeyboard.com/products/5d46dac330c3f8432b9b611655d5abce) が見つかった。  
+特に左右分割である以外のこだわりはなかったので買った。あとレトロなカラーリングがかわいいと思ったのもある
 
-下から2番目の18f60e3のコミットを分割したいとします。  
-このとき、18f60e3,d6b8ce8の2コミットをのちに入力できるように記憶しておきます。
+## 使い心地
+軸は3種類くらいから選べたけど、よくわからないままクリア軸を選んだ。
 
-### git rebaseで該当コミットを編集可能な状態にする
-```
-git rebase -i d6b8ce8
-```
-とするとエディタが開き、そこには
-```
-pick 18f60e3 piyo
-pick 945b51e fuga
-pick 0fd0f4e hoge
-pick b8929a2 piyo
-pick f1cae65 fuga
-pick 83f52e6 hoge
+今までメカニカルキーボードといえば赤軸しか経験がなく、タクタイル系のスイッチは初めてだった。  
+使い始めた当初は打ち心地が重くて疲れると思ったのだけれど、しばらく打っているうちにコツを掴んでいい感じに馴染んだ。  
+具体的には、底まで押し込まずにタクタイルの特徴である引っ掛かりの出る時点まででストロークをやめること。  
+その時点でキースイッチは発火するので、慣れればむしろストローク量を少なく軽いタッチで入力できるようになった。  
+(追記: MD600 はキースイッチ交換可能だったので、後日サイレント赤軸に交換した。やっぱりこっちが好きかも)
 
-# Rebase d6b8ce8..83f52e6 onto d6b8ce8 (6 commands)
-(以下省略)
-```
+MD 600 では Alice レイアウトという湾曲したレイアウトを採用しているのも特徴のひとつ。  
+これも初めて触ったけど、こちらはさほど時間をかけずに慣れることができた。  
+手を動かす距離が多少減った感じがして良いかもという感じ。
 
-のような記述がなされています。  
-今回いじりたいのは18f60e3なので、
+HHKBを使っていたところからの移行だったので、未だにキーの配置に戸惑うところはある。特に delete キーが `Fn+'` なのはかなりつらい。  
+MD600 はマクロキーマッピングが可能なので、いろいろ試しつつ落ち着けるマッピングにできたらいいなという感じ
 
-```
-edit 18f60e3 piyo
-pick 945b51e fuga
-pick 0fd0f4e hoge
-pick b8929a2 piyo
-pick f1cae65 fuga
-pick 83f52e6 hoge
+## おわり
+かなりいい感じ！しばらく使っていきたい
 
-# Rebase d6b8ce8..83f52e6 onto d6b8ce8 (6 commands)
-(以下省略)
-```
-と文頭のpickをeditに変え、保存して閉じます。
+なんかブログらしいことを書いた気がする　以上です
+</p>]]></content:encoded></item><item><title>サイト内部の更新</title><link>https://apxxxxxxe.dev//entries/static-update</link><pubDate>2024-08-07T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
+以前まではSSRを用いた動的サイトとして本サイトをデプロイしていましたが、  
+Next.jsのstatic exportを使ってサイトを静的に生成する形に更新しました。ちょっと早くなったかも
 
-```
-Stopped at 18f60e3...  piyo
-You can amend the commit now, with
-
-  git commit --amend
-
-Once you are satisfied with your changes, run
-
-  git rebase --continue
-```
-
-と出力されれば成功。18f60e3が編集可能となりました。
-
-### git resetで変更をワーキングディレクトリに戻す
-現在、18f60e3での変更はヒストリー上にあるので、コミットし直すためにワーキングディレクトリまで引き戻します。
-
-```
-git reset HEAD~
-```
-
-
-### 変更をコミット
-git add, git commitで変更をコミットします。  
-ここでコミットを小分けにすることで、当初の目的であるコミット18f60e3の分割が叶います。
-
-### git rebase --continueでHEADにチェックアウトして終了
-コミットが完了したら、rebaseで編集モードを終了し、HEADへチェックアウトします。
-
-```
-git rebase --continue
-
-Successfully rebased and updated refs/heads/main.
-```
-
-過去のコミットを分割しなおすことができました。
-
-## 参考
-- [3.6 Git Branching - Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
-- [Gitで数個前のcommitを遡って分割する](https://ken-c-lo.hatenadiary.org/entry/20130706/1373092204?utm_source=pocket_saves)
-- [Git でブランチを上書きする](https://qiita.com/phanect/items/4353854cb0d962916acf?utm_source=pocket_saves)
+ところで、この文のような記事にするまでもない雑記は一覧に全文を表示する形式にしました。  
+記事らしい記事の更新もできていないので、今後はマイクロブログっぽい使い方もしたりしつつなんとかこのスペースを活用していきたいですね
 </p>]]></content:encoded></item><item><title>直近のゴーストをリスト表示するプラグインを作った</title><link>https://apxxxxxxe.dev//entries/recentghosts-intro</link><pubDate>2022-07-24T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
 ## 要旨
 いっぱいゴーストがいるのでより便利な方法で管理したいと思いました。  
@@ -179,48 +131,9 @@ Ctrl+Eで開くエクスプローラーでCtrl+Fを押すと開く検索窓に�
 ぜひおためしください。
 
 
-</p>]]></content:encoded></item><item><title>左右分割キーボードを初めて買った話</title><link>https://apxxxxxxe.dev//entries/my_new_gear_md600</link><pubDate>2024-08-12T00:00:00Z</pubDate><content:encoded><![CDATA[<p>左右分割キーボードを初めて購入した。買ったのは Mistel の MD600 Alpha Rhino
+</p>]]></content:encoded></item><item><title>GutHub APIで遊ぼう！</title><link>https://apxxxxxxe.dev//entries/github-api</link><pubDate>2022-07-13T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
+## hoge
 
-## 購入の経緯
-最近 PC 作業中に肩がこるなと感じることが多くなってきた。  
-キーボード周りに改善の余地があると考え調べていたところ、左右分割キーボードが肩こり改善に効果的であるという情報を得た。(腕を広げた姿勢で入力できるのが良いらしい)
-
-左右分割キーボードについて知識はまるでなかったけど、しいて言えば自作キーボードでたまに見るなーという感じだった。(後日調べたところ、このとき思い浮かべていたのは[keyball](https://shirogane-lab.net/items/64b8f8693ee3fd0045280190)だった)
-
-現時点で自作キーボードは未体験。へんてこな形をしたキーボードを自作するのは面白そうだけど、初めてが重なってハードルが高いかなと思ったので今回自作は断念した。
-
-自作を諦めるということで既製品の左右分割キーボードを探していたところ、[MD600](https://mistelkeyboard.com/products/5d46dac330c3f8432b9b611655d5abce) が見つかった。  
-特に左右分割である以外のこだわりはなかったので買った。あとレトロなカラーリングがかわいいと思ったのもある
-
-## 使い心地
-軸は3種類くらいから選べたけど、よくわからないままクリア軸を選んだ。
-
-今までメカニカルキーボードといえば赤軸しか経験がなく、タクタイル系のスイッチは初めてだった。  
-使い始めた当初は打ち心地が重くて疲れると思ったのだけれど、しばらく打っているうちにコツを掴んでいい感じに馴染んだ。  
-具体的には、底まで押し込まずにタクタイルの特徴である引っ掛かりの出る時点まででストロークをやめること。  
-その時点でキースイッチは発火するので、慣れればむしろストローク量を少なく軽いタッチで入力できるようになった。  
-(追記: MD600 はキースイッチ交換可能だったので、後日サイレント赤軸に交換した。やっぱりこっちが好きかも)
-
-MD 600 では Alice レイアウトという湾曲したレイアウトを採用しているのも特徴のひとつ。  
-これも初めて触ったけど、こちらはさほど時間をかけずに慣れることができた。  
-手を動かす距離が多少減った感じがして良いかもという感じ。
-
-HHKBを使っていたところからの移行だったので、未だにキーの配置に戸惑うところはある。特に delete キーが `Fn+'` なのはかなりつらい。  
-MD600 はマクロキーマッピングが可能なので、いろいろ試しつつ落ち着けるマッピングにできたらいいなという感じ
-
-## おわり
-かなりいい感じ！しばらく使っていきたい
-
-なんかブログらしいことを書いた気がする　以上です
-</p>]]></content:encoded></item><item><title>サイト内部の更新</title><link>https://apxxxxxxe.dev//entries/static-update</link><pubDate>2024-08-07T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
-以前まではSSRを用いた動的サイトとして本サイトをデプロイしていましたが、  
-Next.jsのstatic exportを使ってサイトを静的に生成する形に更新しました。ちょっと早くなったかも
-
-ところで、この文のような記事にするまでもない雑記は一覧に全文を表示する形式にしました。  
-記事らしい記事の更新もできていないので、今後はマイクロブログっぽい使い方もしたりしつつなんとかこのスペースを活用していきたいですね
-</p>]]></content:encoded></item><item><title>このブログについて</title><link>https://apxxxxxxe.dev//entries/init</link><pubDate>2022-07-01T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
-このサイトのブログ部分では、TIPSに記載するほどまとまっていない伺か関連の文章や  
-その他プログラミング関連の文章を載せていきます。
 </p>]]></content:encoded></item><item><title>TIPS</title><link>https://apxxxxxxe.dev//entries/tips</link><pubDate>2022-06-29T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
 ## 「......」で口パクアニメーションしないようにしたい
 
@@ -439,9 +352,6 @@ sakura.bindgroup505318.addid,500168
 // animation500168: 後手用の袖アニメーション
 ```
 ![center:やりたい動作が実現できた。](sode_ushiro_success.png)
-</p>]]></content:encoded></item><item><title>GutHub APIで遊ぼう！</title><link>https://apxxxxxxe.dev//entries/github-api</link><pubDate>2022-07-13T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
-## hoge
-
 </p>]]></content:encoded></item><item><title>cssのお勉強</title><link>https://apxxxxxxe.dev//entries/css-study</link><pubDate>2022-07-14T00:00:00Z</pubDate><content:encoded><![CDATA[<p>## 要素を指定する方法いろいろ
 ### ある要素内にある要素（階層は問わない）
 ```
@@ -458,11 +368,101 @@ p > span {
 ```
 
 
-</p>]]></content:encoded></item><item><title>8/8にweb拍手を送っていただいた方へ</title><link>https://apxxxxxxe.dev//entries/webclap_response_20240808</link><pubDate>2024-08-10T00:00:00Z</pubDate><content:encoded><![CDATA[<p>こちらこそハイネを気にかけてくださってありがとうございます～～～
+</p>]]></content:encoded></item><item><title>gitで過去のコミットを編集したり分割したりする方法</title><link>https://apxxxxxxe.dev//entries/git-split</link><pubDate>2023-04-26T00:00:00Z</pubDate><content:encoded><![CDATA[<p>
+## TL;DL
+intaractive rebaseを使いましょう。
 
-2019年代に一度公開したときは完成度の低さに自分で恥ずかしくなっちゃって公開を停止していました
+## はじめに
+gitでコミット分割の方法を調べたのでメモしておきます。
 
-現在も正式に公開するのはまだ先ですが、（おそらくご存じの通り）GitHubから開発中のデータをダウンロードできるようになっています
+## 手順
+### git logして該当コミット(とその1つ前のコミット)のSHAを確認
+```
+git log --oneline
 
-すでに当時から大幅な変更が入っており、今後も設定変更・仕様変更などがあることは否めませんがゆるくお付き合いいただければと思います
+83f52e6 (HEAD -> main) hoge
+f1cae65 fuga
+b8929a2 piyo
+0fd0f4e hoge
+945b51e fuga
+18f60e3 piyo
+d6b8ce8 poyo
+```
+
+下から2番目の18f60e3のコミットを分割したいとします。  
+このとき、18f60e3,d6b8ce8の2コミットをのちに入力できるように記憶しておきます。
+
+### git rebaseで該当コミットを編集可能な状態にする
+```
+git rebase -i d6b8ce8
+```
+とするとエディタが開き、そこには
+```
+pick 18f60e3 piyo
+pick 945b51e fuga
+pick 0fd0f4e hoge
+pick b8929a2 piyo
+pick f1cae65 fuga
+pick 83f52e6 hoge
+
+# Rebase d6b8ce8..83f52e6 onto d6b8ce8 (6 commands)
+(以下省略)
+```
+
+のような記述がなされています。  
+今回いじりたいのは18f60e3なので、
+
+```
+edit 18f60e3 piyo
+pick 945b51e fuga
+pick 0fd0f4e hoge
+pick b8929a2 piyo
+pick f1cae65 fuga
+pick 83f52e6 hoge
+
+# Rebase d6b8ce8..83f52e6 onto d6b8ce8 (6 commands)
+(以下省略)
+```
+と文頭のpickをeditに変え、保存して閉じます。
+
+```
+Stopped at 18f60e3...  piyo
+You can amend the commit now, with
+
+  git commit --amend
+
+Once you are satisfied with your changes, run
+
+  git rebase --continue
+```
+
+と出力されれば成功。18f60e3が編集可能となりました。
+
+### git resetで変更をワーキングディレクトリに戻す
+現在、18f60e3での変更はヒストリー上にあるので、コミットし直すためにワーキングディレクトリまで引き戻します。
+
+```
+git reset HEAD~
+```
+
+
+### 変更をコミット
+git add, git commitで変更をコミットします。  
+ここでコミットを小分けにすることで、当初の目的であるコミット18f60e3の分割が叶います。
+
+### git rebase --continueでHEADにチェックアウトして終了
+コミットが完了したら、rebaseで編集モードを終了し、HEADへチェックアウトします。
+
+```
+git rebase --continue
+
+Successfully rebased and updated refs/heads/main.
+```
+
+過去のコミットを分割しなおすことができました。
+
+## 参考
+- [3.6 Git Branching - Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
+- [Gitで数個前のcommitを遡って分割する](https://ken-c-lo.hatenadiary.org/entry/20130706/1373092204?utm_source=pocket_saves)
+- [Git でブランチを上書きする](https://qiita.com/phanect/items/4353854cb0d962916acf?utm_source=pocket_saves)
 </p>]]></content:encoded></item></channel></rss>
