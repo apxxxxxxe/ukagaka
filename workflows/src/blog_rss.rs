@@ -71,7 +71,9 @@ impl RssGenerator for HashMap<String, Headers> {
             .link(BASE_URL)
             .build();
 
-        let items = self
+        let mut ary = self.iter().collect::<Vec<_>>();
+        ary.sort_by(|a, b| b.1.date.cmp(&a.1.date));
+        let items = ary
             .iter()
             .map(|(slug, headers)| {
                 let title = headers.title.clone();
