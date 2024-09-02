@@ -1,6 +1,8 @@
 import { getAllPosts, getPostByTag, ArticleForRender, Article } from "utils/api"
 import markdownToHtml from "utils/markdownToHtml"
 import HomePage from "app/search/[tag]/client-component"
+import { join } from "path"
+import fs from "fs"
 
 export const generateStaticParams = async () => {
 	const posts = getAllPosts(["tags"]).filter(
@@ -44,6 +46,12 @@ const getProps = async ({ tag }: { tag: string }) => {
 		if (article.tags.includes("雑記")) {
 			article.html = await markdownToHtml(article.content)
 		}
+		const assetsDirectory = join(process.cwd(), "public")
+		let thumbnail = `/contents/${article.slug}/thumbnail.png`
+		if (!fs.existsSync(`${assetsDirectory}${thumbnail}`)) {
+			thumbnail = `/contents/common/thumbnail.png`
+		}
+		article.thumbnail = thumbnail
 		posts.push(article)
 	}
 
