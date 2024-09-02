@@ -32,6 +32,7 @@ export type Article = {
 
 export interface ArticleForRender extends Article {
 	html: string
+	thumbnail?: string
 }
 
 export const markdownToPost = (fullPath: string, fields: string[] = []) => {
