@@ -33,6 +33,9 @@ module.exports = {
 			blur: {
 				xs: "1.5px",
 			},
+			maxHeight: {
+				lg: "32rem",
+			},
 		},
 		container: {
 			center: true,

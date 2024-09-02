@@ -86,9 +86,18 @@ export const rawHtmlToDom = (
 
 				let imgdivClass = "my-5 flex flex-col"
 
-				if (node.attribs.alt.startsWith("center:")) {
+				if (node.attribs.alt.includes("center:")) {
 					node.attribs.alt = node.attribs.alt.replace("center:", "")
 					imgdivClass += " justify-center items-center"
+				}
+
+				let imgClass = ""
+				if (node.attribs.alt.includes("size-limit:")) {
+					node.attribs.alt = node.attribs.alt.replace(
+						"size-limit:",
+						""
+					)
+					imgClass += ` !max-w-lg !max-h-lg`
 				}
 
 				const caption = reactStringReplace(
@@ -99,7 +108,9 @@ export const rawHtmlToDom = (
 
 				return (
 					<div className={imgdivClass}>
-						<img {...node.attribs} />
+						<Link href={node.attribs.src}>
+							<img {...node.attribs} className={imgClass} />
+						</Link>
 						<p>{caption}</p>
 					</div>
 				)
